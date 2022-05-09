@@ -4,17 +4,7 @@ description: >-
   설정
 ---
 
-# 가. 5호기 Lustre Striping 기본 설정
+# Copy of 가. 5호기 Lustre Striping 기본 설정
 
 5호기 Lustre File System은 File Striping을 지원하며, 이를 위해 복수 개의 OST(Object Storage Target, 즉 물리적으로 분산되어 있는 여러 디스크)에 하나의 파일을 분산시켜 저장 함으로써 병목을 줄이고 I/O 성능을 향상시킬 수 있다. 특히, Lustre 2.10부터 지원되는 PFL(Progressive File Layout)이 /scratch 파일시스템에 적용되어 있다. 이 기능은 사용자 별도의 striping 설정 없이 파일의 크기에 따라 stripe-count 개수가 자동으로 적용되어 I/O의 성능을 향상시킬 수 있다. Nurion 파일 시스템의 striping 설정은 아래와 같다.
-
-|||stripe-count|stripe-size|
-
-\|:---:|:---:|:---:|:---:|
-
-|/home01||1|1MB|
-
-|/apps||1|1MB|
-
-|/scratch(PFL)|file size < 4MB|1|1MB|
 
