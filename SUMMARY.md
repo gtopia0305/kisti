@@ -43,7 +43,6 @@
         * [\[참조 2\] 웹 브라우저에서 리모트 빌더에 의한 싱규레러티 컨테이너 이미지 빌드하기](undefined/undefined/undefined/3-singularity/2.md)
       * [\[별첨4\] Lustre stripe 사용법](undefined/undefined/undefined/4-lustre-stripe/README.md)
         * [가. 5호기 Lustre Striping 기본 설정](undefined/undefined/undefined/4-lustre-stripe/.-5-lustre-striping.md)
-        * [Copy of 가. 5호기 Lustre Striping 기본 설정](undefined/undefined/undefined/4-lustre-stripe/copy-of-.-5-lustre-striping.md)
         * [나. Lustre Striping 개념](undefined/undefined/undefined/4-lustre-stripe/.-lustre-striping.md)
         * [다. stripe 설정 및 확인](undefined/undefined/undefined/4-lustre-stripe/.-stripe.md)
         * [라. 권장사항 및 팁](undefined/undefined/undefined/4-lustre-stripe/untitled.md)
