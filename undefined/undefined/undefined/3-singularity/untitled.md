@@ -4,3 +4,8 @@ description: 기술지원 > 지침서 > 사용법 > 누리온 > [별첨3] Singul
 
 # 가. 싱귤레러티 모듈 적재
 
+
+
+```
+$ module load singularity/3.6.4
+```
