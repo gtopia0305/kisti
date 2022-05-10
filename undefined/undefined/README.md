@@ -2,7 +2,7 @@
 
 ## [누리온](undefined/undefined/)
 
-## [뉴론](뉴론/)
+## [뉴론](undefined/)
 
 ## [NURION(ENG)](nurion-eng/)
 
