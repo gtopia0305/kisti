@@ -20,4 +20,10 @@ KISTI 슈퍼컴퓨터 5호기 누리온(NURION)은 리눅스 기반의 초병렬
 
 ![\[누리온 구성도\]](<../../../../.gitbook/assets/누리온 구성도.png>)
 
+| GIT BOOK               | [https://www.gitbook.com/](https://www.gitbook.com/)                                     | 국가 슈퍼 컴퓨팅 센터 url                                   |
+| ---------------------- | ---------------------------------------------------------------------------------------- | -------------------------------------------------- |
+| sally1334@gtopia.co.kr | [https://www.ksc.re.kr/gsjw/jcs/hd#docout-1](https://www.ksc.re.kr/gsjw/jcs/hd#docout-1) |
+| pass                   | wlxhvldk0305!                                                                            |
+| 만든 URL                 | [https://gtopia.gitbook.io/kisti](https://gtopia.gitbook.io/kisti)                       | [https://blog.ksc.re.kr/](https://blog.ksc.re.kr/) |
+
 ![\[누리온 시스템 사양 및 구성\]](<../../../../.gitbook/assets/누리온 시스템 사양 및 구성.png>)
