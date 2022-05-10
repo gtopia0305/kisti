@@ -4,6 +4,6 @@
 
 ## [뉴론](undefined-1/)
 
-## [NURION(ENG)](nurion-eng.md)
+## [NURION(ENG)](nurion-eng/)
 
 ## [NEURON(ENG)](./#nurion-eng-1)
