@@ -78,5 +78,7 @@
   * [테스트](undefined/undefined-2/README.md)
     * [test](undefined/undefined-2/test.md)
     * [어떨지?](undefined/undefined-2/undefined.md)
-  * [test1](undefined/test1.md)
+  * [test1](undefined/test1/README.md)
+    * [테스트12](undefined/test1/12.md)
+    * [test12](undefined/test1/test12.md)
 * [KISTI 슈퍼 컴퓨팅 기술 블로그](kisti.md)
