@@ -20,10 +20,133 @@ KISTI 슈퍼컴퓨터 5호기 누리온(NURION)은 리눅스 기반의 초병렬
 
 ![\[누리온 구성도\]](<../../../../.gitbook/assets/누리온 구성도.png>)
 
-| GIT BOOK               | [https://www.gitbook.com/](https://www.gitbook.com/)                                     | 국가 슈퍼 컴퓨팅 센터 url                                   |
-| ---------------------- | ---------------------------------------------------------------------------------------- | -------------------------------------------------- |
-| sally1334@gtopia.co.kr | [https://www.ksc.re.kr/gsjw/jcs/hd#docout-1](https://www.ksc.re.kr/gsjw/jcs/hd#docout-1) |
-| pass                   | wlxhvldk0305!                                                                            |
-| 만든 URL                 | [https://gtopia.gitbook.io/kisti](https://gtopia.gitbook.io/kisti)                       | [https://blog.ksc.re.kr/](https://blog.ksc.re.kr/) |
+<table class="common-table-03 txt-ac" border="0" cellspacing="0" cellpadding="0"><colgroup><col style="width: 30%;"></colgroup><colgroup><col style="width: 30%;"></colgroup><colgroup><col style="width: 20%;"></colgroup><colgroup><col style="width: 20%;"></colgroup>
+<thead>
+<tr>
+<th style="width: 415px;" colspan="2">구분</th>
+<th style="width: 124px;">KNL 계산노드</th>
+<th style="width: 124px;">Cpu-only 노드</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="width: 415px;" colspan="2">제조사 및 모델</td>
+<td style="width: 269px;" colspan="2">Cray CS500</td>
+</tr>
+<tr>
+<td style="width: 415px;" colspan="2">노드수</td>
+<td style="width: 124px;">8,305</td>
+<td style="width: 124px;">132</td>
+</tr>
+<tr>
+<td style="width: 415px;" colspan="2">성능최고성능(Rpeak)</td>
+<td style="width: 124px;">25.3 PFlops</td>
+<td style="width: 124px;">0.4 PFlops</td>
+</tr>
+<tr>
+<td style="width: 197px;" rowspan="5">프로세서</td>
+<td style="width: 197px;">모델</td>
+<td style="width: 124px;">Intel Xeon Phi 7250(KNL)</td>
+<td style="width: 124px;">Intel Xeon 6148 (Skylake)</td>
+</tr>
+<tr>
+<td style="width: 197px;">CPU당 이론성능</td>
+<td style="width: 124px;">3.0464 TFLOPS</td>
+<td style="width: 124px;">1.536 TFLOPS</td>
+</tr>
+<tr>
+<td style="width: 197px;">CPU당 코어수</td>
+<td style="width: 124px;">68</td>
+<td style="width: 124px;">20</td>
+</tr>
+<tr>
+<td style="width: 197px;">노드당 CPU수</td>
+<td style="width: 124px;">1</td>
+<td style="width: 124px;">2</td>
+</tr>
+<tr>
+<td style="width: 197px;">On-package Memory</td>
+<td style="width: 124px;">16GB, 490GB/s</td>
+<td style="width: 124px;">-</td>
+</tr>
+<tr>
+<td style="width: 197px;" rowspan="5">메인메모리</td>
+<td style="width: 197px;">모델</td>
+<td style="width: 124px;">16GB DDR4-2400</td>
+<td style="width: 124px;">16GB DDR4-2666</td>
+</tr>
+<tr>
+<td style="width: 197px;">구성</td>
+<td style="width: 124px;">16GB x6, 6Ch per CPU</td>
+<td style="width: 124px;">16GB x12, 6Ch per CPU</td>
+</tr>
+<tr>
+<td style="width: 197px;">노드 당 메모리(GB)</td>
+<td style="width: 124px;">96GB</td>
+<td style="width: 124px;">192GB</td>
+</tr>
+<tr>
+<td style="width: 197px;">CPU당 대역폭</td>
+<td style="width: 124px;">115.2GB/s</td>
+<td style="width: 124px;">128GB/s</td>
+</tr>
+<tr>
+<td style="width: 197px;">전체크기</td>
+<td style="width: 124px;">778.6TB</td>
+<td style="width: 124px;">24.8TB</td>
+</tr>
+<tr>
+<td style="width: 197px;" rowspan="4">고성능 인터커넥트</td>
+<td style="width: 197px;">토폴로지</td>
+<td style="width: 269px;" colspan="2">Fat Tree</td>
+</tr>
+<tr>
+<td style="width: 197px;">Blocking Ratio</td>
+<td style="width: 269px;" colspan="2">50% Blocking</td>
+</tr>
+<tr>
+<td style="width: 197px;">Switches 구성</td>
+<td style="width: 269px;" colspan="2">278x 48-port OPA edge switches<br>8x 768-port OPA core switches</td>
+</tr>
+<tr>
+<td style="width: 197px;">포트 당 대역폭</td>
+<td style="width: 269px;" colspan="2">100Gbps</td>
+</tr>
+<tr>
+<td style="width: 197px;" rowspan="4">고성능 파일시스템(Burst Buffer)</td>
+<td style="width: 197px;">서버수</td>
+<td style="width: 269px;" colspan="2">DDN IME240 Server 48ea</td>
+</tr>
+<tr>
+<td style="width: 197px;">서버 당 디스크</td>
+<td style="width: 269px;" colspan="2">16x 1.2TB NVMe SSD, 2x 0.45TB NVMe SSD</td>
+</tr>
+<tr>
+<td style="width: 197px;">전체 가용 용량</td>
+<td style="width: 269px;" colspan="2">0.8PB</td>
+</tr>
+<tr>
+<td style="width: 197px;">대역폭</td>
+<td style="width: 269px;" colspan="2">20GB/sec per server, 0.8TB/s total</td>
+</tr>
+<tr>
+<td style="width: 197px;" rowspan="4">병렬파일시스템</td>
+<td style="width: 197px;">파일시스템</td>
+<td style="width: 124px;" colspan="2">Lustre 2.7.21.3</td>
+</tr>
+<tr>
+<td style="width: 197px;">전체 가용 용량</td>
+<td style="width: 269px;" colspan="2">/scratch: 21PB, /home: 0.76PB, /apps: 0.5PB</td>
+</tr>
+<tr>
+<td style="width: 197px;">대역폭</td>
+<td style="width: 269px;" colspan="2">0.3TB/s</td>
+</tr>
+<tr>
+<td style="width: 197px;">RAID 구성</td>
+<td style="width: 269px;" colspan="2">RAID6(8D+2P)</td>
+</tr>
+</tbody>
+</table>
 
 ![\[누리온 시스템 사양 및 구성\]](<../../../../.gitbook/assets/누리온 시스템 사양 및 구성.png>)
