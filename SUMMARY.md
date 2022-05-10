@@ -46,6 +46,7 @@
         * [나. Lustre Striping 개념](undefined/undefined/undefined/4-lustre-stripe/.-lustre-striping.md)
         * [다. stripe 설정 및 확인](undefined/undefined/undefined/4-lustre-stripe/.-stripe.md)
         * [라. 권장사항 및 팁](undefined/undefined/undefined/4-lustre-stripe/untitled.md)
+      * [\[별첨6\] MVAPICH2 성능 최적화 옵션 사용법](readme/undefined/undefined/6-mvapich2.md)
     * [뉴론](undefined/undefined/undefined-1/README.md)
       * [뉴론 시스템 개요 및 구성](undefined/undefined/undefined-1/undefined/README.md)
         * [가. 시스템 운영 목적](undefined/undefined/undefined-1/undefined/untitled.md)
