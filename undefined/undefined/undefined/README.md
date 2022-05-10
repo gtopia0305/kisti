@@ -30,7 +30,7 @@
 
 ## [\[별첨10\] 버스트버퍼(Burst Buffer) 사용법 ](../../../readme/undefined/undefined/10-burst-buffer/)
 
-## \[별첨11] 플랫 노드(Flat node) 사용법
+## [\[별첨11\] 플랫 노드(Flat node) 사용법](../../../readme/undefined/undefined/11-flat-node.md)
 
 
 
