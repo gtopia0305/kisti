@@ -14,7 +14,20 @@
 &#x20;    ex) INPUT="/scratch\_ime/$USER/input.dat", OUTPUT="/scratch\_ime/$USER/output.dat"
 
 ```
-#!/bin/sh#PBS -N burstbuffer#PBS -V#PBS -q normal        # 모든 큐 사용가능#PBS -A {PBS 옵션 이름} # Application별 PBS 옵션 이름표 참고#PBS -P burst_buffer  # 버스트 버퍼 사용을 위해서 반드시 명시#PBS -l select=2:ncpus=16:mpiprocs=16#PBS -l walltime=05:00:00cd $PBS_O_WORKDIROUTFILE=/scratch_ime/$USER/output.dat  # 이하 해당 작업 관련 실행명령어 작성 (4장 "스케줄러를 통한 작업실행" 나절 예제 참조)
+#!/bin/sh
+#PBS -N burstbuffer
+#PBS -V
+#PBS -q normal        # 모든 큐 사용가능
+#PBS -A {PBS 옵션 이름} # Application별 PBS 옵션 이름표 참고
+#PBS -P burst_buffer  # 버스트 버퍼 사용을 위해서 반드시 명시
+#PBS -l select=2:ncpus=16:mpiprocs=16
+#PBS -l walltime=05:00:00
+
+cd $PBS_O_WORKDIR
+
+OUTFILE=/scratch_ime/$USER/output.dat  
+
+# 이하 해당 작업 관련 실행명령어 작성 (4장 "스케줄러를 통한 작업실행" 나절 예제 참조)
 ```
 
 &#x20;
@@ -32,7 +45,21 @@ $ module load mvapich2/2.3.1
 &#x20;
 
 ```
-#!/bin/sh#PBS -N mvapich2_ime#PBS -V#PBS -q normal            # KNL에 해당하는 모든 큐 사용 가능 (전용큐, normal, long, flat, debug)#PBS -A {PBS 옵션 이름} # Application별 PBS 옵션 이름표 참고#PBS -P burst_buffer     # 버스트 버퍼 사용을 위해 반드시 명시#PBS -l select=2:ncpus=16:mpiprocs=16#PBS -l walltime=5:00:00cd $PBS_O_WORKDIRTOTAL_CPUS=$(wc -l $PBS_NODEFILE | awk '{print $1}')OUTFILE=ime:///scratch/$USER/output.dat  mpirun_rsh -np ${TOTAL_CPUS} -hostfile $PBS_NODEFILE ./a.out 또는mpirun -np ${TOTAL_CPUS} -hostfile $PBS_NODEFILE ./a.out 
+#!/bin/sh
+#PBS -N mvapich2_ime
+#PBS -V
+#PBS -q normal            # KNL에 해당하는 모든 큐 사용 가능 (전용큐, normal, long, flat, debug)
+#PBS -A {PBS 옵션 이름} # Application별 PBS 옵션 이름표 참고
+#PBS -P burst_buffer     # 버스트 버퍼 사용을 위해 반드시 명시
+#PBS -l select=2:ncpus=16:mpiprocs=16
+#PBS -l walltime=5:00:00
+
+cd $PBS_O_WORKDIR
+TOTAL_CPUS=$(wc -l $PBS_NODEFILE | awk '{print $1}')
+OUTFILE=ime:///scratch/$USER/output.dat  
+mpirun_rsh -np ${TOTAL_CPUS} -hostfile $PBS_NODEFILE ./a.out 
+또는
+mpirun -np ${TOTAL_CPUS} -hostfile $PBS_NODEFILE ./a.out 
 ```
 
 &#x20;
