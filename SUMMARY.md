@@ -145,6 +145,8 @@
         * [B. Singularity Container](readme/undefined/nurion-eng/miscellaneous-manual/b.-singularity-container.md)
         * [C. Burst Buffer](readme/undefined/nurion-eng/miscellaneous-manual/c.-burst-buffer.md)
         * [D. Flat Node](readme/undefined/nurion-eng/miscellaneous-manual/d.-flat-node.md)
+      * [\[Appendix 1\] Main Keywords for Job Scripts](readme/undefined/nurion-eng/appendix-1-main-keywords-for-job-scripts.md)
+      * [\[Appendix 2\] Method for Using Lustre Stripe](readme/undefined/nurion-eng/appendix-2-method-for-using-lustre-stripe.md)
     * [NEURON(ENG)](undefined/undefined/neuron-eng.md)
   * [상용 소프트웨어](undefined/undefined-1/README.md)
     * [누리온(NURION)](undefined/undefined-1/nurion.md)
