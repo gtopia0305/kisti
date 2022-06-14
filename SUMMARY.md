@@ -67,7 +67,7 @@
         * [나. 데이터 처리](readme/undefined/undefined/10-burst-buffer/.-1.md)
         * [다. 유의사항](readme/undefined/undefined/10-burst-buffer/.-2.md)
       * [\[별첨11\] 플랫 노드(Flat node) 사용법](readme/undefined/undefined/11-flat-node.md)
-    * [뉴론](undefined/undefined/undefined-1/README.md)
+    * [뉴론](manual/neuron/README.md)
       * [뉴론 시스템 개요 및 구성](undefined/undefined/undefined-1/undefined/README.md)
         * [가. 시스템 운영 목적](undefined/undefined/undefined-1/undefined/untitled.md)
         * [나. 시스템 구성](undefined/undefined/undefined-1/undefined/.-1.md)
