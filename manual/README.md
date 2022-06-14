@@ -1,9 +1,9 @@
 # 사용법
 
-### [누리온](undefined/undefined/)
+### [누리온](manual/nurion/)
 
-### [뉴론](undefined-1/)
+### [뉴론](manual/neuron)
 
-### [NURION(ENG)](nurion-eng/)
+### [NURION(ENG)](manual/nurion-eng/)
 
-### [NEURON(ENG)](./#nurion-eng-1)
+### [NEURON(ENG)](manual/neuron-eng)
