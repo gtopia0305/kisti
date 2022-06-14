@@ -156,7 +156,7 @@
     * [누리온(NURION)](undefined/undefined-1/nurion.md)
     * [뉴론(NEURON)](undefined/undefined-1/neuron.md)
 * [KISTI 슈퍼 컴퓨팅 기술 블로그](kisti.md)
-<<<<<<< HEAD
+
 
 * [KISTI 슈퍼 컴퓨팅 기술 블로그2](blog/README.md)
 
@@ -167,6 +167,5 @@
 * [SW 설치 문서창고](blog/b)
 
 * [시스템 활용 & 팁](blog/usageTips.md)
-=======
-* [KISTI 슈퍼 컴퓨팅 기술 블로그2](blog/README.md)
->>>>>>> 50fcde0f059c3d5721d31be366beff10cf482778
+
+
