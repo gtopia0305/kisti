@@ -1,6 +1,6 @@
 # Table of contents
 
-### 1 부
+## 1 부
 
 * [국가 슈퍼 컴퓨팅 센터 지침서](README.md)
   * [사용법](manual/README.md)
