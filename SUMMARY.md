@@ -1,7 +1,7 @@
 # Table of contents
 
 * [국가 슈퍼 컴퓨팅 센터 지침서](README.md)
-  * [사용법](undefined/undefined/README.md)
+  * [사용법](manual/nurion/README.md)
     * [누리온](undefined/undefined/undefined/README.md)
       * [누리온 시스템 사양 및 구성](undefined/undefined/undefined/undefined/README.md)
         * [가. 개요](undefined/undefined/undefined/undefined/untitled.md)
