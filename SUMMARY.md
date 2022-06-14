@@ -1,7 +1,5 @@
 # Table of contents
 
-### 1 부
-
 * [국가 슈퍼 컴퓨팅 센터 지침서](README.md)
   * [사용법](manual/README.md)
     * [누리온](manual/nurion/README.md)
@@ -154,4 +152,13 @@
     * [누리온(NURION)](undefined/undefined-1/nurion.md)
     * [뉴론(NEURON)](undefined/undefined-1/neuron.md)
 * [KISTI 슈퍼 컴퓨팅 기술 블로그](kisti.md)
+
 * [KISTI 슈퍼 컴퓨팅 기술 블로그2](blog/README.md)
+
+### KISTI 슈퍼 컴퓨팅 기술 블로그
+
+* [사용자 지침서](blog/a)
+
+* [SW 설치 문서창고](blog/b)
+
+* [시스템 활용 & 팁](blog/usageTips.md)
