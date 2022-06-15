@@ -157,6 +157,4 @@
     * [뉴론(Neuron)(GPU Cluster System)](blog/userguide/neurone.md)
     * [누리온(NURION)](blog/userguide/nurion.md)
   * [SW 설치 문서창고](blog/sw/README.md)
-    * [누리온(NURION)](blog/sw/nurion.md)
-    * [뉴론(Neuron)(GPU Cluster System)](blog/sw/neuron-gpu-cluster-system.md)
   * [시스템 활용 & 팁](blog/and.md)
