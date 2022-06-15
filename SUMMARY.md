@@ -162,7 +162,7 @@
   * [동영상 지침서[초보자사용자]](blog/user_guide/video/index.md)
   * [누리온(NURION)](blog/user_guide/nurion/index.md)
   * [뉴론(Neuron)(GPU Cluster System)](blog/user_guide/neuron/index.md)
-* [SW 설치 문서창고](blog/doc_warehouse/)
+
   * [누리온(NURION)](blog/doc_warehouse/nurion/index.md)
   * [뉴론(Neuron)(GPU Cluster System)](blog/doc_warehouse/neuron/index.md)
 * [시스템 활용 & 팁](blog/usageTips.md)
