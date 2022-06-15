@@ -1,7 +1,7 @@
 # 사용자 지침서
 
-{% content-ref url="undefined.md" %}
-[undefined.md](undefined.md)
+{% content-ref url="../../kisti/userguide/blog/user_guide/video/.md" %}
+[.md](../../kisti/userguide/blog/user\_guide/video/.md)
 {% endcontent-ref %}
 
 {% content-ref url="nurion.md" %}
