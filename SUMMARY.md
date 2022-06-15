@@ -152,18 +152,13 @@
     * [누리온(NURION)](undefined/undefined-1/nurion.md)
     * [뉴론(NEURON)](undefined/undefined-1/neuron.md)
 * [KISTI 슈퍼 컴퓨팅 기술 블로그](kisti.md)
-
-
 * [KISTI 슈퍼 컴퓨팅 기술 블로그2](blog/README.md)
-
-* KISTI 슈퍼 컴퓨팅 기술 블로그
-  * [사용자 지침서](blog/userguide_/index.md)
-    * [동영상 지침서[초보자사용자]](blog/userguide/video/index.md)
-    * [누리온(NURION)](blog/userguide/nurion/index.md)
-    * [뉴론(Neuron)(GPU Cluster System)](blog/user_guide/neuron/index.md)
-  * [SW 설치 문서창고](blog/doc_warehouse.md) {doc_warehouse}
-    * [누리온(NURION)](blog/doc_warehouse/nurion/index.md)
-    * [뉴론(Neuron)(GPU Cluster System)](blog/doc_warehouse/neuron/index.md)
+* [KISTI 슈퍼 컴퓨팅 기술 블로그](kisti-1/README.md)
+  * [사용자 지침서](kisti-1/undefined/README.md)
+    * [동영상 지침서\[초보자사용자\]](kisti-1/undefined/undefined.md)
+    * [누리온(NURION)](kisti-1/undefined/nurion.md)
+    * [뉴론(Neuron)(GPU Cluster System)](kisti-1/undefined/neuron-gpu-cluster-system.md)
+  * [SW 설치 문서창고 {doc\_warehouse}](kisti-1/sw-doc\_warehouse/README.md)
+    * [누리온(NURION)](kisti-1/sw-doc\_warehouse/nurion.md)
+    * [뉴론(Neuron)(GPU Cluster System)](kisti-1/sw-doc\_warehouse/neuron-gpu-cluster-system.md)
   * [시스템 활용 & 팁](blog/usageTips.md)
-
-
