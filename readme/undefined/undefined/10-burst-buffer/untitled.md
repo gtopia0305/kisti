@@ -3,7 +3,7 @@
 &#x20;  버스트버퍼 IME는 Nurion /scratch 파일시스템의 캐시 역할을 수행한다. IME를 통한 데이터 접근방법은 아래 그림과 같다.\
 
 
-![](<../../../../.gitbook/assets/버스트버퍼(Burst Buffer) 사용법.png>)
+![](<../../../../.gitbook/assets/Burst buffer IME performs the role of a cache in the Nurion.png>)
 
 &#x20;IME는 사용자 레벨 파일시스템인 FUSE(**F**ile System In **USE**rspace)를 사용하여 클라이언트 노드(전체 계산노드와 로그인노드)에 마운트 되어 있다. 이때 유의할 것은 IME는 캐시 역할을 수행하므로 /scratch 파일시스템이 사전에 반드시 마운트 되어 있어야 한다. IME 디렉터리 경로는 **/scratch\_ime** 이며 최초 사용자가 해당 디렉터리(/scratch\_ime/$USER)에 접속하면 스크래치(/scratch/$USER) 파일시스템의 모든 디렉터리와 파일의 구조를 동일하게 확인할 수 있다. 이는 실제 IME 디바이스에 존재하지 않는 데이터이며, 버스트버퍼를 이용하여 작업 수행 시 /scratch에서 IME에 캐싱하는 방식으로 사용된다. IME를 사용하기 위해서는 작업 스크립트에 버스트버퍼 프로젝트명(#PBS -P burst\_buffer)을 명시해야 한다. 어플리케이션을 수행하는 방법은 크게 아래와 같이 두가지 방식이 존재한다.
 
@@ -76,7 +76,7 @@ mpirun -np ${TOTAL_CPUS} -hostfile $PBS_NODEFILE ./a.out
 
 &#x20;  IME의 데이터 관리를 위해서는 아래 그림에 있는 데이터의 라이프 사이클을 파악해야 한다. IME 데이터 처리는 크게 Prestage, Prefetch, Sync, Release 단계가 있으며 각각에 대해 IME-API(#ime-ctl) 명령을 제공하고 있다.
 
-![](<../../../../.gitbook/assets/버스트버퍼(Burst Buffer) 사용법(1).png>)
+![](<../../../../.gitbook/assets/For the data management of IME, the life cycle of the data shown in the figure below needs to be examined..png>)
 
 | ime-ctl -i $INPUT\_FILE  | <p>작업 데이터를 IME로 Stage-In 실행</p><p>(/scratch에서 /scratch_ime로 데이터 캐싱)</p> |
 | ------------------------ | ----------------------------------------------------------------------- |
