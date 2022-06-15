@@ -4,7 +4,7 @@ description: 기술지원 > 지침서 > 사용법 > NURION(ENG) > User Environme
 
 # A. Account Creation
 
-① Researchers that have been approved to use the Nurion system should access the KISTI website ([**https://www.ksc.re.kr**](https://www.ksc.re.kr))  to apply for an account.
+① Researchers that have been approved to use the Nurion system should access the KISTI website ([**https://www.ksc.re.kr**](https://www.ksc.re.kr/))  to apply for an account.
 
 ◦ How to apply : Access the KISTI website, (top) Application for use -> (top) Apply -> Select application
 

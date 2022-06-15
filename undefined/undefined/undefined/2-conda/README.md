@@ -9,7 +9,7 @@ description: '[별첨2] Conda 사용법'
 
 Anaconda 배포판은 1,200 만 명이 넘는 사용자가 사용하며 Windows, Linux 및 MacOS에 적합한 1400 가지 이상의 인기있는 데이터 과학 패키지를 포함한다.
 
-Anaconda를 설치하기 위해서는 [https://www.anaconda.com](https://www.anaconda.com) 웹사이트에서 자신의 OS에 맞는 배포판을 다운받아 설치하면 된다.
+Anaconda를 설치하기 위해서는 [https://www.anaconda.com](https://www.anaconda.com/) 웹사이트에서 자신의 OS에 맞는 배포판을 다운받아 설치하면 된다.
 
 (예) Windows, MacOS, Linux
 

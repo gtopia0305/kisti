@@ -1,6 +1,6 @@
 # 가. 계정발급
 
-① 뉴론(NEURON) 시스템의 사용을 승인받은 연구자는 KISTI 홈페이지([https://www.ksc.re.kr](https://www.ksc.re.kr)) 웹 서비스를 통해 계정을 신청한다.
+① 뉴론(NEURON) 시스템의 사용을 승인받은 연구자는 KISTI 홈페이지([https://www.ksc.re.kr](https://www.ksc.re.kr/)) 웹 서비스를 통해 계정을 신청한다.
 
 \* 신청 방법 : KISTI 홈페이지 웹사이트접속, (상단) 사용신청 -> (상단) 신청 -> 신청서선택
 
