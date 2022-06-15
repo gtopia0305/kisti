@@ -156,7 +156,7 @@
     * [동영상 지침서\[초보자사용자\]](kisti/user\_guide/video.md)
     * [뉴론(Neuron)(GPU Cluster System)](kisti/user\_guide/neuron.md)
     * [누리온(NURION)](kisti/user\_guide/nurion.md)
-  * [SW 설치 문서창고](kisti/sw-doc\_warehouse/README.md)
+  * [SW 설치 문서창고](kisti/sw-doc\_warehouse/index.md)
     * [누리온(NURION)](kisti/sw-doc\_warehouse/nurion.md)
     * [뉴론(Neuron)(GPU Cluster System)](kisti/doc\_warehouse/neurone.md)
   * [시스템 활용 & 팁](blog/usageTips.md)
