@@ -5,7 +5,7 @@
 * [사용법](README.md)
   * [누리온](guidebook/manual/nurion/README.md)
     * [누리온 시스템 사양 및 구성](guidebook/manual/nurion/system-specifications-and-configurations.md)
-    * [사용자 환경](guidebook/readme/nurion/user-experience.md)
+    * [사용자 환경](guidebook/manual/nurion/user-experience.md)
     * [사용자 프로그래밍 환경](guidebook/manual/nurion/user-programming-environment/README.md)
       * [가. 프로그래밍 도구 설치 현황](guidebook/manual/nurion/user-programming-environment/untitled.md)
       * [나. 컴파일러 사용법](guidebook/manual/nurion/user-programming-environment/.-1.md)
