@@ -38,7 +38,7 @@
 
 ```
 #!/bin/sh#PBS -V
-#PBS -N Nastran_job
+#PBS -N <mark style="color:blue;">Nastran_job</mark>
 #PBS -q comrcial
 #PBS -l select=1i:ncpus=40:mpiprocs=1:ompthreads=40#PBS -l walltime=04:00:00#PBS -A nastrancd $PBS_O_WORKDIR/apps/commercial/MSC/Nastran/bin/nast20182 car_mod_freq.bdf smp=$NCPUS batch=no sdir="."
 ```
