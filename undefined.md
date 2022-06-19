@@ -1,7 +1,5 @@
 # 이슈 테스트
 
-
-
 테이블 이
 
 | 구분                      | KNL 계산노드                                                               | Cpu-only 노드              |                           |
@@ -32,8 +30,6 @@
 | 대역폭                     | 0.3TB/s                                                                |                          |                           |
 | RAID 구성                 | RAID6(8D+2P)                                                           |                          |                           |
 
-
-
 코드블럭 이슈 - 내부 텍스트 색상변환 안
 
 ```
@@ -42,8 +38,6 @@
 #PBS -q comrcial
 #PBS -l select=1i:ncpus=40:mpiprocs=1:ompthreads=40#PBS -l walltime=04:00:00#PBS -A nastrancd $PBS_O_WORKDIR/apps/commercial/MSC/Nastran/bin/nast20182 car_mod_freq.bdf smp=$NCPUS batch=no sdir="."
 ```
-
-
 
 <mark style="color:red;">텍스트 색상 변환 레드</mark>
 
