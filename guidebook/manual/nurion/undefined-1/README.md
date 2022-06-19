@@ -1,7 +1,6 @@
 ---
-description: 사용자 환경
-layout: landing
+description: 누리온 시스템 사양 및 구성
 ---
 
-# 사용자 환경
+# 누리온 시스템 사양 및 구성
 
