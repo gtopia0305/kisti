@@ -75,7 +75,7 @@ $ ssh -l x123abc nurion.ksc.re.kr혹은$ ssh -l x123abc nurion.ksc.re.kr -p 22
 
 &#x20;  ※ 프로그램은 인터넷을 통해 무료로 다운로드 후 설치
 
-![](<../../../.gitbook/assets/프로그램은 인터넷을 통해 무료로 다운로드 후 설치.png>)
+![](<../../../../.gitbook/assets/프로그램은 인터넷을 통해 무료로 다운로드 후 설치.png>)
 
 &#x20;
 
@@ -85,7 +85,7 @@ $ ssh -l x123abc nurion.ksc.re.kr혹은$ ssh -l x123abc nurion.ksc.re.kr -p 22
 
 &#x20; ※ Host Name : nurion.ksc.re.kr, Port : 22, Connection type : SSH
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2020/02/\&name=A6lfwliJ61yjFF0.png)
+![](<../../../../.gitbook/assets/Host Name  nurion.png>)
 
 &#x20;
 
@@ -93,7 +93,7 @@ $ ssh -l x123abc nurion.ksc.re.kr혹은$ ssh -l x123abc nurion.ksc.re.kr -p 22
 
 &#x20; ※ X display location : localhost:0.0
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2020/02/\&name=hqXNEs07uvXu6pm.png)
+![](<../../../../.gitbook/assets/x display location.png>)
 
 &#x20;
 
@@ -119,7 +119,7 @@ $ sftp [사용자ID@]nurion-dm.ksc.re.kr [-p 22]
 
 &#x20;\- 윈도우 환경에서는 WinSCP와 같이 무료로 배포되고 있는 FTP/SFTP 클라이언트 프로그램을 이용하여 접속한다.
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2020/02/\&name=4fFtfdH7Px3ipnT.png)
+](../../../../.gitbook/assets/노드구성.png)
 
 &#x20;\*  FTP (File Tranfer Protocal)을 이용하며, OTP를 입력하지 않고 파일 전송 가능
 
