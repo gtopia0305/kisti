@@ -1,9 +1,7 @@
-# 사용법
+---
+cover: .gitbook/assets/국가슈퍼컴퓨팅센터 배경.jpg
+coverY: 0
+---
 
-### [누리온](guidebook/manual/nurion/)
+# 국가 슈퍼 컴퓨팅 센터 지침서
 
-### [뉴론](guidebook/manual/neuron/)
-
-### [NURION(ENG)](manual/nurion-eng/)
-
-### [NEURON(ENG)](manual/neuron-eng.md)
