@@ -20,7 +20,7 @@ layout: editorial
 
 \- 한 사용자 아이디 당 **최대 32개 CPU 코어 수행 가능**합니다.
 
-&#x20;\- 한정된 라이선스를 슈퍼컴 사용자들이 함께 사용하므로, 사용정책 기준을 초과하여 사용할 경우 해당 작업은 관리자가 강제 종료 합니다.
+&#x20;\- <mark style="color:red;">한정된 라이선스를 슈퍼컴 사용자들이 함께 사용하므로, 사용정책 기준을 초과하여 사용할 경우 해당 작업은 관리자가 강제 종료 합니다.</mark>
 
 &#x20;\- 부득이하게 많은 라이선스가 필요할 경우, KISTI 홈페이지([https://www.ksc.re.kr](https://www.ksc.re.kr/))를 통해 사전에 관리자와 협의해야 합니다.&#x20;
 
@@ -139,8 +139,29 @@ $ cp /apps/commercial/MSC/Nastran/conf/nast20182rc ./.nast20182rc
 ※ 아래 예제는 누리온 시스템 에서의 NASTRAN에 대한 예제입니다.&#x20;
 
 ```
+#!/bin/sh
+#PBS -V
+#PBS -N <span style="color:red">Nastran_job</span>
+#PBS -q commercial
+#PBS -l select=1:ncpus=40:mpiprocs=1:ompthreads=40
+#PBS -l walltime=04:00:00
+#PBS -A nastran
+
+cd $PBS_O_WORKDIR
+
+/apps/commercial/MSC/Nastran/bin/nast20182 car_mod_freq.bdf smp=$NCPUS batch=no sdir="."
+```
+
+```
 #!/bin/sh#PBS -V#PBS -N Nastran_job#PBS -q commercial#PBS -l select=1:ncpus=40:mpiprocs=1:ompthreads=40#PBS -l walltime=04:00:00#PBS -A nastrancd $PBS_O_WORKDIR/apps/commercial/MSC/Nastran/bin/nast20182 car_mod_freq.bdf smp=$NCPUS batch=no sdir="."
 ```
+
+`#!/bin/sh`\
+`#PBS -V`
+
+`code`
+
+``
 
 &#x20;\- 위에서 파란색으로 표기된 부분은 사용자가 적절히 수정해야 합니다.
 
