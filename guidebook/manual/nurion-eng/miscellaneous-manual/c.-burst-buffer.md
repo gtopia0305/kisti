@@ -8,7 +8,7 @@ description: 기술지원 > 지침서 > 사용법 > NURION(ENG) > Miscellaneous 
 
 Burst buffer IME performs the role of a cache in the Nurion /scratch filesystem. The data access method through IME is as shown in the figure below.
 
-![](<../../../../.gitbook/assets/버스트버퍼(Burst Buffer) 사용법.png>)
+![](<../../../../.gitbook/assets/Burst buffer IME performs the role of a cache in the Nurion.png>)
 
 IME is mounted on a client node (entire computing nodes and login node) using FUSE (**F**ile System In **USE**rspace) which is a user-level filesystem. A caution is needed to ensure the /scratch filesystem is mounted because IME serves the role of a cache. The IME directory path is **/scratch\_ime,** in which all directories and file structures of the scratch (/scratch/$USER) filesystem can be checked when the first user accesses the directory (/scratch\_ime/$USER). The data does not exist in the actual IME device, and the data is cached by IME in /scratch when a job is executed using the burst buffer. To use the IME, the burst buffer project name (#PBS -P burst\_buffer) needs to be clarified in the job script. There are two methods for executing an application.
 
@@ -68,7 +68,7 @@ Load the mvapich2/2.3.1 module as above and write a job script as shown below.
 
 For the data management of IME, the life cycle of the data shown in the figure below needs to be examined. IME data processing largely consists of prestage, prefetch, sync, and release steps, where IME-API(#ime-ctl) commands for each step are provided.
 
-![](<../../../../.gitbook/assets/버스트버퍼(Burst Buffer) 사용법(1).png>)
+![](<../../../../.gitbook/assets/For the data management of IME, the life cycle of the data shown in the figure below needs to be examined..png>)
 
 | ime-ctl -i $INPUT\_FILE  | <p>Stage-in is executed for the job data with IME</p><p>(Data caching from /scratch to /scratch_ime)</p>            |
 | ------------------------ | ------------------------------------------------------------------------------------------------------------------- |
@@ -86,7 +86,7 @@ The total capacity of IME is approximately 900 TB, which is automatically flushe
 
 ② When the overall available space is 15% or below
 
-![](<../../../../.gitbook/assets/버스트버퍼(Burst Buffer) 사용법(2).png>)
+![](<../../../../.gitbook/assets/When the overall available space is 15% or below.png>)
 
 **◦ Caution**
 

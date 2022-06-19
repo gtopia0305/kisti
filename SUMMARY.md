@@ -150,4 +150,4 @@
     * [누리온(NURION)](blog/docwarehouse/nurion.md)
     * [뉴론(Neuron)(GPU Cluster System)](blog/docwarehouse/neuron.md)
   * [시스템 활용 & 팁](blog/usagetip.md)
-* [이슈 테스트](undefined.md)
+* [이슈 테스트](issue.md)

@@ -33,31 +33,31 @@ Download and install Horizon Client appropriate for a user’s environment from 
 
 After installing Horizon Client, complete the settings as shown below.
 
-![](<../../../../.gitbook/assets/VDI 접속 방법.png>)
+![](<../../../../.gitbook/assets/After installing Horizon Client, complete the settings as shown below..png>)
 
 Settings menu on the top right corner - SSL Configuration
 
-![](<../../../../.gitbook/assets/VDI 접속 방법(1).png>)
+![](<../../../../.gitbook/assets/Settings menu on the top right corner - SSL Configuration.png>)
 
 Select “Do not check server ID certificate” and then click OK.
 
-![](<../../../../.gitbook/assets/VDI 접속 방법(2).png>)
+![](<../../../../.gitbook/assets/Select “Do not check server ID certificate” and then click OK..png>)
 
 New Server - enter nurion-vdi.ksc.re.kr and then click Connect.
 
-![](<../../../../.gitbook/assets/VDI 접속 방법(3).png>)
+![](<../../../../.gitbook/assets/New Server - enter nurion-vdi.ksc.re.kr and then click Connect..png>)
 
 Enter the Nurion ID and OTP number to log in.
 
-![](<../../../../.gitbook/assets/VDI 접속 방법(4).png>)
+![](<../../../../.gitbook/assets/Enter the Nurion ID and OTP number to log in..png>)
 
 Enter the temporary VDI password issued by the administrator at the first access (the same ID as the Nurion system is used, but the password is different)
 
-![](<../../../../.gitbook/assets/VDI 접속 방법(5).png>)
+![](<../../../../.gitbook/assets/Enter the temporary VDI password issued by the administrator at the first access (the same ID as the Nurion system is used, but the password is different).png>)
 
 When accessing VM, image initialization and user profile creation require approximately 3 min
 
-![](<../../../../.gitbook/assets/VDI 접속 방법(6).png>)
+![](<../../../../.gitbook/assets/When accessing VM, image initialization and user profile creation require approximately 3 min.png>)
 
 Once VM access is completed, home01 and scratch of the Nurion system are automatically mounted. The NFS of the desktop is executed when not mounted or an error occurs.\
 The C:\ drive and control panel are blocked from access because of security reasons; a user is automatically logged off when idle for two hours
