@@ -58,23 +58,15 @@ KISTI 슈퍼컴퓨터 5호기 누리온(NURION)은 리눅스 기반의 초병렬
 
 누리온 시스템의 계산노드는 총 8,437개로 매니코어 기반의 Intel Xeon Phi 7250프로세서가 장착된 8,305개 계산노드와 Intel Xeon Gold 6148 프로세서가 장착된 132개 계산노드로 구성되어 있다.
 
-&#x20;
-
 #### KNL(매니코어) 노드
 
 KNL 노드에 장착된 Intel Xeon Phi 7250 프로세서(코드명 Knights Landing)는 1.4GHz 기본 주파수에 68개 코어(hyperthreading off)로 동작한다. L2 캐시 메모리는 34MB이며, 온패키지 메모리인 MCDRAM (Multi-Channel DRAM)은 16GB(대역폭 490GB/s)이다. 노드 당 메모리는 96GB로 16GB DDR4-2400 메모리가 6채널로 구성되어 있다. 2U크기의 인클로저(enclosure)에는 4개의 계산노드가 장착되며, 42U 표준랙에 72개의 계산노드로 구성되어 있다.
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2020/02/\&name=pOeRBFHIcyQUwfC.png)
-
-\[KNL 기반 계산노드 블록 다이어그램]
+![\[KNL 기반 계산노드 블록 다이어그램\]](<../../../.gitbook/assets/KNL 기반 계산노드 블록 다이어그램.png>)
 
 &#x20;
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2020/02/\&name=MteLQQNt86MTMEz.png)
-
-\[KNL 기반 계산노드]
-
-&#x20;
+![\[KNL 기반 계산노드\]](<../../../.gitbook/assets/KNL 기반 계산노드.png>)
 
 #### SKL(CPU-only) 노드
 
@@ -82,15 +74,11 @@ SKL(CPU-only) 노드에는 2개의 Intexl Xeon Gold 6148 프로세서(코드명 
 
 &#x20;
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2020/02/\&name=rYXuqNy5ZA1sXSk.png)
-
-\[SKL 기반 CPU-only 노드 블록 다이어그램]
+![\[SKL 기반 CPU-only 노드 블록 다이어그램\]](<../../../.gitbook/assets/SKL 기반 CPU-only 노드 블록 다이어그램.png>)
 
 &#x20;
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2020/02/\&name=qMY5ecPuQM894Tk.png)
-
-\[SKL 기반 CPU-only 노드]
+![\[SKL 기반 CPU-only 노드\]](<../../../.gitbook/assets/SKL 기반 CPU-only 노드.png>)
 
 ## 다. 인터커넥트 네트워크
 
@@ -98,9 +86,7 @@ SKL(CPU-only) 노드에는 2개의 Intexl Xeon Gold 6148 프로세서(코드명 
 
 &#x20;
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2020/02/\&name=janEhLH6bFge2kl.png)
-
-\[인터커넥트 네트워크 구성도]
+![\[인터커넥트 네트워크 구성도\]](<../../../.gitbook/assets/인터커넥트 네트워크 구성도.png>)
 
 &#x20;
 
@@ -114,15 +100,11 @@ Nurion은 IO 처리 및 데이터 보관을 위해 병렬파일시스템과 버�
 
 각 파일시스템은 SFA7700X 스토리지 기반의 메타데이터 서버(MDS)와, ES14KX 스토리지 기반의 오브젝트 스토리지 서버(OSS)로 구성된다. 버스트버퍼는 계산 노드와 병렬파일시스템 사이에서 동작하는 NVMe 기반의 IO 캐시로 약 844TB의 용량을 제공한다. Lustre 파일시스템은 계산노드, 로그인노드, 아카이빙 서버(Data Mover)에 마운트되어 IO 서비스를 제공한다.
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2020/02/\&name=F4sZ6DNPuy9Gg8H.png)
-
-\[병렬파일시스템 및 버스트버퍼 전체 랙 구성]
+![\[병렬파일시스템 및 버스트버퍼 전체 랙 구성\]](<../../../.gitbook/assets/병렬파일시스템 및 버스트버퍼 전체 랙 구성.png>)
 
 &#x20;
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2020/02/\&name=LQBHF6eU4yZt2hu.png)
-
-\[PFS 서버 구성]
+![\[PFS 서버 구성\]](<../../../.gitbook/assets/PFS 서버 구성.png>)
 
 &#x20;
 
@@ -134,9 +116,7 @@ Nurion은 IO 처리 및 데이터 보관을 위해 병렬파일시스템과 버�
 
 &#x20;
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2020/02/\&name=6n7FDTWgDLwFPaD.png) ![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2020/02/\&name=ijCBgRkhSskY4Fv.png)
-
-&#x20;\[Burst Buffer 역할]                                \[Burst Buffer 서버 구성]
+![ \[Burst Buffer 역할\] ](<../../../.gitbook/assets/Burst Buffer 역할.png>) ![\[Burst Buffer 서버 구성\]](<../../../.gitbook/assets/Burst Buffer 서버 구성.png>)
 
 &#x20;
 
@@ -144,21 +124,14 @@ Nurion은 IO 처리 및 데이터 보관을 위해 병렬파일시스템과 버�
 
 BB 구성을 위해 DDN사의 IME240 솔루션이 적용되었으며, 위 \[Burst Buffer 서버 구성] 그림은 BB의 상세 구성을 나타낸다.
 
-\
-\
-\
-
-
-| 시스템        | DDN IME240, Infinite Memory Engine Appliance |
-| ---------- | -------------------------------------------- |
-| 소프트웨어 버전   | CentOS 7.4, IME 1.3                          |
-| 최대 IO 성능   | 20 GB/s                                      |
-| 네트워크 인터페이스 | 2 x OPA                                      |
-| SSD 타입     | 1.2TB, NVMe 드라이브                             |
-| SDD 수량     | 16ea(1.2TB NVMe) + 1ea(450GB SSD)            |
-| 용량(RAW)    | 19.2TB                                       |
-
-&#x20;
+|     시스템    | DDN IME240, Infinite Memory Engine Appliance |
+| :--------: | :------------------------------------------: |
+|  소프트웨어 버전  |              CentOS 7.4, IME 1.3             |
+|  최대 IO 성능  |                    20 GB/s                   |
+| 네트워크 인터페이스 |                    2 x OPA                   |
+|   SSD 타입   |               1.2TB, NVMe 드라이브               |
+|   SDD 수량   |       16ea(1.2TB NVMe) + 1ea(450GB SSD)      |
+|   용량(RAW)  |                    19.2TB                    |
 
 \[IME 단일노드 구성]
 
@@ -166,13 +139,11 @@ BB 구성을 위해 DDN사의 IME240 솔루션이 적용되었으며, 위 \[Burs
 
 &#x20;
 
-| 총 시스템 수        | IME240 x 48대        |
-| -------------- | ------------------- |
-| 총 용량(RAW)      | 979.2 TB            |
+|     총 시스템 수    |     IME240 x 48     |
+| :------------: | :-----------------: |
+|    총 용량(RAW)   |       979.2 TB      |
 | 총 용량(패리티 적용 시) | 816 TB (EC\*, 10+2) |
-| 최대 IO 성능       | 800 GB/s            |
-
-&#x20;
+|    최대 IO 성능    |       800 GB/s      |
 
 \[버스트버퍼 전체 구성]
 
