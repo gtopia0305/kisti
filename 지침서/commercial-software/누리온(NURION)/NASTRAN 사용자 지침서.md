@@ -1,6 +1,6 @@
-# 누리온(NURION)
+# NASTRAN 사용자 지침서
 
-## NASTRAN 사용자 지침서 <a href="#jcstitle" id="jcstitle"></a>
+## &#x20;<a href="#jcstitle" id="jcstitle"></a>
 
 본 문서는 누리온 시스템에서 NASTRAN 소프트웨어 사용을 위한 기초적인 정보를 제공하고 있습니다. &#x20;
 

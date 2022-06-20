@@ -4,6 +4,6 @@
 
 ### [뉴론](neuron/)
 
-### [NURION(ENG)](nurion-eng/)
+### [NURION(ENG)](NURION\(ENG\)/)
 
 ### [NEURON(ENG)](neuron-eng.md)
