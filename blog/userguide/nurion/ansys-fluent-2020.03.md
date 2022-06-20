@@ -93,25 +93,23 @@
 
 ****
 
-`<pre><code><style="color#!/bin/sh</code></pre>`
+<pre><code>
 
-```
 #!/bin/sh
 #PBS -V
 #PBS -N fluent_job                                    # job 이름 지정
 #PBS -q commercial                                    # 큐 지정
 #PBS -l select=1:ncpus=40:mpiprocs=40:ompthreads=1    # MPI 태스크 및 Threads 수 지정
 #PBS -l walltime=04:00:00                             # 예상 작업 소요 시간 지정
-#PBS -A ansys 
+<mark style="color:red">#PBS -A ansys</mark>
  
 cd $PBS_O_WORKDIR
  
 cpus=`cat $PBS_NODEFILE | wc -l`
- 
 
 
 fluent 3d -pethernet -t${cpus} -g -i wst.in > wst.output
-```
+</code></pre>
 
 \- 위에서 내용을 사용자가 적절히 수정해야 합니다.
 
