@@ -2,18 +2,46 @@
 
 코드블럭 이슈 - 내부 텍스트 색상변환 안
 
+```diff
+- #PBS -V
++ #PBS -N  - <span style="color:#0000ff">Nastran_job</span>
+#PBS -q -commercial-
+#PBS -l select=1:ncpus=<span style="color:#0000ff">40</span>:mpiprocs=1:ompthreads=<span style="color:#0000ff">40</span>
+#PBS -l walltime=<span style="color:#0000ff">04:00:00</span>
 ```
-#!/bin/sh#PBS -V
-#PBS -N <mark style="color:blue;">Nastran_job</mark>
-#PBS -q comrcial
-#PBS -l select=1i:ncpus=40:mpiprocs=1:ompthreads=40#PBS -l walltime=04:00:00#PBS -A nastrancd $PBS_O_WORKDIR/apps/commercial/MSC/Nastran/bin/nast20182 car_mod_freq.bdf smp=$NCPUS batch=no sdir="."
+
 ```
+#PBS -V
+#PBS -N <span style="color:#0000ff">Nastran_job</span>
+#PBS -q commercial
+#PBS -l select=1:ncpus=<span style="color:#0000ff">40</span>:mpiprocs=1:ompthreads=<span style="color:#0000ff">40</span>
+#PBS -l walltime=<span style="color:#0000ff">04:00:00</span>
+```
+
+<pre class="highlight">#!/bin/sh
+#PBS -V
+#PBS -N <span style="color:#0000ff">Nastran_job</span>
+#PBS -q commercial
+#PBS -l select=1:ncpus=<span style="color:#0000ff">40</span>:mpiprocs=1:ompthreads=<span style="color:#0000ff">40</span>
+#PBS -l walltime=<span style="color:#0000ff">04:00:00</span>
+<span style="color: #ff0000;">#PBS -A nastran</span>
+
+cd $PBS_O_WORKDIR
+
+/apps/commercial/MSC/Nastran/bin/nast20182 <span style="color: #ff0000;">car_mod_freq.bdf</span> smp=$NCPUS batch=no sdir="."
+</pre>
+
+
 
 <mark style="color:red;"></mark>
 
 <mark style="color:red;">텍스트 색상 변환 레드</mark>
+```
+<mark style="color:red;">텍스트 색상 변환 레드</mark>
+```
 
-텍스트 색상 변환 블루
 
-
-
+<span style="color:red;">텍스트 색상 변환 레드</span>
+```
+<span style="color:red;">텍스트 색상 변환 레드</span>
+```
