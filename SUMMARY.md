@@ -143,6 +143,7 @@
     * [\[Appendix 4\] Method for Using the MVAPICH2 Performance Optimization Option](지침서/사용법/NURION\(ENG\)/appendix-4-method-for-using-the-mvapich2-performance-optimization-option.md)
     * [\[Appendix 5\] Method for Using Deep Learning Framework Parallelization](지침서/사용법/NURION\(ENG\)/appendix-5-method-for-using-deep-learning-framework-parallelization.md)
     * [\[Appendix 6\] List of Common Libraries](지침서/사용법/NURION\(ENG\)/appendix-6-list-of-common-libraries.md)
+    * [\[Appendix 7\] Introduction on How to Use Conda](지침서/사용법/NURION\(ENG\)/appendix-7-introduction-on-how-to-use-conda.md)
   * [NEURON(ENG)](지침서/사용법/NEURON\(ENG\)/README.md)
     * [Neuron System Overview and Configuration](지침서/사용법/NEURON\(ENG\)/neuron-system-overview-and-configuration.md)
 * [상용 소프트웨어](guidebook/commercial-software/README.md)
