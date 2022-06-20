@@ -156,6 +156,8 @@
     * [\[Appendix 4\] How to Use Conda](지침서/사용법/NEURON\(ENG\)/appendix-4-how-to-use-conda.md)
     * [\[Appendix 5\] How to Use Keras-Based Multi-GPU](지침서/사용법/NEURON\(ENG\)/appendix-5-how-to-use-keras-based-multi-gpu.md)
     * [\[Appendix 6\] Conda Environment-Based Horovod-TensorFlow Installation Method](지침서/사용법/NEURON\(ENG\)/appendix-6-conda-environment-based-horovod-tensorflow-installation-method.md)
+    * [\[Appendix 7\] How to Use Deep Learning Framework Parallelization (Horovod)](지침서/사용법/NEURON\(ENG\)/appendix-7-how-to-use-deep-learning-framework-parallelization-horovod.md)
+    * [\[Appendix 8\] Introduction to How to Use Conda](지침서/사용법/NEURON\(ENG\)/appendix-8-introduction-to-how-to-use-conda.md)
 * [상용 소프트웨어](guidebook/commercial-software/README.md)
   * [누리온(NURION)](<지침서/상용 소프트웨어/누리온(NURION)/README.md>)
     * [NASTRAN 사용자 지침서](guidebook/commercial-software/nurion.md)
