@@ -98,7 +98,7 @@
 #PBS -q commercial                                    # 큐 지정
 #PBS -l select=1:ncpus=40:mpiprocs=40:ompthreads=1    # MPI 태스크 및 Threads 수 지정
 #PBS -l walltime=04:00:00                             # 예상 작업 소요 시간 지정
-<mark style="color:red">#PBS -A ansys</mark>
+<span style="color:red">#PBS -A ansys</span>
  
 cd $PBS_O_WORKDIR
  
