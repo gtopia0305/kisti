@@ -137,10 +137,11 @@
     * [뉴론-인터렉티브 작업 방법](<blog/userguide/video/뉴론-인터렉티브 작업 방법.md>)
   * [누리온(NURION)](blog/userguide/누리온\(NURION\)/README.md)
     * [누리온 ANSYS FLUENT 사용자 지침서(2020.03)](blog/userguide/누리온\(NURION\)/ansys-fluent-2020.03.md)
-  * [뉴론(Neuron)(GPU Cluster System)](<기술 블로그/사용자 지침서/뉴론(Neuron)/README.md>)
+  * [뉴론(Neuron)(GPU Cluster System)](blog/userguide/neurone.md)
     * [공유 노드 정책 변경에 따른 메모리 할당량 설정 안내](<기술 블로그/사용자 지침서/뉴론(Neuron)/undefined.md>)
 * [SW 설치 문서창고](blog/docwarehouse/README.md)
-  * [누리온(NURION)](blog/docwarehouse/nurion.md)
+  * [누리온(NURION)](<기술 블로그/SW 설치 문서창고/누리온(NURION)/README.md>)
+    * [누리온 GROMACS-2021.4 버전 설치 소개 (SKL)](<기술 블로그/SW 설치 문서창고/누리온(NURION)/gromacs-2021.4-skl.md>)
   * [뉴론(Neuron)(GPU Cluster System)](blog/docwarehouse/neuron.md)
 * [시스템 활용 & 팁](blog/usagetip.md)
 
