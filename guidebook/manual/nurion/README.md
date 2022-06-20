@@ -16,7 +16,7 @@
 
 #### [\[별첨3\] Singularity 컨테이너 사용법](../../../지침서/사용법/누리온/attachment-3.md)
 
-#### [\[별첨4\] Lustre stripe 사용법](attachment-4/)
+#### [\[별첨4\] Lustre stripe 사용법](../../../지침서/사용법/누리온/attachment-4.md)
 
 #### [\[별첨6\] MVAPICH2 성능 최적화 옵션 사용법](attachment-6.md)
 
