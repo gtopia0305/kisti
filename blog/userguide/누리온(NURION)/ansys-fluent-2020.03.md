@@ -91,14 +91,14 @@
 
 ※ 아래는 누리온 시스템에서의 작업제출 예제입니다. **(단일노드에서 수행)**
 
-<pre>
+```
 #!/bin/sh
 #PBS -V
 #PBS -N fluent_job                                    # job 이름 지정
 #PBS -q commercial                                    # 큐 지정
 #PBS -l select=1:ncpus=40:mpiprocs=40:ompthreads=1    # MPI 태스크 및 Threads 수 지정
 #PBS -l walltime=04:00:00                             # 예상 작업 소요 시간 지정
-<span style="color:red">#PBS -A ansys</span>
+#PBS -A ansys
  
 cd $PBS_O_WORKDIR
  
@@ -106,7 +106,7 @@ cpus=`cat $PBS_NODEFILE | wc -l`
 
 
 fluent 3d -pethernet -t${cpus} -g -i wst.in > wst.output
-</pre>
+```
 
 \- 위에서 내용을 사용자가 적절히 수정해야 합니다.
 
