@@ -1,7 +1,3 @@
----
-layout: editorial
----
-
 # 누리온(NURION)
 
 ## NASTRAN 사용자 지침서 <a href="#jcstitle" id="jcstitle"></a>
