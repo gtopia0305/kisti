@@ -162,6 +162,7 @@
 * [상용 소프트웨어](guidebook/commercial-software/README.md)
   * [누리온(NURION)](<지침서/상용 소프트웨어/누리온(NURION)/README.md>)
     * [NASTRAN 사용자 지침서](guidebook/commercial-software/nurion.md)
+    * [가우시안16(Gaussian16) LINDA 지침서](<지침서/상용 소프트웨어/누리온(NURION)/16-gaussian16-linda.md>)
   * [뉴론(NEURON)](<지침서/상용 소프트웨어/뉴론(NEURON)/README.md>)
     * [가우시안16(Gaussian16) GPU S/W 사용 안내](<지침서/상용 소프트웨어/뉴론(NEURON)/16-gaussian16-gpu-s-w.md>)
 
