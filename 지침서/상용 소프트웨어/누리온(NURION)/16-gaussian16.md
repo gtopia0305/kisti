@@ -65,7 +65,25 @@ $ module load gaussian/g16.a03
 &#x20;   파일 위치:  /apps/commercial/test\_samples/G16/g16.sh
 
 ```
-#!/bin/sh#PBS -V#PBS -N gaussian_test#PBS -q normal                                                # PBS의 queue를 지정#PBS -l select=1:ncpu=64:mpiprocs=1:ompthreads=64#PBS -l walltime=01:00:00                                     # 예상 작업소요시간 지정 (시:분:초)#PBS -A gaussiancd $PBS_O_WORKDIRmodule purgemodule load gaussian/g16.a03export GAUSS_SCRDIR="/scratch/${USER}"export GAUSS_PDEF=$NCPUSg16 test000.comexit 0
+#!/bin/sh
+#PBS -V
+#PBS -N gaussian_test
+#PBS -q normal                                                # PBS의 queue를 지정
+#PBS -l select=1:ncpu=64:mpiprocs=1:ompthreads=64
+#PBS -l walltime=01:00:00                                     # 예상 작업소요시간 지정 (시:분:초)
+#PBS -A gaussian
+
+cd $PBS_O_WORKDIR
+
+module purge
+module load gaussian/g16.a03
+
+export GAUSS_SCRDIR="/scratch/${USER}"
+export GAUSS_PDEF=$NCPUS
+
+g16 test000.com
+
+exit 0
 ```
 
 \- 2019년 3월 PM 이후(3월14일)부터 "#PBS -A gaussian" 옵션이 없는 경우 작업제출이 되지 않습니다.
