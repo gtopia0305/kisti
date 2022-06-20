@@ -14,13 +14,13 @@
 
 #### [\[별첨2\] Conda 사용법](../neuron/attachment-2/)
 
-#### [\[별첨3\] Singularity 컨테이너 사용법](../../../지침서/사용법/누리온/attachment-3.md)
+#### [\[별첨3\] Singularity 컨테이너 사용법](attachment-3/)
 
-#### [\[별첨4\] Lustre stripe 사용법](../../../지침서/사용법/누리온/attachment-4.md)
+#### [\[별첨4\] Lustre stripe 사용법](attachment-4/)
 
 #### [\[별첨6\] MVAPICH2 성능 최적화 옵션 사용법](attachment-6.md)
 
-#### [\[별첨5\] TSMSF를 이용한 데이터 아카이빙(Archiving) 사용법](attachment-5/)
+#### [\[별첨5\] TSMSF를 이용한 데이터 아카이빙(Archiving) 사용법](../../../지침서/사용법/누리온/attachment-5.md)
 
 #### [\[별첨7\] 딥러닝 프레임워크 병렬화 사용법](attachment-7/)
 
