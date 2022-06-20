@@ -151,6 +151,7 @@
     * [Running Jobs Through Scheduler (SLURM)](지침서/사용법/NEURON\(ENG\)/running-jobs-through-scheduler-slurm.md)
     * [User Support](지침서/사용법/NEURON\(ENG\)/user-support.md)
     * [\[Appendix 1\] Main Keywords for Job Scripts](지침서/사용법/NEURON\(ENG\)/appendix-1-main-keywords-for-job-scripts.md)
+    * [\[Appendix 2\] How to Use Lustre Striping](지침서/사용법/NEURON\(ENG\)/appendix-2-how-to-use-lustre-striping.md)
 * [상용 소프트웨어](guidebook/commercial-software/README.md)
   * [누리온(NURION)](<지침서/상용 소프트웨어/누리온(NURION)/README.md>)
     * [NASTRAN 사용자 지침서](guidebook/commercial-software/nurion.md)
