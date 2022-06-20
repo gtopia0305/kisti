@@ -8,7 +8,7 @@ description: >-
 
 Singularity is a container platform suitable for the HPC environment to implement the OS virtualization as a Docker. The Linux distribution version suitable for a user’s work environment, compiler, and container images containing library will be provided. The container is operated to execute a user program.
 
-![](<../../../../.gitbook/assets/싱귤레러티 컨테이너 아키텍처.png>)
+![](<../../../../.gitbook/assets/Singularity is a container platform suitable for the HPC environment to implement the OS virtualization as a Docker..png>)
 
 **ㅇ Loading singularity module**
 

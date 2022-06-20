@@ -151,4 +151,8 @@
     * [누리온(NURION)](blog/docwarehouse/nurion.md)
     * [뉴론(Neuron)(GPU Cluster System)](blog/docwarehouse/neuron.md)
   * [시스템 활용 & 팁](blog/usagetip.md)
-* [이슈 테스트](undefined.md)
+
+## 이슈사항 <a href="#issue" id="issue"></a>
+
+* [코드블록 이슈](issue/undefined.md)
+* [테이블 병합](issue/undefined-1.md)
