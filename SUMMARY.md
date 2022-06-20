@@ -53,7 +53,7 @@
       * [가. VDI 서비스 개요](guidebook/manual/nurion/attachment-9/.-vdi.md)
       * [나. VDI 서비스 신청](guidebook/manual/nurion/attachment-9/.-vdi-1.md)
       * [다. VDI 접속 방법](guidebook/manual/nurion/attachment-9/.-vdi-2.md)
-    * [\[별첨8\] 공통라이브러리 목록](지침서/사용법/누리온/attachment-8.md)
+    * [\[별첨8\] 공통라이브러리 목록](guidebook/manual/nurion/attachment-8/README.md)
     * [\[별첨10\] 버스트버퍼(Burst Buffer) 사용법](guidebook/manual/nurion/attachment-10/README.md)
       * [가. 개념](guidebook/manual/nurion/attachment-10/untitled.md)
       * [나. 데이터 처리](guidebook/manual/nurion/attachment-10/.-1.md)
