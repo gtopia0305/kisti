@@ -146,6 +146,8 @@
     * [\[Appendix 7\] Introduction on How to Use Conda](지침서/사용법/NURION\(ENG\)/appendix-7-introduction-on-how-to-use-conda.md)
   * [NEURON(ENG)](지침서/사용법/NEURON\(ENG\)/README.md)
     * [Neuron System Overview and Configuration](지침서/사용법/NEURON\(ENG\)/neuron-system-overview-and-configuration.md)
+    * [User Environment](지침서/사용법/NEURON\(ENG\)/user-environment.md)
+    * [User Programming Environment](지침서/사용법/NEURON\(ENG\)/user-programming-environment.md)
 * [상용 소프트웨어](guidebook/commercial-software/README.md)
   * [누리온(NURION)](<지침서/상용 소프트웨어/누리온(NURION)/README.md>)
     * [NASTRAN 사용자 지침서](guidebook/commercial-software/nurion.md)
