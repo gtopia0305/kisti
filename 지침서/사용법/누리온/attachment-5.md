@@ -4,7 +4,7 @@ description: '[별첨5] TSMSF를 이용한 데이터 아카이빙(Archiving) 사
 
 # \[별첨5] TSMSF를 이용한 데이터 아카이빙(Archiving) 사용법
 
-![](<../../../../.gitbook/assets/\[별첨5] TSMSF를 이용한 데이터 아카이빙\_1.jpg>) ![](<../../../../.gitbook/assets/\[별첨5] TSMSF를 이용한 데이터 아카이빙.jpg>)
+![](<../../../.gitbook/assets/\[별첨5] TSMSF를 이용한 데이터 아카이빙\_1.jpg>) ![](<../../../.gitbook/assets/\[별첨5] TSMSF를 이용한 데이터 아카이빙.jpg>)
 
 ## 가. 시스템 환경 및 사용 신청
 
