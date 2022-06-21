@@ -7,7 +7,7 @@
 * [사용법](지침서/사용법/README.md)
   * [누리온](지침서/사용법/누리온/README.md)
     * [누리온 시스템 사양 및 구성](<지침서/사용법/누리온/누리온 시스템 사양 및 구성.md>)
-    * [사용자 환경](지침서/사용법/누리온/user-experience.md)
+    * [사용자 환경](<지침서/사용법/누리온/사용자 환경.md>)
     * [사용자 프로그래밍 환경](지침서/사용법/누리온/user-programming-environment.md)
     * [스케줄러(PBS)를 통한 작업 실행](지침서/사용법/누리온/running-jobs-through-scheduler.md)
     * [사용자 지원](지침서/사용법/누리온/user-support.md)
