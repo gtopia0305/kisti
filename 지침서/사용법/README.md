@@ -1,9 +1,9 @@
-# 상용 소프트웨어
+# 사용법
 
-### [누리온](../../%EC%A7%80%EC%B9%A8%EC%84%9C/%EC%82%AC%EC%9A%A9%EB%B2%95/nurion/)
+### [누리온](누리온/)
 
-### [뉴론](../../%EC%A7%80%EC%B9%A8%EC%84%9C/%EC%82%AC%EC%9A%A9%EB%B2%95/neuron/)
+### [뉴론](뉴론/)
 
-### [NURION(ENG)](../../%EC%A7%80%EC%B9%A8%EC%84%9C/%EC%82%AC%EC%9A%A9%EB%B2%95/nurion-eng/)
+### [NURION(ENG)](NURION\(ENG\)/)
 
-### [NEURON(ENG)](../../%EC%A7%80%EC%B9%A8%EC%84%9C/%EC%82%AC%EC%9A%A9%EB%B2%95/NEURON\(ENG\)/)
+### [NEURON(ENG)](NEURON\(ENG\)/)

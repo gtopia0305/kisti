@@ -1,2 +1,0 @@
-# A. Desktop Virtualization (VDI)
-
