@@ -96,4 +96,4 @@
 
 * [코드블록 이슈](issue/undefined.md)
 * [테이블 병합](issue/undefined-1.md)
-* [Page 1](issue/page-2.md)
+* [Page 1](issue/page-1.md)
