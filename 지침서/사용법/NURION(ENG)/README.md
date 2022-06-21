@@ -1,11 +1,11 @@
 # NURION(ENG)
 
-{% content-ref url="specifications-and-configuration/" %}
-[specifications-and-configuration](specifications-and-configuration/)
+{% content-ref url="specifications-and-configuration.md" %}
+[specifications-and-configuration.md](specifications-and-configuration.md)
 {% endcontent-ref %}
 
-{% content-ref url="user-environment/" %}
-[user-environment](user-environment/)
+{% content-ref url="user-environment.md" %}
+[user-environment.md](user-environment.md)
 {% endcontent-ref %}
 
 {% content-ref url="user-support.md" %}
