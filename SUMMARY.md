@@ -122,13 +122,13 @@
     * [\[Appendix 7\] How to Use Deep Learning Framework Parallelization (Horovod)](지침서/사용법12/NEURION\(ENG\)/appendix-7-how-to-use-deep-learning-framework-parallelization-horovod.md)
     * [\[Appendix 8\] Introduction to How to Use Conda](지침서/사용법12/NEURION\(ENG\)/appendix-8-introduction-to-how-to-use-conda.md)
     * [\[Appendix 9\] Neuron Jupyter User Guideline](지침서/사용법12/NEURION\(ENG\)/appendix-9-neuron-jupyter-user-guideline.md)
-* [상용 소프트웨어](지침서/사용법/README.md)
-  * [누리온(NURION)](guidebook/manual/nurion/README.md)
-    * [NASTRAN 사용자 지침서](지침서/상용 소프트웨어/누리온\(NURION\)/nastran.md)
-    * [가우시안16(Gaussian16) LINDA 지침서](지침서/상용 소프트웨어/누리온\(NURION\)/16-gaussian16-linda.md)
-    * [가우시안16(Gaussian16) 지침서](지침서/상용 소프트웨어/누리온\(NURION\)/16-gaussian16.md)
-  * [뉴론(NEURON)](guidebook/manual/neuron/README.md)
-    * [가우시안16(Gaussian16) GPU S/W 사용 안내](지침서/상용 소프트웨어/뉴론\(NEURON\)/16-gaussian16-gpu-s-w.md)
+* [상용 소프트웨어](<지침서/상용 소프트웨어/README.md>)
+  * [누리온(NURION)](<지침서/상용 소프트웨어/누리온\(NURION\)/README.md>)
+    * [NASTRAN 사용자 지침서](<지침서/상용 소프트웨어/누리온\(NURION\)/nastran.md>)
+    * [가우시안16(Gaussian16) LINDA 지침서](<지침서/상용 소프트웨어/누리온\(NURION\)/16-gaussian16-linda.md>)
+    * [가우시안16(Gaussian16) 지침서](<지침서/상용 소프트웨어/누리온\(NURION\)/16-gaussian16.md>)
+  * [뉴론(NEURON)](<지침서/상용 소프트웨어/뉴론\(NEURON\)/README.md>)
+    * [가우시안16(Gaussian16) GPU S/W 사용 안내](<지침서/상용 소프트웨어/뉴론\(NEURON\)/16-gaussian16-gpu-s-w.md>)
 
 ## 기술 블로그
 
