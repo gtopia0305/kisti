@@ -68,10 +68,10 @@
 * [상용 소프트웨어](<지침서/상용 소프트웨어/README.md>)
   * [누리온(NURION)](<지침서/상용 소프트웨어/누리온(NURION)/README.md>)
     * [NASTRAN 사용자 지침서](<지침서/상용 소프트웨어/누리온(NURION)/NASTRAN 사용자 지침서.md>)
-    * [가우시안16(Gaussian16) LINDA 지침서](<지침서/상용 소프트웨어/누리온(NURION)/가우시안16(Gaussian16) LINDA 지침서.md>)
-    * [가우시안16(Gaussian16) 지침서](<지침서/상용 소프트웨어/누리온(NURION)/가우시안16(Gaussian16) 지침서.md>)
+    * [가우시안16(Gaussian16) LINDA 지침서](<지침서/상용 소프트웨어/누리온(NURION)/16-gaussian16-linda.md>)
+    * [가우시안16(Gaussian16) 지침서](<지침서/상용 소프트웨어/누리온(NURION)/16-gaussian16.md>)
   * [뉴론(NEURON)](<지침서/상용 소프트웨어/뉴론(NEURON)/README.md>)
-    * [가우시안16(Gaussian16) GPU S/W 사용 안내](<지침서/상용 소프트웨어/뉴론(NEURON)/가우시안16(Gaussian16) GPU SW 사용 안내.md>)
+    * [가우시안16(Gaussian16) GPU S/W 사용 안내](<지침서/상용 소프트웨어/뉴론(NEURON)/16-gaussian16-gpu-s-w.md>)
 
 ## 기술 블로그 <a href="#기술 블로그" id="기술 블로그"></a>
 
@@ -89,8 +89,8 @@
     * [뉴론 Quantum Espresso-6.6 (GPU 버전) 설치](<기술 블로그/SW 설치 문서창고/뉴론(Neuron)/quantum-espresso-6.6-gpu.md>)
 * [시스템 활용 & 팁](<기술 블로그/시스템 활용 & 팁/README.md>)
   * [oneAPI 소개](<기술 블로그/시스템 활용 & 팁/oneapi.md>)
-* [기술문서 창고](<기술 블로그/undefined/README.md>)
-  * [X86\_64 어셈블리 프로그래밍 기초](<기술 블로그/undefined/x86\_64.md>)
+* [기술문서 창고](<기술 블로그/기술문서 창고/README.md>)
+  * [X86\_64 어셈블리 프로그래밍 기초](<기술 블로그/기술문서 창고/x86\_64.md>)
 
 ## 이슈사항 <a href="#issue" id="issue"></a>
 
