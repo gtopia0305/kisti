@@ -1,6 +1,6 @@
 # 누리온
 
-#### [누리온 시스템 사양 및 구성](system-specifications-and-configurations.md)
+#### [누리온 시스템 사양 및 구성](<누리온 시스템 사양 및 구성.md>)
 
 #### [사용자 환경](broken-reference)
 
