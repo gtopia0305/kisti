@@ -1,9 +1,9 @@
 # 사용법
 
-### [누리온](nurion/)
+### [누리온](누리온/)
 
-### [뉴론](neuron/)
+### [뉴론](뉴론/)
 
-### [NURION(ENG)](nurion-eng/)
+### [NURION(ENG)](NURION\(ENG\)/)
 
-### [NEURON(ENG)](neuron-eng/)
+### [NEURON(ENG)](NEURON\(ENG\)/)
