@@ -12,7 +12,7 @@
 
 #### [\[별첨1\] 작업 스크립트 주요 키워드](attachment-1.md)
 
-#### [\[별첨2\] Conda 사용법](../뉴론/attachment-2/)
+#### [\[별첨2\] Conda 사용법](../뉴론/attachment-2.md)
 
 #### [\[별첨3\] Singularity 컨테이너 사용법](attachment-3.md)
 
