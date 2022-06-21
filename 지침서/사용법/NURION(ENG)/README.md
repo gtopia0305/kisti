@@ -1,17 +1,17 @@
 # NURION(ENG)
 
-{% content-ref url="specifications-and-configuration.md" %}
-[specifications-and-configuration.md](specifications-and-configuration.md)
+{% content-ref url="specifications-and-configuration/" %}
+[specifications-and-configuration](specifications-and-configuration/)
 {% endcontent-ref %}
 
-{% content-ref url="user-environment.md" %}
-[user-environment.md](user-environment.md)
+{% content-ref url="user-environment/" %}
+[user-environment](user-environment/)
 {% endcontent-ref %}
 
 {% content-ref url="user-support.md" %}
 [user-support.md](user-support.md)
 {% endcontent-ref %}
 
-{% content-ref url="user-programming-environment/" %}
-[user-programming-environment](user-programming-environment/)
+{% content-ref url="user-programming-environment.md" %}
+[user-programming-environment.md](user-programming-environment.md)
 {% endcontent-ref %}

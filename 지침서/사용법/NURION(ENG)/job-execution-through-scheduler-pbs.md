@@ -12,8 +12,8 @@ A user’s job can only be submitted through the login node, and general users c
 
 Moreover, **user jobs can only be submitted in /scratch**.
 
-**A.** [**Queue Configuration**](a.-queue-configuration.md)\*\*\*\*
+**A.** [**Queue Configuration**](broken-reference)\*\*\*\*
 
-**B.** [**Job Submission and Monitoring**](b.-job-submission-and-monitoring.md)\*\*\*\*
+**B.** [**Job Submission and Monitoring**](broken-reference)\*\*\*\*
 
-**C.** [**Job Control**](c.-job-control.md)\*\*\*\*
+**C.** [**Job Control**](broken-reference)\*\*\*\*
