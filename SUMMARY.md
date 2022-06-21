@@ -4,7 +4,7 @@
 
 ## 지침서 <a href="#지침서" id="지침서"></a>
 
-* [사용법](지침서/manual/README.md)
+* [사용법1](지침서/manual/README.md)
   * [누리온](지침서/manual/nurion/README.md)
     * [누리온 시스템 사양 및 구성](지침서/manual/nurion/system-specifications-and-configurations.md)
     * [사용자 환경](지침서/manual/nurion/user-experience.md)
