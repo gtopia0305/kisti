@@ -4,6 +4,46 @@ description: Job Execution through Scheduler (PBS)
 
 # Job Execution through Scheduler (PBS)
 
+The job scheduler of the 5th supercomputer Nurion uses a portable batch system (PBS). In this chapter, a method for submitting jobs through a scheduler and the related commands are introduced. The queues for users to submit jobs are already determined. The maximum number of jobs that a user can submit per queue is limited, which can be adjusted depending on the load of the system.
+
+&#x20;
+
+Nurion employs an **exclusive node allocation policy** as the default to ensure that only the jobs of one user are executed in one node. It prevents significant performance degradation of the user application, which can occur when the shared node allocation policy is applied. However, queues that cannot use commercial SW are applied with the shared node policy to ensure efficient use of resources because the node scale is relatively small.
+
+&#x20;
+
+A user’s job can only be submitted through the login node, and general users cannot directly access the computing node.
+
+&#x20;
+
+Moreover, **user jobs can only be submitted in /scratch**.
+
+&#x20;
+
+## A. Queue Configuration
+
+ㅇ The commercial queue (for executing commercial SW) and the debug queue for debugging are applied with the shared node policy, where multiple jobs are assigned per node within the range of available resources (CPU core); only one job is assigned to one node in the remaining queues according to the exclusive node policy.
+
+ㅇ Job queue
+
+&#x20;\- The queues that can be used by general users and the number of jobs that can be submitted per user are presented in the following table. (as of April 2021)
+
+| **Queue category**                                                                  | **Queue name**                                                                    | <p><strong>No. of allocated</strong></p><p><strong>nodes</strong></p>        | <p><strong>Total no. of</strong></p><p><strong>CPU cores</strong></p> | <p><strong>Wall</strong></p><p><strong>Clock</strong></p><p><strong>Limit</strong></p><p><strong>(time)</strong></p> | **No. of limited job submissions \*** | <p><strong>Resource</strong></p><p><strong>occupancy limit **</strong></p> |      |   |
+| ----------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | --------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | ------------------------------------- | -------------------------------------------------------------------------- | ---- | - |
+| <p><strong>Max. no. of job</strong></p><p><strong>submissions per user</strong></p> | <p><strong>Max. no. of job</strong></p><p><strong>execution per user</strong></p> | <p><strong>No. of occupied nodes</strong></p><p><strong>per job</strong></p> |                                                                       |                                                                                                                      |                                       |                                                                            |      |   |
+| **Max.**                                                                            | **Min.**                                                                          |                                                                              |                                                                       |                                                                                                                      |                                       |                                                                            |      |   |
+| **KNL**                                                                             | **exclusive**                                                                     | 2600                                                                         | 176,800                                                               | unlimited                                                                                                            | 100                                   | 100                                                                        | 2600 | 1 |
+| **normal**                                                                          | 4970                                                                              | 337,960                                                                      | 48                                                                    | 40                                                                                                                   | 20                                    | 4970                                                                       |      |   |
+| **long**                                                                            | 300                                                                               | 20,400                                                                       | 120                                                                   | 20                                                                                                                   | 10                                    | 300                                                                        |      |   |
+| **flat**                                                                            | 180                                                                               | 12,240                                                                       | 48                                                                    | 20                                                                                                                   | 10                                    | 180                                                                        |      |   |
+| **debug**                                                                           | 20                                                                                | 1,360                                                                        | 12                                                                    | 2                                                                                                                    | 2                                     | 2                                                                          |      |   |
+| **SKL**                                                                             | **commercial**                                                                    | 118                                                                          | 4,720                                                                 | 48                                                                                                                   | 6                                     | 2                                                                          | 118  |   |
+| **norm\_skl**                                                                       | 118                                                                               | 4,720                                                                        | 10                                                                    | 5                                                                                                                    |                                       |                                                                            |      |   |
+
+**※ Node configuration can be adjusted while the system is in operation depending on the system loads.** (The node configuration and maximum number of jobs allowed can be checked frequently through showq command and motd)
+
+&#x20;
+
 ① Queue description
 
 | **Category**  | **Queue name**                                                                                                                                                                                   | **Features**                                                                                                                                                                |
