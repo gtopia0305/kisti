@@ -92,6 +92,7 @@
     * [누리온 사용자 지침서 (2021.05)](blog/userguide/nurion/nurion-userguide-2021-05.md)
     * [데스크톱 가상화(VDI)](blog/userguide/nurion/desktop-virtualization-vdi.md)
     * [TSMSF 사용자 지침서](blog/userguide/nurion/tsmsf.md)
+    * [누리온 i-PI 사용법 (LAMMPS)](blog/userguide/nurion/i-pi-lammps.md)
   * [뉴론(Neuron)(GPU Cluster System)](blog/userguide/neuron/README.md)
     * [공유 노드 정책 변경에 따른 메모리 할당량 설정 안내](blog/userguide/neuron/setting-memory-quota.md)
 * [SW 설치 문서창고](blog/sw-install-doc/README.md)
