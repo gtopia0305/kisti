@@ -81,6 +81,7 @@
     * [뉴론-인터렉티브 작업 방법](blog/userguide/video/neuron-how-to-work-interactive.md)
     * [뉴론-Slurm 작업 제출 방법](blog/userguide/video/neuron-how-to-submit-slurm-jobs.md)
     * [뉴론-conda 설정방법](blog/userguide/video/neuron-how-to-set-up-conda.md)
+    * [뉴론-작업 스크립트 작성 방법](blog/userguide/video/neuron-how-to-write-a-job-script.md)
     * [누리온 작업 제출 방법](blog/userguide/video/nurion-how-to-submit-job.md)
     * [누리온 작업 스크립트 작성법](blog/userguide/video/nurion-how-to-write-job-script.md)
     * [누리온 슈퍼컴퓨터 모듈 사용법](blog/userguide/video/nurion-how-to-use-supercomputer-mudule.md)
