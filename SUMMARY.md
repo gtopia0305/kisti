@@ -107,8 +107,3 @@
 * [코드블록 이슈](issue/codeblock.md)
 * [테이블 병합](issue/table-merge.md)
 * [Page 1](issue/test.md)
-
-
-* [First page's title](test1/README.md)
-  * [Some child page](test1/test1-1.md)
-  * [Some other child page](test1/test1-2.md)
