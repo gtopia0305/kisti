@@ -81,6 +81,7 @@
     * [뉴론-인터렉티브 작업 방법](blog/userguide/video/neuron-how-to-work-interactive.md)
   * [누리온(NURION)](blog/userguide/nurion/README.md)
     * [누리온 FAQ (2021.05)](blog/userguide/nurion/nurion-faq-2021-05.md)
+    * [Copy of 누리온 ANSYS FLUENT 사용자 지침서(2020.03)](blog/userguide/nurion/ansys-fluent-2020.03.md)
   * [abc](blog/userguide/누리온\(NURION\)/README.md)
     * [누리온 ANSYS FLUENT 사용자 지침서(2020.03)](blog/userguide/누리온\(NURION\)/ansys-fluent-2020.03.md)
   * [뉴론(Neuron)(GPU Cluster System)](blog/userguide/뉴론\(Neuron\)/README.md)
