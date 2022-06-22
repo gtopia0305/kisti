@@ -89,14 +89,10 @@
     * [누리온 GROMACS-2021.4 버전 설치 소개 (SKL)](blog/sw-install-doc/nurion/nurion-gromacs-2021-4-install-skl.md)
   * [뉴론(Neuron)(GPU Cluster System)](blog/sw-install-doc/neuron/README.md)
     * [뉴론 Quantum Espresso-6.6 (GPU 버전) 설치](blog/sw-install-doc/neuron/neuron-quantum-espresso-6-6-install.md)
-* [시스템 활용 & 팁](<blog/시스템 활용 & 팁/README.md>)
-  * [oneAPI 소개](<blog/시스템 활용 & 팁/oneapi.md>)
-* [Copy of 시스템 활용 & 팁](blog/usage-tip/README.md)
+* [시스템 활용 & 팁](blog/usage-tip/README.md)
   * [oneAPI 소개](blog/usage-tip/openapi-about.md)
 * [기술문서 창고](<blog/기술문서 창고/README.md>)
   * [X86\_64 어셈블리 프로그래밍 기초](<blog/기술문서 창고/x86\_64.md>)
-* [Copy of 기술문서 창고](<blog/ technic-doc/README.md>)
-  * [X86\_64 어셈블리 프로그래밍 기초](<blog/ technic-doc/x86-64-assembly-programming-basic.md>)
 
 ## 이슈사항 <a href="#issue" id="issue"></a>
 
