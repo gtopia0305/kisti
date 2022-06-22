@@ -96,6 +96,6 @@
 
 ## 이슈사항 <a href="#issue" id="issue"></a>
 
-* [코드블록 이슈](issue/undefined.md)
-* [테이블 병합](issue/undefined-1.md)
-* [Page 1](issue/page-1.md)
+* [코드블록 이슈](issue/codeblock.md)
+* [테이블 병합](issue/table-merge.md)
+* [Page 1](issue/test.md)
