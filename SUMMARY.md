@@ -76,9 +76,8 @@
 ## 기술 블로그 <a href="#blog" id="blog"></a>
 
 * [사용자 지침서](blog/userguide/README.md)
-  * [동영상지침서](blog/userguide/video2.md)
-  * [동영상 지침서(초보자사용자)](blog/userguide/video/README.md)
-    * [뉴론-인터렉티브 작업 방법](<blog/userguide/video/뉴론-인터렉티브 작업 방법.md>)
+  * [동영상 지침서(초보자사용자)](<blog/userguide/동영상 지침서\[초보자사용자]/README.md>)
+    * [뉴론-인터렉티브 작업 방법](blog/userguide/video/neuron-how-to-work-interactive.md)
   * [누리온(NURION)](blog/userguide/누리온\(NURION\)/README.md)
     * [누리온 ANSYS FLUENT 사용자 지침서(2020.03)](blog/userguide/누리온\(NURION\)/ansys-fluent-2020.03.md)
   * [뉴론(Neuron)(GPU Cluster System)](blog/userguide/뉴론\(Neuron\)/README.md)
