@@ -79,6 +79,7 @@
   * [동영상 지침서 (초보사용자)](blog/userguide/video/README.md)
     * [공통 - 파일 전송 (FTP) 사용법](blog/userguide/video/common-file-transfer-usage.md)
     * [뉴론-인터렉티브 작업 방법](blog/userguide/video/neuron-how-to-work-interactive.md)
+    * [뉴론-Slurm 작업 제출 방법](blog/userguide/video/how-to-submit-neuron-slurm-jobs.md)
   * [누리온(NURION)](blog/userguide/nurion/README.md)
     * [누리온 FAQ (2021.05)](blog/userguide/nurion/nurion-faq-2021-05.md)
     * [누리온 ANSYS FLUENT 사용자 지침서(2020.03)](blog/userguide/nurion/ansys-fluent-2020-03.md)
