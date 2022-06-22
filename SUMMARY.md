@@ -93,6 +93,8 @@
   * [oneAPI 소개](blog/usage-tip/openapi-about.md)
 * [기술문서 창고](<blog/기술문서 창고/README.md>)
   * [X86\_64 어셈블리 프로그래밍 기초](<blog/기술문서 창고/x86\_64.md>)
+* [Copy of 기술문서 창고](blog/technic-doc/README.md)
+  * [X86\_64 어셈블리 프로그래밍 기초](blog/technic-doc/x86-64-assembly-programming-basic.md)
 
 ## 이슈사항 <a href="#issue" id="issue"></a>
 
