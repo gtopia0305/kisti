@@ -89,7 +89,9 @@
     * [누리온 슈퍼컴퓨터 접속 방법 \[Mac 사용자\]](blog/userguide/video/nurion-how-to-connect-supercomputer-mac-user.md)
   * [누리온(NURION)](blog/userguide/nurion/README.md)
     * [누리온 FAQ (2021.05)](blog/userguide/nurion/nurion-faq-2021-05.md)
-    * [누리온 ANSYS FLUENT 사용자 지침서(2020.03)](blog/userguide/nurion/ansys-fluent-2020-03.md)
+    * [누리온 ANSYS FLUENT 사용자 지침서(2020.03)](blog/userguide/nurion/
+    * [누리온 사용자 지침서 (2021.05)](blog/userguide/nurion/nurion-userguide-2021-05.md)
+    * [데스크톱 가상화(VDI)](blog/userguide/nurion/desktop-virtualization-vdi.md)
   * [뉴론(Neuron)(GPU Cluster System)](blog/userguide/neuron/README.md)
     * [공유 노드 정책 변경에 따른 메모리 할당량 설정 안내](blog/userguide/neuron/setting-memory-quota.md)
 * [SW 설치 문서창고](blog/sw-install-doc/README.md)
