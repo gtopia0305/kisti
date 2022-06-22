@@ -1,4 +1,4 @@
-# Copy of 누리온
+# 누리온
 
 #### [누리온 시스템 사양 및 구성](broken-reference)
 

@@ -5,7 +5,7 @@
 ## 지침서 <a href="#userguide" id="userguide"></a>
 
 * [사용법](userguide/manual/README.md)
-  * [Copy of 누리온](userguide/manual/nurion/README.md)
+  * [누리온](userguide/manual/nurion/README.md)
     * [누리온 시스템 사양 및 구성](userguide/manual/nurion/nurion-system-overview-and-configuration.md)
     * [사용자 환경](userguide/manual/nurion/user-experience.md)
     * [사용자 프로그래밍 환경](userguide/manual/nurion/user-programming-environment.md)
