@@ -94,6 +94,7 @@
     * [TSMSF 사용자 지침서](blog/userguide/nurion/tsmsf.md)
     * [누리온 i-PI 사용법 (LAMMPS)](blog/userguide/nurion/i-pi-lammps.md)
     * [누리온 딥러닝 프레임워크 병렬화 사용법](blog/userguide/nurion/undefined.md)
+    * [누리온 Q-CHEM v5.2 사용자 지침서](blog/userguide/nurion/q-chem-v5.2.md)
   * [뉴론(Neuron)(GPU Cluster System)](blog/userguide/neuron/README.md)
     * [공유 노드 정책 변경에 따른 메모리 할당량 설정 안내](blog/userguide/neuron/setting-memory-quota.md)
 * [SW 설치 문서창고](blog/sw-install-doc/README.md)
