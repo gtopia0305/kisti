@@ -66,12 +66,12 @@
     * [\[Appendix 8\] Introduction to How to Use Conda](userguide/manual/NEURON\(ENG\)/appendix-8-introduction-to-how-to-use-conda.md)
     * [\[Appendix 9\] Neuron Jupyter User Guideline](userguide/manual/NEURON\(ENG\)/appendix-9-neuron-jupyter-user-guideline.md)
 * [상용 소프트웨어](userguide/commercial-software/README.md)
-  * [누리온(NURION)](userguide/commercial-software/누리온\(NURION\)/README.md)
-    * [NASTRAN 사용자 지침서](<userguide/commercial-software/누리온(NURION)/NASTRAN 사용자 지침서.md>)
-    * [가우시안16(Gaussian16) LINDA 지침서](<userguide/commercial-software/누리온(NURION)/가우시안16(Gaussian16) LINDA 지침서.md>)
-    * [가우시안16(Gaussian16) 지침서](<userguide/commercial-software/누리온(NURION)/가우시안16(Gaussian16) 지침서.md>)
-  * [뉴론(NEURON)](userguide/commercial-software/뉴론\(NEURON\)/README.md)
-    * [가우시안16(Gaussian16) GPU S/W 사용 안내](<userguide/commercial-software/뉴론(NEURON)/가우시안16(Gaussian16) GPU SW 사용 안내.md>)
+  * [누리온(NURION)](userguide/commercial-software/nurion/README.md)
+    * [NASTRAN 사용자 지침서](userguide/commercial-software/nurion/nastran-userguide.md)
+    * [가우시안16(Gaussian16) LINDA 지침서](userguide/commercial-software/nurion/gaussian16-linda-userguide.md)
+    * [가우시안16(Gaussian16) 지침서](userguide/commercial-software/nurion/gaussian16-userguide.md)
+  * [뉴론(NEURON)](userguide/commercial-software/neuron/README.md)
+    * [가우시안16(Gaussian16) GPU S/W 사용 안내](userguide/commercial-software/neuron/gaussian16-gpu-sw-userguide.md)
 
 ## 기술 블로그 <a href="#blog" id="blog"></a>
 
