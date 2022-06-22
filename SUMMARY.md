@@ -77,7 +77,7 @@
 
 * [사용자 지침서](blog/userguide/README.md)
   * [동영상 지침서 (초보사용자)](blog/userguide/vid/README.md)
-    * [공통 - 파일 전송 (FTP) 사용법](blog/userguide/vid/ftp.md)
+    * [공통 - 파일 전송 (FTP) 사용법](blog/userguide/vid/common-file-transfer-usage.md)
   * [동영상 지침서(초보자사용자)](<blog/userguide/동영상 지침서\[초보자사용자]/README.md>)
     * [뉴론-인터렉티브 작업 방법](<blog/userguide/동영상 지침서\[초보자사용자]/뉴론-인터렉티브 작업 방법.md>)
   * [누리온(NURION)](blog/userguide/누리온\(NURION\)/README.md)
