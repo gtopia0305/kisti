@@ -58,9 +58,9 @@ KNL 노드에 장착된 Intel Xeon Phi 7250 프로세서(코드명 Knights Landi
 
 SKL(CPU-only) 노드에는 2개의 Intexl Xeon Gold 6148 프로세서(코드명 Skylake)가 장착되어 있다. 기본 주파수는 2.4GHz이며 20개의 CPU 코어(hyperthreading off)로 구성된다. L3 캐시 메모리는 27.5MB이며, 각 CPU당 메모리는 96GB(노드 당 192GB)로 16GB DDR4-2666 메모리가 6채널로 구성되어 있다. 2U크기의 인클로저(enclosure)에는 4개의 계산노드가 장착되어 있다.
 
-![\[SKL 기반 CPU-only 노드 블록 다이어그램\]](<../../../.gitbook/assets/SKL 기반 CPU-only 노드 블록 다이어그램.png>)
+![\[SKL 기반 CPU-only 노드 블록 다이어그램\]](broken-reference)
 
-![\[SKL 기반 CPU-only 노드\]](<../../../.gitbook/assets/SKL 기반 CPU-only 노드.png>)
+![\[SKL 기반 CPU-only 노드\]](broken-reference)
 
 ## 다. 인터커넥트 네트워크
 
