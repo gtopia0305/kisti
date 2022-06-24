@@ -43,7 +43,7 @@ categories:
 
 &#x20;
 
-![](<../../../.gitbook/assets/VDI 접속 방법.png>)
+![VDI 접속 방법](<../../../.gitbook/assets/VDI 접속 방법.png>)
 
 &#x20;오른쪽 상단 설정메뉴 - SSL구성
 
