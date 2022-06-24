@@ -72,7 +72,7 @@
 
 Neuron storage is a DDN SFA12K-40 model and consists of 10 Enclosure SS8460 (Disk Box) and 10 Oracle X3-2L servers (2 MDS, 8 OSS). The Neuron storage is configured using a Lustre parallel distributed file system, and the actual available capacity is about 2.3 PB. The home directory (/home01), application directory (/apps), and scratch directory (/scratch2) are configured separately in a single file system and are mounted on login and compute nodes.
 
-![\[ Neuron storage configuration diagram\]](<../../../.gitbook/assets/Neuron 스토리지 구성도.png>)
+![\[ Neuron storage configuration diagram\]](../../../.gitbook/assets/TkbLovYt7ZryPFB.png)
 
 | <p>Parallel file system<br>(Lustre)</p> | File system   | Lustre 2.10.5 |
 | --------------------------------------- | ------------- | ------------- |
