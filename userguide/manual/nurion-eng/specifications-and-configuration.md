@@ -64,22 +64,22 @@ Burst buffer (hereinafter, “BB”) is a cache layer between the computing node
 
 The IME240 solution of DDN was applied for the BB configuration; the \[Burst buffer server configuration] figure above shows the detailed configuration of the BB.
 
-| System               | DDN IME240, Infinite Memory Engine Appliance |
-| -------------------- | -------------------------------------------- |
-| Software version     | CentOS 7.4, IME 1.3                          |
-| Max. I/O performance | 20 GB/s                                      |
-| Network interface    | 2 x OPA                                      |
-| SSD type             | 1.2TB, NVMe drive                            |
-| SDD quantity         | 16ea(1.2TB NVMe) + 1ea(450GB SSD)            |
-| Capacity (RAW)       | 19.2TB                                       |
+| **System**               | DDN IME240, Infinite Memory Engine Appliance |
+| ------------------------ | -------------------------------------------- |
+| **Software version**     | CentOS 7.4, IME 1.3                          |
+| **Max. I/O performance** | 20 GB/s                                      |
+| **Network interface**    | 2 x OPA                                      |
+| **SSD type**             | 1.2TB, NVMe drive                            |
+| **SDD quantity**         | 16ea(1.2TB NVMe) + 1ea(450GB SSD)            |
+| **Capacity (RAW)**       | 19.2TB                                       |
 
 &#x20;                                                          \[IME single node configuration]
 
-| Total no. of systems                     | IME240 x 48         |
-| ---------------------------------------- | ------------------- |
-| Total capacity (RAW)                     | 979.2 TB            |
-| Total capacity (when parity is applied)) | 816 TB (EC\*, 10+2) |
-| Max. I/O performance                     | 800 GB/s            |
+| **Total no. of systems**                     | IME240 x 48         |
+| -------------------------------------------- | ------------------- |
+| **Total capacity (RAW)**                     | 979.2 TB            |
+| **Total capacity (when parity is applied))** | 816 TB (EC\*, 10+2) |
+| **Max. I/O performance**                     | 800 GB/s            |
 
 &#x20;                                                          \[Overall configuration of burst buffer]
 
