@@ -75,7 +75,7 @@ The IME240 solution of DDN was applied for the BB configuration; the \[Burst buf
 
 &#x20;                                                          \[IME single node configuration]
 
-| Total no. of systems                     | IME240 x 48         |
+| Total no. of systems2                    | IME240 x 48         |
 | ---------------------------------------- | ------------------- |
 | Total capacity (RAW)                     | 979.2 TB            |
 | Total capacity (when parity is applied)) | 816 TB (EC\*, 10+2) |
