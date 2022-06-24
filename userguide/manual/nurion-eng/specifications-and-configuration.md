@@ -83,15 +83,12 @@ The Intel Xeon Phi 7250 processor (code name: Knights Landing) equipped in the K
 
 The SKL (CPU-only) node is equipped with two Intel Xeon Gold 6148 processors (code name: Skylake). The fundamental frequency is 2.4 GHz, and there are 20 CPU cores (hyperthreading off). The L3 cache memory is 27.5 MB, and the memory per CPU is 96 GB (192 GB per node) with six channels of 16 GB DDR4-2666 memory. The 2U-size enclosure is equipped with four computing nodes.
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2021/11/\&name=NwiAvTQB3n1mbjQ.png)
+![[Block diagram of SKL-based CPU-only node]](../../../.gitbook/assets/NwiAvTQB3n1mbjQ.png)
 
-\[Block diagram of SKL-based CPU-only node]
 
 &#x20;
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2021/11/\&name=h3jV5a33UZiVL0I.png)
-
-\[SKL-based CPU-only node]
+![[SKL-based CPU-only node]](../../../.gitbook/assets/h3jV5a33UZiVL0I.png)
 
 &#x20;
 
@@ -99,9 +96,7 @@ The SKL (CPU-only) node is equipped with two Intel Xeon Gold 6148 processors (co
 
 It uses Intel’s Omni-Path Architecture (OPA) as the computing network between nodes and the interconnect network for file I/O communications. In a fat-tree topology using 100 Gbps OPA, the network is configured with 50% blocking between the computing nodes and non-blocking between storage units. The computing nodes and storage units are connected to 277 48-port OPA Edge switches, and all Edge switches are connected to eight 768-port OPA Director switches.
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2021/11/\&name=89LSApl4oE0nAN0.png)
-
-\[Block diagram of interconnect network]
+![[Block diagram of interconnect network]](../../../.gitbook/assets/89LSApl4oE0nAN0.png)
 
 &#x20;
 
@@ -115,15 +110,13 @@ Nurion provides a parallel filesystem and burst buffer configuration for I/O pro
 
 Each filesystem consists of an SFA7700X storage-based metadata server (MDS) and an ES14KX storage-based object storage server (OSS). The burst buffer is an NVMe based I/O cache that acts between computing nodes and the parallel filesystem and provides approximately 844 TB capacity. The Lustre filesystem provides I/O services by being mounted on the computing node, login node, and archiving server (data mover).
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2021/11/\&name=sOdKlUWMwnbB9lP.png)
+![[Configuration of parallel filesystem and overall burst buffer rack]](../../../.gitbook/assets/sOdKlUWMwnbB9lP.png)
 
-\[Configuration of parallel filesystem and overall burst buffer rack]
 
 &#x20;
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2021/11/\&name=UikUtB7HWx9PSti.png)
+![[PFS server configuration]](../../../.gitbook/assets/UikUtB7HWx9PSti.png)
 
-\[PFS server configuration]
 
 &#x20;
 
@@ -135,9 +128,8 @@ Burst buffer (hereinafter, “BB”) is a cache layer between the computing node
 
 &#x20;
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2020/02/\&name=6n7FDTWgDLwFPaD.png) ![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2020/02/\&name=ijCBgRkhSskY4Fv.png)
+![[Burst Buffer role]](https://www.ksc.re.kr/file/image/?path=sos/jcs/2020/02/\&name=6n7FDTWgDLwFPaD.png) ![[Burst Buffer server configuration]](https://www.ksc.re.kr/file/image/?path=sos/jcs/2020/02/\&name=ijCBgRkhSskY4Fv.png)
 
-&#x20;                  \[Burst Buffer role]                       \[Burst Buffer server configuration]
 
 &#x20;
 
