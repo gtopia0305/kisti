@@ -22,37 +22,8 @@ Various types of software are equipped and consistently upgraded in Nurion to su
 
 &#x20;
 
-| Category                                   | KNL Computing node                                                     | CPU-only node            |                           |
-| ------------------------------------------ | ---------------------------------------------------------------------- | ------------------------ | ------------------------- |
-| Manufacturer and model                     | Cray CS500                                                             |                          |                           |
-| No. of nodes                               | 8,305                                                                  | 132                      |                           |
-| Theoretical peak performance (Rpeak)       | 25.3 PFlops                                                            | 0.4 PFlops               |                           |
-| Processor                                  | Model                                                                  | Intel Xeon Phi 7250(KNL) | Intel Xeon 6148 (Skylake) |
-| Theoretical performance per CPU            | 3.0464 TFLOPS                                                          | 1.536 TFLOPS             |                           |
-| No. of cores per CPU                       | 68                                                                     | 20                       |                           |
-| No. of CPUs per node                       | 1                                                                      | 2                        |                           |
-| On-package Memory                          | 16GB, 490GB/s                                                          | -                        |                           |
-| Main memory                                | Model                                                                  | 16GB DDR4-2400           | 16GB DDR4-2666            |
-| Configuration                              | 16GB x6, 6Ch per CPU                                                   | 16GB x12, 6Ch per CPU    |                           |
-| Memory per node (GB)                       | 96GB                                                                   | 192GB                    |                           |
-| Bandwidth per CPU                          | 115.2GB/s                                                              | 128GB/s                  |                           |
-| Total size                                 | 778.6TB                                                                | 24.8TB                   |                           |
-| High-performance interconnect              | Topology                                                               | Fat Tree                 |                           |
-| Blocking Ratio                             | 50% Blocking                                                           |                          |                           |
-| Switches configuration                     | <p>278x 48-port OPA edge switches<br>8x 768-port OPA core switches</p> |                          |                           |
-| Bandwidth per port                         | 100Gbps                                                                |                          |                           |
-| High-performance filesystem (burst buffer) | No. of servers                                                         | DDN IME240 Server 48ea   |                           |
-| Disk per server                            | 16x 1.2TB NVMe SSD, 2x 0.45TB NVMe SSD                                 |                          |                           |
-| Total available capacity                   | 0.8PB                                                                  |                          |                           |
-| Bandwidth                                  | 20GB/sec per server, 0.8TB/s total                                     |                          |                           |
-| Parallel filesystem                        | File system                                                            | Lustre 2.7.21.3          |                           |
-| Total available capacity                   | /scratch: 21PB, /home: 0.76PB, /apps: 0.5PB                            |                          |                           |
-| Bandwidth                                  | 0.3TB/s                                                                |                          |                           |
-| RAID configuration                         | RAID6(8D+2P)                                                           |                          |                           |
+![[Nurion system specifications and configuration]](../../../.gitbook/assets/nurion-system-specifications-and-configuration.png)
 
-&#x20;
-
-\[Nurion system specifications and configuration]
 
 &#x20;
 
@@ -144,9 +115,7 @@ The IME240 solution of DDN was applied for the BB configuration; the \[Burst buf
 | SDD quantity         | 16ea(1.2TB NVMe) + 1ea(450GB SSD)            |
 | Capacity (RAW)       | 19.2TB                                       |
 
-&#x20;
-
-\[IME single node configuration]
+                              [IME single node configuration]
 
 &#x20;
 
@@ -158,9 +127,7 @@ The IME240 solution of DDN was applied for the BB configuration; the \[Burst buf
 | Total capacity (when parity is applied)) | 816 TB (EC\*, 10+2) |
 | Max. I/O performance                     | 800 GB/s            |
 
-&#x20;
-
-\[Overall configuration of burst buffer]
+                            [Overall configuration of burst buffer]
 
 &#x20;
 
