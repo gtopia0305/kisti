@@ -1,4 +1,12 @@
-# Page 1
+# 이미지 업로드 관련 이슈
+
+
+
+gitHub로 .gitbook/assets 폴더에 이미지 생성 후 push 할경우 gitBook 에디터에서 Files 목록에 나타나지 않음
+
+
+
+&#x20;
 
 
 
@@ -6,18 +14,7 @@
 
 
 
-{% embed url="https://www.figma.com/community/file/1120926047807071623" %}
-
-{% embed url="https://docs.google.com/document/d/1VjcvnLgmVLnXZeDR-MHOvn14piuU03U-bTThpKiwUHs/edit?usp=sharing" %}
 
 
 
 
-
-
-
-
-
-{% embed url="https://docs.google.com/spreadsheets/d/11nbM0axC7TIkO-nfB_qSAe0U-D9hT81NEWcxBHZxcsE/edit?usp=sharing" %}
-
-{% embed url="https://docs.google.com/presentation/d/1lkKuJUI8F9u61xHoQQWzVuFgiSB8pM2UKpa651EN3Qo/edit?usp=sharing" %}
