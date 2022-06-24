@@ -128,4 +128,4 @@
 
 * [코드블록 이슈](issue/codeblock.md)
 * [테이블 병합](issue/table-merge.md)
-* [이미지 업로드 관련 이슈](issue/test.md)
+* [이미지 업로드 방법](issue/test.md)
