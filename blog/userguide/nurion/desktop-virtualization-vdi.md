@@ -43,43 +43,43 @@ categories:
 
 &#x20;
 
-![VDI 접속 방법](<../../../.gitbook/assets/VDI 접속 방법.png>)
+![](../../../../kisti/.gitbook/assets/Az5A1wDFKBGS1kK.png)
 
 &#x20;오른쪽 상단 설정메뉴 - SSL구성
 
 &#x20;
 
-![](https://blog.kakaocdn.net/dn/b2YVtG/btqYB5PTAQt/MCkUZMpHHg3RoKnHI4HZc0/img.png)
+![](../../../../kisti/.gitbook/assets/dQbuWinoNEP9mmX.png)
 
 &#x20;서버 ID 인증서를 확인하지 않음 선택 후 확인
 
 &#x20;
 
-![](https://blog.kakaocdn.net/dn/bnmUCe/btqYAsq3OVw/pPBhiKuHaRDIevDx6se2J0/img.png)
+![](../../../../kisti/.gitbook/assets/iieFZ07QqV3gWJQ.png)
 
 &#x20;새 서버 – 연결 서버 nurion-vdi.ksc.re.kr 입력 후 연결
 
 &#x20;
 
-![](https://blog.kakaocdn.net/dn/OrQYH/btqYusFvBRT/wB9uZD0HH4oaniyDKnsnj1/img.png)
+![](../../../../kisti/.gitbook/assets/LJXkNgQ1sO1KN4q.png)
 
 &#x20;누리온 ID와 OTP 번호 입력 후 로그인
 
 &#x20;
 
-![](https://blog.kakaocdn.net/dn/o923B/btqYB5ClVrQ/KKOOxMLnWI8wCo4TqJ9wP1/img.png)
+![](../../../../kisti/.gitbook/assets/Q5rJf3yw2oceoLM.png)
 
 &#x20;최초 접근 시 관리자가 발급한 초기 패스워드를 입력하며, 누리온 시스템과 연동되지 않기 때문에 변경을 하더라도 누리온 시스템 접속 패스워드는 변경되지 않는다.
 
 &#x20;
 
-![](https://blog.kakaocdn.net/dn/pf4pV/btqYE8eg2ch/qBvdIsUo1fA1iWwFAFX2bk/img.png)
+![](../../../../kisti/.gitbook/assets/JLKUmCmYhIDmfYF.png)
 
 &#x20;VM 접근 시 이미지 초기화 및 사용자 프로파일 생성으로 약 3분 소요
 
 &#x20;
 
-![](https://blog.kakaocdn.net/dn/ooqCE/btqYB5vDjrd/yi5b09uo1Boz7YjgT9qKl1/img.png)
+![](../../../../kisti/.gitbook/assets/gd9Yr0XoX0T177D.png)
 
 &#x20;VM 접속이 완료되면 누리온 시스템의 home01과 scratch가 자동으로 마운트 되며 마운트가 되지 않거나 오류가 있을 경우 바탕화면의 NFS를 실행한다.
 

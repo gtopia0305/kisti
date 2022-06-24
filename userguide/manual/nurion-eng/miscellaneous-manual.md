@@ -39,31 +39,31 @@ Download and install Horizon Client appropriate for a user’s environment from 
 
 After installing Horizon Client, complete the settings as shown below.
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2021/02/\&name=Az5A1wDFKBGS1kK.png)
+![](../../../../kisti/.gitbook/assets/Az5A1wDFKBGS1kK.png)
 
 Settings menu on the top right corner - SSL Configuration
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2021/02/\&name=dQbuWinoNEP9mmX.png)
+![](../../../../kisti/.gitbook/assets/dQbuWinoNEP9mmX.png)
 
 Select “Do not check server ID certificate” and then click OK.
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2021/02/\&name=iieFZ07QqV3gWJQ.png)
+![](../../../../kisti/.gitbook/assets/iieFZ07QqV3gWJQ.png)
 
 New Server - enter nurion-vdi.ksc.re.kr and then click Connect.
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2021/02/\&name=LJXkNgQ1sO1KN4q.png)
+![](../../../../kisti/.gitbook/assets/LJXkNgQ1sO1KN4q.png)
 
 Enter the Nurion ID and OTP number to log in.
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2021/02/\&name=Q5rJf3yw2oceoLM.png)
+![](../../../../kisti/.gitbook/assets/Q5rJf3yw2oceoLM.png)
 
 Enter the temporary VDI password issued by the administrator at the first access (the same ID as the Nurion system is used, but the password is different)&#x20;
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2021/02/\&name=JLKUmCmYhIDmfYF.png)
+![](../../../../kisti/.gitbook/assets/JLKUmCmYhIDmfYF.png)
 
 When accessing VM, image initialization and user profile creation require approximately 3 min
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2021/02/\&name=gd9Yr0XoX0T177D.png)
+![](../../../../kisti/.gitbook/assets/gd9Yr0XoX0T177D.png)
 
 Once VM access is completed, home01 and scratch of the Nurion system are automatically mounted.  The NFS of the desktop is executed when not mounted or an error occurs.\
 The C:\ drive and control panel are blocked from access because of security reasons; a user is automatically logged off when idle for two hours
