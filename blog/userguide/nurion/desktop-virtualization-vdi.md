@@ -43,7 +43,7 @@ categories:
 
 &#x20;
 
-![](https://blog.kakaocdn.net/dn/BGC8q/btqYxpVD99O/aVX8Oq2TGkS5er6LHkKaAk/img.png)
+![](<../../../.gitbook/assets/After installing Horizon Client, complete the settings as shown below..png>)
 
 &#x20;오른쪽 상단 설정메뉴 - SSL구성
 
