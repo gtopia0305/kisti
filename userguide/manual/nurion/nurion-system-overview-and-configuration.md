@@ -12,35 +12,8 @@ KISTI 슈퍼컴퓨터 5호기 누리온(NURION)은 리눅스 기반의 초병렬
 
 ![\[누리온 구성도\]](../../../.gitbook/assets/46cGZjtaR1zSlum.png)
 
-| 구분                      | KNL 계산노드                                                               | Cpu-only 노드              |                           |
-| ----------------------- | ---------------------------------------------------------------------- | ------------------------ | ------------------------- |
-| 제조사 및 모델                | Cray CS500                                                             |                          |                           |
-| 노드수                     | 8,305                                                                  | 132                      |                           |
-| 성능최고성능(Rpeak)           | 25.3 PFlops                                                            | 0.4 PFlops               |                           |
-| 프로세서                    | 모델                                                                     | Intel Xeon Phi 7250(KNL) | Intel Xeon 6148 (Skylake) |
-| CPU당 이론성능               | 3.0464 TFLOPS                                                          | 1.536 TFLOPS             |                           |
-| CPU당 코어수                | 68                                                                     | 20                       |                           |
-| 노드당 CPU수                | 1                                                                      | 2                        |                           |
-| On-package Memory       | 16GB, 490GB/s                                                          | -                        |                           |
-| 메인메모리                   | 모델                                                                     | 16GB DDR4-2400           | 16GB DDR4-2666            |
-| 구성                      | 16GB x6, 6Ch per CPU                                                   | 16GB x12, 6Ch per CPU    |                           |
-| 노드 당 메모리(GB)            | 96GB                                                                   | 192GB                    |                           |
-| CPU당 대역폭                | 115.2GB/s                                                              | 128GB/s                  |                           |
-| 전체크기                    | 778.6TB                                                                | 24.8TB                   |                           |
-| 고성능 인터커넥트               | 토폴로지                                                                   | Fat Tree                 |                           |
-| Blocking Ratio          | 50% Blocking                                                           |                          |                           |
-| Switches 구성             | <p>278x 48-port OPA edge switches<br>8x 768-port OPA core switches</p> |                          |                           |
-| 포트 당 대역폭                | 100Gbps                                                                |                          |                           |
-| 고성능 파일시스템(Burst Buffer) | 서버수                                                                    | DDN IME240 Server 48ea   |                           |
-| 서버 당 디스크                | 16x 1.2TB NVMe SSD, 2x 0.45TB NVMe SSD                                 |                          |                           |
-| 전체 가용 용량                | 0.8PB                                                                  |                          |                           |
-| 대역폭                     | 20GB/sec per server, 0.8TB/s total                                     |                          |                           |
-| 병렬파일시스템                 | 파일시스템                                                                  | Lustre 2.7.21.3          |                           |
-| 전체 가용 용량                | /scratch: 21PB, /home: 0.76PB, /apps: 0.5PB                            |                          |                           |
-| 대역폭                     | 0.3TB/s                                                                |                          |                           |
-| RAID 구성                 | RAID6(8D+2P)                                                           |                          |                           |
+![[누리온 시스템 사양 및 구성]](../../../.gitbook/assets/nurion-specification-configuration.png)
 
-&#x20;                                                         \[누리온 시스템 사양 및 구성]
 
 ## 나. 계산 노드
 
@@ -58,15 +31,15 @@ KNL 노드에 장착된 Intel Xeon Phi 7250 프로세서(코드명 Knights Landi
 
 SKL(CPU-only) 노드에는 2개의 Intexl Xeon Gold 6148 프로세서(코드명 Skylake)가 장착되어 있다. 기본 주파수는 2.4GHz이며 20개의 CPU 코어(hyperthreading off)로 구성된다. L3 캐시 메모리는 27.5MB이며, 각 CPU당 메모리는 96GB(노드 당 192GB)로 16GB DDR4-2666 메모리가 6채널로 구성되어 있다. 2U크기의 인클로저(enclosure)에는 4개의 계산노드가 장착되어 있다.
 
-![\[SKL 기반 CPU-only 노드 블록 다이어그램\]](broken-reference)
+![\[SKL 기반 CPU-only 노드 블록 다이어그램\]](../../../.gitbook/assets/NwiAvTQB3n1mbjQ.png)
 
-![\[SKL 기반 CPU-only 노드\]](broken-reference)
+![\[SKL 기반 CPU-only 노드\]](../../../.gitbook/assets/h3jV5a33UZiVL0I.png)
 
 ## 다. 인터커넥트 네트워크
 
 노드 간 계산 네트워크 및 파일 I/O 통신을 위한 인터커넥트 네트워크로 인텔 OPA(Omni-Path Architecture)를 사용하고 있다. 100Gbps OPA를 사용하여 Fat-Tree 구조로 계산노드 간 50% blocking, 스토리지 간 non-blocking 네트워크로 구성 하였다. 계산노드와 스토리지는 277개의 48포트 OPA Edge 스위치에 연결되며 모든 Edge 스위치는 8대의 768포트 OPA Director 스위치에 연결 하였다.
 
-![\[인터커넥트 네트워크 구성도\]](broken-reference)
+![\[인터커넥트 네트워크 구성도\]](../../../.gitbook/assets/89LSApl4oE0nAN0.png)
 
 ## 라. 스토리지
 
@@ -76,9 +49,9 @@ Nurion은 IO 처리 및 데이터 보관을 위해 병렬파일시스템과 버�
 
 각 파일시스템은 SFA7700X 스토리지 기반의 메타데이터 서버(MDS)와, ES14KX 스토리지 기반의 오브젝트 스토리지 서버(OSS)로 구성된다. 버스트버퍼는 계산 노드와 병렬파일시스템 사이에서 동작하는 NVMe 기반의 IO 캐시로 약 844TB의 용량을 제공한다. Lustre 파일시스템은 계산노드, 로그인노드, 아카이빙 서버(Data Mover)에 마운트되어 IO 서비스를 제공한다.
 
-![\[병렬파일시스템 및 버스트버퍼 전체 랙 구성\]](broken-reference)
+![\[병렬파일시스템 및 버스트버퍼 전체 랙 구성\]](../../../.gitbook/assets/sOdKlUWMwnbB9lP.png)
 
-![\[PFS 서버 구성\]](broken-reference)
+![\[PFS 서버 구성\]](../../../.gitbook/assets/UikUtB7HWx9PSti.png)
 
 #### 버스트버퍼
 
@@ -86,7 +59,7 @@ Nurion은 IO 처리 및 데이터 보관을 위해 병렬파일시스템과 버�
 
 버스트버퍼(Burst Buffer, 이하 BB)는 계산노드와 스토리지 (/scratch) 사이의 I/O 가속화를 위한 캐시 레이어로 병렬파일시스템의 small I/O 또는 random I/O에 대한 낮은 성능 보완 및 병렬 IO의 성능 극대화를 위해 5호기에 새로이 도입되었다. I/O 의존성이 높은 사용자 어플리케이션의 성능 향상을 목표로 하고 있으며, KNL 노드를 사용하는 모든 큐에 대해 지원하고 있다.
 
-![\[Burst Buffer 역할\]](broken-reference) ![\[Burst Buffer 서버 구성\]](broken-reference)
+![\[Burst Buffer 역할\]](../../../.gitbook/assets/6n7FDTWgDLwFPaD.png) ![\[Burst Buffer 서버 구성\]](../../../.gitbook/assets/ijCBgRkhSskY4Fv.png)
 
 \- 시스템 구성
 

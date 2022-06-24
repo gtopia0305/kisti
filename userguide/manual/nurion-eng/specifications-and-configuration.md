@@ -1,7 +1,3 @@
----
-description: Nurion System Specifications and Configuration
----
-
 # Nurion System Specifications and Configuration
 
 ## **A. Overview**
@@ -128,7 +124,7 @@ Burst buffer (hereinafter, “BB”) is a cache layer between the computing node
 
 &#x20;
 
-![[Burst Buffer role]](https://www.ksc.re.kr/file/image/?path=sos/jcs/2020/02/\&name=6n7FDTWgDLwFPaD.png) ![[Burst Buffer server configuration]](https://www.ksc.re.kr/file/image/?path=sos/jcs/2020/02/\&name=ijCBgRkhSskY4Fv.png)
+![[Burst Buffer role]](../../../.gitbook/assets/6n7FDTWgDLwFPaD.png) ![[Burst Buffer server configuration]](../../../.gitbook/assets/ijCBgRkhSskY4Fv.png)
 
 
 &#x20;
