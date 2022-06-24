@@ -10,7 +10,7 @@ KISTI 슈퍼컴퓨터 5호기 누리온(NURION)은 리눅스 기반의 초병렬
 
 또한 누리온은 이러한 연구 개발들을 지원하기 위한 다양한 종류의 소프트웨어를 탑재하고 지속적으로 업그레이드 하고 있으며, 고성능 하드웨어와 유기적인 연동을 통해 최고의 생산성을 유지하기 위해 노력하고 있다. 아울러 최적ㆍ병렬화를 비롯한 다양한 사용자 지원과 거대 문제 및 난제 해결 등을 위한 대형 과제 발굴을 통해서 국가 과학기술 발전과 지능정보사회 구현의 핵심 인프라로서 역할을 수행하고자 한다.
 
-![[누리온 구성도]](../../../.gitbook/assets/images/46cGZjtaR1zSlum.png)
+![\[누리온 구성도\]](../../../.gitbook/assets/images/46cGZjtaR1zSlum.png)
 
 \[누리온 시스템 사양 및 구성]
 
@@ -50,9 +50,9 @@ KISTI 슈퍼컴퓨터 5호기 누리온(NURION)은 리눅스 기반의 초병렬
 
 KNL 노드에 장착된 Intel Xeon Phi 7250 프로세서(코드명 Knights Landing)는 1.4GHz 기본 주파수에 68개 코어(hyperthreading off)로 동작한다. L2 캐시 메모리는 34MB이며, 온패키지 메모리인 MCDRAM (Multi-Channel DRAM)은 16GB(대역폭 490GB/s)이다. 노드 당 메모리는 96GB로 16GB DDR4-2400 메모리가 6채널로 구성되어 있다. 2U크기의 인클로저(enclosure)에는 4개의 계산노드가 장착되며, 42U 표준랙에 72개의 계산노드로 구성되어 있다.
 
-![\[KNL 기반 계산노드 블록 다이어그램\]](<../../../.gitbook/assets/images/pOeRBFHIcyQUwfC (1).png>)
+![\[KNL 기반 계산노드 블록 다이어그램\]](broken-reference)
 
-![\[KNL 기반 계산노드\]](<../../../.gitbook/assets/KNL 기반 계산노드.png>)
+![\[KNL 기반 계산노드\]](../../../.gitbook/assets/KNL%20%EA%B8%B0%EB%B0%98%20%EA%B3%84%EC%82%B0%EB%85%B8%EB%93%9C.png)
 
 #### SKL(CPU-only) 노드
 
