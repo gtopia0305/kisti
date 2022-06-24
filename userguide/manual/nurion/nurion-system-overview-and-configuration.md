@@ -18,7 +18,7 @@ KISTI 슈퍼컴퓨터 5호기 누리온(NURION)은 리눅스 기반의 초병렬
 
 &#x20;
 
-![\[누리온 구성도\]](<../../../.gitbook/assets/누리온 구성도.png>)
+![[누리온 구성도]](../../../.gitbook/assets/46cGZjtaR1zSlum.png)
 
 &#x20;
 
