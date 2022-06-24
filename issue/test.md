@@ -14,3 +14,4 @@ gitHub로 .gitbook/assets 폴더에 등록할 경우는 md파일에서 경로를
 
 
 
+gitBook에디터용 이미지와 gitHub 일괄 업로드용 이미지 구분을 위해 gitHub는 .gitbook/assets/images 폴더를 사용
