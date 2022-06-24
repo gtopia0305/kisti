@@ -22,11 +22,7 @@ Various types of software are equipped and consistently upgraded in Nurion to su
 
 &#x20;
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2021/11/\&name=hZUlzJMzieep1fc.png)
-
-&#x20;
-
-\[Block diagram of Nurion]
+![\[Block diagram of Nurion\]](../../../.gitbook/assets/46cGZjtaR1zSlum.png)
 
 &#x20;
 
@@ -74,15 +70,12 @@ There are a total of 8,437 computing nodes in the Nurion system, among which 8,3
 
 The Intel Xeon Phi 7250 processor (code name: Knights Landing) equipped in the KNL node is operated by 68 cores (hyper threading off) at a fundamental frequency of 1.4 GHz. The L2 cache memory is 34 MB, and the Multi-Channel DRAM (MCDRAM), which is an on-package memory, is 16 GB (490 GB/s bandwidth). The memory per node is 96 GB, consisting of six channels of 16 GB DDR4-2400 memory. The 2U-size enclosure is equipped with four computing nodes, in which the 42U standard rack consists of 72 computing nodes.
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2021/11/\&name=M9lQKV9UwdVVho0.png)
-
-\[Block diagram of KNL-based computing node]
+![[Block diagram of KNL-based computing node]](../../../.gitbook/assets/pOeRBFHIcyQUwfC.png)
 
 &#x20;
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2021/11/\&name=8eTQgXRi3rFKRQO.png)
+![[KNL-based computing node]](../../../.gitbook/assets/MteLQQNt86MTMEz.png)
 
-\[KNL-based computing node]
 
 &#x20;
 
