@@ -50,9 +50,9 @@ KISTI 슈퍼컴퓨터 5호기 누리온(NURION)은 리눅스 기반의 초병렬
 
 KNL 노드에 장착된 Intel Xeon Phi 7250 프로세서(코드명 Knights Landing)는 1.4GHz 기본 주파수에 68개 코어(hyperthreading off)로 동작한다. L2 캐시 메모리는 34MB이며, 온패키지 메모리인 MCDRAM (Multi-Channel DRAM)은 16GB(대역폭 490GB/s)이다. 노드 당 메모리는 96GB로 16GB DDR4-2400 메모리가 6채널로 구성되어 있다. 2U크기의 인클로저(enclosure)에는 4개의 계산노드가 장착되며, 42U 표준랙에 72개의 계산노드로 구성되어 있다.
 
-![\[KNL 기반 계산노드 블록 다이어그램\]](broken-reference)
+![\[KNL 기반 계산노드 블록 다이어그램\]](../../../.gitbook/assets/images/pOeRBFHIcyQUwfC.png)
 
-![\[KNL 기반 계산노드\]](../../../.gitbook/assets/KNL%20%EA%B8%B0%EB%B0%98%20%EA%B3%84%EC%82%B0%EB%85%B8%EB%93%9C.png)
+![\[KNL 기반 계산노드\]](../../../.gitbook/assets/images/MteLQQNt86MTMEz.png)
 
 #### SKL(CPU-only) 노드
 
