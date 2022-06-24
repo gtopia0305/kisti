@@ -33,31 +33,31 @@ VM 접속을 위해 아래 사이트에서 사용자 환경에 맞는 Horizon Cl
 
 Horizon Client 설치 후 아래와 같이 설정 한다.
 
-![](broken-reference)
+![](../../../.gitbook/assets/Az5A1wDFKBGS1kK.png)
 
 오른쪽 상단 설정메뉴 - SSL구성
 
-![](broken-reference)
+![](../../../.gitbook/assets/dQbuWinoNEP9mmX.png)
 
 서버 ID 인증서를 확인하지 않음 선택 후 확인
 
-![](broken-reference)
+![](../../../.gitbook/assets/iieFZ07QqV3gWJQ.png)
 
 새 서버 – 연결 서버 nurion-vdi.ksc.re.kr 입력 후 연결
 
-![](broken-reference)
+![](../../../.gitbook/assets/LJXkNgQ1sO1KN4q.png)
 
 누리온 ID와 OTP 번호 입력 후 로그인
 
-![](broken-reference)
+![](../../../.gitbook/assets/Q5rJf3yw2oceoLM.png)
 
 최초 접근 시 관리자가 발급한 VDI 패스워드를 입력(누리온 시스템의 아이디는 동일하지만 패스워드는 별개임)
 
-![](broken-reference)
+![](../../../.gitbook/assets/JLKUmCmYhIDmfYF.png)
 
 VM 접근 시 이미지 초기화 및 사용자 프로파일 생성으로 약 3분 소요
 
-![](broken-reference)
+![](../../../.gitbook/assets/gd9Yr0XoX0T177D.png)
 
 VM 접속이 완료되면 누리온 시스템의 home01과 scratch가 자동으로 마운트 되며 마운트가 되지 않거나 오류가 있을 경우 바탕화면의 NFS를 실행\
 보안을 위해 C:\ 드라이브, 제어판 등은 접근이 차단되어 있으며, 2시간 동안 사용하지 않을 경우 자동으로 로그오프 됨
