@@ -43,7 +43,7 @@ categories:
 
 &#x20;
 
-![](<../../../.gitbook/assets/After installing Horizon Client, complete the settings as shown below..png>)
+![](<../../../.gitbook/assets/VDI 접속 방법.png>)
 
 &#x20;오른쪽 상단 설정메뉴 - SSL구성
 
