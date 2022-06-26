@@ -21,7 +21,7 @@
 &#x20;
 
 | Subject              | <p>Request for OTP authentication code - User ID</p><p>(e.g.) Request for OTP authentication code - x123abc</p>      |
-| -------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| --- | --- |
 | Recipient            | [account@ksc.re.kr](mailto:account@ksc.re.kr)                                                                        |
 | Email body (example) | <p>Login ID: x123abc</p><p>Mobile number: 010-1234-5678</p><p>Name: John Doe</p><p>Carrier: LG Uplus (or SKT/KT)</p> |
 
@@ -130,7 +130,7 @@ $ ftp nurion-dm.ksc.re.kr or $ sftp [user ID@]nurion-dm.ksc.re.kr [-p 22]
 &#x20;
 
 |  ****          | **Host name**       | **CPU Limit**    | **Note**                                                                                            |                                                                                  |
-| -------------- | ------------------- | ---------------- | --------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| ---- | --- | --- | --- | --- |
 | Login node     | nurion.ksc.re.kr    | 20 min.          | <p>ㆍSSH/SCP accessible<br>ㆍFor compile and batch job submission<br>ㆍFTP/SFTP access not allowed</p> |                                                                                  |
 | Datamover node | nurion-dm.ksc.re.kr | -                | <p>ㆍSSH/SCP/SFTP accessible<br>ㆍFTP accessible<br>ㆍCompile and job submission not allowed</p>       |                                                                                  |
 | Computing node | KNL                 | node\[0001-8305] | -                                                                                                   | <p>ㆍJob executable through PBS scheduler<br>ㆍGeneral user access not allowed</p> |
@@ -203,7 +203,7 @@ $ isam
 ㅇ Home directory and scratch directory information are provided below.
 
 | **Category**                   | **Directory path** | **Capacity limit** | **No. of file limit** | **File deletion policy**                                                        | **File system** | **Backup** |
-| ------------------------------ | ------------------ | ------------------ | --------------------- | ------------------------------------------------------------------------------- | --------------- | ---------- |
+| --- | --- | --- | --- | --- | --- | --- |
 | <p>Home</p><p>Directory</p>    | /home01            | 64GB               | 200K                  | N/A                                                                             | Lustre          | O          |
 | <p>Scratch</p><p>Directory</p> | /scratch           | 100TB              | 1M                    | <p>Automatically delete files</p><p>that have not been accessed for 15 days</p> | X               |            |
 
