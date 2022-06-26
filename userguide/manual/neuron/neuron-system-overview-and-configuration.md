@@ -40,4 +40,4 @@ Neuron 스토리지는 DDN SFA12K-40 모델로 10개의 Enclosure SS8460(Disk Bo
 
 \[ Neuron 스토리지 구성도 ]
 
-![](<../../../.gitbook/assets/image (1).png>)
+![](<../../../.gitbook/assets/image (1) (1).png>)
