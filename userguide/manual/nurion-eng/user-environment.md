@@ -1,7 +1,3 @@
----
-description: User Environment
----
-
 # User Environment
 
 ## A. Account Creation
@@ -79,7 +75,7 @@ $ ssh -l x123abc nurion.ksc.re.kr or $ ssh -l x123abc nurion.ksc.re.kr -p 22
 
 &#x20;※ Download the program for free from the internet and install it.
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2021/11/\&name=JJNmXayKPdXGask.png)
+![](../../../.gitbook/assets/JJNmXayKPdXGask.png)
 
 &#x20;
 
@@ -89,7 +85,7 @@ $ ssh -l x123abc nurion.ksc.re.kr or $ ssh -l x123abc nurion.ksc.re.kr -p 22
 
 &#x20;※ Host Name : nurion.ksc.re.kr, Port : 22, Connection type : SSH
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2021/11/\&name=mymgSTp1SpIXNqv.png)
+![](../../../.gitbook/assets/mymgSTp1SpIXNqv.png)
 
 &#x20;
 
@@ -97,7 +93,7 @@ $ ssh -l x123abc nurion.ksc.re.kr or $ ssh -l x123abc nurion.ksc.re.kr -p 22
 
 &#x20;※ X display location : localhost:0.0
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2021/11/\&name=7CIgfnisxwUP8q8.png)
+![](../../../.gitbook/assets/7CIgfnisxwUP8q8.png)
 
 &#x20;
 
@@ -121,7 +117,7 @@ $ ftp nurion-dm.ksc.re.kr or $ sftp [user ID@]nurion-dm.ksc.re.kr [-p 22]
 
 &#x20;\- In the Windows environment, use FTP/SFTP client programs such as WinSCP that are distributed for free to access the system.
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2021/11/\&name=cmp2uAQLNNDJaOJ.png)
+![](../../../.gitbook/assets/cmp2uAQLNNDJaOJ.png)
 
 &#x20;\* File Transfer Protocol (FTP) is used, where files can be sent without entering the OTP
 
