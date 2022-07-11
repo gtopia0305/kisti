@@ -71,7 +71,7 @@ $ ssh -l <사용자ID> neuron01.ksc.re.kr -p 22
 
 ※ 프로그램은 인터넷을 통해 무료로 다운로드 후 설치
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2020/02/\&name=VhT2afiz3QVaR6W.png)
+![](../../../.gitbook/assets/VhT2afiz3QVaR6W.png)
 
 ② 윈도우 환경
 
@@ -79,7 +79,7 @@ $ ssh -l <사용자ID> neuron01.ksc.re.kr -p 22
 
 ※ 프로그램은 인터넷을 통해 무료로 다운로드 후 설치
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2020/02/\&name=DQvGq055jkNyz5e.png)
+![](../../../.gitbook/assets/DQvGq055jkNyz5e.png)
 
 \- putty, Mobaxterm, 또는 SSH Secure Shell Client 등의 ssh 접속 프로그램을 이용
 
@@ -87,7 +87,7 @@ $ ssh -l <사용자ID> neuron01.ksc.re.kr -p 22
 
 ※ Host Name : neuron.ksc.re.kr, Port : 22, Connection type : SSH &#x20;
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2021/08/\&name=aUi3Rys5RaiCIhE.png)
+![](../../../.gitbook/assets/aUi3Rys5RaiCIhE.png)
 
 &#x20;
 
@@ -95,7 +95,7 @@ $ ssh -l <사용자ID> neuron01.ksc.re.kr -p 22
 
 ※ X display location : localhost:0.0
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2020/02/\&name=yykOZoJFaQM2QaG.png)
+![](../../../.gitbook/assets/yykOZoJFaQM2QaG.png)
 
 &#x20;
 
@@ -119,7 +119,7 @@ $ ftp neuron-dm.ksc.re.kr또는$ sftp [사용자ID@]neuron-dm.ksc.re.kr [-P 22]
 
 \- 윈도우 환경에서는 WinSCP와 같이 무료로 배포되고 있는 FTP/SFTP 클라이언트 프로그램을 이용하여 접속한다.
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2020/02/\&name=7HNXz4ZOCMv2wPD.jpeg)
+![](../../../.gitbook/assets/7HNXz4ZOCMv2wPD.jpeg)
 
 \*  FTP (File Tranfer Protocal)을 이용하며, OTP를 입력하지 않고 파일 전송 가능
 
