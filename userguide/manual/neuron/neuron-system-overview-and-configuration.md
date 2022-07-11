@@ -36,8 +36,7 @@ CPU\_only 노드는 총 10대이며, 2개의 Intexl Xeon Gold 6140 프로세서(
 
 Neuron 스토리지는 DDN SFA12K-40 모델로 10개의 Enclosure SS8460(Disk Box)와 10대의 ORACLE X3-2L 서버(MDS 2대, OSS 8대)로 구성되어 있다. 병렬분산파일시스템인 Lustre를 이용하여 구성되어 있으며 실제 가용 용량은 약 2.3PB이다. 단일 파일시스템에 홈 디렉터리(/home01), 어플리케이션 디렉터리(/apps), 스크래치 디렉터리(/scratch2)가 나누어 설정되어 있으며, 로그인 노드(Login Nodes), 계산노드(Computing Nodes)에 마운트 되어있다.
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2020/02/\&name=TkbLovYt7ZryPFB.png)
+![\[ Neuron 스토리지 구성도 \]](../../../.gitbook/assets/TkbLovYt7ZryPFB.png)
 
-\[ Neuron 스토리지 구성도 ]
 
-![](<../../../.gitbook/assets/image (1) (1).png>)
+![](../../../.gitbook/assets/neuron-storage-diagram.png)
