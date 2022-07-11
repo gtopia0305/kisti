@@ -170,7 +170,10 @@
   * [Checkpoint 기능 관련 안내](blog/usage-tip/checkpoint-function-related-information.md)
   * [누리온 MVAPICH2/MVAPICH2-X 성능 비교(VASP)](blog/usage-tip/mvapich2-mvapich2-x-performance-comp-vasp.md)
   * [인터렉티브 작업 제출 예제](blog/usage-tip/interactive-job-submission-example.md)
-  * [git 사용 방법 안내](blog/usage-tip/git.md)
+  * [git 사용 방법 안내](blog/usage-tip/how-to-use-git.md)
+  * [누리온 WRF 멀티노드 활용(SKL)](blog/usage-tip/wrf-multi-node-utilization-skl.md)
+  * [누리온 WRF 멀티노드 활용(KNL)](blog/usage-tip/wrf-multi-node-utilization-knl.md)
+  * [누리온 VASP 멀티노드 활용(SKL)](blog/usage-tip/wrf-multi-node-utilization-skl-1.md)
 * [기술문서 창고](blog/technic-doc/README.md)
   * [X86\_64 어셈블리 프로그래밍 기초](blog/technic-doc/x86-64-assembly-programming-basic.md)
 
