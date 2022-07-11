@@ -16,7 +16,7 @@
 
 \- LAMMPS 등 타 소프트웨어와 연동하여 계산을 수행하는 경우 상호간 통신에 Socket을 사용합니다.(Unix Domain Socket, Internet Socket)
 
-![](https://t1.daumcdn.net/cfile/tistory/997BE64A5F9BBF541C)
+![](../../../.gitbook/assets/997BE64A5F9BBF541C.png)
 
 (출처: http://ipi-code.org/about/interface/)
 

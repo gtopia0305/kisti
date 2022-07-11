@@ -39,38 +39,26 @@ KISTI GPU 클러스터인 NEURON의 큐 구성은 다음과 같으며, ivy\_k40\
 
 **1.학습에 사용된 신경망 코드 (cifar10.py)**
 
-![](https://t1.daumcdn.net/cfile/tistory/997C723F5D818DBB06)![](https://t1.daumcdn.net/cfile/tistory/99E2DA3D5D818DE51F)![](https://t1.daumcdn.net/cfile/tistory/996A393D5D818DE61D)![](https://t1.daumcdn.net/cfile/tistory/99A4D23D5D818DE620)![](https://t1.daumcdn.net/cfile/tistory/993150485D81944509)
+![](../../../.gitbook/assets/997C723F5D818DBB06.png)
 
-&#x20;
+![](../../../.gitbook/assets/99E2DA3D5D818DE51F.png)
 
-&#x20;
+![](../../../.gitbook/assets/996A393D5D818DE61D.png)
 
-&#x20;
+![](../../../.gitbook/assets/99A4D23D5D818DE620.png)
 
-![](https://t1.daumcdn.net/cfile/tistory/992B3D475D8192ED01)
+![](../../../.gitbook/assets/993150485D81944509.png)
 
-&#x20;
+![](../../../.gitbook/assets/992B3D475D8192ED01.png)
 
-![](https://t1.daumcdn.net/cfile/tistory/9943AB4F5D8194A005)
-
-&#x20;
-
-&#x20;
-
-&#x20;
-
-&#x20;
+![](../../../.gitbook/assets/9943AB4F5D8194A005.png)
 
 **2. 단일 GPU 사용 작업 제출 방법**
-
-&#x20;
 
 ※작업제출 스크립트
 
 | <p>#!/bin/sh</p><p>#SBATCH -J keras</p><p>#SBATCH --time=24:00:00</p><p>#SBATCH -o %x_%j.out</p><p>#SBATCH -e %x_%j.err</p><p>#SBATCH -p cas_v100_2</p><p>#SBATCH --comment tensorflow</p><p>#SBATCH --gres=gpu:2</p><p>#SBATCH -N 1</p><p> </p><p>module load python/3.7.1</p><p>source activate tf_gpu</p><p> </p><p>srun python cifar10.py</p> |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-
-&#x20;
 
 \- Conda를 이용하여 Keras 패키지가 설치된 tf\_gpu 가상환경을 구축하고 tf\_gpu 환경에서 수행하는 방법임. (Conda의 활용은 ‘KISTI 홈페이지 > 기술지원 > 지침서 > 소프트웨어 > Conda의 활용’ 참고.)
 
@@ -82,7 +70,7 @@ KISTI GPU 클러스터인 NEURON의 큐 구성은 다음과 같으며, ivy\_k40\
 
 \<GPU 모니터링 – 단일 GPU 사용 확인>
 
-![](https://t1.daumcdn.net/cfile/tistory/999A06445D8185B82E)
+![](../../../.gitbook/assets//999A06445D8185B82E.png)
 
 &#x20;
 
@@ -122,6 +110,6 @@ KISTI GPU 클러스터인 NEURON의 큐 구성은 다음과 같으며, ivy\_k40\
 
 \<GPU 모니터링 – Multi-GPU 사용 확인>
 
-![](https://t1.daumcdn.net/cfile/tistory/99B49C455D8185CE2E)
+![](../../../.gitbook/assets/99B49C455D8185CE2E.png)
 
 &#x20;

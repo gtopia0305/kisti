@@ -22,7 +22,7 @@
 
 ○ Apache Spark, Pandas, Scikit-learn, ggplot2, Tensorflow 등 다양한 툴/라이브러리들과 연동 가능하다.
 
-![](https://t1.daumcdn.net/cfile/tistory/991C50375ECF521D29)
+![](../../../.gitbook/assets/DuGAciy4ZdnjgPQ.png)
 
 다. JupyterLab
 
@@ -30,7 +30,7 @@
 
 ○ Jupyter Notebook과 달리 하나의 작업 화면에 Tabs 와 Splitters를 사용하여 여러 개의 도큐먼트 또는 다른 기능을 제공한다.
 
-![](https://t1.daumcdn.net/cfile/tistory/999BEC415ECF524B28)
+![](../../../.gitbook/assets/P1gtEKP1fQV1Nsq.png)
 
 라. IPyParallel
 
@@ -38,11 +38,11 @@
 
 ○ Jupyter Notebook에 플러그인으로 확장가능하며 IPython Clusters Tab으로 Jupyter Notebook을 통해 사용 가능하다.
 
-![](<../../../.gitbook/assets/fEuuyE877IXSvC9 (1).png>)
+![](../../../.gitbook/assets/fEuuyE877IXSvC9.png)
 
 2\. 스크립트를 통한 Jupyter 실행
 
-![](https://t1.daumcdn.net/cfile/tistory/99146B3D5ECF528D29)
+![](../../../.gitbook/assets/FouxpybuajnMgzY.png)
 
 ※ 최초 한번만 실행하며 환경설정이 완료되면 즉시 웹 페이지에 접속하여 (나. JupyterHub 웹 페이지 접속 참고) JupyterLab/Notebook을 사용 가능하다.
 
@@ -104,7 +104,7 @@ done
 
 \- https://jupyter.ksc.re.kr 에 접속하여 신청 받은 뉴런 계정, OTP, 비밀번호를 입력한다.
 
-![](https://t1.daumcdn.net/cfile/tistory/999690425EFD7F5A25)
+![](../../../.gitbook/assets/cXDKdaUkHSJ0yAM.png)
 
 \- 메인 화면에서 자원 사용현황 확인 및 Refresh 버튼을 클릭하여 자원 사용 현황을 업데이트할 수 있다.
 
@@ -140,11 +140,11 @@ done
 
 \- 다음과 같은 화면이 몇 초간 진행 되면서 자원 할당이 진행된다.
 
-![](https://t1.daumcdn.net/cfile/tistory/994542415ECF53482A)
+![](../../../.gitbook/assets/nF3Wzcq3jpduHRC.png)
 
 \- Default로 https://jupyter.ksc.re.kr/user/a1113a01/tree Jupyter Notebook 화면이 실행된다.
 
-![](https://t1.daumcdn.net/cfile/tistory/99680C405ECF538223)
+![](../../../.gitbook/assets/bMiS3ZoVOuWaGle.png)
 
 3\. Jupyter Notebook 사용 방법
 
@@ -166,19 +166,19 @@ done
 
 \- Menu Bars는 Files/Running/IPython Clusters로 구성되어 있다.
 
-![](https://t1.daumcdn.net/cfile/tistory/99897A345ECF539828)
+![](../../../.gitbook/assets/xDFygZX7DZaUt1K.png)
 
 \- Menu Bar -> Running 은 현재 실행 중인 세션들을(Terminal, Notebook, Tensorboard) 모니터링 및 삭제 가능하다.
 
-![](https://t1.daumcdn.net/cfile/tistory/993E93405ECF53AE28)
+![](../../../.gitbook/assets/YakI3dEeMq373yb.png)
 
 \- Menu Bar -> IPython Clusters 는 프로파일 기반 파이썬 병렬 엔진을 시작/종료 가능하다. (IPython Parallel 프로파일 작성 방법은 라. IPyParallel 실행 부분 참고)
 
-![](<../../../.gitbook/assets/fEuuyE877IXSvC9 (1).png>)
+![](../../../.gitbook/assets/fEuuyE877IXSvC9.png)
 
 \- New 클릭 시 Python3/Text File/Floder/Terminal/Tensorboard 신규 생성이 가능하다.
 
-![](https://t1.daumcdn.net/cfile/tistory/9951AF3B5ECF53E62B)
+![](../../../.gitbook/assets/lgAmF7Hvd0Vh50B.png)
 
 다. JupyterLab 전환 방법
 
@@ -186,7 +186,7 @@ done
 
 \- Notebook 화면 https://jupyter.ksc.re.kr/user/a1113a01/tree
 
-![](https://t1.daumcdn.net/cfile/tistory/99A2273E5ECF54002C)
+![](../../../.gitbook/assets/cSygij43NpgPSgE.png)
 
 \- JupyterLab 화면 https://jupyter.ksc.re.kr/user/a1113a01/lab
 
@@ -198,88 +198,88 @@ done
 
 \- New->Terminal 클릭하여 머신러닝/딥러닝에 필요한 라이브러리를 설치한다.
 
-![](https://t1.daumcdn.net/cfile/tistory/9933F13A5ECF541D2B)
+![](../../../.gitbook/assets/myS5L5u7ge9vIp2.png)
 
 \- 터미널 환경에서 conda activate notebook 명령어로 notebook 환경을 활성화하고 notebook 환경에 필요한 라이브러리를 설치한다.
 
 ※ 반드시 notebook conda 환경에 설치해야 Jupyter 웹 화면에 적용된다.
 
-![](https://t1.daumcdn.net/cfile/tistory/991CD9395ECF54412A)
+![](../../../.gitbook/assets/5yrubHevkCjkKc6.png)
 
 \- notebook 환경에 사용자가 원하는 머신러닝/딥러닝 관련 라이브러리 설치 (본 예제는 머신러닝 프레임워크 Keras, pandas, numpy, scipy 등 흔히 사용되는 라이브러리들을 conda로 설치하는 과정이며, 본 예제에 필요한 라이브러리 설치 시 약 7분 소요)
 
 | <p>772% [a1113a01@gpu06 workspace]$ conda activate notebook<br>(notebook) 773% [a1113a01@gpu06 workspace]$ conda install theano keras graphviz numpy scipy scikit-learn matplotlib pandas pydot -y</p> |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 
-![](https://t1.daumcdn.net/cfile/tistory/9952AB355ECF54D623)
+![](../../../.gitbook/assets/s18F9seQueXgxua.png)
 
-![](https://t1.daumcdn.net/cfile/tistory/9957BF3A5ECF54EE25)
+![](../../../.gitbook/assets/fIj5bZUgoBGBrWA.png)
 
-![](https://t1.daumcdn.net/cfile/tistory/993654445ECF602A2C)
+![](../../../.gitbook/assets/KCgWAOe7NPkjvda.png)
 
 \- 설치 완료 확인
 
-![](https://t1.daumcdn.net/cfile/tistory/99AFBE4F5ECF604833)
+![](../../../.gitbook/assets/5roVOiMzvLftkb7.png)
 
 나. 예제 코드 작성 및 실행
 
 \- Home Page 로 돌아가 Menu Bar -> Files 에서 예제 파일 iris\_ex.ipynb를 클릭한다.
 
-![](https://t1.daumcdn.net/cfile/tistory/99510E425ECF56221F)
+![](../../../.gitbook/assets/8vt8r9p0Q5bBOvm.png)
 
 \- Jupyter Notebook이 실행되면 Shift+Enter로 예제 코드를 실행한다.
 
-![](https://t1.daumcdn.net/cfile/tistory/99545E4D5ECF607135)
+![](../../../.gitbook/assets/JrfOrRF4J7LsaoE.png)
 
 ※ 실행 과정에 나오는 warning 들은 무시 가능하며, 동일 코드를 재실행 시 warning 메시지가 출력되지 않는다. (warning 내용은 코딩 시 버전에 따른 문법적 제시 안내)
 
 \- matplotlib 라이브러리를 사용한 그래프 출력
 
-![](https://t1.daumcdn.net/cfile/tistory/994646485ECF58502C)
+![](../../../.gitbook/assets/SX6ZxYNxMoZSub3.png)
 
-![](https://t1.daumcdn.net/cfile/tistory/99B9CE3F5ECF586A2F)
+![](../../../.gitbook/assets/g1MZ0fOQKvwUBWy.png)
 
 다. Tensorboard 실행
 
 \- Menu Bar -> Files 에서 tfboard\_ex.ipynb를 클릭한다.
 
-![](https://t1.daumcdn.net/cfile/tistory/995484355ECF58832C)
+![](../../../.gitbook/assets/NkBcFYVSfnR3T1N.png)
 
 \- Shift+Enter로 코드를 실행한다. (약 1분 소요)
 
-![](https://t1.daumcdn.net/cfile/tistory/99F5753F5ECF58AF2E)
+![](../../../.gitbook/assets/xdX1GpNpHvfiRrN.png)
 
 \- Tensorboard 실행 후 Home Page -> New -> Tensorboard -> Current directory를 클릭한다.
 
 ※ Files 에 logs 폴더가 생성되며 여기에 로그 데이터가 저장된다.
 
-![](https://t1.daumcdn.net/cfile/tistory/99C12A3A5ECF58D12B)
+![](../../../.gitbook/assets/aaQqQYS8dAeogAI.png)
 
 ※ 혹은 logs 폴더를 클릭한 후 Tensorboard 버튼이 생성되면 클릭
 
-![](https://t1.daumcdn.net/cfile/tistory/9913C2385ECF58E42F)
+![](../../../.gitbook/assets/0qs7DtCwPnFS7a9.png)
 
 \- TensorBoard -> Scalars
 
-![](https://t1.daumcdn.net/cfile/tistory/99E9893D5ECF591C32)
+![](../../../.gitbook/assets/nNt6sLANd0iPvq2.png)
 
 \- TensorBoard -> Graphs
 
-![](https://t1.daumcdn.net/cfile/tistory/99852D3B5ECF596331)
+![](../../../.gitbook/assets/E7Q3W0udQjkzOXy.png)
 
 \- TensorBoard -> Distributions
 
-![](https://t1.daumcdn.net/cfile/tistory/992A6C4C5ECF59A632)
+![](../../../.gitbook/assets/YhCiSqGRPGn79il.png)
 
 \- TensorBoard -> Histograms
 
-![](https://t1.daumcdn.net/cfile/tistory/99BDAE4A5ECF59DF26)
+![](../../../.gitbook/assets/idcwepwUTPBQ8v8.png)
 
 라. IPyParallel 실행
 
 \- Menu Bar에서 IPython Clusters 탭을 클릭한다.
 
-![](https://t1.daumcdn.net/cfile/tistory/9927C9385F8958F419)
+![](../../../.gitbook/assets/AzrkiJ3oNRQMeuz.png)
 
 \- slurm 프로파일에 engine, node, queue 정보를 입력한다.
 
@@ -289,27 +289,27 @@ node: 할당할 계산 노드 개수
 
 queue: 병렬 작업을 제출할 큐 이름 (아래 자원 현황을 보고 선택)
 
-![](https://t1.daumcdn.net/cfile/tistory/996CBE455F89595507)
+![](../../../.gitbook/assets/oOq9F0npaZHwwQV.png)
 
 \- start 버튼으로 병렬 엔진 생성 후, 새로 고침하여 확인한다.
 
-![](https://t1.daumcdn.net/cfile/tistory/994BE23D5F89591C1D)
+![](../../../.gitbook/assets/A9xGqreXrY7O2Fi.png)
 
 마. IPyParallel 예제 코드 실행
 
 \- Menu Bar -> Files -> ipy\_ex.ipynb를 클릭한다.
 
-![](https://t1.daumcdn.net/cfile/tistory/994E63385ECF5D8101)
+![](../../../.gitbook/assets/RKgGZuVYLgoFsNM.png)
 
 바. 새로운 Launcher 만들기 및 Python 코드 작성
 
 \- 아래와 같이 New -> Python 3 메뉴를 클릭하여 새로운 Python 코드의 작성이 가능하다.
 
-![](https://t1.daumcdn.net/cfile/tistory/99B6FB355ECF5DA934)
+![](../../../.gitbook/assets/pMsnBC5ymOiEP2s.png)
 
 \- Python 3 커널을 사용할 수 있는 새로운 Jupyter Notebook Launcher가 실행된다.
 
-![](https://t1.daumcdn.net/cfile/tistory/99A0EA3A5ECF5DBD31)
+![](../../../.gitbook/assets/xnnQM4NqlW3ZouC.png)
 
 5\. Jupyter 종료 방법
 
@@ -317,7 +317,7 @@ queue: 병렬 작업을 제출할 큐 이름 (아래 자원 현황을 보고 선
 
 \- 다음 그림과 같이, Running 탭을 클릭하여 실행중인 Terminal Sessions 이나 Kernel, Tensorboard Sessions들을 Shutdown 버튼을 클릭하여 종료한다.
 
-![](https://t1.daumcdn.net/cfile/tistory/99CA2F3A5ECF5DDD01)
+![](../../../.gitbook/assets/Q2vQeDmmSjsvMGt.png)
 
 ※ 세션을 종료시키지 않고 JupyterHub 웹 페이지를 종료하는 경우, 다음 Jupyter 실행 시에도 그대로 남아있게 된다. (과금은 진행되지 않음)
 
@@ -325,9 +325,9 @@ queue: 병렬 작업을 제출할 큐 이름 (아래 자원 현황을 보고 선
 
 \- (Jupyter Notebook) Control Panel -> Stop My Server를 클릭한다.
 
-![](https://t1.daumcdn.net/cfile/tistory/99AB383B5ECF5DF12C)
+![](../../../.gitbook/assets/0CM3m3Vl65A3mmY.png)
 
-![](https://t1.daumcdn.net/cfile/tistory/99A4ED395ECF5DFF2D)
+![](../../../.gitbook/assets/Aifkvuq9qpyyJxG.png)
 
 ※ 홈페이지 Logout 시 실행중인 Jupyter 및 세션들은 모두 자동으로 종료된다.
 
@@ -356,15 +356,15 @@ queue: 병렬 작업을 제출할 큐 이름 (아래 자원 현황을 보고 선
 
 ※ Launcher 탭이 보이지 않을 경우 Menu Bar에서 + 아이콘을 클릭한다.
 
-![](https://t1.daumcdn.net/cfile/tistory/99FBD8375ECF5E1535)
+![](../../../.gitbook/assets/eDtreex0IDwyL3d.png)
 
-![](https://t1.daumcdn.net/cfile/tistory/99D968365ECF5E2633)
+![](../../../.gitbook/assets/1pQTEGKnXpoCpqm.png)
 
 \- Tensorboard 실행 후 Menu Bar -> +아이콘 -> Launcher -> Tensorboard 를 클릭한다.
 
-![](https://t1.daumcdn.net/cfile/tistory/994B68385ECF5E3802)
+![](../../../.gitbook/assets/zoYS0S9gCXUvx4R.png)
 
-![](https://t1.daumcdn.net/cfile/tistory/998EA3415ECF5E4A32)
+![](../../../.gitbook/assets/t8EJplkhAqtCUtR.png)
 
 나. 실행중인 세션 종료
 
@@ -374,12 +374,12 @@ queue: 병렬 작업을 제출할 큐 이름 (아래 자원 현황을 보고 선
 
 세션을 종료시키지 않고 JupyterHub 웹 페이지를 종료하는 경우, 다음 Jupyter 실행 시에도 그대로 남아있게 된다. (과금은 진행되지 않음)
 
-![](https://t1.daumcdn.net/cfile/tistory/9980D93E5ECF5E5A01)
+![](../../../.gitbook/assets/6wSWdeDOV2wFXw9.png)
 
 다. Jupyter 종료
 
 \- (JupyterLab) Jupyter 사용이 끝나면 반드시 Jupyter를 종료시켜 자원을 반납해야 한다. File -> Hub Control Panel 클릭하여 Home 페이지로 이동 후 Stop My Server를 클릭하여 자원을 반납할 수 있다.
 
-![](https://t1.daumcdn.net/cfile/tistory/99B10A3C5ECF5E6836)
+![](../../../.gitbook/assets/Aifkvuq9qpyyJxG.png)
 
-![](https://t1.daumcdn.net/cfile/tistory/9968024C5ECF5E7635)
+![](../../../.gitbook/assets/lGi3UXL44cC0Fr9.png)

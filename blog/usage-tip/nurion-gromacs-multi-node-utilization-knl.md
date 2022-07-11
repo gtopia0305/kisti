@@ -2,23 +2,11 @@
 
 다음은 누리온 KNL을 활용한 Gromacs 테스트 샘플의 실행 방법 및 성능을 보여주는 예제이다.
 
-&#x20;**** \
-
-
-\
-
-
 **가. 테스트 계산 모델**
 
 Gromacs (2018.6 버전)의 실행 테스트를 위하여, 프로틴을 모델 시스템으로 사용하여 성능을 테스트하였다.
 
-\
-
-
-![](https://t1.daumcdn.net/cfile/tistory/999AB44B5DB634D604)
-
-\
-
+![](../../.gitbook/assets/99DD5E395DB6361031.png)
 
 **나. 실행 방법 및 성능 분석**
 
@@ -80,7 +68,7 @@ PBS 배치 작업 수행하는 경우 작업 중 STDOUT과 STDERR을 시스템 �
 
 ※ 실험 데이터는 2018년 6월 누리온에서 4번의 반복 실험을 평균한 결과임
 
-![](https://t1.daumcdn.net/cfile/tistory/994187455DBF4F6E15)
+![](../../.gitbook/assets/994187455DBF4F6E15.png)
 
 \- 노드 당 64개 코어를 사용할 때 가장 좋은 성능을 나타냄
 
@@ -98,7 +86,7 @@ PBS 배치 작업 수행하는 경우 작업 중 STDOUT과 STDERR을 시스템 �
 
 &#x20;
 
-![](https://t1.daumcdn.net/cfile/tistory/999F5E455DB6352304)
+![](../../.gitbook/assets/999F5E455DB6352304.png)
 
 \
 
@@ -126,7 +114,7 @@ KNL은 MCDRAM의 사용 방식에 따라 Cache mode, Flat mode, Hybrid mode로 �
 | Cache | 20836  | 10832  | 5479   | 2986   | 1637    | 986     | 669     |
 | Flat  | 20931  | 10638  | 5456   | 2887   | 1570    | 906     | 632     |
 
-![](https://t1.daumcdn.net/cfile/tistory/999351475DBF4FF616)
+![](../../.gitbook/assets/999351475DBF4FF616.png)
 
 결과 표와 그래프를 보면, 하나의 노드를 사용하는 경우만 제외하고 전체 노드에서 Flat mode의 성능이 조금 더 나은 것을 확인할 수 있다.
 
@@ -139,7 +127,7 @@ KNL은 MCDRAM의 사용 방식에 따라 Cache mode, Flat mode, Hybrid mode로 �
 
 누리온의 경우 SKL 노드와 KNL 노드가 있으며, 이 둘의 이론 성능은 거의 비슷하다. 하지만, 실제 Gromacs 코드를 실행해 보면 SKL 노드를 사용할 경우 더 빠른 계산 결과를 얻을 수 있었다.
 
-![](https://t1.daumcdn.net/cfile/tistory/999E5D4D5DBF504816)
+![](../../.gitbook/assets/999E5D4D5DBF504816.png)
 
 누리온 시스템은 SKL node가 132개, KNL은 8305개로 구성되어 있어, 현실적으로 SKL node를 많이 사용하는 것은 불가능하다. 대신에 KNL 노드를 많이 확보하여 프로그램을 실행하는 것이 유리할 것으로 판단되며, 위의 그래프에서도 KNL인 경우 64노드까지 성능이 계속 나아지는 것을 볼 수 있다. 즉, KNL노드에서의 병렬확장성이 좋은 결과를 보여준다. 그리고, KNL노드가 SKL 노드에 비해 2배 저렴하므로 KNL 노드 사용이 보다 경제적일 수 있다.
 
@@ -167,6 +155,6 @@ GPU의 메모리가 작기 때문에, 시스템 성능 비교 테스트에서는
 
 **※ ivy\_v100\_1 큐는 6월 정기점검 이후 v100 카드를 추가하여 ivy\_v100\_2 로 통합**
 
-![](https://t1.daumcdn.net/cfile/tistory/994AD0455DBF508715)
+![](../../.gitbook/assets/994AD0455DBF508715.png)
 
 위와 같이 시스템 별 성능 편차가 존재함을 알 수 있다. 이는 노드가 2개일 때 다소 작은 예제의 성능 비교이므로, 사용자가 다루는 문제의 크기와 필요로 하는 계산 속도 및 비용을 감안하여 계산할 시스템을 선택하고 최적화할 필요가 있다.

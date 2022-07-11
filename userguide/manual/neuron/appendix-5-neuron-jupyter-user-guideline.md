@@ -31,7 +31,7 @@
 ○ IPyParallel 프로젝트는 인터렉티브 클러스터 컴퓨팅을 위한 파이썬 모듈로 인터렉티브 파이썬 병렬환경을 제공한다.\
 ○ Jupyter Notebook에 플러그인으로 확장가능하며 IPython Clusters Tab으로 Jupyter Notebook을 통해 사용 가능하다.
 
-![](<../../../.gitbook/assets/fEuuyE877IXSvC9 (1).png>)
+![](../../../.gitbook/assets/fEuuyE877IXSvC9.png)
 
 ## 나. 스크립트를 통한 Jupyter 실행
 
@@ -155,7 +155,7 @@ done
 
 \- Menu Bar -> IPython Clusters 는 프로파일 기반 파이썬 병렬 엔진을 시작/종료 가능하다. (IPython Parallel 프로파일 작성 방법은 라. IPyParallel 실행 부분 참고)
 
-![](<../../../.gitbook/assets/fEuuyE877IXSvC9 (1).png>)
+![](../../../.gitbook/assets/fEuuyE877IXSvC9.png)
 
 \- New 클릭 시 Python3/Text File/Floder/Terminal/Tensorboard 신규 생성이 가능하다.
 
@@ -203,7 +203,6 @@ done
 
 **2) 예제 코드 작성 및 실행**
 
-\
 \- Home Page 로 돌아가 Menu Bare-> Files 에서 예제 파일 iris\_ex.ipynb를 클릭한다.
 
 ![](../../../.gitbook/assets/8vt8r9p0Q5bBOvm.png)

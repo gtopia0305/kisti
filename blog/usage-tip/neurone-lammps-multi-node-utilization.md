@@ -11,7 +11,7 @@ Rhodopsin 프로틴을 모델 시스템으로 사용하여 성능을 테스트�
 \
 
 
-[![](https://t1.daumcdn.net/cfile/tistory/99E949345DB78A7E2E)](https://t1.daumcdn.net/cfile/tistory/99E949345DB78A7E2E?original)
+![](../../.gitbook/assets/99E949345DB78A7E2E.png)
 
 \
 
@@ -57,6 +57,6 @@ GPU슬롯에 따른 계산 시간의 차이를 확인해 보기 위해 각각 �
 
 **※ ivy\_v100\_1 큐는 6월 정기점검 이후 v100 카드를 추가하여 ivy\_v100\_2 로 통합**
 
-![](https://t1.daumcdn.net/cfile/tistory/993775445DBBBD2916)
+![](../../.gitbook/assets/993775445DBBBD2916.png)
 
 ※ KNL, SKL 시스템과의 비교는 "[누리온 LAMMPS](https://blog.ksc.re.kr/169)[ ](https://blog.ksc.re.kr/169)[멀티노드 활용 ](https://blog.ksc.re.kr/169)[(](https://blog.ksc.re.kr/169)[KNL)](https://blog.ksc.re.kr/169)" 참조

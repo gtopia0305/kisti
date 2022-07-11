@@ -14,18 +14,9 @@ VASP (5.4.4.4 버전)의 실행 테스트를 위하여, 실리콘(Si64)을 모�
 | KPAR   | NCORE  | LPLANE | LWARE   | LCHARG  | LHFCALC | PREFOCK | NKRED | AEXX   | HFSCREEN |
 | 1      | ?      | .TRUE. | .FALSE. | .FLASE. | T       | Fast    | 1     | 0.25   | 2        |
 
-\
-
-
-![](https://t1.daumcdn.net/cfile/tistory/995662385DB8C1BE18)
+![](../../.gitbook/assets//995662385DB8C1BE18.png)
 
 VASP 입력값 중 병렬계산과 관련된 설정들이 있는데, 이 중 병렬 설정에 따른 성능 차이를 가장 크게 보이는 변수가 NCORE 값이므로, NCORE가 1, 4, 8일 때에 대하여 누리온 노드와 코어수를 조정하여 계산 속도를 측정하였다.
-
-\
-
-
-\
-
 
 **나. 실행 방법 및 성능 분석**
 
@@ -72,19 +63,19 @@ D(예제에서는 1) : 한 프로세스가 사용할 OpenMP스레드의 수
 
 **1) NCORE=1일 때**
 
-![](https://t1.daumcdn.net/cfile/tistory/9984E33C5DBB92D30C)
+![](../../.gitbook/assets/9984E33C5DBB92D30C.png)
 
 &#x20;
 
 **2) NCORE=4일 때**
 
-![](https://t1.daumcdn.net/cfile/tistory/99A4D03E5DBB92A00A)
+![](../../.gitbook/assets/99A4D03E5DBB92A00A.png)
 
 &#x20;****&#x20;
 
 **3) NCORE=8일 때**
 
-![](https://t1.daumcdn.net/cfile/tistory/993C03415DBBD7E306)
+![](../../.gitbook/assets/993C03415DBBD7E306.png)
 
 \- 노드 당 코어(MPIPROCS)를 64 코어 정도로 사용할 때 일반적으로 효율적인 성능을 보여준다. 노드 당 코어를 모두 점유하여 사용할 경우(즉 MPIPROCS=68) 성능이 가장 좋을 것 같으나 실행 프로그램에 따라서 최고 성능을 보일 때도 있고 지금 보는 것과 같이 그렇지 않은 경우도 있다.
 
@@ -128,7 +119,7 @@ D(예제에서는 1) : 한 프로세스가 사용할 OpenMP스레드의 수
 \
 
 
-![](https://t1.daumcdn.net/cfile/tistory/99F111435DB8C2DF18)
+![](../../.gitbook/assets/99F111435DB8C2DF18.png)
 
 \
 
@@ -152,7 +143,7 @@ KNL은 MCDRAM의 사용 방식에 따라 Cache mode, Flat mode, Hybrid mode로 �
 | Cache | 8691   | 6325   | 5084   | 2996   | 1695    | 1177    |
 | NCORE | 1      | 1      | 2      | 4      | 8       | 16      |
 
-![](https://t1.daumcdn.net/cfile/tistory/99EB5A4B5DBB962115)
+![](../../.gitbook/assets/99EB5A4B5DBB962115.png)
 
 NCORE값은 각 노드에서 가장 빠른 성능을 보이고 있는 값으로 (노드 수)/2의 값을 가지고 비교를 하였다. 위 형태를 보면, 기대와는 달리 VASP의 경우 노드당 16GB이상을 사용하는 것으로 보이며 Flat 모드보다 Cache 모드가 더 좋은 성능을 보이고 있음을 확인할 수 있었다.
 
@@ -180,6 +171,6 @@ NCORE값은 각 노드에서 가장 빠른 성능을 보이고 있는 값으로 
 
 실제 VASP을 실행시켜보면 단일 노드인 경우, 위 이론 성능과 비슷한 경향성을 보이고 있다. 하지만, 멀티노드로 확장이 되면 결과가 달라짐을 알 수 있다.
 
-![](https://t1.daumcdn.net/cfile/tistory/99E4A1505DBB971619)
+![](../../.gitbook/assets/99E4A1505DBB971619.png)
 
 위 그래프를 보면 1개 노드에서는 뉴론 시스템의 GPU노드 성능이 좋지만, 2개 이상의 노드를 사용할 경우 GPU 노드의 성능 향상이 그리 좋지 않다는 것을 알 수 있다. 오히려 4개 노드를 사용할 경우 SKL 노드가 GPU 노드보다 성능이 좋아짐을 확인할 수 있다. 다만, SKL 노드는 8개 노드, GPU 노드에서는 4개 노드이상을 사용하는 것은 현실적으로 상당히 어려운 상황이기 때문에, KNL 노드를 사용하는 것이 현실적이며, 성능적인 면에서도 유리함을 확인할 수 있다. 그러므로 단일 노드에서 계산을 수행하는 짧은 계산의 경우는 GPU 노드나 SKL 노드를 사용하는 것이 효율적인 면에서 좋을 수도 있지만, 크고 많은 계산을 수행하는 VASP의 Input을 사용할 경우는 KNL 노드를 활용하는 것이 올바른 선택이라고 할 수 있다.

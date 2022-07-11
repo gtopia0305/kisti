@@ -16,17 +16,9 @@ VASP (5.4.4.4 버전)의 실행 테스트를 위하여, 실리콘(Si64)을 모�
 | KPAR   | NCORE  | LPLANE | LWARE   | LCHARG  | LHFCALC | PREFOCK | NKRED | AEXX   | HFSCREEN |
 | 1      | ?      | .TRUE. | .FALSE. | .FLASE. | T       | Fast    | 1     | 0.25   | 2        |
 
-\
-
-
-[![](https://t1.daumcdn.net/cfile/tistory/995662385DB8C1BE18)](https://t1.daumcdn.net/cfile/tistory/995662385DB8C1BE18?original)
+![](../../.gitbook/assets/995662385DB8C1BE18.png)
 
 VASP 입력값 중 병렬계산과 관련된 설정들이 있는데, 이 중 병렬 설정에 따른 성능 차이를 가장 크게 보이는 변수가 NCORE 값이므로, NCORE가 1, 4, 8일 때에 대하여 누리온 노드와 코어수를 조정하여 계산 속도를 측정하였다.
-
-\
-
-
-\
 
 
 **나. 실행 방법 및 성능 분석**
@@ -61,7 +53,7 @@ SKL 노드의 경우 노드의 수가 많지 않기 때문에, 4개 노드까지
 | NODE=2 | 5452    | 6203    | 3990    | 3425    | 4172     |
 | NODE=4 | 3768    | 3978    | 2528    | 1939    | 2206　    |
 
-![](https://t1.daumcdn.net/cfile/tistory/99C585475DBB99F218)
+![](../../.gitbook/assets/99C585475DBB99F218.png)
 
 여기에서는 NCORE당 128개 코어를 썼을 때 가장 좋은 성능을 보였던 KNL과 같은 성향은 보이지 않았으며, NCORE가 8일 때 모든 노드에서 가장 좋은 성능을 보이고 있다.
 

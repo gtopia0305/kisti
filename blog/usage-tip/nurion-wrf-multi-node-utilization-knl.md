@@ -8,7 +8,7 @@
 
 WRF의 실행 테스트를 위하여, 아래의 환경으로 2018년 10월 16일 06UTC부터 2018년 10월 17일 06UTC까지 24시간 적분을 수행하였다.
 
-![](https://t1.daumcdn.net/cfile/tistory/99545B395DB8CAEE1D)
+![](../../.gitbook/assets/99545B395DB8CAEE1D.png)
 
 | Physics                  | Microphysics       | WSM6 |
 | ------------------------ | ------------------ | ---- |
@@ -68,7 +68,7 @@ D(예제에서는 1) : 한 프로세스가 사용할 OpenMP스레드의 수
 
 &#x20;
 
-![](https://t1.daumcdn.net/cfile/tistory/995E47385DB8CB4B1D)
+![](../../.gitbook/assets/995E47385DB8CB4B1D.png)
 
 ※ 실험 데이터는 2018년 6월 누리온에서 각각 4번의 반복 실험을 평균한 결과임&#x20;
 
@@ -92,7 +92,7 @@ D(예제에서는 1) : 한 프로세스가 사용할 OpenMP스레드의 수
 
 &#x20;누리온에서는 CPU 맞춤 컴파일 옵션을 사용하도록 권장하고 있다. 즉, Intel compiler인 경우, KNL에서만 실행되는 바이너리 파일을 생성하기 위해서는 ‘-xMIC-AVX512’ 옵션을 사용하고, KNL과 SKL 모두에서 실행되는 바이너리 파일을 생성하기 위해서는 ‘-xCOMMON-AVX512’ 옵션을 사용하도록 권장하고 있다.&#x20;
 
-![](https://t1.daumcdn.net/cfile/tistory/992DA43A5DB8CB8E1C)
+![](../../.gitbook/assets/992DA43A5DB8CB8E1C.png)
 
 ※ 컴파일 옵션에 따른 성능 차이가 있으므로, 블로그의 WRF 설치 지침에 따라 사용하시는 노드에 맞는 컴파일하시기를 권장함 (KNL 노드 사용의 경우, -xMIC-AVX512 사용 권장)&#x20;
 
@@ -110,7 +110,7 @@ Flat mode를 사용하는 경우, 프로그램 실행 시 ‘numactl -p 1’옵�
 \
 
 
-![](https://t1.daumcdn.net/cfile/tistory/990BCD3F5DB8CBCD1F)
+![](../../.gitbook/assets/990BCD3F5DB8CBCD1F.png)
 
 \
 
@@ -141,7 +141,7 @@ Cache mode의 실험 결과에서 노드당 코어를 64개를 사용할 때 가
 | 32     | 2888  | 3163  | 4300  | 6342  | 5754  |
 | 64     | 3616  | 2696  | 2962  | 4433  | 6447  |
 
-![](https://t1.daumcdn.net/cfile/tistory/99E3B5395DBB83662F)
+![](../../.gitbook/assets/99E3B5395DBB83662F.png)
 
 전체적으로 스레드이 개수가 증가할수록 성능이 좋아지지 않음을 알 수 있다. 오히려 DMPAR 즉 MPI 코드가 많을수록 성능이 좋아지고&#x20;
 
@@ -171,11 +171,11 @@ WRF의 경우 input, output의 파일 사이즈가 크기 때문에 이 파일�
 | NODE=32 | 2934  | 3096  | 4216  | 6298   | 　      |
 | NODE=64 | 3587  | 2831  | 2808  | 4307   | 　      |
 
-![](https://t1.daumcdn.net/cfile/tistory/99A532355DBB837A31)
+![](../../.gitbook/assets/99A532355DBB837A31.png)
 
 수행되는 input의 사이즈가 그리 크지 않기 때문일 수도 있지만, 현재 Parallel NETCDF의 효과는 보이는 것처럼 높지 않은 것으로 나오고 있다.
 
-![](https://t1.daumcdn.net/cfile/tistory/99A0863A5DBF57311A)
+![](../../.gitbook/assets/99A0863A5DBF57311A.png)
 
 \
 
@@ -192,7 +192,7 @@ SKL과 KNL의 노드 별 이론 성능은 거의 비슷하지만 실제 실험�
 | SKL | 12318  | 7005   | 3786   | 2307   | 2792    | -       | -       |
 | KNL | -      | 10273  | 6810   | 4303   | 3558    | 2340    | 2487    |
 
-![](https://t1.daumcdn.net/cfile/tistory/99E8A93E5DBF575B1C)
+![](../../.gitbook/assets/99E8A93E5DBF575B1C.png)
 
 수행 결과를 확인해보면 SKL 노드에서 8개의 노드를 사용할 때 가장 빠른 시간으로 계산이 소요된 것을 확인할 수 있고, 반면 KNL 노드에서는 32개를 사용할 때 가장 빠른 시간이 소요되었음을 확인할 수 있다. 이와 같은 현상은 WRF 뿐 아니라 격자류의 무거운 계산을 수행하는 유체, 기계등의 코드에서도 동일한 현상을 보이고 있다.
 
