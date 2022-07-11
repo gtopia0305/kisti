@@ -8,7 +8,7 @@ description: '[별첨3] Singularity 컨테이너 사용법'
 
 &#x20;
 
-![< 싱귤레러티 컨테이너 아키텍처 >](https://www.ksc.re.kr/file/image/?path=sos/jcs/2020/12/\&name=iA7rMElSDzNPxoc.png)
+![< 싱귤레러티 컨테이너 아키텍처 >](../../../.gitbook/assets/iA7rMElSDzNPxoc.png)
 
 ## 가. 싱귤레러티 모듈 적재
 
@@ -119,15 +119,15 @@ _※ Sylabs Cloud(https://cloud.sylabs.io)에 이미지를 내보내기(업로�
 
 &#x20;
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2020/12/\&name=FptMOrEVriyeHwm.png)
+![](../../../.gitbook/assets/FptMOrEVriyeHwm.png)
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2020/12/\&name=8SsHKgVZrGoHZ7E.png)
+![](../../../.gitbook/assets/8SsHKgVZrGoHZ7E.png)
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2020/12/\&name=jB4Qz6eplC8UhyS.png)
+![](../../../.gitbook/assets/jB4Qz6eplC8UhyS.png)
 
 &#x20;
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2020/12/\&name=LGDeMrtu2piP4ZA.png)
+![](../../../.gitbook/assets/LGDeMrtu2piP4ZA.png)
 
 &#x20;
 
@@ -137,9 +137,9 @@ _※ Sylabs Cloud(https://cloud.sylabs.io)에 이미지를 내보내기(업로�
 
 &#x20;
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2020/12/\&name=7NuUZiOLvyaYZqK.png)
+![](../../../.gitbook/assets/7NuUZiOLvyaYZqK.png)
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2020/12/\&name=ViIZ0BPIfboW1Tz.png)
+![](../../../.gitbook/assets/ViIZ0BPIfboW1Tz.png)
 
 _※  누리온에서 singularity 명령어로 리모트 빌드한 이미지 목록도 포함됨_
 
