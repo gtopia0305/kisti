@@ -117,7 +117,7 @@
 * [SW 설치 문서창고](blog/sw-install-doc/README.md)
   * [누리온(NURION)](blog/sw-install-doc/nurion/README.md)
     * [누리온 GROMACS-2021.4 버전 설치 소개 (SKL)](blog/sw-install-doc/nurion/nurion-gromacs-2021-4-install-skl.md)
-    * [누리온 GROMACS-2021.4 버전 설치 소개 (KNL)](blog/sw-install-doc/nurion/gromacs-2021.4-knl.md)
+    * [누리온 GROMACS-2021.4 버전 설치 소개 (KNL)](blog/sw-install-doc/nurion/nurion-gromacs-2021-4-install-knl.md)
   * [뉴론(Neuron)(GPU Cluster System)](blog/sw-install-doc/neuron/README.md)
     * [뉴론 Quantum Espresso-6.6 (GPU 버전) 설치](blog/sw-install-doc/neuron/neuron-quantum-espresso-6-6-install.md)
 * [시스템 활용 & 팁](blog/usage-tip/README.md)
