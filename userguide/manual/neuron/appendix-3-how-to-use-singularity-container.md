@@ -10,7 +10,7 @@ Tensorflow, Caffe, Pytorch와 같은 딥러닝 프레임워크와 Quantum Espres
 
 &#x20;
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2022/03/\&name=ODaaowbXWtsnLcU.png)   ![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2020/12/\&name=iUHvmQa8jfrouGh.png)&#x20;
+![](../../../.gitbook/assets/ODaaowbXWtsnLcU.png) ![](../../../.gitbook/assets/iA7rMElSDzNPxoc.png)
 
 &#x20;< 가상머신과 컨테이너 아키텍처 비교 >                                                 < 싱귤레러티 컨테이너 아키텍처 >
 
@@ -238,15 +238,15 @@ $ singularity [global options...] shell [shell options...] ＜container＞$ sing
 
 [**\[Sylabs Cloud 바로가기\]**](https://cloud.sylabs.io/)
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2020/12/\&name=0uA1VswRtBwuiMX.png)
+![](../../../.gitbook/assets/FptMOrEVriyeHwm.png)
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2020/12/\&name=i7yoPSEz8vCd10Z.png)
+![](../../../.gitbook/assets/8SsHKgVZrGoHZ7E.png)
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2020/12/\&name=qlGhtVeD8LMv6eG.png)
+![](../../../.gitbook/assets/jB4Qz6eplC8UhyS.png)
 
 &#x20;
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2020/12/\&name=70ZC45NRHMBJNe4.png)
+![](../../../.gitbook/assets/LGDeMrtu2piP4ZA.png)
 
 &#x20;
 
@@ -256,9 +256,9 @@ $ singularity [global options...] shell [shell options...] ＜container＞$ sing
 
 [**\[Sylabs Cloud 바로가기\]**](https://cloud.sylabs.io/)
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2020/12/\&name=vAH6LNfpwpVYl4S.png)
+![](../../../.gitbook/assets/7NuUZiOLvyaYZqK.png)
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2020/12/\&name=QRfz3mqIyCZsnlB.png)
+![](../../../.gitbook/assets/ViIZ0BPIfboW1Tz.png)
 
 &#x20;
 
