@@ -4,7 +4,7 @@ description: '[별첨5] TSMSF를 이용한 데이터 아카이빙(Archiving) 사
 
 # \[별첨5] TSMSF를 이용한 데이터 아카이빙(Archiving) 사용법
 
-![](<../../../.gitbook/assets/\[별첨5] TSMSF를 이용한 데이터 아카이빙\_1.jpg>) ![](<../../../.gitbook/assets/\[별첨5] TSMSF를 이용한 데이터 아카이빙.jpg>)
+![](../../../.gitbook/assets/oqm6dfnZbZXsgQ2.jpg) ![](../../../.gitbook/assets/ptXncsWKIDgF837.jpg)
 
 ## 가. 시스템 환경 및 사용 신청
 
@@ -26,7 +26,7 @@ TSMSF(Tiered Storage Management Script Facility)는 사용자의 데이터 백�
 
 \[ TSMSF 시스템 구성도 ]
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2021/02/\&name=K2uTYs6pSXjH8F6.bmp)
+![](../../../.gitbook/assets/K2uTYs6pSXjH8F6.bmp)
 
 &#x20;
 
@@ -106,7 +106,7 @@ TSMSF는 기본적으로 테이프 미디어를 이용하므로 테이프 미디
 
 &#x20;
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2021/02/\&name=09vnGgvqndHwOJR.bmp)
+![](../../../.gitbook/assets/09vnGgvqndHwOJR.bmp)
 
 &#x20;
 
@@ -114,13 +114,13 @@ TSMSF는 기본적으로 테이프 미디어를 이용하므로 테이프 미디
 
 ※ 리모트 사이트 경로에 직접 절대경로를 입력하면 쉽게 이동가능
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2021/02/\&name=lIkNBrVqqyiDIXz.bmp)
+![](../../../.gitbook/assets/lIkNBrVqqyiDIXz.bmp)
 
 &#x20;
 
 \- 왼쪽 로컬 사이트에서 파일이나 디렉토리를 선택하여 파일 업로드
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2021/02/\&name=zOsAQCEcNmolm8w.bmp)
+![](../../../.gitbook/assets/zOsAQCEcNmolm8w.bmp)
 
 ※ 보다 상세한 파일질라 매뉴얼은 사이트(https://filezilla-project.org/) 참조
 
@@ -132,7 +132,7 @@ TSMSF는 기본적으로 테이프 미디어를 이용하므로 테이프 미디
 
 \- Datamover 노드에 접속하기 위해서‘Quick Connect’ 버튼 클릭
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2021/02/\&name=tMoayQXkQ5bJOKX.jpg)
+![](../../../.gitbook/assets/tMoayQXkQ5bJOKX.jpg)
 
 &#x20;
 
@@ -146,17 +146,17 @@ TSMSF는 기본적으로 테이프 미디어를 이용하므로 테이프 미디
 
 &#x20;
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2021/02/\&name=HvjeKpQhjBDTD80.bmp)
+![](../../../.gitbook/assets/HvjeKpQhjBDTD80.bmp)
 
 &#x20;
 
 \- 일회용패스워드(OTP)와 비밀번호(Password)를 순차적으로 입력하고 ‘OK’ 버튼 클릭
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2021/02/\&name=tvuPaZyizUkrei0.bmp)
+![](../../../.gitbook/assets/tvuPaZyizUkrei0.bmp)
 
 &#x20;
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2021/02/\&name=zZBM6Z3RBI0iRJ8.bmp)
+![](../../../.gitbook/assets/zZBM6Z3RBI0iRJ8.bmp)
 
 &#x20;
 
@@ -164,7 +164,7 @@ TSMSF는 기본적으로 테이프 미디어를 이용하므로 테이프 미디
 
 ※ 해당 경로에 직접 절대경로를 입력하면 쉽게 이동가능
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2021/02/\&name=RTVTku7zIhHsrPv.bmp)
+![](../../../.gitbook/assets/RTVTku7zIhHsrPv.bmp)
 
 &#x20;
 
@@ -172,7 +172,7 @@ TSMSF는 기본적으로 테이프 미디어를 이용하므로 테이프 미디
 
 &#x20;****&#x20;
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2021/02/\&name=wlvqaTAw4xYiieb.bmp)
+![](../../../.gitbook/assets/wlvqaTAw4xYiieb.bmp)
 
 &#x20;
 
