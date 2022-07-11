@@ -131,6 +131,7 @@
     * [누리온 GROMACS-2020.2 버전 설치 소개 (SKL)](blog/sw-install-doc/nurion/gromacs-2020.2-install-skl.md)
     * [누리온 VASP 6.1.0 설치 소개](blog/sw-install-doc/nurion/vasp-6.1.0-install.md)
     * [누리온 v\_sim-3.7.2 설치 소개](blog/sw-install-doc/nurion/v\_sim-3.7.2-install.md)
+    * [누리온 R-3.6.2 버전 설치 소개](blog/sw-install-doc/nurion/r-3.6.2-install.md)
   * [뉴론(Neuron)(GPU Cluster System)](blog/sw-install-doc/neuron/README.md)
     * [뉴론 Quantum Espresso-6.6 (GPU 버전) 설치](blog/sw-install-doc/neuron/neuron-quantum-espresso-6-6-install.md)
 * [시스템 활용 & 팁](blog/usage-tip/README.md)
