@@ -9,7 +9,7 @@
 
 ## A. System Environment and How to Use the System
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2021/02/\&name=oqm6dfnZbZXsgQ2.jpg) ![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2021/02/\&name=ptXncsWKIDgF837.jpg)
+![](../../../.gitbook/assets/oqm6dfnZbZXsgQ2.jpg) ![](../../../.gitbook/assets/ptXncsWKIDgF837.jpg)
 
 The Nurion system operates a Tape Library (IBM TS4500) with a capacity of 10 PBytes to support the long-term (1 year after the contract expires) storage of users' important files and large files.
 
@@ -27,7 +27,7 @@ Tiered storage management script facility (TSMSF) is a software tool that suppor
 
 \[TSMSF System Configuration Diagram ]
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2021/02/\&name=K2uTYs6pSXjH8F6.bmp)
+![](../../../.gitbook/assets/K2uTYs6pSXjH8F6.bmp)
 
 Data are automatically archived 7 days (this may be changed later) after the user uploads files from Datamover to the specified directory (/scratch/arcv/$USER). When uploading files to Datamover, the user can use FTP, SCP, SSH, SFTP, etc. to upload files directly from the outside. The user can also upload files through the Nurion login node (but FTP cannot be used for the login node). Here, services other than FTP require the user to enter a one-time password (OTP). Furthermore, services other than FTP automatically stop uploading files if the limited resource (10 min of CPU time) is used up. Hence, we recommend that you use FTP to upload files.
 
@@ -113,7 +113,7 @@ To archive the user data, please use the Nurion system's login node or Datamover
 
 &#x20;
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2021/02/\&name=09vnGgvqndHwOJR.bmp)
+![](../../../.gitbook/assets/09vnGgvqndHwOJR.bmp)
 
 &#x20;
 
@@ -121,7 +121,7 @@ To archive the user data, please use the Nurion system's login node or Datamover
 
 ※ You can move easily by directly entering the absolute path in the remote site path.
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2021/02/\&name=lIkNBrVqqyiDIXz.bmp)
+![](../../../.gitbook/assets/lIkNBrVqqyiDIXz.bmp)
 
 &#x20;
 
@@ -129,7 +129,7 @@ To archive the user data, please use the Nurion system's login node or Datamover
 
 \- Upload files by selecting files or directories in the local site on the left.
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2021/02/\&name=zOsAQCEcNmolm8w.bmp)
+![](../../../.gitbook/assets/zOsAQCEcNmolm8w.bmp)
 
 ※ Refer to (https://filezilla-project.org/) for a more detailed FileZilla manual.
 
@@ -141,7 +141,7 @@ To archive the user data, please use the Nurion system's login node or Datamover
 
 \- Click the “Quick Connect” button to connect to the Datamover node.
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2021/02/\&name=tMoayQXkQ5bJOKX.jpg)
+![](../../../.gitbook/assets/tMoayQXkQ5bJOKX.jpg)
 
 &#x20;
 
@@ -153,15 +153,15 @@ To archive the user data, please use the Nurion system's login node or Datamover
 
 &#x20;
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2021/02/\&name=HvjeKpQhjBDTD80.bmp)
+![](../../../.gitbook/assets/HvjeKpQhjBDTD80.bmp)
 
 &#x20;
 
 \- Enter the one-time password (OTP) and the password sequentially, and then click the “OK” button.
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2021/02/\&name=tvuPaZyizUkrei0.bmp)
+![](../../../.gitbook/assets/tvuPaZyizUkrei0.bmp)
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2021/02/\&name=zZBM6Z3RBI0iRJ8.bmp)
+![](../../../.gitbook/assets/zZBM6Z3RBI0iRJ8.bmp)
 
 &#x20;
 
@@ -171,7 +171,7 @@ To archive the user data, please use the Nurion system's login node or Datamover
 
 ※ You can move easily by directly entering the absolute path in the site path.
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2021/02/\&name=RTVTku7zIhHsrPv.bmp)
+![](../../../.gitbook/assets/RTVTku7zIhHsrPv.bmp)
 
 &#x20;
 
@@ -179,7 +179,7 @@ To archive the user data, please use the Nurion system's login node or Datamover
 
 \- Upload files by selecting files or directories in the local site on the left.
 
-&#x20;**** ![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2021/02/\&name=wlvqaTAw4xYiieb.bmp)
+&#x20;**** ![](../../../.gitbook/assets/wlvqaTAw4xYiieb.bmp)
 
 &#x20;
 

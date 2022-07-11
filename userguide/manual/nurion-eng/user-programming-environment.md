@@ -519,15 +519,15 @@ $ ddt &
 
 \- Execute the command to see if the following pop-up execution window appears.
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2021/11/\&name=sWalDicT3oGzyGg.png)
+![](../../../.gitbook/assets/I97n7qZ81qCXhYr.png)
 
 \- Select “RUN” among the listed commands, select the file for debugging as shown below, and then click “RUN” in the new pop-up window.
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2021/11/\&name=jzb6HthNw9L7Ztc.png)
+![](../../../.gitbook/assets/Mi560g3KZ07pgdU.png)
 
 \- Debugging can be initiated by entering the debugging mode for the following selected execution file.
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2021/11/\&name=rUvMP6veEXuH5T1.png)
+![](../../../.gitbook/assets/gTAr5SRcMVrBvVk.png)
 
 2\) Example of using profiler Intel vtune Amplifier\
 Select the architecture, compiler, and MPI for using a profiler vtune in this system, and then select vtune to use the profiler.
@@ -566,17 +566,17 @@ $ amplxe-gui
 
 \- Click “New Analysis” in the screen below.
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2021/11/\&name=7gwZRUsGR0fySJi.png)
+![](../../../.gitbook/assets/GTm1mNMQZZf8bty.png)
 
 \- When the screen shown below appears, check the number of CPUs and click the Start button to begin the analysis.
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2021/11/\&name=XFVfo670naAutju.png)
+![](../../../.gitbook/assets/GZ4wIMQohgL61Xb.png)
 
 \- Once completed, the analysis results are summarized in multiple tabs as shown below.
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2021/11/\&name=jROQxEAScn3Bj8g.png)
+![](../../../.gitbook/assets/cBGODIPc3EqGMwk.png)
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2021/11/\&name=CBVs5pLpL149i7R.png)
+![](../../../.gitbook/assets/E6pssxfC8C9m0oq.png)
 
 3\) Example of using profiler Cary-Pat\
 The environment including the architecture is set as below for using CaryPat, which is a profiler, and the example was initiated.
@@ -649,13 +649,13 @@ $ app2 a.out+apa+378250-3t
 
 \- Visualization results are produced as shown below.
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2021/11/\&name=1tZDNmbavC7mjFc.png)
+![](../../../.gitbook/assets/YPY09PIhdCcn1kZ.png)
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2021/11/\&name=3jrkiJGoQjQNgo4.png)
+![](../../../.gitbook/assets/aiHnF5L2OvQWZHq.png)
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2021/11/\&name=OEyeTyoZe5MIgMq.png)
+![](../../../.gitbook/assets/mQM5xWpZTEGSlSb.png)
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2021/11/\&name=4JZOhwpHdqSMWVV.png)
+![](../../../.gitbook/assets/09wS30q3jMt4TaN.png)
 
 &#x20;&#x20;
 

@@ -501,7 +501,7 @@ $ ddt &
 
 \- 명령을 실행하여 다음과 같은 팝업 실행 창을 확인한다.
 
-![](<../../../.gitbook/assets/I97n7qZ81qCXhYr (1).png>)
+![](../../../.gitbook/assets/I97n7qZ81qCXhYr.png)
 
 \- 위 명령 중 "RUN" 을 선택하여 다음과 같이 디버깅할 파일 선택한 후 다시 새로운 팝업 창의 "RUN" 선택한다.
 
@@ -563,11 +563,11 @@ amplxe: Executing actions 100 % done
 
 \- 아래의 화면에서 New Analysis 버튼을 클릭한다.
 
-![](<../../../.gitbook/assets/GTm1mNMQZZf8bty (1).png>)
+![](../../../.gitbook/assets/GTm1mNMQZZf8bty.png)
 
 \- 아래와 같은 화면이 나타나면 cpu수와 체크 확인 후 Start 버튼을 클릭하면 분석이 시작된다.
 
-![](<../../../.gitbook/assets/GZ4wIMQohgL61Xb (1).png>)
+![](../../../.gitbook/assets/GZ4wIMQohgL61Xb.png)
 
 \- 완료되면 다음과 같이 분석 결과가 여러 개의 탭으로 요약되어 나타난다.
 
@@ -644,10 +644,10 @@ $ app2 a.out+apa+378250-3t
 
 \- 아래와 같이 시각화가 가능하다.
 
-![](<../../../.gitbook/assets/YPY09PIhdCcn1kZ (1).png>)
+![](../../../.gitbook/assets/YPY09PIhdCcn1kZ.png)
 
 ![](../../../.gitbook/assets/aiHnF5L2OvQWZHq.png)
 
 ![](../../../.gitbook/assets/mQM5xWpZTEGSlSb.png)
 
-![](<../../../.gitbook/assets/09wS30q3jMt4TaN (1).png>)
+![](../../../.gitbook/assets/09wS30q3jMt4TaN.png)

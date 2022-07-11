@@ -68,7 +68,7 @@ The C:\ drive and control panel are blocked from access because of security reas
 
 Singularity is a container platform suitable for the HPC environment to implement the OS virtualization as a Docker. The Linux distribution version suitable for a user’s work environment, compiler, and container images containing library will be provided. The container is operated to execute a user program.
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2020/12/\&name=iA7rMElSDzNPxoc.png)
+![](../../../.gitbook/assets/iA7rMElSDzNPxoc.png)
 
 **ㅇ Loading singularity module**
 
@@ -136,19 +136,19 @@ _※ An access token needs to be generated and registered on Nurion to export an
 
 **\[Reference 1] Generating a Sylabs Cloud access token and registering on Nurion**
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2020/12/\&name=FptMOrEVriyeHwm.png)
+![](../../../.gitbook/assets/FptMOrEVriyeHwm.png)
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2020/12/\&name=8SsHKgVZrGoHZ7E.png)
+![](../../../.gitbook/assets/8SsHKgVZrGoHZ7E.png)
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2020/12/\&name=jB4Qz6eplC8UhyS.png)
+![](../../../.gitbook/assets/jB4Qz6eplC8UhyS.png)
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2020/12/\&name=LGDeMrtu2piP4ZA.png)
+![](../../../.gitbook/assets/LGDeMrtu2piP4ZA.png)
 
 **\[Reference 2] Building a singularity container image using a remote builder on a web browser**
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2020/12/\&name=7NuUZiOLvyaYZqK.png)
+![](../../../.gitbook/assets/7NuUZiOLvyaYZqK.png)
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2020/12/\&name=ViIZ0BPIfboW1Tz.png)
+![](../../../.gitbook/assets/ViIZ0BPIfboW1Tz.png)
 
 _※ Includes a list of images remotely built with singularity commands in Nurion_
 
@@ -158,7 +158,7 @@ _※ Includes a list of images remotely built with singularity commands in Nurio
 
 Burst buffer IME performs the role of a cache in the Nurion /scratch filesystem. The data access method through IME is as shown in the figure below.
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2020/02/\&name=Fjx33GN4MTdGgFk.png)
+![](../../../.gitbook/assets/Fjx33GN4MTdGgFk.png)
 
 IME is mounted on a client node (entire computing nodes and login node) using FUSE (**F**ile System In **USE**rspace) which is a user-level filesystem. A caution is needed to ensure the /scratch filesystem is mounted because IME serves the role of a cache. The IME directory path is **/scratch\_ime,** in which all directories and file structures of the scratch (/scratch/$USER) filesystem can be checked when the first user accesses the directory (/scratch\_ime/$USER). The data does not exist in the actual IME device, and the data is cached by IME in /scratch when a job is executed using the burst buffer. To use the IME, the burst buffer project name (#PBS -P burst\_buffer) needs to be clarified in the job script. There are two methods for executing an application.
 
@@ -192,7 +192,7 @@ Load the mvapich2/2.3.1 module as above and write a job script as shown below.
 
 For the data management of IME, the life cycle of the data shown in the figure below needs to be examined. IME data processing largely consists of prestage, prefetch, sync, and release steps, where IME-API(#ime-ctl) commands for each step are provided.
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2020/02/\&name=Y1b0H3iRxaLyeu2.png)
+![](../../../.gitbook/assets/Y1b0H3iRxaLyeu2.png)
 
 | ime-ctl -i $INPUT\_FILE  | <p>Stage-in is executed for the job data with IME</p><p>(Data caching from /scratch to /scratch_ime)</p>            |
 | ------------------------ | ------------------------------------------------------------------------------------------------------------------- |
@@ -210,7 +210,7 @@ The total capacity of IME is approximately 900 TB, which is automatically flushe
 
 ② When the overall available space is 15% or below
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2020/02/\&name=jexfpOF6FjmZ1Yn.png)
+![](../../../.gitbook/assets/jexfpOF6FjmZ1Yn.png)
 
 **◦ Caution**
 
