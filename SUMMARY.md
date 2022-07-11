@@ -122,6 +122,7 @@
     * [누리온 lammps-3Mar20 설치 소개(KNL)](<blog/sw-install-doc/nurion/nurion-lammps-3Mar20 install-knl.md>)
     * [누리온 Quantum Espresso-6.6 설치 소개](<blog/sw-install-doc/nurion/nurion-Quantum Espresso-6.6-install.md>)
     * [누리온 DDSCAT-7.3.3 설치 소개](blog/sw-install-doc/nurion/nurion-ddscat-7.3.3-install.md)
+    * [누리온 AutoDock Vina-1.1.2 설치 소개](blog/sw-install-doc/nurion/nurion-autodock-vina-1.1.2-install.md)
   * [뉴론(Neuron)(GPU Cluster System)](blog/sw-install-doc/neuron/README.md)
     * [뉴론 Quantum Espresso-6.6 (GPU 버전) 설치](blog/sw-install-doc/neuron/neuron-quantum-espresso-6-6-install.md)
 * [시스템 활용 & 팁](blog/usage-tip/README.md)
