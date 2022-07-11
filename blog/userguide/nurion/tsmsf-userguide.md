@@ -2,7 +2,7 @@
 
 ## **TSMSF를 이용한 데이터 아카이빙(Archiving) 방법**
 
-![](https://blog.kakaocdn.net/dn/cMmtCt/btqXYoKN26Z/PHEzHe6wfyaGJxlOdL92l0/img.png) ![](https://blog.kakaocdn.net/dn/bQIGJ2/btqX0pWF2vk/9EPhBMDhKT9MR8euvnkOFk/img.png)
+![](../../../.gitbook/assets/oqm6dfnZbZXsgQ2.jpg) ![](../../../.gitbook/assets/ptXncsWKIDgF837.jpg)
 
 ### **1. 시스템 환경 및 사용 신청**
 
@@ -17,7 +17,7 @@ TSMSF(Tiered Storage Management Script Facility)는 사용자의 데이터 백�
 
 \[ TSMSF 시스템 구성도 ]
 
-![](https://blog.kakaocdn.net/dn/diVC5L/btqX6fZUEv3/98Kveas7CzzHm36Po18UR0/img.png)
+![](../../../.gitbook/assets/K2uTYs6pSXjH8F6.bmp)
 
 사용자가 파일을 Datamover에서 지정된 디렉토리(/scratch/arcv/$USER)로 업로드(upload)하고 7일(추후 변경가능)이 지나면 데이터는 자동으로 아키이빙(Archiving)이 진행되게 됩니다. Datamover로 파일을 업로드 할 경우에는 FTP, SCP, SSH, SFTP 등을 이용하여 외부에서 직접 파일을 업로드 할 수 있고, 누리온 로그인 노드(단, 로그인노드의 경우 FTP 사용 불가)를 통해서도 가능합니다. 이 때, FTP를 제외한 서비스는 일회용패스워드(OTP)를 입력해야 합니다. 또한 FTP를 제외한 서비스는 제한된 자원(CPU 시간 10분)을 소진하게 되면 자동으로 파일 업로드가 중단되니 FTP를 이용하여 파일을 업로드하여 주시길 권고 드립니다.
 
@@ -72,23 +72,23 @@ Password:\
 | ------------------- | -------------- | -------- | -- |
 | nurion-dm.ksc.re.kr | USER ID(사용자계정) | 사용자 비밀번호 | 21 |
 
-![](https://blog.kakaocdn.net/dn/cfZw05/btqX82swuGB/1lpwccePmGQVlexWez7wT1/img.png)
+![](../../../.gitbook/assets/09vnGgvqndHwOJR.bmp)
 
 \- 리모트 사이트의 경로가 사용자 홈 디렉토리(/home01/$USER) 이므로 지정된 디렉토리(/scratch/arcv/$USER)로 이동\
 ※ 리모트 사이트 경로에 직접 절대경로를 입력하면 쉽게 이동가능
 
-![](https://blog.kakaocdn.net/dn/bSiwHu/btqXYqhvXL5/ylbCcLPeybxe2WfwJ8U22k/img.png)
+![](../../../.gitbook/assets/lIkNBrVqqyiDIXz.bmp)
 
 \- 왼쪽 로컬 사이트에서 파일이나 디렉토리를 선택하여 파일 업로드
 
-![](https://blog.kakaocdn.net/dn/bgfKWA/btqXZIISqJL/gBA1u1oRk4ZKg9QMrC7dW1/img.png)
+![](../../../.gitbook/assets/zOsAQCEcNmolm8w.bmp)
 
 ※ 보다 상세한 파일질라 매뉴얼은 사이트([http://filezilla-project.org](https://filezilla-project.org/)) 참조
 
 ② SSH Secure Shell Client를 이용한 예제(SFTP)\
 \- Datamover 노드에 접속하기 위해서‘Quick Connect’ 버튼 클릭
 
-![](https://blog.kakaocdn.net/dn/mONxm/btqYbJMVGNA/WYMSa9xk5O5TKOnORuAp30/img.png)
+![](../../../.gitbook/assets/tMoayQXkQ5bJOKX.jpg)
 
 \- Datamover 노드에 접속하기 위한 정보를 입력하고 ‘연결(Connect)’ 버튼 클릭
 
@@ -96,20 +96,21 @@ Password:\
 | ------------------- | -------------- | -- | -------------------- |
 | nurion-dm.ksc.re.kr | USER ID(사용자계정) | 22 | Keyboard Interactive |
 
-![](https://blog.kakaocdn.net/dn/AkgaZ/btqX33yFpIA/7g5Hxu8x3X4WjdsKuMIYQ0/img.png)
+![](../../../.gitbook/assets/HvjeKpQhjBDTD80.bmp)
 
 \- 일회용패스워드(OTP)와 비밀번호(Password)를 순차적으로 입력하고 ‘OK’ 버튼 클릭
 
-![](https://blog.kakaocdn.net/dn/bymjL1/btqX83kE2SF/nWkZ7KKQ9WFU9NZMc5NqxK/img.png) ![](https://blog.kakaocdn.net/dn/7BWkD/btqX33Mf8vB/2b2oKYX3TVK99Vd7xIjT8K/img.png)
+![](../../../.gitbook/assets/tvuPaZyizUkrei0.bmp)
+![](../../../.gitbook/assets/zZBM6Z3RBI0iRJ8.bmp)
 
 \- 오른쪽 사이트의 경로가 사용자 홈 디렉토리(/home01/$USER) 이므로 지정된 디렉토리(/scratch/arcv/$USER)로 이동\
 ※ 해당 경로에 직접 절대경로를 입력하면 쉽게 이동가능
 
-![](https://blog.kakaocdn.net/dn/cerhDj/btqXYpQAxRn/zSgLL911cimEFyIWZEDKfk/img.png)
+![](../../../.gitbook/assets/RTVTku7zIhHsrPv.bmp)
 
 \- 왼쪽 로컬 사이트에서 파일이나 디렉토리를 선택하여 파일 업로드
 
-![](https://blog.kakaocdn.net/dn/6zrmR/btqYbJe8RBV/SiV5HUBJoIgDohU3H9DYHK/img.png)
+![](../../../.gitbook/assets/wlvqaTAw4xYiieb.bmp)
 
 **3.2 데이터 아카이빙**
 

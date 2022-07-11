@@ -113,7 +113,7 @@ Hello, World!
 * &#x20;\_start 레이블은 프로그램의 엔트리 포인트이다. 이것은 디폴트 값으로 엔트리 포인트를 바꾸고 싶을 경우 ld -e foo 라고 할 수 있다.
 * x86\_64 아키텍처의 레지스터는 다음과 같다. 자세한 것은[ Intel 64 and IA-2 Architectures Software Developer's Manual](https://www.intel.com/content/www/us/en/developer/articles/technical/intel-sdm.html) 을 참고한다.
 
-![](https://blog.kakaocdn.net/dn/bhzF28/btrDQfRUgxP/0Xmdn0h1lkHC4wMQmXbF61/img.png)X86\_64 프로세서 내부 레지스터 구조
+![X86\_64 프로세서 내부 레지스터 구조](../../.gitbook/assets/0Xmdn0h1lkHC4wMQmXbF61.png)
 
 * syscall 은 시스템콜을 호출하는 명령어로, 리눅스에서 사용하는 시스템 콜 번호는 관련 문서(64비트, 32비트, ARM)를 참고한다. 아키텍처에 따라서 시스템 호출 번호가 서로 다름을 알 수 있다.
 * 64비트 리눅스에서 sys\_write 시스템콜 정의는 다음과 같다.

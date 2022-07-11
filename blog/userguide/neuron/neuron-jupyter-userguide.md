@@ -64,7 +64,7 @@
 
 &#x20;&#x20;
 
-![](https://blog.kakaocdn.net/dn/cblYJj/btrxVFqAdyk/y7mm6dT0iznhY6KbOS5WY1/img.png)
+![](../../../.gitbook/assets/fEuuyE877IXSvC9.png)
 
 &#x20;
 
@@ -152,7 +152,9 @@
 
 &#x20;
 
-![](https://blog.kakaocdn.net/dn/o8Kpa/btrx1xxMUHa/DGbwEPK66qKxuZfXkIOWJk/img.png)
+![](../../../.gitbook/assets/0uegGvxpcDETAut.png)
+
+
 
 &#x20;
 
@@ -190,7 +192,7 @@
 
 \- Job queue 에서 해당 queue를 선택하고 Submit버튼을 클릭하여 Jupyter Notebook 실행 (other queues로도 실행 가능하나, 과금 발생. 과금 정보는 KSC 홈페이지 Neuron 과금 정보 참고)
 
-![](https://blog.kakaocdn.net/dn/bxGj2O/btrx0XcoWVs/j40bzGpZ3JPJWyUpFGaK70/img.png)
+![](../../../.gitbook/assets/bURdAe1yRXKrQDg.png)
 
 &#x20;
 
@@ -260,7 +262,7 @@
 
 \- Menu Bar -> IPython Clusters 는 프로파일 기반 파이썬 병렬 엔진을 시작/종료 가능하다. (IPython Parallel 프로파일 작성 방법은 라. IPyParallel 실행 부분 참고)
 
-![](https://blog.kakaocdn.net/dn/cUCYHk/btrxZDGif1C/45kMsvAKkiHOvpLkNrnGsk/img.png)
+![](../../../.gitbook/assets/fEuuyE877IXSvC9.png)
 
 &#x20;
 

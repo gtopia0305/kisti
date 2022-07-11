@@ -22,7 +22,7 @@
 
 **1) NAMD 단일 코어**
 
-![](https://blog.kakaocdn.net/dn/b4UI15/btq4hp32LRv/KhE7iPjTVhofXC6n76X3b0/img.png)
+![](../../.gitbook/assets/KhE7iPjTVhofXC6n76X3b0.png)
 
 * 단순 컴파일러 기준 gcc 는 AMD 노드에서 보다 좋은 성능을 보여줌
 * 단순 컴파일러 기준 intel 은 Cascade 노드에서 보다 좋은 성능을 보여줌
@@ -31,7 +31,7 @@
 
 **2) NAMD 멀티 코어**
 
-![](https://blog.kakaocdn.net/dn/c3r9o8/btq4kbX5BtM/CjkxZ5ByrvqyUiqdnJ34Wk/img.png)
+![](../../.gitbook/assets/CjkxZ5ByrvqyUiqdnJ34Wk.png)
 
 * gcc 의 경우 AMD 노드에서 지속적으로 좋은 성능을 보여줌
 * intel 의 경우 10 core 까지는 Cascade 노드에서 더 좋은 성능을 보이지만 20 core 부터는 AMD 노드에서 더 좋은 성능을 보여줌
@@ -40,7 +40,7 @@
 
 **3) GROMACS 단일 코어**
 
-![](https://blog.kakaocdn.net/dn/xGVgR/btq4eLUcNyf/wIWLus8EUI66AL6GsZke6K/img.png)
+![](../../.gitbook/assets/wIWLus8EUI66AL6GsZke6K.png)
 
 * gcc 와 intel 컴파일러 모두 Cascade 노드에서 더 좋은 성능을 보여줌
 
@@ -48,7 +48,7 @@
 
 **4) GROMACS 멀티 코어**
 
-![](https://blog.kakaocdn.net/dn/ch7nXV/btq4kETyt4f/HDapdj2GA5WvBtpc2jng00/img.png)
+![](../../.gitbook/assets/HDapdj2GA5WvBtpc2jng00.png)
 
 * 10 core 에서 intel 은 여전히 Cascade 노드에서 더 좋은 성능을 보여줌
 * 10 core 에서 gcc는 AMD 노드에서 더 좋은 성능을 보이기 시작함
@@ -58,7 +58,7 @@
 
 **5) OpenFOAM 단일 코어**
 
-![](https://blog.kakaocdn.net/dn/bHaXN5/btq4hpKgVNS/wooTLQ8VMAp3JOxiRQYU90/img.png)
+![](../../.gitbook/assets/wooTLQ8VMAp3JOxiRQYU90.png)
 
 * gcc 는 AMD 노드에서 더 좋은 성능
 * intel 은 Cascade 노드에서 더 좋은 성능
@@ -67,7 +67,7 @@
 
 **6) OpenFOAM 멀티 코어**
 
-![](https://blog.kakaocdn.net/dn/nRa5d/btq4jP2AoOL/k86ZqqDl1WLI6fW8WWL2E0/img.png)
+![](../../.gitbook/assets/k86ZqqDl1WLI6fW8WWL2E0.png)
 
 * gcc 의 경우 AMD 노드에서 지속적으로 좋은 성능을 보여줌
 * intel 의 경우 10 core 까지는 Cascade 노드에서 더 좋은 성능을 보이지만 20 core 부터는 AMD 노드에서 더 좋은 성능을 보여줌&#x20;

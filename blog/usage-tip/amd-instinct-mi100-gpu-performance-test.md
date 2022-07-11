@@ -21,7 +21,7 @@ AMD Instinct MI100은 AMD CDNA 아키텍처를 기반으로 설계된 GPU로 HPC
 
 &#x20;
 
-![](https://blog.kakaocdn.net/dn/GdwGE/btq4iOWh9hy/DgkOHF46SLToNmfuGsxKN0/img.png)
+![](../../.gitbook/assets/DgkOHF46SLToNmfuGsxKN0.png)
 
 &#x20;
 
@@ -35,7 +35,7 @@ AMD Instinct MI100은 AMD CDNA 아키텍처를 기반으로 설계된 GPU로 HPC
 
 &#x20;
 
-![](https://blog.kakaocdn.net/dn/dPnDIk/btq4jEMF1dR/Yk9yjW1eGk98gx8mkKdce1/img.png)
+![](../../.gitbook/assets/Yk9yjW1eGk98gx8mkKdce1.png)
 
 &#x20;
 

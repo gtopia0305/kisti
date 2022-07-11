@@ -104,10 +104,11 @@ Password
 | ------------------- | -------------- | -- | -------------------- |
 | nurion-dm.ksc.re.kr | USER ID(사용자계정) | 22 | Keyboard Interactive |
 
-![](../../../.gitbook/assets/tMoayQXkQ5bJOKX.jpg)
+![](../../../.gitbook/assets/HvjeKpQhjBDTD80.bmp)
 
 \- 일회용패스워드(OTP)와 비밀번호(Password)를 순차적으로 입력하고 ‘OK’ 버튼 클릭
 
+![](../../../.gitbook/assets/tvuPaZyizUkrei0.bmp)
 ![](../../../.gitbook/assets/zZBM6Z3RBI0iRJ8.bmp)
 
 \- 오른쪽 사이트의 경로가 사용자 홈 디렉토리(/home01/$USER) 이므로 지정된 디렉토리(/scratch/arcv/$USER)로 이동

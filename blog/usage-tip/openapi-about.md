@@ -1,6 +1,6 @@
 # oneAPI 소개
 
-![](https://blog.kakaocdn.net/dn/cwc3qF/btrjJyLbf5P/4j49EFsjgGpRygeBMQpu0k/img.png)
+![](../../.gitbook/assets/4j49EFsjgGpRygeBMQpu0k.png)
 
 1\. oneAPI Base ToolKit - 특징 및 장점
 
@@ -68,7 +68,7 @@
 
 3\. oneAPI: STREAM 벤치마크
 
-![](https://blog.kakaocdn.net/dn/kE5Rg/btrjLxdF7wL/VfXj29dUQOT6EMkkoN2akK/img.png)
+![](../../.gitbook/assets/VfXj29dUQOT6EMkkoN2akK.png)
 
 &#x20;  ㅇ Triad 커널은 1차원 벡터에 대한 계산과 관련된 메모리 대역폭을 측정합니다 : a=b+ γc
 
@@ -92,7 +92,7 @@
 
 4\. oneMKL: SGEMM 벤치마크
 
-![](https://blog.kakaocdn.net/dn/6iRp4/btrjLwMCiuM/RcvMYHdeqmm50YH7Q8dw61/img.png)
+![](../../.gitbook/assets/RcvMYHdeqmm50YH7Q8dw61.png)
 
 &#x20;   ㅇ 단일 정밀도 BLAS3 행렬 곱셈:
 
