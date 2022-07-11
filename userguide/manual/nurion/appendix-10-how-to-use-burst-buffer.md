@@ -6,7 +6,7 @@
 
 &#x20;
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2020/02/\&name=Fjx33GN4MTdGgFk.png)
+![](../../../.gitbook/assets/Fjx33GN4MTdGgFk.png)
 
 &#x20;
 
@@ -56,7 +56,7 @@ $ module load mvapich2/2.3.1
 
 &#x20;
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2020/02/\&name=Y1b0H3iRxaLyeu2.png)
+![](../../../.gitbook/assets/Y1b0H3iRxaLyeu2.png)
 
 &#x20;
 
@@ -82,7 +82,7 @@ $ module load mvapich2/2.3.1
 
 &#x20;
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2020/02/\&name=jexfpOF6FjmZ1Yn.png)
+![](../../../.gitbook/assets/jexfpOF6FjmZ1Yn.png)
 
 &#x20;
 
