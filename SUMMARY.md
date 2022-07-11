@@ -165,6 +165,12 @@
     * [뉴론 VASP 5.4.4 설치 (GPU 버전)](blog/sw-install-doc/neuron/vasp-5.4.4-install-gpu.md)
 * [시스템 활용 & 팁](blog/usage-tip/README.md)
   * [oneAPI 소개](blog/usage-tip/openapi-about.md)
+  * [뉴론 AMD 노드 활용](blog/usage-tip/amd-node-uses.md)
+  * [AMD Instinct MI100 GPU 성능 테스트](blog/usage-tip/amd-instinct-mi100-gpu-performance-test.md)
+  * [Checkpoint 기능 관련 안내](blog/usage-tip/checkpoint-function-related-information.md)
+  * [누리온 MVAPICH2/MVAPICH2-X 성능 비교(VASP)](blog/usage-tip/mvapich2-mvapich2-x-performance-comp-vasp.md)
+  * [인터렉티브 작업 제출 예제](blog/usage-tip/interactive-job-submission-example.md)
+  * [git 사용 방법 안내](blog/usage-tip/git.md)
 * [기술문서 창고](blog/technic-doc/README.md)
   * [X86\_64 어셈블리 프로그래밍 기초](blog/technic-doc/x86-64-assembly-programming-basic.md)
 
