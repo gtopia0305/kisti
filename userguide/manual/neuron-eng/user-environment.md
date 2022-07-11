@@ -67,7 +67,7 @@ $ ssh -l neuron01.ksc.re.kr -p 22
 
 ※ Download the program from the Internet for free, and then install it.
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2020/02/\&name=VhT2afiz3QVaR6W.png)
+![](../../../.gitbook/assets/VhT2afiz3QVaR6W.png)
 
 &#x20;
 
@@ -77,7 +77,7 @@ $ ssh -l neuron01.ksc.re.kr -p 22
 
 ※ Download the program from the Internet for free, and then install it.
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2020/02/\&name=DQvGq055jkNyz5e.png)
+![](../../../.gitbook/assets/DQvGq055jkNyz5e.png)
 
 \- Use ssh connection programs, such as putty, Mobaxterm, or SSH Secure Shell Client.
 
@@ -85,13 +85,13 @@ $ ssh -l neuron01.ksc.re.kr -p 22
 
 ※ Host Name: neuron.ksc.re.kr, Port: 22, Connection type: SSH &#x20;
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2021/08/\&name=aUi3Rys5RaiCIhE.png)
+![](../../../.gitbook/assets/aUi3Rys5RaiCIhE.png)
 
 ※ ssh -> X11 tap -> check “Enable X11 forwarding”
 
 ※ X display location: localhost:0.0
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2020/02/\&name=yykOZoJFaQM2QaG.png)
+![](../../../.gitbook/assets/yykOZoJFaQM2QaG.png)
 
 &#x20;
 
@@ -115,7 +115,7 @@ $ ftp neuron-dm.ksc.re.kror$ sftp [user ID@]neuron-dm.ksc.re.kr [-P 22]
 
 \- Use a freely distributed FTP/SFTP client program, such as WinSCP, to connect in the Windows environment.
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2020/02/\&name=7HNXz4ZOCMv2wPD.jpeg)
+![](../../../.gitbook/assets/7HNXz4ZOCMv2wPD.jpeg)
 
 \* Files can be sent without entering the OTP when using FTP (File Transfer Protocol).
 

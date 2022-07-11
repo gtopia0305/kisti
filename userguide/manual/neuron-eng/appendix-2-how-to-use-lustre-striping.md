@@ -29,7 +29,7 @@ The Neuron Lustre File system supports file striping. Therefore, a single file w
 ![Figure 1 The Concept of Lustre Striping
 (사용자에게 보여지는 파일: Files visible to the user
 Stripe에 의해 분할: Partitioned by the stripe
-분할된 파일은 RAID에 의해 한번 더 분할되어 저장: Partitioned files further split by the RAID and stored)](https://www.ksc.re.kr/file/image/?path=sos/jcs/2020/02/\&name=ByuiN89DGA7hjDU.png)
+분할된 파일은 RAID에 의해 한번 더 분할되어 저장: Partitioned files further split by the RAID and stored)](../../../.gitbook/assets/ByuiN89DGA7hjDU.png)
 
 &#x20;
 

@@ -9,7 +9,7 @@ Container images that support deep learning frameworks, such as TensorFlow, Caff
 \
 
 
-![< Singularity container architecture >](https://www.ksc.re.kr/file/image/?path=sos/jcs/2020/12/\&name=iUHvmQa8jfrouGh.png)
+![< Singularity container architecture >](../../../.gitbook/assets/iA7rMElSDzNPxoc.png)
 
 &#x20;
 
@@ -224,20 +224,21 @@ _※ Singularity container images can be created and managed by accessing the Sy
 
 
 
-&#x20;![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2020/12/\&name=0uA1VswRtBwuiMX.png)
+&#x20;
+![](../../../.gitbook/assets/FptMOrEVriyeHwm.png)
 
 웹 브라우저 : Web Browser\
 ①Sylabs Cloud 계정 등록 및 로그인하기 : Register Sylabs Cloud Account and Log In
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2020/12/\&name=i7yoPSEz8vCd10Z.png)
+![](../../../.gitbook/assets/8SsHKgVZrGoHZ7E.png)
 
 ②새로운 토큰 생성하기 : Create a New Token
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2020/12/\&name=qlGhtVeD8LMv6eG.png)
+![](../../../.gitbook/assets/jB4Qz6eplC8UhyS.png)
 
 ③클립보드로 토큰 복사하기 : Copy the Token to the Clipboard
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2020/12/\&name=70ZC45NRHMBJNe4.png)
+![](../../../.gitbook/assets/LGDeMrtu2piP4ZA.png)
 
 ④토큰 입력하기 : Enter The Token
 
@@ -247,7 +248,7 @@ _※ Singularity container images can be created and managed by accessing the Sy
 
 **\[Reference 2] Build a Singularity Container with the Remote Builder from a Web Browser**
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2020/12/\&name=vAH6LNfpwpVYl4S.png)
+![](../../../.gitbook/assets/7NuUZiOLvyaYZqK.png)
 
 ①웹 브라우저에서 컨테이너 이미지 빌드하기 : Build a container image from a web brower
 

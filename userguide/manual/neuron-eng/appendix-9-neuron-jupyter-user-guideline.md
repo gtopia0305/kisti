@@ -27,7 +27,7 @@
 ○ Codes written in programming languages can be converted into various file types, such as HTML, image, video, and LaTeX.\
 ○ Jupyter Notebook can be integrated with various tools and libraries, such as Apache Spark, Pandas, Scikit-learn, ggplot2, and TensorFlow.
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2020/05/\&name=DuGAciy4ZdnjgPQ.png)
+![](../../../.gitbook/assets/DuGAciy4ZdnjgPQ.png)
 
 **C. JupyterLab**
 
@@ -36,7 +36,7 @@
 ○ JupyterLab comprises extensible modules by introducing functions to the Jupyter Notebook interface for user convenience.\
 ○ Unlike Jupyter Notebook, JupyterLab provides several documents or different functions on a single work screen using Tabs and Splitters.
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2020/05/\&name=P1gtEKP1fQV1Nsq.png)
+![](../../../.gitbook/assets/P1gtEKP1fQV1Nsq.png)
 
 **D. IPyParallel**
 
@@ -45,7 +45,7 @@
 ○ IPyParallel project is a Python module for interactive cluster computing that provides an interactive Python parallel environment. \
 ○ IPyParallel can be extended as a plug-in to Jupyter Notebook and used as an IPython Clusters Tab with a Jupyter Notebook.
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2020/10/\&name=UsvHLLtTHQsX0yN.png)
+![](../../../.gitbook/assets/UsvHLLtTHQsX0yN.png)
 
 &#x20;
 
@@ -53,7 +53,7 @@
 
 ## 2. Run Jupyter through a Script
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2020/05/\&name=FouxpybuajnMgzY.png)
+![](../../../.gitbook/assets/FouxpybuajnMgzY.png)
 
 **※ Run the script only once the first time. Once the environment is set, you can immediately connect to the webpage (refer to B. Connect to the JupyterHub webpage) and use JupyterLab and Jupyter Notebook.**
 
@@ -147,7 +147,7 @@ To initialize this nbextension in the browser every time the notebook (or other 
 **B. Connect to the JupyterHub webpage**\
 \- Connect to [**https://jupyter.ksc.re.kr**](https://jupyter.ksc.re.kr/) and enter your Neuron account username, OTP, and password.
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2020/07/\&name=cXDKdaUkHSJ0yAM.png)
+![](../../../.gitbook/assets/cXDKdaUkHSJ0yAM.png)
 
 \- You can check the resource usage status on the main page and click the Refresh button to update the resource usage status.
 
@@ -162,7 +162,7 @@ To initialize this nbextension in the browser every time the notebook (or other 
 &#x20;  ◦ Down: Number of unavailable nodes\
 &#x20;  ◦ Total: Total number of nodes
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2020/10/\&name=27PJ1fZR4qLEo5X.png)
+![](../../../.gitbook/assets/27PJ1fZR4qLEo5X.png)
 
 \
 \- Check the queue information\
@@ -179,15 +179,15 @@ To initialize this nbextension in the browser every time the notebook (or other 
 
 \- Select the jupyter queue from the “Select a job” queue dropdown menu and click the Submit button to run Jupyter Notebook. (Although Jupyter Notebook can be run with other queues, additional fees are charged. Refer to the fee information about the Neuron system on the KSC Homepage.)
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2020/10/\&name=UdHdWFdotD2kQhK.png)
+![](../../../.gitbook/assets/UdHdWFdotD2kQhK.png)
 
 \- The following screen is displayed for a few seconds, and resources are allocated.
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2020/05/\&name=nF3Wzcq3jpduHRC.png)
+![](../../../.gitbook/assets/nF3Wzcq3jpduHRC.png)
 
 \- The https://jupyter.ksc.re.kr/user/a1113a01/tree Jupyter Notebook screen is displayed by default.
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2020/05/\&name=bMiS3ZoVOuWaGle.png)
+![](../../../.gitbook/assets/bMiS3ZoVOuWaGle.png)
 
 {% embed url="https://www.youtube.com/embed/HN-Uw3NYmmA" %}
 
@@ -219,19 +219,19 @@ To initialize this nbextension in the browser every time the notebook (or other 
 
 \- The Menu Bar comprises Files, Running, and IPython Clusters tabs.
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2020/05/\&name=xDFygZX7DZaUt1K.png)
+![](../../../.gitbook/assets/xDFygZX7DZaUt1K.png)
 
 \- The Menu Bar -> Running tab can monitor and delete sessions (Terminal, Notebook, and Tensorboard) that are running currently.
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2020/05/\&name=YakI3dEeMq373yb.png)
+![](../../../.gitbook/assets/YakI3dEeMq373yb.png)
 
 \- The Menu Bar -> IPython Clusters tab can start and end a profile-based Python parallel engine. (Refer to D. Running IPyParallel on how to create IPython parallel profiles.)
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2020/10/\&name=KUAAfWdceL0IGi8.png)
+![](../../../.gitbook/assets/KUAAfWdceL0IGi8.png)
 
 좌측 탭 스크롤 -> 뉴론(Neuron) -> 스케줄러(SLURM)를 통한 작업 실행: Scroll the left tab -> Neuron -> Run the job via the scheduler (SLURM)
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2020/05/\&name=lgAmF7Hvd0Vh50B.png)
+![](../../../.gitbook/assets/lgAmF7Hvd0Vh50B.png)
 
 &#x20;
 
@@ -247,7 +247,7 @@ To initialize this nbextension in the browser every time the notebook (or other 
 
 \- JupyterLab screen [https://jupyter.ksc.re.kr/user/a1113a01/lab](https://jupyter.ksc.re.kr/user/a1113a01/lab)
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2020/05/\&name=cSygij43NpgPSgE.png)
+![](../../../.gitbook/assets/cSygij43NpgPSgE.png)
 
 ※ Refer to Supplement 1 for detailed information on how to use JupyterLab.
 
@@ -268,12 +268,12 @@ To initialize this nbextension in the browser every time the notebook (or other 
 
 \- Click New->Terminal and install libraries that are required for machine learning/deep learning.
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2020/05/\&name=myS5L5u7ge9vIp2.png)
+![](../../../.gitbook/assets/myS5L5u7ge9vIp2.png)
 
 \- Run the conda activate notebook command from the terminal environment to activate the notebook environment and install libraries that are required for the notebook environment. \
 ※ The libraries must be installed in the notebook conda environment to apply them to the Jupyter web screen.
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2020/05/\&name=5yrubHevkCjkKc6.png)
+![](../../../.gitbook/assets/5yrubHevkCjkKc6.png)
 
 \- Install the machine learning/deep learning-related libraries requested by the user in the notebook environment (This example shows the process of installing commonly used libraries, such as machine learning framework Keras, pandas, NumPy, and SciPy, using conda. It takes approximately 7 min to install the necessary libraries for this example.)
 
@@ -282,28 +282,28 @@ To initialize this nbextension in the browser every time the notebook (or other 
  (notebook) 773% [a1113a01@gpu06 workspace]$ conda install theano keras graphviz numpy scipy scikit-learn matplotlib pandas pydot -y
 ```
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2020/05/\&name=s18F9seQueXgxua.png)
+![](../../../.gitbook/assets/s18F9seQueXgxua.png)
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2020/05/\&name=fIj5bZUgoBGBrWA.png)
+![](../../../.gitbook/assets/fIj5bZUgoBGBrWA.png)
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2020/05/\&name=KCgWAOe7NPkjvda.png)
+![](../../../.gitbook/assets/KCgWAOe7NPkjvda.png)
 
 &#x20;
 
 \- Verify the installation
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2020/05/\&name=5roVOiMzvLftkb7.png)
+![](../../../.gitbook/assets/5roVOiMzvLftkb7.png)
 
 **B. Create and execute an example code**
 
 \
 \- Return to the Homepage and click the iris\_ex.ipynb example file from the Menu Bar-> Files tab.
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2020/05/\&name=8vt8r9p0Q5bBOvm.png)
+![](../../../.gitbook/assets/8vt8r9p0Q5bBOvm.png)
 
 \- Jupyter Notebook is run, and the example code is executed using Shift + Enter.
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2020/05/\&name=JrfOrRF4J7LsaoE.png)
+![](../../../.gitbook/assets/JrfOrRF4J7LsaoE.png)
 
 ※ You can ignore the warnings that are displayed during the execution process. If the same code is run again, these warning messages disappear. (The warnings provide syntax guidance for coding according to the version.)
 
@@ -315,7 +315,7 @@ To initialize this nbextension in the browser every time the notebook (or other 
 
 \- Plot graphs using the matplotlib library
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2020/05/\&name=SX6ZxYNxMoZSub3.png)
+![](../../../.gitbook/assets/SX6ZxYNxMoZSub3.png)
 
 &#x20;
 
@@ -324,43 +324,43 @@ To initialize this nbextension in the browser every time the notebook (or other 
 \
 \- Click tfboard\_ex.ipynb on the Menu Bar -> Files tab.
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2020/05/\&name=NkBcFYVSfnR3T1N.png)
+![](../../../.gitbook/assets/NkBcFYVSfnR3T1N.png)
 
 \- Execute the code using Shifter + Enter. (this takes approximately 1 min)
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2020/05/\&name=xdX1GpNpHvfiRrN.png)
+![](../../../.gitbook/assets/xdX1GpNpHvfiRrN.png)
 
 \- Run Tensorboard, and then click Home Page->New->Tensorboard->Current directory.\
 ※ The “logs” folder is created in Files, and the log data is saved in this folder.
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2020/05/\&name=aaQqQYS8dAeogAI.png)
+![](../../../.gitbook/assets/aaQqQYS8dAeogAI.png)
 
 ※ Or click the “logs” folder, and then the Tensorboard button after the button is created.
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2020/05/\&name=0qs7DtCwPnFS7a9.png)
+![](../../../.gitbook/assets/0qs7DtCwPnFS7a9.png)
 
 \- TensorBoard -> Scalars
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2020/05/\&name=nNt6sLANd0iPvq2.png)
+![](../../../.gitbook/assets/nNt6sLANd0iPvq2.png)
 
 \- TensorBoard -> Graphs
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2020/05/\&name=E7Q3W0udQjkzOXy.png)
+![](../../../.gitbook/assets/E7Q3W0udQjkzOXy.png)
 
 \- TensorBoard -> Distributions
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2020/05/\&name=YhCiSqGRPGn79il.png)
+![](../../../.gitbook/assets/YhCiSqGRPGn79il.png)
 
 \- TensorBoard -> Histograms
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2020/05/\&name=idcwepwUTPBQ8v8.png)
+![](../../../.gitbook/assets/idcwepwUTPBQ8v8.png)
 
 **D. Run IPyParallel**
 
 \
 \- Click the IPython Clusters tab in the Menu Bar.
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2020/10/\&name=AzrkiJ3oNRQMeuz.png)
+![](../../../.gitbook/assets/AzrkiJ3oNRQMeuz.png)
 
 \- Enter the engine, node, and queue information in the slurm profile.\
 &#x20; engine: number of parallel processes\
@@ -368,18 +368,18 @@ To initialize this nbextension in the browser every time the notebook (or other 
 &#x20; queue: name of the queue to which the parallel job will be submitted (Select after checking the resource status below.)\
 &#x20;자원 현황: Resource status
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2020/10/\&name=oOq9F0npaZHwwQV.png)
+![](../../../.gitbook/assets/oOq9F0npaZHwwQV.png)
 
 \- Create the parallel engine by clicking the Start button, and then check the resource status by clicking the refresh button.
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2020/10/\&name=A9xGqreXrY7O2Fi.png)
+![](../../../.gitbook/assets/A9xGqreXrY7O2Fi.png)
 
 **E. Run the IPyParallel example code**
 
 \
 \- Click the Menu Bar -> Files -> ipy\_ex.ipynb.
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2020/05/\&name=RKgGZuVYLgoFsNM.png)
+![](../../../.gitbook/assets/RKgGZuVYLgoFsNM.png)
 
 &#x20;**병렬 프로세스 개수 확인: Check the number of parallel processes**
 
@@ -390,7 +390,7 @@ To initialize this nbextension in the browser every time the notebook (or other 
 \
 \- You can write a new Python code by clicking the New -> Python 3 menu, as shown below.
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2020/05/\&name=pMsnBC5ymOiEP2s.png)
+![](../../../.gitbook/assets/pMsnBC5ymOiEP2s.png)
 
 &#x20;**새로운 Python3 커널을 사용하는 Notebook 생성: Create a new Notebook that employs the Python 3 kernel**&#x20;
 
@@ -398,7 +398,7 @@ To initialize this nbextension in the browser every time the notebook (or other 
 
 \- A new Jupyter Notebook Launcher that can adopt the Python 3 kernel is executed.
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2020/05/\&name=xnnQM4NqlW3ZouC.png)
+![](../../../.gitbook/assets/xnnQM4NqlW3ZouC.png)
 
 &#x20;
 
@@ -415,7 +415,7 @@ To initialize this nbextension in the browser every time the notebook (or other 
 
 \- As illustrated in the following figure, click the Shutdown button in the Running tab to terminate the running Terminal, Kernel, or Tensorboard sessions.
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2020/05/\&name=Q2vQeDmmSjsvMGt.png)
+![](../../../.gitbook/assets/Q2vQeDmmSjsvMGt.png)
 
 ※ If you close the JupyterHub webpage without terminating the sessions, these sessions will still remain the next time you run the Jupyter. (Fees are not charged in the meantime)
 
@@ -426,9 +426,9 @@ To initialize this nbextension in the browser every time the notebook (or other 
 \
 \- Click the (Jupyter Notebook) Control Panel -> Stop My Server.
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2020/05/\&name=0CM3m3Vl65A3mmY.png)
+![](../../../.gitbook/assets/0CM3m3Vl65A3mmY.png)
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2020/05/\&name=Aifkvuq9qpyyJxG.png)
+![](../../../.gitbook/assets/Aifkvuq9qpyyJxG.png)
 
 **※ When you log out of the homepage, all running Jupyter and sessions are automatically closed.**
 
@@ -477,17 +477,17 @@ to https://jupyter.ksc.re.kr/user/a1113a01/lab, and go to the new webpage.
 &#x20;\- Click the Terminal icon in the Launcher tab to run a Terminal.\
 ※ If the Launcher tab is not visible, click the + icon in the Menu Bar.
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2020/05/\&name=eDtreex0IDwyL3d.png)
+![](../../../.gitbook/assets/eDtreex0IDwyL3d.png)
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2020/05/\&name=1pQTEGKnXpoCpqm.png)
+![](../../../.gitbook/assets/1pQTEGKnXpoCpqm.png)
 
 &#x20;
 
 \- Click the Menu Bars->+ icon ->Launcher->Tensorboard icon to execute Tensorboard.
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2020/05/\&name=zoYS0S9gCXUvx4R.png)
+![](../../../.gitbook/assets/zoYS0S9gCXUvx4R.png)
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2020/05/\&name=t8EJplkhAqtCUtR.png)
+![](../../../.gitbook/assets/t8EJplkhAqtCUtR.png)
 
 &#x20;
 
@@ -499,7 +499,7 @@ to https://jupyter.ksc.re.kr/user/a1113a01/lab, and go to the new webpage.
 
 ※ If you close the JupyterHub webpage without terminating the sessions, these sessions will still remain the next time you run the Jupyter. (fees are not charged in the meantime)
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2020/05/\&name=6wSWdeDOV2wFXw9.png)
+![](../../../.gitbook/assets/6wSWdeDOV2wFXw9.png)
 
 &#x20;
 
@@ -509,8 +509,8 @@ to https://jupyter.ksc.re.kr/user/a1113a01/lab, and go to the new webpage.
 
 \- (JupyterLab) When your use for Jupyter is over, you are required to close it to return the resources. To return the resources, click File -> Hub Control Panel to go to the Homepage, and then click the “Stop My Server” button.
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2020/05/\&name=RTykquCSquqLYjL.png)
+![](../../../.gitbook/assets/RTykquCSquqLYjL.png)
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2020/05/\&name=lGi3UXL44cC0Fr9.png)
+![](../../../.gitbook/assets/lGi3UXL44cC0Fr9.png)
 
 {% embed url="https://www.youtube.com/embed/bMvwXXJvwq4" %}

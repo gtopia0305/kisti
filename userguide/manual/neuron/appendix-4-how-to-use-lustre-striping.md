@@ -29,7 +29,7 @@ Neuron Lustre File system은 File Striping을 지원하며, 이를 위해 복수
 
 &#x20;
 
-![](../../../.gitbook/assets/SdhQjnOpmE4vxyB.png)
+![](../../../.gitbook/assets/ByuiN89DGA7hjDU.png)
 
 Lustre는 각 OST별로 자료를 분할하여 대용량 파일에 대한 I/O 성능을 최대화 할 수 있으며, 병렬화가 유효한 최대 분할 수는 OST 숫자와 같다. 단일 파일 역시 위 그림과 같이 Lustre Striping 기능을 사용하여 OST에 병렬로 저장 함
 

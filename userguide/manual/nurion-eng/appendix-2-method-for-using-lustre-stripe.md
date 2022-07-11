@@ -28,7 +28,7 @@ The Unit #5 Lustre file system supports file striping. For this purpose, a singl
 
 ## B. Lustre Striping Concept
 
-![](../../../.gitbook/assets/SdhQjnOpmE4vxyB.png)
+![](../../../.gitbook/assets/ByuiN89DGA7hjDU.png)
 
 Lustre partitions data for each OST to maximize the I/O performance for large files. The maximum number of partitions for which parallelization is valid is equal to the OST number. A single file is also stored in the OST in parallel using the Lustre striping function, as shown in the figure above.
 
