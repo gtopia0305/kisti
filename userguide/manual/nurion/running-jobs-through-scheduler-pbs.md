@@ -515,7 +515,7 @@ $ qstat -i -w -T -u
 
 $ qstat -i -w -T -u user01
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2020/02/\&name=e7KSHFnzy6a6X9h.png)
+![](../../../.gitbook/assets/e7KSHFnzy6a6X9h.png)
 
 ※ 사용자 작업스크립트의 walltime 정보 취합으로 계산된 예상치임
 
