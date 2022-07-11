@@ -23,7 +23,7 @@
 ○ 프로그래밍 언어로 작성한 코드는 HTML, 이미지, 동영상 파일, LaTeX 등 다양한 타입으로 변환 가능하다.\
 ○ Apache Spark, Pandas, Scikit-learn, ggplot2, Tensorflow 등 다양한 툴/라이브러리들과 연동 가능하다.
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2020/05/\&name=DuGAciy4ZdnjgPQ.png)
+![](../../../.gitbook/assets/DuGAciy4ZdnjgPQ.png)
 
 &#x20;
 
@@ -32,7 +32,7 @@
 ○ JupyterLab은 Jupyter Notebook 인터페이스에 사용자 편의를 위한 기능들을 추가하여 확장 가능한 모듈로 구성된다.\
 ○ Jupyter Notebook과 달리 하나의 작업 화면에 Tabs 와 Splitters를 사용하여 여러 개의 도큐먼트 또는 다른 기능을 제공한다.
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2020/05/\&name=P1gtEKP1fQV1Nsq.png)
+![](../../../.gitbook/assets/P1gtEKP1fQV1Nsq.png)
 
 &#x20;
 
@@ -41,7 +41,8 @@
 ○ IPyParallel 프로젝트는 인터렉티브 클러스터 컴퓨팅을 위한 파이썬 모듈로 인터렉티브 파이썬 병렬환경을 제공한다. \
 ○ Jupyter Notebook에 플러그인으로 확장가능하며 IPython Clusters Tab으로 Jupyter Notebook을 통해 사용 가능하다.
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2022/03/\&name=IfuhwVsqiPsPwmE.png)
+![](../../../.gitbook/assets/fEuuyE877IXSvC9.png)
+
 
 &#x20;
 
@@ -51,7 +52,7 @@
 
 ## 나. 스크립트를 통한 Jupyter 실행
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2020/05/\&name=FouxpybuajnMgzY.png)
+![](../../../.gitbook/assets/FouxpybuajnMgzY.png)
 
 ※ 최초 한번만 실행하며 환경설정이 완료되면 즉시 웹 페이지 접속하여 (나. JupyterHub 웹 페이지 접속 참고) JupyterLab/Notebook을 사용 가능하다.
 
@@ -103,11 +104,11 @@
 **2)  JupyterHub 웹 페이지 접속**\
 \- [https://jupyter.ksc.re.kr](https://jupyter.ksc.re.kr/) 에 접속하여 신청 받은 뉴런 계정, OTP, 비밀번호를 입력한다.
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2020/07/\&name=cXDKdaUkHSJ0yAM.png)
+![](../../../.gitbook/assets/cXDKdaUkHSJ0yAM.png)
 
 \- 메인 화면에서 자원 사용현황 확인 및 Refresh 버튼을 클릭하여 자원 사용 현황을 업데이트 할 수 있다.
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2022/03/\&name=0uegGvxpcDETAut.png)
+![](../../../.gitbook/assets/0uegGvxpcDETAut.png)
 
 &#x20;
 
@@ -135,19 +136,19 @@
 
 \- Job queue 에서 해당 queue를 선택하고 Submit버튼을 클릭하여 Jupyter Notebook 실행 (other queues로도 실행 가능하나, 다만 과금 발생함, 과금 정보는 KSC 홈페이지 Neuron 과금 정보 참고)
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2022/03/\&name=bURdAe1yRXKrQDg.png)
+![](../../../.gitbook/assets/bURdAe1yRXKrQDg.png)
 
 &#x20;
 
 \- 다음과 같은 화면이 몇 초간 진행 되면서 자원 할당이 진행된다.
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2020/05/\&name=nF3Wzcq3jpduHRC.png)
+![](../../../.gitbook/assets/nF3Wzcq3jpduHRC.png)
 
 &#x20;
 
 \- Default로 https://jupyter.ksc.re.kr/user/a1113a01/tree Jupyter Notebook 화면이 실행된다.
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2020/05/\&name=bMiS3ZoVOuWaGle.png)
+![](../../../.gitbook/assets/bMiS3ZoVOuWaGle.png)
 
 &#x20;
 
@@ -181,25 +182,25 @@
 
 \- Menu Bars는 Files/Running/IPython Clusters로 구성되어 있다.
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2020/05/\&name=xDFygZX7DZaUt1K.png)
+![](../../../.gitbook/assets/xDFygZX7DZaUt1K.png)
 
 &#x20;
 
 \- Menu Bar -> Running 은 현재 실행 중인 세션들을(Terminal, Notebook, Tensorboard) 모니터링 하고 삭제 가능하다.
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2020/05/\&name=YakI3dEeMq373yb.png)
+![](../../../.gitbook/assets/YakI3dEeMq373yb.png)
 
 &#x20;
 
 \- Menu Bar -> IPython Clusters 는 프로파일 기반 파이썬 병렬 엔진을 시작/종료 가능하다. (IPython Parallel 프로파일 작성 방법은 라. IPyParallel 실행 부분 참고)
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2022/03/\&name=fEuuyE877IXSvC9.png)
+![](../../../.gitbook/assets/fEuuyE877IXSvC9.png)
 
 &#x20;
 
 \- New 클릭 시 Python3/Text File/Floder/Terminal/Tensorboard 신규 생성이 가능하다.
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2020/05/\&name=lgAmF7Hvd0Vh50B.png)
+![](../../../.gitbook/assets/lgAmF7Hvd0Vh50B.png)
 
 **3)  JupyterLab 전환 방법**
 
@@ -207,7 +208,7 @@
 \- 웹 브라우저에 다음과 같이 주소 끝에 tree를 lab으로 수정하면 JupyterLab으로 전환 가능하다. \
 \- Notebook 화면 https://jupyter.ksc.re.kr/user/a1113a01/tree
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2020/05/\&name=cSygij43NpgPSgE.png)
+![](../../../.gitbook/assets/cSygij43NpgPSgE.png)
 
 \- JupyterLab 화면 https://jupyter.ksc.re.kr/user/a1113a01/lab
 
@@ -229,14 +230,14 @@
 
 \- New->Terminal 클릭하여 머신러닝/딥러닝에 필요한 라이브러리 설치한다.
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2020/05/\&name=myS5L5u7ge9vIp2.png)
+![](../../../.gitbook/assets/myS5L5u7ge9vIp2.png)
 
 &#x20;
 
 \- 터미널 환경에서 conda activate notebook 명령어로 notebook 환경을 활성화하고 notebook 환경에 필요한 라이브러리를 설치한다. \
 ※ 반드시 notebook conda 환경에 설치해야 Jupyter 웹 화면에 적용된다.
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2020/05/\&name=5yrubHevkCjkKc6.png)
+![](../../../.gitbook/assets/5yrubHevkCjkKc6.png)
 
 &#x20;
 
@@ -245,21 +246,21 @@
 | <p>772% [a1113a01@gpu06 workspace]$ conda activate notebook<br>(notebook) 773% [a1113a01@gpu06 workspace]$ conda install theano keras graphviz numpy scipy scikit-learn matplotlib pandas pydot -y</p> |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2020/05/\&name=s18F9seQueXgxua.png)
+![](../../../.gitbook/assets/s18F9seQueXgxua.png)
 
 &#x20;
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2020/05/\&name=fIj5bZUgoBGBrWA.png)
+![](../../../.gitbook/assets/fIj5bZUgoBGBrWA.png)
 
 &#x20;
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2020/05/\&name=KCgWAOe7NPkjvda.png)
+![](../../../.gitbook/assets/KCgWAOe7NPkjvda.png)
 
 &#x20;
 
 \- 설치 완료 확인
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2020/05/\&name=5roVOiMzvLftkb7.png)
+![](../../../.gitbook/assets/5roVOiMzvLftkb7.png)
 
 &#x20;
 
@@ -270,13 +271,13 @@
 \
 \- Home Page 로 돌아가 Menu Bare-> Files 에서 예제 파일 iris\_ex.ipynb를 클릭한다.
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2020/05/\&name=8vt8r9p0Q5bBOvm.png)
+![](../../../.gitbook/assets/8vt8r9p0Q5bBOvm.png)
 
 &#x20;
 
 \- Jupyter Notebook이 실행되고 Shift+Enter로 예제 코드를 실행한다.
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2020/05/\&name=JrfOrRF4J7LsaoE.png)
+![](../../../.gitbook/assets/JrfOrRF4J7LsaoE.png)
 
 &#x20;
 
@@ -286,9 +287,9 @@
 
 \- matplotlib 라이브러리를 사용한 그래프 출력
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2020/05/\&name=SX6ZxYNxMoZSub3.png)
+![](../../../.gitbook/assets/SX6ZxYNxMoZSub3.png)
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2020/05/\&name=g1MZ0fOQKvwUBWy.png)
+![](../../../.gitbook/assets/g1MZ0fOQKvwUBWy.png)
 
 &#x20;
 
@@ -299,50 +300,50 @@
 \
 \- Menu Bar -> Files 에서 tfboard\_ex.ipynb를 클릭한다.
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2020/05/\&name=NkBcFYVSfnR3T1N.png)
+![](../../../.gitbook/assets/NkBcFYVSfnR3T1N.png)
 
 &#x20;
 
 \- Shifter+Enter로 코드 실행한다. (약1분 소요)
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2020/05/\&name=xdX1GpNpHvfiRrN.png)
+![](../../../.gitbook/assets/xdX1GpNpHvfiRrN.png)
 
 &#x20;
 
 \- Tensorboard 실행, Home Page->New->Tensorboard->Current directory를 클릭한다.\
 ※ Files 에 logs 폴더가 생성되며 여기에 로그 데이터가 여기에 저장된다.
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2020/05/\&name=aaQqQYS8dAeogAI.png)
+![](../../../.gitbook/assets/aaQqQYS8dAeogAI.png)
 
 &#x20;
 
 ※ 혹은 logs 폴더를 클릭한 후 Tensorboard 버튼이 생성되면 클릭
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2020/05/\&name=0qs7DtCwPnFS7a9.png)
+![](../../../.gitbook/assets/0qs7DtCwPnFS7a9.png)
 
 &#x20;
 
 \- TensorBoard -> Scalars
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2020/05/\&name=nNt6sLANd0iPvq2.png)
+![](../../../.gitbook/assets/nNt6sLANd0iPvq2.png)
 
 &#x20;
 
 \- TensorBoard -> Graphs
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2020/05/\&name=E7Q3W0udQjkzOXy.png)
+![](../../../.gitbook/assets/E7Q3W0udQjkzOXy.png)
 
 &#x20;
 
 \- TensorBoard -> Distributions
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2020/05/\&name=YhCiSqGRPGn79il.png)
+![](../../../.gitbook/assets/YhCiSqGRPGn79il.png)
 
 &#x20;
 
 \- TensorBoard -> Histograms
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2020/05/\&name=idcwepwUTPBQ8v8.png)
+![](../../../.gitbook/assets/idcwepwUTPBQ8v8.png)
 
 &#x20;
 
@@ -353,7 +354,7 @@
 \
 \- Menu Bar에서 IPython Clusters 탭을 클릭한다.
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2020/10/\&name=AzrkiJ3oNRQMeuz.png)
+![](../../../.gitbook/assets/AzrkiJ3oNRQMeuz.png)
 
 &#x20;
 
@@ -362,13 +363,13 @@
 &#x20; node: 할당할 계산 노드 개수\
 &#x20; queue: 병렬 작업을 제출할 큐 이름 (아래 자원 현황을 보고 선택)
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2020/10/\&name=oOq9F0npaZHwwQV.png)
+![](../../../.gitbook/assets/oOq9F0npaZHwwQV.png)
 
 &#x20;
 
 \- start 버튼으로 병렬 엔진 생성, 새로 고침하여 확인한다.
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2020/10/\&name=A9xGqreXrY7O2Fi.png)
+![](../../../.gitbook/assets/A9xGqreXrY7O2Fi.png)
 
 &#x20;
 
@@ -379,7 +380,7 @@
 \
 \- Menu Bar -> Files -> ipy\_ex.ipynb를 클릭한다.
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2020/05/\&name=RKgGZuVYLgoFsNM.png)
+![](../../../.gitbook/assets/RKgGZuVYLgoFsNM.png)
 
 &#x20;
 
@@ -390,13 +391,13 @@
 \
 \- 아래와 같이 New -> Python 3 메뉴를 클릭하여 새로운 Python 코드의 작성이 가능하다.
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2020/05/\&name=pMsnBC5ymOiEP2s.png)
+![](../../../.gitbook/assets/pMsnBC5ymOiEP2s.png)
 
 &#x20;
 
 \- Python 3 커널을 사용할 수 있는 새로운 Jupyter Notebook Launcher가 실행된다.
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2020/05/\&name=xnnQM4NqlW3ZouC.png)
+![](../../../.gitbook/assets/xnnQM4NqlW3ZouC.png)
 
 &#x20;
 
@@ -412,7 +413,7 @@
 
 \- 다음 그림과 같이, Running 탭을 클릭하여 실행중인 Terminal Sessions 이나 Kernel, Tensorboard Sessions들을 Shutdown 버튼을 클릭하여 종료한다.
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2020/05/\&name=Q2vQeDmmSjsvMGt.png)
+![](../../../.gitbook/assets/Q2vQeDmmSjsvMGt.png)
 
 ※ 세션을 종료시키지 않고 JupyterHub 웹페이지를 종료하는 경우, 다음 Jupyter 실행 시에도 그대로 남아있게 된다. (과금은 진행되지 않음)
 
@@ -423,9 +424,9 @@
 \
 \- (Jupyter Notebook) Control Panel -> Stop My Server를 클릭한다.
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2020/05/\&name=0CM3m3Vl65A3mmY.png)
+![](../../../.gitbook/assets/0CM3m3Vl65A3mmY.png)
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2020/05/\&name=Aifkvuq9qpyyJxG.png)
+![](../../../.gitbook/assets/Aifkvuq9qpyyJxG.png)
 
 &#x20;
 
@@ -472,21 +473,21 @@
 \- Terminal 실행, Launcher 탭에서 Terminal 아이콘을 클릭한다. \
 ※ Launcher 탭이 보이지 않을 경우 Menu Bars에서 + 아이콘을 클릭한다.
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2020/05/\&name=eDtreex0IDwyL3d.png)
+![](../../../.gitbook/assets/eDtreex0IDwyL3d.png)
 
 &#x20;
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2020/05/\&name=1pQTEGKnXpoCpqm.png)
+![](../../../.gitbook/assets/1pQTEGKnXpoCpqm.png)
 
 &#x20;
 
 \- Tensorboard 실행, Menu Bars->+아이콘->Launcher->Tensorboard를 클릭한다.
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2020/05/\&name=zoYS0S9gCXUvx4R.png)
+![](../../../.gitbook/assets/zoYS0S9gCXUvx4R.png)
 
 &#x20;
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2020/05/\&name=t8EJplkhAqtCUtR.png)
+![](../../../.gitbook/assets/t8EJplkhAqtCUtR.png)
 
 &#x20;
 
@@ -500,7 +501,7 @@
 
 ※ 세션을 종료시키지 않고 JupyterHub 웹페이지를 종료하는 경우, 다음 Jupyter 실행 시에도 그대로 남아있게 된다. (과금은 진행되지 않음)
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2020/05/\&name=6wSWdeDOV2wFXw9.png)
+![](../../../.gitbook/assets/6wSWdeDOV2wFXw9.png)
 
 &#x20;
 
@@ -510,11 +511,11 @@
 
 \- (JupyterLab) Jupyter 사용이 끝나면 반드시 Jupyter를 종료시켜 자원을 반납해야 한다. 반납하는 방법은 File -> Hub Control Panel 클릭하여 Home 페이지로 와서 Stop My Server 클릭하여 자원을 반납할 수 있다.
 
-![](https://www.ksc.re.kr/file/image/?path=sos/jcs/2020/05/\&name=RTykquCSquqLYjL.png)
+![](../../../.gitbook/assets/Aifkvuq9qpyyJxG.png)
 
 &#x20;
 
-![ ](https://www.ksc.re.kr/file/image/?path=sos/jcs/2020/05/\&name=lGi3UXL44cC0Fr9.png)
+![ ](../../../.gitbook/assets/lGi3UXL44cC0Fr9.png)
 
 {% embed url="https://youtu.be/bMvwXXJvwq4" %}
 
