@@ -12,6 +12,8 @@
 
 \- 계정 발급 완료 시 신청서에 기입한 이메일로 계정 관련 정보 발송
 
+
+
 ② OTP (One Time Password, 일회용 비밀번호) 인증코드 발급
 
 **수신하신 계정 정보 이메일을 참고하여** 아래와 같이 작성하여 [account@ksc.re.kr](mailto:account@ksc.re.kr)을 통해 인증코드를 발급받는다.
@@ -20,6 +22,8 @@
 | -------- | --------------------------------------------------------------------------------------------- |
 | 수신인      | [account@ksc.re.kr](mailto:account@ksc.re.kr)                                                 |
 | 메일내용(예제) | <p>로그인 ID: x123abc</p><p>휴대폰번호: 010-1234-5678</p><p>이름: 홍길동</p><p>통신사: LG 유플러스(or SKT/KT)</p> |
+
+
 
 ③ OTP 앱 설치
 
@@ -45,6 +49,8 @@
 
 \- 로그인 노드에 대한 접근은 ssh, scp, sftp, X11 만 허용된다.
 
+
+
 ① 유닉스 또는 리눅스 환경
 
 ```
@@ -58,6 +64,8 @@ $ ssh -l x123abc nurion.ksc.re.kr
 혹은
 $ ssh -l x123abc nurion.ksc.re.kr -p 22
 ```
+
+
 
 ② 윈도우 환경
 
@@ -79,13 +87,15 @@ $ ssh -l x123abc nurion.ksc.re.kr -p 22
 
 ※ X display location : localhost:0.0
 
-![](<../../../.gitbook/assets/x display location.png>)
+![](<../../../.gitbook/assets/7CIgfnisxwUP8q8 (1).png>)
 
 ※ 만약, DNS 캐싱 문제로 접속이 안 될 경우에는 캐시를 정리(명령 프롬프트에서 ipconfig/flushdns 명령어 수행)하고 재접속
 
 ```
 C: ipconfig /flushdns
 ```
+
+
 
 ③ 파일 송수신
 
@@ -104,6 +114,8 @@ $ sftp [사용자ID@]nurion-dm.ksc.re.kr [-p 22]
 \* FTP (File Tranfer Protocal)을 이용하며, OTP를 입력하지 않고 파일 전송 가능
 
 \* SFTP(Secure-FTP) 을 이용하며, 파일 전송시 OTP를 입력해야함.(FTP보다 안전한 전송방식)
+
+
 
 ④ 노드구성
 

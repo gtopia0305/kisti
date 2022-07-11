@@ -8,8 +8,6 @@ description: '[별첨4] Lustre stripe 사용법'
 
 5호기 Lustre File System은 File Striping을 지원하며, 이를 위해 복수 개의 OST(Object Storage Target, 즉 물리적으로 분산되어 있는 여러 디스크)에 하나의 파일을 분산시켜 저장 함으로써 병목을 줄이고 I/O 성능을 향상시킬 수 있다. 특히, Lustre 2.10부터 지원되는 PFL(Progressive File Layout)이 /scratch 파일시스템에 적용되어 있다. 이 기능은 사용자 별도의 striping 설정 없이 파일의 크기에 따라 stripe-count 개수가 자동으로 적용되어 I/O의 성능을 향상시킬 수 있다. Nurion 파일 시스템의 striping 설정은 아래와 같다.
 
-&#x20;
-
 |                             | stripe-count    | stripe-size |     |
 | --------------------------- | --------------- | ----------- | --- |
 | /home01                     | 1               | 1MB         |     |
@@ -21,15 +19,11 @@ description: '[별첨4] Lustre stripe 사용법'
 | 10G < file size < 100G      | 16              | 1MB         |     |
 | file size > 100G            | 32              | 1MB         |     |
 
-&#x20;
-
 ## 나. Lustre Striping 개념
 
-![](../../../.gitbook/assets/SdhQjnOpmE4vxyB.png)
+![](<../../../.gitbook/assets/SdhQjnOpmE4vxyB (1).png>)
 
 Lustre는 각 OST별로 자료를 분할하여 대용량 파일에 대한 I/O 성능을 최대화 할 수 있으며, 병렬화가 유효한 최대 분할 수는 OST 숫자와 같다. 단일 파일 역시 위 그림과 같이 Lustre Striping 기능을 사용하여 OST에 병렬로 저장 함
-
-&#x20;
 
 ## 다. stripe 설정 및 확인
 
@@ -41,29 +35,25 @@ $ lfs setstripe [--stripe-size|-s size] [--stripe-count|-c count] filename|dirna
 
 ㅇ --stripe-size
 
-&#x20; ㆍ 각 OST에 저장할 데이터의 크기를 설정
+ㆍ 각 OST에 저장할 데이터의 크기를 설정
 
-&#x20; ㆍ지정된 크기만큼 저장하면 다음 OST에 데이터를 저장
+ㆍ지정된 크기만큼 저장하면 다음 OST에 데이터를 저장
 
-&#x20; ㆍ기본 값은 1MB이며 stripe\_size를 0으로 설정하면 기본 값을 사용함 stripe\_size는 반드시 64KB의 배수로 설정해야 하며 4GB보다 작아야 함
+ㆍ기본 값은 1MB이며 stripe\_size를 0으로 설정하면 기본 값을 사용함 stripe\_size는 반드시 64KB의 배수로 설정해야 하며 4GB보다 작아야 함
 
 ㅇ --stripe-count
 
-&#x20; ㆍStriping에 사용할 OST 개수를 설정
+ㆍStriping에 사용할 OST 개수를 설정
 
-&#x20; ㆍ기본 값은 1이며 stripe\_count를 0으로 설정하면 기본 값을 사용
+ㆍ기본 값은 1이며 stripe\_count를 0으로 설정하면 기본 값을 사용
 
-&#x20; ㆍstripe\_count가 -1이면 가능한 모든 OST들을 사용
-
-&#x20;
+ㆍstripe\_count가 -1이면 가능한 모든 OST들을 사용
 
 ```
 $ lfs getstripe filename|dirname
 ```
 
 \-파일 또는 디렉터리에 적용된 striping 설정 값을 확인하는 명령어
-
-&#x20;
 
 ## 라. 권장사항 및 팁
 
@@ -73,4 +63,4 @@ $ lfs getstripe filename|dirname
 
 ㅇ --stripe-size는 파일 사이즈가 수 TB 이상인 파일인 경우에만 유효하므로 대부분 default 값을 사용해도 문제 없음
 
-\
+\\
