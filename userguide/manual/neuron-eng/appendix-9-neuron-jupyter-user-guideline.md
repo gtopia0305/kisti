@@ -45,7 +45,7 @@
 ○ IPyParallel project is a Python module for interactive cluster computing that provides an interactive Python parallel environment. \
 ○ IPyParallel can be extended as a plug-in to Jupyter Notebook and used as an IPython Clusters Tab with a Jupyter Notebook.
 
-![](../../../.gitbook/assets/UsvHLLtTHQsX0yN.png)
+![](../../../.gitbook/assets/fEuuyE877IXSvC9.png)
 
 &#x20;
 
@@ -162,7 +162,7 @@ To initialize this nbextension in the browser every time the notebook (or other 
 &#x20;  ◦ Down: Number of unavailable nodes\
 &#x20;  ◦ Total: Total number of nodes
 
-![](../../../.gitbook/assets/27PJ1fZR4qLEo5X.png)
+![](../../../.gitbook/assets/0uegGvxpcDETAut.png)
 
 \
 \- Check the queue information\
@@ -179,7 +179,7 @@ To initialize this nbextension in the browser every time the notebook (or other 
 
 \- Select the jupyter queue from the “Select a job” queue dropdown menu and click the Submit button to run Jupyter Notebook. (Although Jupyter Notebook can be run with other queues, additional fees are charged. Refer to the fee information about the Neuron system on the KSC Homepage.)
 
-![](../../../.gitbook/assets/UdHdWFdotD2kQhK.png)
+![](../../../.gitbook/assets/bURdAe1yRXKrQDg.png)
 
 \- The following screen is displayed for a few seconds, and resources are allocated.
 
@@ -227,7 +227,7 @@ To initialize this nbextension in the browser every time the notebook (or other 
 
 \- The Menu Bar -> IPython Clusters tab can start and end a profile-based Python parallel engine. (Refer to D. Running IPyParallel on how to create IPython parallel profiles.)
 
-![](../../../.gitbook/assets/KUAAfWdceL0IGi8.png)
+![](../../../.gitbook/assets/fEuuyE877IXSvC9.png)
 
 좌측 탭 스크롤 -> 뉴론(Neuron) -> 스케줄러(SLURM)를 통한 작업 실행: Scroll the left tab -> Neuron -> Run the job via the scheduler (SLURM)
 
@@ -509,7 +509,7 @@ to https://jupyter.ksc.re.kr/user/a1113a01/lab, and go to the new webpage.
 
 \- (JupyterLab) When your use for Jupyter is over, you are required to close it to return the resources. To return the resources, click File -> Hub Control Panel to go to the Homepage, and then click the “Stop My Server” button.
 
-![](../../../.gitbook/assets/RTykquCSquqLYjL.png)
+![](../../../.gitbook/assets/Aifkvuq9qpyyJxG.png)
 
 ![](../../../.gitbook/assets/lGi3UXL44cC0Fr9.png)
 

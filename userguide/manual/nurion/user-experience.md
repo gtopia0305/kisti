@@ -63,7 +63,7 @@ $ ssh -l x123abc nurion.ksc.re.kr -p 22
 
 ※ 프로그램은 인터넷을 통해 무료로 다운로드 후 설치
 
-![](<../../../.gitbook/assets/JJNmXayKPdXGask (1).png>)
+![](../../../.gitbook/assets/JJNmXayKPdXGask.png)
 
 \- putty나 SSH Secure Shell Client 등의 ssh 접속 프로그램을 이용
 
@@ -71,13 +71,13 @@ $ ssh -l x123abc nurion.ksc.re.kr -p 22
 
 ※ Host Name : nurion.ksc.re.kr, Port : 22, Connection type : SSH
 
-![](../../../.gitbook/assets/Host%20Name%20%20nurion.png)
+![](../../../.gitbook/assets/mymgSTp1SpIXNqv.png)
 
 ※ ssh -> X11 tap -> check "Enable X11 forwarding"
 
 ※ X display location : localhost:0.0
 
-![](../../../.gitbook/assets/7CIgfnisxwUP8q8%20\(1\).png)
+![](../../../.gitbook/assets/7CIgfnisxwUP8q8.png)
 
 ※ 만약, DNS 캐싱 문제로 접속이 안 될 경우에는 캐시를 정리(명령 프롬프트에서 ipconfig/flushdns 명령어 수행)하고 재접속
 
