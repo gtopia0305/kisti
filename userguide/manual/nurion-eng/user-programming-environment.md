@@ -1,7 +1,3 @@
----
-description: User Programming Environment
----
-
 # User Programming Environment
 
 ## A. Programming Tool Installation Status
