@@ -501,15 +501,15 @@ $ ddt &
 
 \- 명령을 실행하여 다음과 같은 팝업 실행 창을 확인한다.
 
-![](../../../.gitbook/assets/I97n7qZ81qCXhYr.png)
+![](<../../../.gitbook/assets/I97n7qZ81qCXhYr (1).png>)
 
 \- 위 명령 중 "RUN" 을 선택하여 다음과 같이 디버깅할 파일 선택한 후 다시 새로운 팝업 창의 "RUN" 선택한다.
 
-![](../../../.gitbook/assets/Mi560g3KZ07pgdU.png)
+![](<../../../.gitbook/assets/Mi560g3KZ07pgdU (1).png>)
 
 \- 다음과 같이 선택 된 실행 파일에 대한 디버깅 모드로 진입하여 디버깅을 진행할 수 있다.
 
-![](../../../.gitbook/assets/gTAr5SRcMVrBvVk.png)
+![](<../../../.gitbook/assets/gTAr5SRcMVrBvVk (1).png>)
 
 2\) 프로파일러 Intel vtune Amplifiler 사용예제\
 본 시스템에서 프로파일러인 vtune을 사용하기 위하여 아키텍처, 컴파일러, MPI를 선택한 후 vtune을 선택하면 프로파일러를 사용 할 수 있다.
@@ -563,17 +563,17 @@ amplxe: Executing actions 100 % done
 
 \- 아래의 화면에서 New Analysis 버튼을 클릭한다.
 
-![](../../../.gitbook/assets/GTm1mNMQZZf8bty.png)
+![](<../../../.gitbook/assets/GTm1mNMQZZf8bty (1).png>)
 
 \- 아래와 같은 화면이 나타나면 cpu수와 체크 확인 후 Start 버튼을 클릭하면 분석이 시작된다.
 
-![](../../../.gitbook/assets/GZ4wIMQohgL61Xb.png)
+![](<../../../.gitbook/assets/GZ4wIMQohgL61Xb (1).png>)
 
 \- 완료되면 다음과 같이 분석 결과가 여러 개의 탭으로 요약되어 나타난다.
 
-![](../../../.gitbook/assets/cBGODIPc3EqGMwk.png)
+![](<../../../.gitbook/assets/cBGODIPc3EqGMwk (1).png>)
 
-![](../../../.gitbook/assets/E6pssxfC8C9m0oq.png)
+![](<../../../.gitbook/assets/E6pssxfC8C9m0oq (1).png>)
 
 3\) 프로파일러 Cary-Pat 사용예제\
 본 시스템에서 프로파일러인 CaryPat을 사용하기 위하여 아래와 같이 아키텍처 등 환경을 설정한 후 예제를 진행하였다.
@@ -644,10 +644,10 @@ $ app2 a.out+apa+378250-3t
 
 \- 아래와 같이 시각화가 가능하다.
 
-![](../../../.gitbook/assets/YPY09PIhdCcn1kZ.png)
+![](<../../../.gitbook/assets/YPY09PIhdCcn1kZ (1).png>)
 
-![](../../../.gitbook/assets/aiHnF5L2OvQWZHq.png)
+![](<../../../.gitbook/assets/aiHnF5L2OvQWZHq (1).png>)
 
-![](../../../.gitbook/assets/mQM5xWpZTEGSlSb.png)
+![](<../../../.gitbook/assets/mQM5xWpZTEGSlSb (1).png>)
 
-![](../../../.gitbook/assets/09wS30q3jMt4TaN.png)
+![](<../../../.gitbook/assets/09wS30q3jMt4TaN (1).png>)

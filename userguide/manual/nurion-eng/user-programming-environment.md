@@ -11,16 +11,12 @@
 | <p>Compiler dependent</p><p>library</p>      | <p>∙ hdf4/4.2.13</p><p>∙ hdf5/1.10.2</p><p>∙ lapack/3.7.0</p><p>∙ ncl/6.7.0</p>                                                                                                                                                                                             | <p>∙ ncview/2.1.7</p><p>∙ NCO/4.7.4</p><p>∙ netcdf/4.6.1</p>                                                                                                                                                                                                               |
 | MPI                                          | <p>∙ impi/17.0.5</p><p>∙ impi/18.0.1</p><p>∙ impi/18.0.3</p><p>∙ impi/19.0.1</p><p>∙ impi/19.0.4</p><p>∙ impi/19.0.5</p>                                                                                                                                                    | <p>∙ mvapich2/2.3</p><p>∙ mvapich2/2.3.1</p><p>∙ openmpi/3.1.0</p><p>∙ mvapich-verbs/2.2.ddn1.4</p><p>∙ ime/mvapich-verbs/2.2.ddn1.4</p>                                                                                                                                   |
 | <p>MPI dependent</p><p>library</p>           | <p>∙ fftw_mpi/2.1.5</p><p>∙ fftw_mpi/3.3.7</p><p>∙ hdf5-parallel/1.10.2</p>                                                                                                                                                                                                 | <p>∙ netcdf-hdf5-parallel/4.6.1</p><p>∙ parallel-netcdf/1.10.0</p><p>∙ pio/2.3.1</p>                                                                                                                                                                                       |
-| Commercial software                          | <p>∙ cfx/v145</p><p>∙ cfx/v170</p><p>∙ cfx/v181</p><p>∙ cfx/v191</p><p>∙ cfx/v192</p><p>∙ cfx/v195</p><p>∙ cfx/v201</p><p>∙ cfx/v202</p><p>∙ fluent/v145</p><p>∙ fluent/v170</p><p>∙ fluent/v181</p>                                                                        | <p>∙ fluent/v191</p><p>∙ fluent/v192</p><p>∙ fluent/v195</p><p>∙ fluent/v201</p><p>∙ fluent/v202</p><p>∙ gaussian/g16.a03</p><p>∙ gaussian/g16.a03.linda</p><p>∙ gaussian/g16.b01.linda</p><p>∙ gaussian/g16.c01.linda</p><p> </p>                                         |
-| Application software                         | <p>∙ cp2k/5.1.0</p><p>∙ cp2k/6.1.0</p><p>∙ ferret/7.4.3</p><p>∙ forge/18.1.2</p><p>∙ grads/2.2.0</p><p>∙ gromacs/2016.4</p><p>∙ gromacs/2018.6</p><p>∙ gromacs/2020.2</p><p>∙ gromacs/5.0.6</p><p>∙ lammps/12Dec18</p><p>∙ lammps/8Mar18</p><p> </p>                        | <p>∙ namd/2.12</p><p>∙ namd/2.13</p><p>∙ PETSc/3.8.4</p><p>∙ python/2.7.15</p><p>∙ python/3.7</p><p>∙ qe/6.1</p><p>∙ qe/6.4.1</p><p>∙ R/3.5.0</p><p>∙ siesta/4.0.2</p><p>∙ siesta/4.1-b3</p><p> </p>                                                                       |
+| Commercial software                          | <p>∙ cfx/v145</p><p>∙ cfx/v170</p><p>∙ cfx/v181</p><p>∙ cfx/v191</p><p>∙ cfx/v192</p><p>∙ cfx/v195</p><p>∙ cfx/v201</p><p>∙ cfx/v202</p><p>∙ fluent/v145</p><p>∙ fluent/v170</p><p>∙ fluent/v181</p>                                                                        | <p>∙ fluent/v191</p><p>∙ fluent/v192</p><p>∙ fluent/v195</p><p>∙ fluent/v201</p><p>∙ fluent/v202</p><p>∙ gaussian/g16.a03</p><p>∙ gaussian/g16.a03.linda</p><p>∙ gaussian/g16.b01.linda</p><p>∙ gaussian/g16.c01.linda</p>                                                 |
+| Application software                         | <p>∙ cp2k/5.1.0</p><p>∙ cp2k/6.1.0</p><p>∙ ferret/7.4.3</p><p>∙ forge/18.1.2</p><p>∙ grads/2.2.0</p><p>∙ gromacs/2016.4</p><p>∙ gromacs/2018.6</p><p>∙ gromacs/2020.2</p><p>∙ gromacs/5.0.6</p><p>∙ lammps/12Dec18</p><p>∙ lammps/8Mar18</p>                                | <p>∙ namd/2.12</p><p>∙ namd/2.13</p><p>∙ PETSc/3.8.4</p><p>∙ python/2.7.15</p><p>∙ python/3.7</p><p>∙ qe/6.1</p><p>∙ qe/6.4.1</p><p>∙ R/3.5.0</p><p>∙ siesta/4.0.2</p><p>∙ siesta/4.1-b3</p>                                                                               |
 | Virtualization module                        | <p>∙ singularity/3.0.1</p><p>∙ singularity/3.6.4</p>                                                                                                                                                                                                                        | <p>∙ conda/pytorch_1.0</p><p>∙ conda/tensorflow_1.13</p><p>∙ conda/intel_caffe_1.1.5</p>                                                                                                                                                                                   |
 | <p>Intel</p><p>Debugging module</p>          | <p>∙ advisor/17.0.5</p><p>∙ advisor/18.0.1</p><p>∙ advisor/18.0.3</p><p>∙ advisor/18.0.3a</p>                                                                                                                                                                               | <p>∙ vtune/17.0.5</p><p>∙ vtune/18.0.1</p><p>∙ vtune/18.0.2</p><p>∙ vtune/18.0.3</p>                                                                                                                                                                                       |
 | Cray module                                  | <p>∙ cdt/17.10</p><p>∙ cray-ccdb/3.0.3</p><p>∙ cray-cti/1.0.6</p><p>∙ cray-fftw/3.3.6.2</p><p>∙ cray-fftw_impi/3.3.6.2</p><p>∙ cray-impi/1.1.4</p><p>∙ cray-lgdb/3.0.7</p><p>∙ cray-libsci/17.09.1</p><p>∙ craype/2.5.13</p><p>∙ craypkg-gen/1.3.5</p><p>∙ chklimit/1.0</p> | <p>∙ vapich2_cce/2.2rc1.0.3_noslurm</p><p>∙ vapich2_gnu/2.2rc1.0.3_noslurm</p><p>∙ papi/5.5.1.3</p><p>∙ perftools/6.5.2</p><p>∙ perftools-bas/6.5.2</p><p>∙ perftools-lite/6.5.2</p><p>∙ PrgEnv-cray/1.0.2</p><p>∙ libfabric/1.7.0</p><p>∙ pbs/trace</p><p>∙ pbs/tools</p> |
 | Others                                       | <p>∙ cmake/3.12.3</p><p>∙ cmake/3.17.4</p><p>∙ common/memkind-1.9.0</p><p>∙ git/1.8.3.4</p><p>∙ IGPROF/5.9.16</p>                                                                                                                                                           | <p>∙ ImageMagick/7.0.8-20</p><p>∙ perl/5.28.1</p><p>∙ qt/4.8.7</p><p>∙ qt/5.9.6</p><p>∙ subversion/1.7.19</p><p>∙ subversion/1.9.3</p>                                                                                                                                     |
-
-&#x20;
-
-&#x20;
 
 ㅇ Commercial software information
 
@@ -33,11 +29,9 @@
 | <p>Chemistry/</p><p>Biology</p>   | Gaussian                 | <p>g16-a03<br>g16-a03.linda</p><p>g16-b01.linda</p><p>g16-c01.linda</p> | <p>No limit on no. of jobs<br>No limit on no. of CPUs<br>within a single node</p>          | /apps/commercial/G16/g16 |   |
 |                                   |                          |                                                                         |                                                                                            |                          |   |
 
-&#x20;※ For Gaussian, obtain permission for use from the helpdesk account manager ([account@ksc.re.kr](mailto:account@ksc.re.kr)) first
+※ For Gaussian, obtain permission for use from the helpdesk account manager ([account@ksc.re.kr](mailto:account@ksc.re.kr)) first
 
-&#x20;※ Refer to \[Annex 5] for the installation status of shared libraries (e.g.: cairo, expat, jasper, libpng, udunits, etc.)
-
-&#x20;
+※ Refer to \[Annex 5] for the installation status of shared libraries (e.g.: cairo, expat, jasper, libpng, udunits, etc.)
 
 ## B. How to Use Compiler
 
@@ -51,13 +45,9 @@
 | ----------------------------- | -------------- | ------------------ |
 | Module name                   | craype-mic-knl | craype-x86-skylake |
 
-&#x20;
-
 ```
 $ module load craype-mic-knl or $ module load craype-x86-skylake
 ```
-
-&#x20;
 
 (2) Basic commands related to the module
 
@@ -69,8 +59,6 @@ A list of modules that are available such as compiler and library can be checked
 $ module avail or  $ module av
 ```
 
-&#x20;
-
 ▶ Add a module to be used
 
 Modules to be used such as compiler and library can be added.
@@ -80,8 +68,6 @@ All modules to be used can be added at once.
 ```
 $ module load [module name] [module name] [module name] … or $ module add [module name] [module name] [module name] …
 ```
-
-&#x20;
 
 ▶ Delete modules being used
 
@@ -99,8 +85,6 @@ A list of currently set modules can be checked.
 $ module list or $ module li
 ```
 
-&#x20;
-
 ▶ Purge all modules being used
 
 ```
@@ -109,13 +93,9 @@ $ module purge
 
 ※ In this case, the default required modules are also deleted at once; those modules need to be added again when reusing them.
 
-&#x20;
-
 2\) Compiling sequential programs
 
 A sequential program refers to a program in which a parallel program environment is not considered. Specifically, it is a program that does not use a parallel program interface such as OpenMP or MPI and is not used where the program is executed using one processor in one node. Options per compiler used for compiling a sequential program are also used when compiling a parallel program; thus, it is recommended to reference them even if a sequential program is not of interest.
-
-&#x20;
 
 **① Intel compiler**
 
@@ -127,16 +107,12 @@ $ module load intel/18.0.3
 
 ※ Check the available version by referring to the programming tool installation status table.
 
-&#x20;
-
 ■ Compiler type
 
 | **Compiler** | **program** | **Source extensions**                                  |
 | ------------ | ----------- | ------------------------------------------------------ |
 | icc / icpc   | C / C++     | .C, .cc, .cpp, .cxx,.c++                               |
 | ifort        | F77/F90     | .f, .for, .ftn, .f90, .fpp, .F, .FOR, .FTN, .FPP, .F90 |
-
-&#x20;
 
 ■ Compiler option
 
@@ -162,8 +138,6 @@ $ module load intel/18.0.3
 | -mcmodel medium                             | Used when a memory allocation of 2 GB or higher is required                                                                                                                       |
 | -help                                       | Outputs a list of options                                                                                                                                                         |
 
-&#x20;
-
 ■ Example of using Intel compiler
 
 The following is an example of creating an execution file test.exe by compiling a test sample file with the Intel compiler in the **KNL computing node**.
@@ -174,8 +148,6 @@ $ module load craype-mic-knl intel/18.0.3 $ icc –o test.exe –O3 –fPIC –x
 
 ※ Copy the test sample file for job submission in /apps/shell/home/job\_examples
 
-&#x20;
-
 ■ Recommended options
 
 | **Computing node** | **Recommended options**   |
@@ -183,8 +155,6 @@ $ module load craype-mic-knl intel/18.0.3 $ icc –o test.exe –O3 –fPIC –x
 | SKL                | -O3 –fPIC –xCORE-AVX512   |
 | KNL                | -O3 -fPIC -xMIC-AVX512    |
 | SKL & KNL          | -O3 –fPIC -xCOMMON-AVX512 |
-
-&#x20;
 
 **② GNU compiler**
 
@@ -198,16 +168,12 @@ $ module load gcc/7.2.0
 
 ※ Must use "gcc/6.1.0” version or higher
 
-&#x20;
-
 ■ Compiler type
 
 | **Compiler** | **program** | **Source extensions**                                  |
 | ------------ | ----------- | ------------------------------------------------------ |
 | gcc / g++    | C / C++     | .C, .cc, .cpp, .cxx,.c++                               |
 | gfortran     | F77/F90     | .f, .for, .ftn, .f90, .fpp, .F, .FOR, .FTN, .FPP, .F90 |
-
-&#x20;
 
 ■ GNU compiler option
 
@@ -225,8 +191,6 @@ $ module load gcc/7.2.0
 | -fPIC                                      | Compiles to generate position independent code (PIC)                                                                                                                    |
 | -help                                      | Outputs a list of options                                                                                                                                               |
 
-&#x20;
-
 ■ Example of using GNU compiler
 
 The following is an example of creating an execution file test.exe by compiling a test sample file with the GNU compiler in the **KNL computing node**.
@@ -237,8 +201,6 @@ $ module load craype-mic-knl gcc/7.2.0 $ gcc –o test.exe -O3 -fPIC -march=knl 
 
 ※ Copy the test sample file for job submission in /apps/shell/home/job\_examples
 
-&#x20;
-
 ■ Recommended options
 
 | **Computing node** | **Recommended options**         |
@@ -247,9 +209,9 @@ $ module load craype-mic-knl gcc/7.2.0 $ gcc –o test.exe -O3 -fPIC -march=knl 
 | KNL                | -O3 -fPIC -march=knl            |
 | SKL & KNL          | -fPIC -mpku                     |
 
-&#x20;****&#x20;
+\*\*\*\*
 
-&#x20;****&#x20;
+\*\*\*\*
 
 **③ PGI compiler**
 
@@ -261,16 +223,12 @@ $ module load pgi/18.10
 
 ※ Check the available version by referring to the programming tool installation status table.
 
-&#x20;
-
 ■ Compiler type
 
 | **Compiler** | **program** | **Source extensions**                                  |
 | ------------ | ----------- | ------------------------------------------------------ |
 | pgcc / pgc++ | C / C++     | .C, .cc, .cpp, .cxx, .c++                              |
 | pgfortran    | F77/F90     | .f, .for, .ftn, .f90, .fpp, .F, .FOR, .FTN, .FPP, .F90 |
-
-&#x20;
 
 ■ PGI compiler option
 
@@ -290,8 +248,6 @@ $ module load pgi/18.10
 | -fPIC                                                   | Compiles to generate position independent code (PIC)                                                                                                                                                                                                                                                                                                          |
 | -help                                                   | Outputs a list of options                                                                                                                                                                                                                                                                                                                                     |
 
-&#x20;
-
 ■ Example of using PGI compiler
 
 The following is an example of creating an execution file test.exe by compiling a test sample file with the PGI compiler in the **KNL computing node**.
@@ -302,8 +258,6 @@ $ module load craype-mic-knl pgi/18.10 $ pgcc –o test.exe -fast –tp=knl test
 
 ※ Copy the test sample file for job submission in /apps/shell/home/job\_examples
 
-&#x20;
-
 ■ Recommended options
 
 | **Computing node** | **Recommended options** |
@@ -311,10 +265,6 @@ $ module load craype-mic-knl pgi/18.10 $ pgcc –o test.exe -fast –tp=knl test
 | SKL                | -fast –tp=skylake       |
 | KNL                | -fast –tp=knl           |
 | SKL & KNL          | -fast –tp=skylake,knl   |
-
-&#x20;
-
-&#x20;
 
 **④ Cray compiler**
 
@@ -326,8 +276,6 @@ $ module load cce/8.6.3
 
 ※ Check the available version by referring to the programming tool installation status table.
 
-&#x20;
-
 ■ Compiler type
 
 | **Compiler** | **program** | **Source extensions**                                  |
@@ -335,23 +283,19 @@ $ module load cce/8.6.3
 | cc / CC      | C / C++     | .C, .cc, .cpp, .cxx,.c++                               |
 | ftn          | F77/F90     | .f, .for, .ftn, .f90, .fpp, .F, .FOR, .FTN, .FPP, .F90 |
 
-&#x20;
-
 ■ Compiler option
 
-| **Compiler option**                             | **Description**                                                              |
-| ----------------------------------------------- | ---------------------------------------------------------------------------- |
-| -O\[1\|2\|3]                                    | Object optimization. Optimization level for numbers.                         |
-| -hcpu=mic-knl                                   | Supports MIC with a 512 bit register                                         |
-| <p>-Oipa[0|1|2|3|4|5]<br>-hpia[0|1|2|3|4|5]</p> | <p>-ftn Inlining option<br>cc/CC Inlining option</p>                         |
-| -hunroll\[0\|1\|2]                              | Unrolling option. Unrolls all loops if Default is 2                          |
-| -hfp\[0\|1\|2\|3\|4]                            | Floating\_Point optimization                                                 |
-| -homp(default)                                  | Uses OpenMP-based multi-thread code                                          |
-| -g \| -G0                                       | Generates debugging information                                              |
-| -h pic                                          | Used when a static memory of 2 GB or higher is required (used with -dynamic) |
-| -dynamic                                        | Links shared libraries                                                       |
-
-&#x20;
+| **Compiler option**  | **Description**                                                              |
+| -------------------- | ---------------------------------------------------------------------------- |
+| -O\[1\|2\|3]         | Object optimization. Optimization level for numbers.                         |
+| -hcpu=mic-knl        | Supports MIC with a 512 bit register                                         |
+| -Oipa\[0             | 1                                                                            |
+| -hunroll\[0\|1\|2]   | Unrolling option. Unrolls all loops if Default is 2                          |
+| -hfp\[0\|1\|2\|3\|4] | Floating\_Point optimization                                                 |
+| -homp(default)       | Uses OpenMP-based multi-thread code                                          |
+| -g \| -G0            | Generates debugging information                                              |
+| -h pic               | Used when a static memory of 2 GB or higher is required (used with -dynamic) |
+| -dynamic             | Links shared libraries                                                       |
 
 ■ Example of using Cray compiler
 
@@ -362,8 +306,6 @@ $ module load craype-mic-knl cce/8.6.3 PrgEnv-cray/1.0.2 $ cc –o test.exe –h
 ```
 
 ※ Copy the test sample file for job submission in /apps/shell/home/job\_examples
-
-&#x20;
 
 ■ Recommended options
 
@@ -376,8 +318,6 @@ $ module load craype-mic-knl cce/8.6.3 PrgEnv-cray/1.0.2 $ cc –o test.exe –h
 ※ test.c and test.f90 for testing can be found in **/apps/shell/home/job\_examples** (test by copying to the user directory)
 
 ※ For programs to use the KNL optimization option, it is recommended to access them through interactive job submission by the KNL debug node and then compile (refer to “Job execution through scheduler → B. Job submission monitoring → 2) Interactive job submission”).
-
-&#x20;
 
 3\) Compiling parallel programs
 
@@ -392,8 +332,6 @@ OpenMP is a technique simply developed to enable multi-thread utilization only b
 | cc / CC /ftn             | C / C++ / F77/F90 | -homp      |
 | pgcc / pgc++ / pgfortran | C / C++ / F77/F90 | -mp        |
 
-&#x20;
-
 ① Example of OpenMP program compilation (Intel compiler)
 
 The following is an example of creating an execution file test\_omp.exe by compiling a test\_omp sample file that uses OpenMP with the Intel compiler in the **KNL computing node**.
@@ -401,8 +339,6 @@ The following is an example of creating an execution file test\_omp.exe by compi
 ```
 $ module load craype-mic-knlintel/18.0.3 $ icc -o test_omp.exe -qopenmp -O3 -fPIC –xMIC-AVX512 test_omp.c or $ ifort -o test_omp.exe -qopenmp -O3 -fPIC –xMIC-AVX512 test_omp.f90 $ ./test_omp.exe
 ```
-
-&#x20;
 
 ② Example of OpenMP program compilation (GNU compiler)
 
@@ -412,8 +348,6 @@ The following is an example of creating an execution file test\_omp.exe by compi
 $ module load craype-mic-knl gcc/7.2.0 $ gcc -o test_omp.exe -fopenmp -O3 -fPIC -march=knl test_omp.c or $ gfortran -o test_omp.exe -fopenmp -O3 -fPIC -march=knl test_omp.f90 $ ./test_omp.exe
 ```
 
-&#x20;
-
 ③ Example of OpenMP program compilation (PGI compiler)
 
 The following is an example of creating an execution file test\_omp.exe by compiling a test\_omp sample file that uses OpenMP with the PGI compiler in the **KNL computing node**.
@@ -422,8 +356,6 @@ The following is an example of creating an execution file test\_omp.exe by compi
 $ module load craype-mic-knl pgi/18.10 $ pgcc –o test_omp.exe -mp -fast test_omp.c or $ pgfortran –o test_omp.exe -mp -fast test_omp.f90 $ ./test_omp.exe
 ```
 
-&#x20;
-
 ④ Example of OpenMP program compilation (Cray compiler)
 
 The following is an example of creating an execution file test\_omp.exe by compiling a test\_omp sample file that uses OpenMP with the Cray compiler in the **KNL computing node**.
@@ -431,8 +363,6 @@ The following is an example of creating an execution file test\_omp.exe by compi
 ```
 $ module load craype-mic-knl cce/8.6.3 PrgEnv-cray/1.0.2 $ cc -o test_omp.exe -homp -hcpu=mic-knl test_omp.c or $ ftn -o test_omp.exe -homp -hcpu=mic-knl test_omp.f90 $ ./test_omp.exe
 ```
-
-&#x20;
 
 (2) MPI compiler
 
@@ -449,7 +379,7 @@ Users can execute the MPI commands in the following table, and these commands ar
 
 Even when compiled through mpicc, the options corresponding to the original compiler being wrapped must be used.
 
-&#x20;****&#x20;
+\*\*\*\*
 
 **①** Example of MPI program compilation (Intel compiler)
 
@@ -459,8 +389,6 @@ The following is an example of creating an execution file test\_mpi.exe by compi
 $ module load craype-mic-knl intel/18.0.3 impi/18.0.3 $ mpiicc -o test_mpi.exe -O3 -fPIC -xMIC-AVX512 test_mpi.c or $ mpiifort -o test_mpi.exe -O3 -fPIC -xMIC-AVX512 test_mpi.f90 $ mpirun -np 2 ./test_mpi.exe
 ```
 
-&#x20;
-
 **②** Example of MPI program compilation (GNU compiler)
 
 The following is an example of creating an execution file test\_mpi.exe by compiling a test\_mpi sample file that uses MPI with the GNU compiler in the **KNL computing node**.
@@ -468,8 +396,6 @@ The following is an example of creating an execution file test\_mpi.exe by compi
 ```
 $ module load craype-mic-knl gcc/7.2.0 openmpi/3.1.0 $ mpicc -o test_mpi.exe -O3 -fPIC -march=knl test_mpi.c or $ mpif90 -o test_mpi.exe -O3 -fPIC -march=knl test_mpi.f90 $ mpirun -np 2 ./test_mpi.exe
 ```
-
-&#x20;
 
 **③** Example of MPI program compilation (PGI compiler)
 
@@ -479,8 +405,6 @@ The following is an example of creating an execution file test\_mpi.exe by compi
 $ module load craype-mic-knl pgi/18.10 openmpi/3.1.0 $ mpicc -o test_mpi.exe -O3 -fPIC -tp=knl test_mpi.c or $ mpifort -o test_mpi.exe -O3 -fPIC -tp=knl test_mpi.f90 $ mpirun -np 2 ./test_mpi.exe
 ```
 
-&#x20;
-
 **④** Example of MPI program compilation (Cray compiler)
 
 The following is an example of creating an execution file test\_mpi.exe by compiling a test\_mpi sample file that uses MPI with the Cray compiler in the **KNL computing node**.
@@ -488,8 +412,6 @@ The following is an example of creating an execution file test\_mpi.exe by compi
 ```
 $ module load craype-mic-knl cce/8.6.3 PrgEnv-cray/1.0.2 $ cc -o test_mpi.exe -hcpu=mic-knl test_mpi.c or $ ftn -o test_mpi.exe -hcpu=mic-knl test_mpi.f90 $ mpirun -np 2 ./test_mpi.exe
 ```
-
-&#x20;
 
 ## C. Debugger and Profiler
 
@@ -519,15 +441,15 @@ $ ddt &
 
 \- Execute the command to see if the following pop-up execution window appears.
 
-![](../../../.gitbook/assets/I97n7qZ81qCXhYr.png)
+![](<../../../.gitbook/assets/I97n7qZ81qCXhYr (1).png>)
 
 \- Select “RUN” among the listed commands, select the file for debugging as shown below, and then click “RUN” in the new pop-up window.
 
-![](../../../.gitbook/assets/Mi560g3KZ07pgdU.png)
+![](<../../../.gitbook/assets/Mi560g3KZ07pgdU (1).png>)
 
 \- Debugging can be initiated by entering the debugging mode for the following selected execution file.
 
-![](../../../.gitbook/assets/gTAr5SRcMVrBvVk.png)
+![](<../../../.gitbook/assets/gTAr5SRcMVrBvVk (1).png>)
 
 2\) Example of using profiler Intel vtune Amplifier\
 Select the architecture, compiler, and MPI for using a profiler vtune in this system, and then select vtune to use the profiler.
@@ -566,17 +488,17 @@ $ amplxe-gui
 
 \- Click “New Analysis” in the screen below.
 
-![](../../../.gitbook/assets/GTm1mNMQZZf8bty.png)
+![](<../../../.gitbook/assets/GTm1mNMQZZf8bty (1).png>)
 
 \- When the screen shown below appears, check the number of CPUs and click the Start button to begin the analysis.
 
-![](../../../.gitbook/assets/GZ4wIMQohgL61Xb.png)
+![](<../../../.gitbook/assets/GZ4wIMQohgL61Xb (1).png>)
 
 \- Once completed, the analysis results are summarized in multiple tabs as shown below.
 
-![](../../../.gitbook/assets/cBGODIPc3EqGMwk.png)
+![](<../../../.gitbook/assets/cBGODIPc3EqGMwk (1).png>)
 
-![](../../../.gitbook/assets/E6pssxfC8C9m0oq.png)
+![](<../../../.gitbook/assets/E6pssxfC8C9m0oq (1).png>)
 
 3\) Example of using profiler Cary-Pat\
 The environment including the architecture is set as below for using CaryPat, which is a profiler, and the example was initiated.
@@ -637,26 +559,20 @@ $ pat_report a.out+apa+378250-3t
 
 \- When the file is executed as above, the ap2 file and tracing report are created.
 
-&#x20;
-
 \- app2 is provided as a method for visualizing the collected data.
 
 ```
 $ app2 a.out+apa+378250-3t
 ```
 
-&#x20;
-
 \- Visualization results are produced as shown below.
 
-![](../../../.gitbook/assets/YPY09PIhdCcn1kZ.png)
+![](<../../../.gitbook/assets/YPY09PIhdCcn1kZ (1).png>)
 
-![](../../../.gitbook/assets/aiHnF5L2OvQWZHq.png)
+![](<../../../.gitbook/assets/aiHnF5L2OvQWZHq (1).png>)
 
-![](../../../.gitbook/assets/mQM5xWpZTEGSlSb.png)
+![](<../../../.gitbook/assets/mQM5xWpZTEGSlSb (1).png>)
 
-![](../../../.gitbook/assets/09wS30q3jMt4TaN.png)
-
-&#x20;&#x20;
+![](<../../../.gitbook/assets/09wS30q3jMt4TaN (1).png>)
 
 2022년 2월 15일에 마지막으로 업데이트되었습니다.

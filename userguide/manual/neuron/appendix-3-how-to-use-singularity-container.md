@@ -8,19 +8,13 @@ description: '[별첨3] Singularity 컨테이너 사용법'
 
 Tensorflow, Caffe, Pytorch와 같은 딥러닝 프레임워크와 Quantum Espresso, Lammps, Gromacs, Paraview 등을 지원하는 빌드된 **컨테이너 이미지는** **/apps/applications/singularity\_images/ngc 디렉터리**에서 액세스 할 수 있다.
 
-&#x20;
+![](../../../.gitbook/assets/ODaaowbXWtsnLcU.png) ![](<../../../.gitbook/assets/iA7rMElSDzNPxoc (1).png>)
 
-![](../../../.gitbook/assets/ODaaowbXWtsnLcU.png) ![](../../../.gitbook/assets/iA7rMElSDzNPxoc.png)
-
-&#x20;< 가상머신과 컨테이너 아키텍처 비교 >                                                 < 싱귤레러티 컨테이너 아키텍처 >
+< 가상머신과 컨테이너 아키텍처 비교 > < 싱귤레러티 컨테이너 아키텍처 >
 
 ※ 가상머신은 애플리케이션이 하이퍼바이저와 게스트 OS를 거쳐 올라가는 구조이나, 컨테이너는 물리적인 하드웨어에 더 가까우며 별도의 게스트 OS가 아닌 호스트 OS를 공유하기 때문에 오버헤드가 더 작음. 최근 클라우드 서비스에서 컨테이너의 활용이 증가하고 있음
 
-&#x20;
-
 ## 가. 컨테이너 이미지 빌드하기
-
-&#x20;
 
 **1) 싱귤레러티 모듈 적재 혹은 경로 설정**
 
@@ -30,21 +24,17 @@ or
 $ $HOME/.bash_profileexport PATH=$PATH:/apps/applications/singularity/3.9.7/bin/
 ```
 
-&#x20;
-
 **2) 로컬 빌드**
 
-•  뉴론 시스템의 로그인 노드에서 컨테이너 이미지를  로컬 빌드하기  위해서는, 먼저 [**KISTI 홈페이지 > 기술지원 > 상담신청**을](https://www.ksc.re.kr/gsjw/gsjw/qna/edit) 통해 아래와 같은 내용으로 fakeroot 사용 신청을 해야함
+• 뉴론 시스템의 로그인 노드에서 컨테이너 이미지를 로컬 빌드하기 위해서는, 먼저 [**KISTI 홈페이지 > 기술지원 > 상담신청**을](https://www.ksc.re.kr/gsjw/gsjw/qna/edit) 통해 아래와 같은 내용으로 fakeroot 사용 신청을 해야함
 
-&#x20;   \- 시스템명 : 뉴론\
-&#x20;   \- 사용자 ID : a000abc\
-&#x20;   \- 요청사항 : 싱귤레러티 fakeroot 사용 설정  &#x20;
+\- 시스템명 : 뉴론\
+\- 사용자 ID : a000abc\
+\- 요청사항 : 싱귤레러티 fakeroot 사용 설정
 
-• [**NGC(Nvidia GPU Cloud)에서 배포하는 도커 컨테이너**](https://catalog.ngc.nvidia.com/containers)로 부터 뉴론 시스템의 Nvidia GPU에 최적화된 딥러닝 프레임워크 및 HPC 애플리케이션 관련 싱규레러티 컨테이너 이미지를 빌드할 수 있음&#x20;
+• [**NGC(Nvidia GPU Cloud)에서 배포하는 도커 컨테이너**](https://catalog.ngc.nvidia.com/containers)로 부터 뉴론 시스템의 Nvidia GPU에 최적화된 딥러닝 프레임워크 및 HPC 애플리케이션 관련 싱규레러티 컨테이너 이미지를 빌드할 수 있음
 
 • 생성된 싱귤레러티 이미지 파일(\*.sif)을 수정하기 위해서는 root 권한이 필요하며, 샌드박스(쓰기 가능 chroot 디렉터리)로 변환해야 함.
-
-&#x20;
 
 **`[이미지 빌드 명령어]`**
 
@@ -52,15 +42,13 @@ $ $HOME/.bash_profileexport PATH=$PATH:/apps/applications/singularity/3.9.7/bin/
 $ singularity [global options...] build [local options...] ＜IMAGE PATH＞ ＜BUILD SPEC＞[주요 global options]    -d : 디버깅 정보를 출력함    -v : 추가 정보를 출력함    --version : 싱귤레러티 버전 정보를 출력함[관련 주요 local options]    --fakeroot : roor 권한 없이 일반사용자가 가짜 root 사용자로 이미지 빌드     --remote : 외부 싱귤레러티 클라우드(Sylabs Cloud)를 통한 원격 빌드(root 권한 필요 없음)    --sandbox : 샌드박스 형태의 쓰기 가능한 이미지 디렉터리 빌드＜IMAGE PATH＞   default : 읽기만 가능한 기본 이미지 파일(예시 : ubuntu1.sif)   sandbox : 읽기 및 쓰기 가능한 디렉터리 구조의 컨테이너(예시 : ubuntu4) ＜BUILD SPEC＞definition file : 컨테이너를 빌드하기 위한 recipe 파일(예시 : ubuntu.def)local image : 싱귤레러티 이미지 파일 혹은 샌드박스 디렉터리(IMAGE PATH 참조)URI library:// 컨테이너 라이브러리 (default https://cloud.sylabs.io/library) docker:// 도커 레지스트리 (default 도커 허브)shub:// 싱규레러티 레지스트리 (default 싱귤레러티 허브)oras:// OCI 레지스트리
 ```
 
-&#x20;
-
 **\[예제]**
 
 ```
 ① recipe 파일로부터 ubuntu1.sif 이미지 빌드하기 $ singularity build --fakeroot ubuntu1.sif ubuntu.def* ② 싱규레러티 라이브러리로부터 ubuntu2.sif 이미지 빌드하기 $ singularity build --fakeroot ubuntu2.sif library://ubuntu:18.04 ③ 도커 허브로부터 ubuntu3.sif 이미지 빌드하기 $ singularity build --fakeroot ubuntu3.sif docker://ubuntu:18.04 ④ 도커 허브로부터 샌드박스 형태의 ubuntu4 이미지 디렉터리 빌드하기 $ singularity build --fakeroot --sandbox ubuntu4 docker://ubuntu:18.04 ⑤ NGC(Nvidia GPU Cloud) 도커 레지스트리로부터 '22년 03월 배포 pytorch 이미지 빌드하기 $ singularity build --fakeroot pytorch1.sif docker://nvcr.io/nvidia/pytorch:22.03-py3⑥ recipe 파일로부터 pytorch.sif 이미지 빌드하기 $ singularity build --fakeroot pytorch2.sif pytorch.def*** ) ubuntu.def 예시 bootstrap: library from: ubuntu:18.04 %post apt-get update apt-get install -y wget git bash gcc gfortran g++ make file %runscript echo "hello world from ubuntu container!"** ) pytorch.def 예시- 로컬 이미지 파일로부터 콘다를 사용하여 새로운 패키지 설치를 포함한 이미지 빌드 bootstrap: localimage from: /apps/applications/singularity_images/ngc/pytorch:22.03-py3.sif %post conda install matplotlib -y- 외부 NGC 도커 이미지로부터 콘다를 사용하여 새로운 패키지 설치를 포함한 이미지 빌드 bootstrap: docker from: nvcr.io/nvidia/pytorch:22.03-py3 %post conda install matplotlib -y
 ```
 
-&#x20;****&#x20;
+\*\*\*\*
 
 **3) 원격빌드**
 
@@ -69,9 +57,7 @@ $ singularity [global options...] build [local options...] ＜IMAGE PATH＞ ＜B
 ```
 
 ※ Sylabs Cloud(https://cloud.sylabs.io)에서 제공하는 원격빌드 서비스를 이용하려면 액세스 토큰을 생성하여 뉴론 시스템에 등록해야 함 [**\[참조 1\]**](https://www.ksc.re.kr/gsjw/jcs/hd#h\_7595929387701647407267724)\
-※ 또한, Sylabs Cloud에 웹 브라우저 접속을 통해서 싱귤레러티 컨테이너 이미지의 생성∙관리가 가능함 **** [**\[참조 2\]**](https://www.ksc.re.kr/gsjw/jcs/hd#h\_6582700487751647407356239)
-
-&#x20;
+※ 또한, Sylabs Cloud에 웹 브라우저 접속을 통해서 싱귤레러티 컨테이너 이미지의 생성∙관리가 가능함 \*\*\*\* [**\[참조 2\]**](https://www.ksc.re.kr/gsjw/jcs/hd#h\_6582700487751647407356239)
 
 **4) 컨테이너 이미지 가져오기/내보내기**
 
@@ -81,8 +67,6 @@ $ singularity [global options...] build [local options...] ＜IMAGE PATH＞ ＜B
 
 ※ Sylabs Cloud 라이브러리에 컨테이너 이미지를 내보내기(업로드) 위해서는 먼저 액세스 토큰을 생성하여 뉴론 시스템에 등록해야 함 [**\[참조 1\]**](https://www.ksc.re.kr/gsjw/jcs/hd#h\_7595929387701647407267724)
 
-&#x20;
-
 **5) 컨테이너 이미지에서 제공되지 않는 파이썬 패키지 등을 사용자 홈 디렉터리에 설치하는 방법**
 
 ```
@@ -91,11 +75,7 @@ $ singularity [global options...] build [local options...] ＜IMAGE PATH＞ ＜B
 
 ※ 단, 여러 가지 컨테이너 이미지를 사용하는 경우 사용자 프로그램 실행 시 사용자 홈 디렉터리에 추가로 설치한 패키지를 먼저 찾기 때문에 다른 컨테이너 이미지에서 요구하는 패키지와 충돌이 발생하여 정상적으로 동작하지 않을 수 있음
 
-&#x20;
-
 ## 나. 싱귤레러티 컨테이너에서 사용자 프로그램 실행
-
-&#x20;
 
 **1) 싱귤레러티 모듈 적재 혹은 경로 설정**
 
@@ -105,15 +85,11 @@ or
 $ $HOME/.bash_profileexport PATH=$PATH:/apps/applications/singularity/3.9.7/bin/
 ```
 
-&#x20;
-
 **2) 싱귤레러티 컨테이너에서 프로그램 실행 명령어**
 
 ```
 $ singularity [global options...] shell [shell options...] ＜container＞$ singularity [global options...] exec [exec options...] ＜container＞ ＜command＞$ singularity [global options...] run [run options...] ＜container＞
 ```
-
-&#x20;
 
 **\[예제]**
 
@@ -124,13 +100,9 @@ $ singularity [global options...] shell [shell options...] ＜container＞$ sing
 ※ 싱귤레러티의 명령어\[shell | exec | run | pull ...] 별 도움말을 보려면 “singularity help \[command]”를 실행함\
 \* ) 계산/로그인 노드에서 Nvidia GPU를 사용하기 위해서는 --nv 옵션을 사용해야 함
 
-&#x20;
-
-**3) NGC 컨테이너 모듈을 사용하여 사용자 프로그램 실행**&#x20;
+**3) NGC 컨테이너 모듈을 사용하여 사용자 프로그램 실행**
 
 모듈 명령어를 사용하여 NGC 싱규레러티 컨테이너 이미지와 관련된 모듈을 로드하면 싱귤레러티 명령어를 입력하지 않아도 자동으로 컨테이너 이미지가 구동되어 좀 더 쉽게 싱귤레러티 컨테이너에서 사용자 프로그램을 실행할 수 있음
-
-&#x20;
 
 ■ NGC 컨테이너 모듈을 로드하여 컨테이너에서 사용자 프로그램 실행하기
 
@@ -139,8 +111,6 @@ $ singularity [global options...] shell [shell options...] ＜container＞$ sing
 ```
 
 ※ 컨네이너 이미지 모듈 로드 후 실행명령어 입력만으로 “singularity run --nv <컨테이너> \[실행명령어]”가 자동 실행됨
-
-&#x20;
 
 ■ NGC 컨테이너 모듈 리스트
 
@@ -158,21 +128,13 @@ $ singularity [global options...] shell [shell options...] ＜container＞$ sing
 ▸NGC(https://ngc.nvidia.com)에서 Nvidia GPU에 최적화하여 빌드 배포한 도커 컨테이너 이미지를 싱귤레러티로 변환함\
 ▸컨테이너 이미지 파일 경로 : /apps/applications/singularity\_images/ngc
 
-&#x20;
-
 ```
 1009% [a123a01@glogin01 ngc]$ module av-- [중략] ---- [중략] --
 ```
 
-&#x20;
-
 **4) 스케줄러(SLURM)를 통한 컨테이너 실행 방법**
 
-&#x20;
-
 **■ GPU 싱귤레러티 컨테이너 작업 실행**
-
-&#x20;
 
 **① 작업 스크립트를 작성하여 배치 형태 작업 실행**\
 \# 실행 명령어 : sbatch＜작업 스크립트 파일＞
@@ -181,11 +143,9 @@ $ singularity [global options...] shell [shell options...] ＜container＞$ sing
 [id@glogin01]$ sbatch job_script.shSubmitted batch job 12345
 ```
 
-※ 자세한 스케줄러(SLURM) 사용 방법은  "뉴론 지침서-스케줄러(SLURM)를 통한 작업실행" 참조
+※ 자세한 스케줄러(SLURM) 사용 방법은 "뉴론 지침서-스케줄러(SLURM)를 통한 작업실행" 참조
 
 ※ [**\[참조 3\]**](https://www.ksc.re.kr/gsjw/jcs/hd#h\_9146219267821647408138749)를 통해 병렬 학습 실행 예제 프로그램을 따라해 볼 수 있음
-
-&#x20;
 
 **② 스케줄러가 할당한 계산 노드에서 인터랙티브 작업 실행**\
 \# 스케줄러를 통해 계산노드를 할당받아 첫번째 계산노드에 쉘 접속 후 인터렉티브 모드로 사용자 프로그램 실행
@@ -194,9 +154,7 @@ $ singularity [global options...] shell [shell options...] ＜container＞$ sing
 [id@glogin01]$ srun --partition=cas_v100_4 --nodes=1 --ntasks-per-node=2 --cpus-per-task=10 --gres=gpu:2 --comment=pytorch --pty bash [id@gpu10]$ [id@gpu10]$ module load singularity/3.9.7 [id@gpu10]$ singularity run --nv /apps/applications/singularity_images/ngc/pytorch_22.03-hd-py3.sif python test.py
 ```
 
-※ 1노드 점유, 노드 당 2  타스크, 타스크 당 10 CPUs, 노드 당 2GPU 사용 예제
-
-&#x20;
+※ 1노드 점유, 노드 당 2 타스크, 타스크 당 10 CPUs, 노드 당 2GPU 사용 예제
 
 **■ GPU 싱귤레러티 컨테이너 작업 스크립트 예시**
 
@@ -209,8 +167,6 @@ $ singularity [global options...] shell [shell options...] ＜container＞$ sing
 
 ※ 1노드 점유, 노드 당 2 타스크, 타스크 당 10 CPUs, 노드 당 2GPU 사용 예제
 
-&#x20;
-
 **② 멀티 노드-1**\
 \# 실행 명령어 : srun singularity run --nv <컨테이너> \[사용자 프로그램 실행 명령어]
 
@@ -219,8 +175,6 @@ $ singularity [global options...] shell [shell options...] ＜container＞$ sing
 ```
 
 ※ 2노드 점유, 노드 당 2 타스크(총 4개 MPI 프로세스-horovod 사용), 타스크 당 10CPUs, 노드 당 2GPU 사용 예제
-
-&#x20;
 
 **③ 멀티 노드-2**\
 \# NGC 컨테이너 모듈을 로드하면 사용자 프로그램 실행 시 지정된 싱귤레러티 컨테이너를 자동으로 구동함\
@@ -232,8 +186,6 @@ $ singularity [global options...] shell [shell options...] ＜container＞$ sing
 
 ※ 2노드 점유, 노드 당 2 타스크(총 4개 MPI 프로세스-horovod 사용), 타스크 당 10CPUs, 노드 당 2GPU 사용 예제
 
-&#x20;
-
 ## \[참조1] Sylabs Cloud 액세스 토큰 생성 및 뉴론 시스템에 토큰 등록하기 <a href="#h_7595929387701647407267724" id="h_7595929387701647407267724"></a>
 
 [**\[Sylabs Cloud 바로가기\]**](https://cloud.sylabs.io/)
@@ -244,13 +196,7 @@ $ singularity [global options...] shell [shell options...] ＜container＞$ sing
 
 ![](../../../.gitbook/assets/jB4Qz6eplC8UhyS.png)
 
-&#x20;
-
 ![](../../../.gitbook/assets/LGDeMrtu2piP4ZA.png)
-
-&#x20;
-
-&#x20;
 
 ## \[참조2] 웹 브라우저에서 리모트 빌더에 의한 싱귤레러티 컨테이너 빌드하기 <a href="#h_6582700487751647407356239" id="h_6582700487751647407356239"></a>
 
@@ -259,8 +205,6 @@ $ singularity [global options...] shell [shell options...] ＜container＞$ sing
 ![](../../../.gitbook/assets/7NuUZiOLvyaYZqK.png)
 
 ![](../../../.gitbook/assets/ViIZ0BPIfboW1Tz.png)
-
-&#x20;
 
 ## \[참조3] 병렬 학습 프로그램 실행 예제 <a href="#h_9146219267821647408138749" id="h_9146219267821647408138749"></a>
 
@@ -271,15 +215,11 @@ $ singularity [global options...] shell [shell options...] ＜container＞$ sing
 ▪ 병렬 학습 작업 스크립트 경로 : /apps/applications/singularity_images/examples▪ 컨테이너 이미지 디렉터리 경로 : /apps/applications/singularity_images/ngc▪ 병렬 학습 예제 프로그램 경로   - pytorch 프로그램    (단일노드) /apps/applications/singularity_images/examples/pytorch/resnet50v1.5    (멀티노드-horovod) /apps/applications/singularity_images/examples/horovod/examples/pytorch  - keras(Tensorflow) 프로그램    (멀티노드-horovod) /apps/applications/singularity_images/examples/horovod/examples/keras▪ imagent 이미지 데이터 경로  - (학습 데이터) /apps/applications/singularity_images/imagenet/train  - (검증 데이터) /apps/applications/singularity_images/imagenet/val
 ```
 
-&#x20;
-
 **1) /apps/applications/singularity\_images/examples 디렉터리에서 아래 작업 스크립트 파일을 사용자 작업 디렉터리로 복사함**
 
 ```
 [a1234b5@glogin01]$ cp /apps/applications/singularity_images/examples/*.sh /scratch/ID/work/
 ```
-
-&#x20;
 
 **2) STATE가 idle 상태인 계산 노드가 있는 파티션을 확인함**\
 아래 예제에서는 cas\_v100nv\_8, cas\_v100nv\_4, cas\_v100\_4, cas\_v100\_2 등의 파티션에 가용 계산노드가 존재함
@@ -287,8 +227,6 @@ $ singularity [global options...] shell [shell options...] ＜container＞$ sing
 ```
 [a1234b5@glogin01]$ sinfo
 ```
-
-&#x20;
 
 **3) 작업 스크립트 파일에서 작업명(-J), wall\_time(--time), 작업 큐(-p), Application이름(--comment), 계산노드 자원 요구량(--nodes, --ntasks-per-node, --gres) 등의 스케줄러 옵션과 학습 프로그램의 파라미터를 변경함**
 
@@ -300,15 +238,11 @@ $ singularity [global options...] shell [shell options...] ＜container＞$ sing
  
 ```
 
-&#x20;
-
 **4) 스케줄러에 작업을 제출함**
 
 ```
 [a1234b5@glogin01]$ sbatch 01.pytorch.shSubmitted batch job 99982
 ```
-
-&#x20;
 
 **5) 스케줄러에 의해 할당된 계산 노드를 확인함**
 
@@ -316,23 +250,17 @@ $ singularity [global options...] shell [shell options...] ＜container＞$ sing
 [a1234b5@glogin01]$ squque –u a1234b5 JOBID PARTITION NAME USER STATE TIME TIME_LIMI NODES NODELIST(REASON) 99982 cas_v100_2 pytorch a1234b5 RUNNING 10:13 24:00:00 1 gpu41
 ```
 
-&#x20;
-
 **6) 스케줄러에 의해 생성되는 로그 파일을 모니터링함**
 
 ```
 [a1234b5@glogin01]$ tail –f pytorch_99982.out or [a1234b5@glogin01]$ tail –f pytorch_99982.err  
 ```
 
-&#x20;
-
 **7) 스케줄러에 의해 할당된 계산 노드에서 학습 프로세스 및 GPU 활용 현황을 모니터링 함**
 
 ```
 [a1234b5@glogin01]$ ssh gpu41[a1234b5@gpu41]$ module load nvtop[a1234b5@gpu41]$ nvtop 
 ```
-
-&#x20;
 
 **■ 작업 스크립트**
 
@@ -344,17 +272,13 @@ $ singularity [global options...] shell [shell options...] ＜container＞$ sing
 
 ※ 1노드 점유, 노드 당 2 타스크, 타스크 당 10 CPUs, 노드 당 2GPU 사용
 
-&#x20;
-
 **② pytorch\_horovod 멀티 노드 병렬 학습(02.pytorch\_horovod.sh)**
 
 ```
 #!/bin/sh#SBATCH -J pytorch_horovod # job name#SBATCH --time=24:00:00 # walltime#SBATCH --comment=pytorch # application name#SBATCH -p cas_v100_4 # partition name (queue or class)#SBATCH --nodes=2 # the number of nodes#SBATCH --ntasks-per-node=2 # number of tasks per node#SBATCH --cpus-per-task=10 # number of cpus per task#SBATCH -o %x_%j.out#SBATCH -e %x_%j.err#SBATCH --gres=gpu:2 # number of GPUs per node## Training Resnet-50(Pytorch horovod) for image classification on multi nodes & multi GPUsBase=/apps/applications/singularity_imagesmodule load ngc/pytorch:22.03-py3mpirun_wrapper \python $Base/examples/horovod/examples/pytorch/pytorch_imagenet_resnet50.py \--batch-size=128 --epochs=50
 ```
 
-※ 2노드 점유, 노드 당 2  MPI 타스크, 타스크 당 10 CPUs, 노드 당 2GPU 사용
-
-&#x20;
+※ 2노드 점유, 노드 당 2 MPI 타스크, 타스크 당 10 CPUs, 노드 당 2GPU 사용
 
 **③ keras(tensorflow)\_horovod 멀티 노드 병렬 학습(03.keras\_horovod.sh)**
 
@@ -362,8 +286,6 @@ $ singularity [global options...] shell [shell options...] ＜container＞$ sing
 #!/bin/sh#SBATCH -J keras_horovod # job name#SBATCH --time=24:00:00 # walltime#SBATCH --comment=tensorflow # application name#SBATCH -p cas_v100_4 # partition name (queue or class)#SBATCH --nodes=2 # the number of nodes#SBATCH --ntasks-per-node=2 # number of tasks per node#SBATCH --cpus-per-task=10 # number of cpus per task#SBATCH -o %x_%j.out#SBATCH -e %x_%j.err#SBATCH --gres=gpu:2 # number of GPUs per node## Training Resnet-50(Keras horovod) for image classification on multi nodes & multi GPUSBase=/apps/applications/singularity_images/examplesmodule load ngc/tensorflow:22.03-tf1-py3mpirun_wrapper python $Base/horovod/examples/keras/keras_imagenet_resnet50.py \--batch-size=128 --epochs=50
 ```
 
-※ 2노드 점유, 노드 당 2  MPI 타스크, 타스크 당 10 CPUs, 노드 당 2GPU 사용
-
-&#x20;
+※ 2노드 점유, 노드 당 2 MPI 타스크, 타스크 당 10 CPUs, 노드 당 2GPU 사용
 
 2022년 4월 13일에 마지막으로 업데이트되었습니다.

@@ -12,8 +12,6 @@
 
 \- 계정 발급 완료 시 신청서에 기입한 이메일로 계정 관련 정보 발송
 
-
-
 ② OTP (One Time Password, 일회용 비밀번호) 인증코드 발급
 
 **수신하신 계정 정보 이메일을 참고하여** 아래와 같이 작성하여 [account@ksc.re.kr](mailto:account@ksc.re.kr)을 통해 인증코드를 발급받는다.
@@ -23,8 +21,6 @@
 | 수신인      | [account@ksc.re.kr](mailto:account@ksc.re.kr)                                                 |
 | 메일내용(예제) | <p>로그인 ID: x123abc</p><p>휴대폰번호: 010-1234-5678</p><p>이름: 홍길동</p><p>통신사: LG 유플러스(or SKT/KT)</p> |
 
-
-
 ③ OTP 앱 설치
 
 \- 슈퍼컴퓨팅 보안 접속을 위해 OTP 스마트폰 앱이 제공된다.
@@ -32,8 +28,6 @@
 \- OTP 스마트폰 앱은 안드로이드 앱 스토어(Google Play)나 아이폰 앱 스토어(App Store)에서 “Any OTP”로 검색 후 미래기술(mirae-tech)에서 개발한 앱을 설치하여 사용할 수 있다.
 
 \- 슈퍼컴퓨터 로그인 시 “Any OTP” 앱의 OTP 보안숫자를 반드시 입력해야 한다.
-
-
 
 ※ 스마트폰을 사용하고 있지 않은 사용자의 경우, 계정담당자(account@ksc.re.kr)에게 문의
 
@@ -49,8 +43,6 @@
 
 \- 로그인 노드에 대한 접근은 ssh, scp, sftp, X11 만 허용된다.
 
-
-
 ① 유닉스 또는 리눅스 환경
 
 ```
@@ -65,15 +57,13 @@ $ ssh -l x123abc nurion.ksc.re.kr
 $ ssh -l x123abc nurion.ksc.re.kr -p 22
 ```
 
-
-
 ② 윈도우 환경
 
 \- X환경 실행을 위해 Xming 실행
 
 ※ 프로그램은 인터넷을 통해 무료로 다운로드 후 설치
 
-![](../../../.gitbook/assets/JJNmXayKPdXGask.png)
+![](<../../../.gitbook/assets/JJNmXayKPdXGask (1).png>)
 
 \- putty나 SSH Secure Shell Client 등의 ssh 접속 프로그램을 이용
 
@@ -81,21 +71,19 @@ $ ssh -l x123abc nurion.ksc.re.kr -p 22
 
 ※ Host Name : nurion.ksc.re.kr, Port : 22, Connection type : SSH
 
-![](<../../../.gitbook/assets/Host Name  nurion.png>)
+![](../../../.gitbook/assets/Host%20Name%20%20nurion.png)
 
 ※ ssh -> X11 tap -> check "Enable X11 forwarding"
 
 ※ X display location : localhost:0.0
 
-![](<../../../.gitbook/assets/7CIgfnisxwUP8q8 (1).png>)
+![](../../../.gitbook/assets/7CIgfnisxwUP8q8%20\(1\).png)
 
 ※ 만약, DNS 캐싱 문제로 접속이 안 될 경우에는 캐시를 정리(명령 프롬프트에서 ipconfig/flushdns 명령어 수행)하고 재접속
 
 ```
 C: ipconfig /flushdns
 ```
-
-
 
 ③ 파일 송수신
 
@@ -109,13 +97,11 @@ $ sftp [사용자ID@]nurion-dm.ksc.re.kr [-p 22]
 
 \- 윈도우 환경에서는 WinSCP와 같이 무료로 배포되고 있는 FTP/SFTP 클라이언트 프로그램을 이용하여 접속한다.
 
-![](../../../.gitbook/assets/cmp2uAQLNNDJaOJ.png)
+![](<../../../.gitbook/assets/cmp2uAQLNNDJaOJ (1).png>)
 
 \* FTP (File Tranfer Protocal)을 이용하며, OTP를 입력하지 않고 파일 전송 가능
 
 \* SFTP(Secure-FTP) 을 이용하며, 파일 전송시 OTP를 입력해야함.(FTP보다 안전한 전송방식)
-
-
 
 ④ 노드구성
 

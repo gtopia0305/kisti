@@ -90,7 +90,7 @@ $ ftp nurion-dm.ksc.re.kr or $ sftp [user ID@]nurion-dm.ksc.re.kr [-p 22]
 
 \- In the Windows environment, use FTP/SFTP client programs such as WinSCP that are distributed for free to access the system.
 
-![](../../../.gitbook/assets/cmp2uAQLNNDJaOJ.png)
+![](<../../../.gitbook/assets/cmp2uAQLNNDJaOJ (1).png>)
 
 \* File Transfer Protocol (FTP) is used, where files can be sent without entering the OTP
 

@@ -4,14 +4,9 @@ Similar to Docker, Singularity is a container platform suitable for implementing
 
 Container images that support deep learning frameworks, such as TensorFlow, Caffe, and PyTorch, can be accessed from /apps/applications/singularity\_images and /apps/applications/singularity\_images/ngc directories.
 
-&#x20;
+\\
 
-\
-
-
-![< Singularity container architecture >](../../../.gitbook/assets/iA7rMElSDzNPxoc.png)
-
-&#x20;
+![< Singularity container architecture >](<../../../.gitbook/assets/iA7rMElSDzNPxoc (1).png>)
 
 ## A. Load the Singularity Module or Set the Path
 
@@ -21,10 +16,6 @@ or
 $ $HOME/.bash_profile
 export PATH=$PATH:/apps/applications/singularity/3.6.4/bin/
 ```
-
-&#x20;
-
-&#x20;
 
 ## B. Run a Shell from the Singularity Container
 
@@ -38,10 +29,6 @@ singularity shell --nv＊ tensorflow:20.09-tf1-py3.sif
 
 _※ Run “singularity help \<command> \[\<sub-command>]” to view help for a Singularity command \[shell | exec | run | pull ...]._\
 _\* ) The --nv option must be adopted to use an Nvidia GPU on the compute/login node._
-
-&#x20;
-
-&#x20;
 
 ## C. Execute a User Program that Employs GPUs in the Singularity Container
 
@@ -79,14 +66,10 @@ NOTE: Legacy NVIDIA Driver detected. Compatibility mode ENABLED.
 Detected MOFED 4.4-2.0.7.
 
 Python 3.6.9
-
 ```
 
 _※ Refer to the writing a job script file> for information on how to run the container on the compute node using a scheduler (SLURM)._\
-\
-
-
-&#x20;
+\\
 
 ## D. How to Execute User Program From an Nvidia GPU Cloud (NGC) Container Based on the Module (Lmod)
 
@@ -105,13 +88,9 @@ _※ Refer to the writing a job script file> for information on how to run the c
  $ gmx mdrun -ntmpi 2 -nb gpu -ntomp 1 -pin on -v -noconfout -nsteps 5000 –s topol.tpr singularity shell --nv＊ tensorflow:20.09-tf1-py3.sif
 ```
 
-&#x20;
-
 ※ To use the Lmod-based NGC container-related modules, create an .lmod file in the user home directory (/home01/ID) by running the "touch .lmod" command, and then log in again.
 
-※  The “singularity run --nv ” is automatically run by simply entering the execution command after loading the container image module.
-
-&#x20;
+※ The “singularity run --nv ” is automatically run by simply entering the execution command after loading the container image module.
 
 _※_ NGC container module list
 
@@ -126,12 +105,10 @@ _※_ NGC container module list
 | ngc/qe:6.7                   | quantum\_espresso:v6.7.sif       | quantum\_espresso v6.7                 |
 | ngc/paraview:5.9.0-py3       | paraview\_egl-py3-5.9.0.sif      | Paraview 5.9.0                         |
 
-&#x20;   _▸ Container image file path: /apps/applications/singularity\_images/ngc_\
-&#x20;   _▸ Convert a Docker container image, which was optimized for the Nvidia GPU, built and distributed from NGC (_[_https://ngc.nvidia.com_](https://ngc.nvidia.com/)_) into a Singularity container image_
+_▸ Container image file path: /apps/applications/singularity\_images/ngc_\
+_▸ Convert a Docker container image, which was optimized for the Nvidia GPU, built and distributed from NGC (_[_https://ngc.nvidia.com_](https://ngc.nvidia.com/)_) into a Singularity container image_
 
-&#x20;
-
-&#x20;_※ How to install packages such as Python package, which are not provided by TensorFlow, the PyTorch container image, in the user home directory (Example)_
+_※ How to install packages such as Python package, which are not provided by TensorFlow, the PyTorch container image, in the user home directory (Example)_
 
 ```
  ## The container image file can be modified with the user privilege. Hence, the Python package is installed in the user home directory, where the user has access privilege.
@@ -156,8 +133,6 @@ _※_ NGC container module list
  matplotlib 3.3.3 pypi_0 pypi
 ```
 
-&#x20;
-
 ## E. Build a Singularity Container Image as a User Without the Root Privilege
 
 ```
@@ -168,14 +143,11 @@ $ singularity build --fakeroot ubuntu1.sif ubuntu.def
 $ singularity build --fakeroot ubuntu2.sif library://ubuntu:18.04 
 ## Build sandbox directory (ubuntu3) from a Docker hub
 $ singularity build --fakeroot --sandbox ubuntu3 docker://ubuntu:18.04 
-
 ```
 
-※ Supports version 3.6.4; the use of fakeroot needs to be registered by the administrator via the KISTI Homepage > Technical Support > Request a Support.&#x20;
+※ Supports version 3.6.4; the use of fakeroot needs to be registered by the administrator via the KISTI Homepage > Technical Support > Request a Support.
 
 ※ However, root privilege is required to modify the created Singularity image file (\*.sif). Furthermore, it is needed to change to sandbox (writable chroot directory).
-
-&#x20;
 
 ```
 (ubuntu.def recipe file example)
@@ -187,20 +159,15 @@ apt update
 echo "hello world from ubuntu container!"
 ```
 
-&#x20;
-
 ```
 (Remote build)
 ## Build ubuntu4.sif image from the recipe file using the remote build service provided by the Sylabs Cloud
 $ singularity build --remote ubuntu4.sif ubuntu.def 
-
 ```
 
 ※ Access token needs to be created and registered in the Neuron system to adopt the remote build service provided by the Sylabs Cloud (https://cloud.sylabs.io). \[Reference 1]
 
 ※ In addition, Singularity container images can be created and managed by accessing the Sylabs Cloud using a web browser. \[Reference 2]
-
-&#x20;
 
 ## F. Pull/Push Singularity Container Image
 
@@ -210,21 +177,12 @@ $ singularity build --remote ubuntu4.sif ubuntu.def
  $ singularity push -U tensorflow.sif library://ID/default/tensorflow.sif (Push a Singularity image to the Sylabs Cloud library (upload))
 ```
 
-&#x20;
-
 _※ Access token needs to be created and registered in the Neuron system to push a container image to the Sylabs Cloud library (upload). \[Reference 1]_
 
 _※ Singularity container images can be created and managed by accessing the Sylabs Cloud using a web browser. \[Reference 2]_
 
-&#x20;
-
-&#x20;
-
 **\[Reference 1] Create Sylabs Cloud Access Token and Register It in the Neuron System**
 
-
-
-&#x20;
 ![](../../../.gitbook/assets/FptMOrEVriyeHwm.png)
 
 웹 브라우저 : Web Browser\
@@ -242,10 +200,6 @@ _※ Singularity container images can be created and managed by accessing the Sy
 
 ④토큰 입력하기 : Enter The Token
 
-&#x20;
-
-&#x20;
-
 **\[Reference 2] Build a Singularity Container with the Remote Builder from a Web Browser**
 
 ![](../../../.gitbook/assets/7NuUZiOLvyaYZqK.png)
@@ -256,4 +210,4 @@ _※ Singularity container images can be created and managed by accessing the Sy
 
 ②빌드한 컨테이너 이미지 목록 보기 :View the list ofcontainer images thathave been built
 
-\
+\\
