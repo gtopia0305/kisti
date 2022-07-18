@@ -1,7 +1,3 @@
----
-description: 사용자 지원
----
-
 # 사용자 지원
 
 \
@@ -13,4 +9,6 @@ description: 사용자 지원
 | 교육 문의                                 | [https://kacademy.kisti.re.kr](https://kacademy.kisti.re.kr/) |
 | 시스템 활용 정보                             | [https://blog.ksc.re.kr](https://blog.ksc.re.kr/)             |
 
-\\
+{% hint style="info" %}
+2022년 4월 12일에 마지막으로 업데이트되었습니다.
+{% endhint %}
