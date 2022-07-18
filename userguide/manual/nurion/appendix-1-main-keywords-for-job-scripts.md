@@ -1,3 +1,7 @@
+---
+description: '[별첨1] 작업 스크립트 주요 키워드'
+---
+
 # \[별첨1] 작업 스크립트 주요 키워드
 
 \
@@ -43,6 +47,4 @@
 
 ※ 상세 매뉴얼 : [https://pbsworks.com/pdfs/PBSUserGuide14.2.pdf](https://pbsworks.com/pdfs/PBSUserGuide14.2.pdf) 참조
 
-{% hint style="info" %}
-2022년 4월 12일에 마지막으로 업데이트되었습니다.
-{% endhint %}
+\\
