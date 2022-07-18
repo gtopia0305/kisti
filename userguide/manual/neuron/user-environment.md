@@ -1,7 +1,3 @@
----
-description: 사용자 환경
----
-
 # 사용자 환경
 
 ## 가. 계정발급
@@ -16,6 +12,8 @@ description: 사용자 환경
 
 \- 계정 발급 완료 시 신청서에 기입한 이메일로 계정 관련 정보 발송
 
+
+
 ② OTP (One Time Password, 일회용 비밀번호) 인증코드 발급
 
 \- **수신하신 계정 정보 이메일을 참고하여** 아래와 같이 작성하여 [account@ksc.re.kr](mailto:account@ksc.re.kr)을 통해 인증코드를 발급받는다.
@@ -25,6 +23,8 @@ description: 사용자 환경
 | 수신인      | [account@ksc.re.kr](mailto:account@ksc.re.kr)                                                 |
 | 메일내용(예제) | <p>로그인 ID: x123abc</p><p>휴대폰번호: 010-1234-5678</p><p>이름: 홍길동</p><p>통신사: LG 유플러스(or SKT/KT)</p> |
 
+
+
 ③ OTP 앱 설치
 
 \- 슈퍼컴퓨팅 보안 접속을 위해 OTP 스마트폰 앱이 제공된다.
@@ -32,6 +32,8 @@ description: 사용자 환경
 \- OTP 스마트폰 앱은 안드로이드 앱 스토어(Google Play)나 아이폰 앱 스토어(App Store)에서 “Any OTP”로 검색 후 미래기술(mirae-tech)에서 개발한 앱을 설치하여 사용할 수 있다.
 
 \- 슈퍼컴퓨터 로그인 시 “Any OTP” 앱의 OTP 보안숫자를 반드시 입력해야 한다.
+
+
 
 ※ 스마트폰을 사용하고 있지 않은 사용자의 경우, 계정담당자(account@ksc.re.kr)에게 문의
 
@@ -46,6 +48,8 @@ description: 사용자 환경
 \- 기본 문자셋(encoding)은 유니코드(UTF-8)이다.
 
 \- 로그인 노드에 대한 접근은 ssh, scp, sftp, X11 만 허용된다.
+
+
 
 ① 유닉스 또는 리눅스 환경
 
@@ -75,6 +79,8 @@ $ ssh -l <사용자ID> neuron01.ksc.re.kr -p 22
 
 ※ Host Name : neuron.ksc.re.kr, Port : 22, Connection type : SSH
 
+&#x20;&#x20;
+
 ![](../../../.gitbook/assets/aUi3Rys5RaiCIhE.png)
 
 ※ ssh -> X11 tap -> check “Enable X11 forwarding”
@@ -90,6 +96,8 @@ $ ssh -l <사용자ID> neuron01.ksc.re.kr -p 22
 ```
 C:￦> ipconfig /flushdns
 ```
+
+
 
 ③ 파일 송수신
 
@@ -109,6 +117,8 @@ $ sftp [사용자ID@]neuron-dm.ksc.re.kr [-P 22]
 
 \* SFTP(Secure-FTP) 을 이용하며, 파일 전송시 OTP를 입력해야함.(FTP보다 안전한 전송방식)
 
+
+
 ④ 노드구성
 
 |                  | **호스트명**                                                                      | **CPU Limit** | **비고**                                                                                                                     |
@@ -120,13 +130,15 @@ $ sftp [사용자ID@]neuron-dm.ksc.re.kr [-P 22]
 
 \* wget, git을 이용한 다운로드 및 대용량 데이터의 전송은 CPU Limit이 없는 Datamover 노드를 사용할 것을 권장함 (로그인 노드에서 수행 시에 CPU Limit에 따라 전송 중에 끊어질 수 있음)
 
-⑤ 디버깅 노드 제공
 
-\* 디버깅, 컴파일, 수행코드 테스트 등의 목적으로 2개의 GPU 노드 제공(실제 작업 수행은 제한함)
 
-\* 각 노드당 2개의 CPU(Xeon2.9GHz/32Cores)와 2개의 GPU(V100)가 장착되어 있음
+<mark style="color:red;">⑤ 디버깅 노드 제공</mark>
 
-\* 로그인 노드(glogin\[01.02])에서 ssh로 직접 접속 가능하며(#ssh gpu27 또는 gpu28), 스케줄러를 통한 서비스는 더 이상 지원하지 않음
+<mark style="color:red;">\* 디버깅, 컴파일, 수행코드 테스트 등의 목적으로 2개의 GPU 노드 제공(실제 작업 수행은 제한함)</mark>
+
+<mark style="color:red;">\* 각 노드당 2개의 CPU(Xeon2.9GHz/32Cores)와 2개의 GPU(V100)가 장착되어 있음</mark>
+
+<mark style="color:red;">\* 로그인 노드(glogin\[01.02])에서 ssh로 직접 접속 가능하며(#ssh gpu27 또는 gpu28), 스케줄러를 통한 서비스는 더 이상 지원하지 않음</mark>
 
 ## 다. 사용자 쉘(shell) 변경
 
@@ -172,19 +184,7 @@ $ passwd
 
 ## 마. 제공 시간
 
-| 큐 명(CPU종류\_GPU종류\_GPU개수) | 노드명         | 구좌 당 노드 제공 시간 | 1노드 1시간 사용요금 |
-| ------------------------ | ----------- | ------------- | ------------ |
-| cas\_v100nv\_8           | gpu\[01-05] | 400           | 2,499원       |
-| cas\_v100nv\_4           | gpu\[06-09] | 700           | 1,426원       |
-| cas\_v100nv\_4           | gpu\[10-24] | 700           | 1,426원       |
-| cas\_v100\_2             | gpu\[25-29] | 1,200         | 831원         |
-| amd\_a100nv\_8           | gpu\[30-35] | 300           | 3,334원       |
-| amd\_a100\_4             | gpu\[36-37] | 500           | 1,995원       |
-| amd\_a100\_2             | gpu\[38-39] | 800           | 1,249원       |
-| skl                      | skl\[01-10] | 5,400         | 184원         |
-| bigmem                   | bigmem01    | 9,700         | 104원         |
-| bigmem02                 | 2,800       | 353원          |              |
-| bigmem03                 | 1,200       | 833원          |              |
+![](../../../.gitbook/assets/neuron-02-01-table05.png)
 
 **※ 공유 노드 정책으로 인하여 작업이 사용한 core, gpu 개수만큼 과금 부과**
 
@@ -192,12 +192,9 @@ $ passwd
 
 \- 홈 디렉터리 및 스크래치 디렉터리에 대한 정보는 아래와 같다.
 
-| 구분        | 디렉터리 경로  | 용량제한  | 파일수 제한 | 파일삭제정책                                | 백업유무 |
-| --------- | -------- | ----- | ------ | ------------------------------------- | ---- |
-| 홈 디렉터리    | /home01  | 64GB  | 100K   | -                                     | X    |
-| 스크래치 디렉터리 | /scratch | 100TB | 4M     | <p>15일동안 접근하지 않은 파일은</p><p>자동 삭제함</p> | X    |
+![](../../../.gitbook/assets/neuron-02-01-table06.png)
 
-* \* NEURON시스템은 백업을 지원하지 않음.
+\* NEURON시스템은 백업을 지원하지 않음.
 
 \- 홈 디렉터리는 용량 및 I/O 성능이 제한되어 있기 때문에, 모든 계산 작업은 스크래치 디렉터리인 /scratch의 사용자 작업 공간에서 이루어져야 한다.
 
@@ -206,3 +203,9 @@ $ passwd
 ```
 $ quotainfo
 ```
+
+
+
+{% hint style="info" %}
+2022년 5월 26일에 마지막으로 업데이트되었습니다.
+{% endhint %}
