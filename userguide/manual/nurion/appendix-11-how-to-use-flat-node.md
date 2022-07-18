@@ -1,7 +1,3 @@
----
-description: '[별첨11] 플랫 노드(Flat node) 사용법'
----
-
 # \[별첨11] 플랫 노드(Flat node) 사용법
 
 \
@@ -11,19 +7,14 @@ description: '[별첨11] 플랫 노드(Flat node) 사용법'
 
 #### ■ **Flat 모드 작업 스크립트 작성 예제**
 
-```
-#!/bin/sh
-#PBS -N flat_job
-#PBS -V
-#PBS -q flat#PBS -A {PBS 옵션 이름}  # Application별 PBS 옵션 이름표 참고
-#PBS -l select=1:ncpus=68:mpiprocs=32:ompthreads=1
-#PBS -l walltime=12:00:00
-
-cd $PBS_O_WORKDIR
-
-mpirun numactl -m 1 my_app.x또는mpirun numactl -p 1 my_app.x
-```
+|                                                                                                                                                                                                                                                                                                                                                                                         |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <p>#!/bin/sh</p><p>#PBS -N flat_job</p><p>#PBS -V</p><p>#PBS -q flat</p><p><mark style="color:red;">#PBS -A {PBS 옵션 이름} # Application별 PBS 옵션 이름표 참고</mark> </p><p>#PBS -l select=1:ncpus=68:mpiprocs=32:ompthreads=1</p><p>#PBS -l walltime=12:00:00</p><p></p><p>cd $PBS_O_WORKDIR</p><p></p><p><em>mpirun numactl -m 1 my_app.x</em></p><p>또는</p><p>mpirun numactl -p 1 my_app.x</p> |
 
 ※ pbs option으로 제출할 큐는 반드시 flat 선택 (즉, -q flat)
 
-\\
+
+
+{% hint style="info" %}
+2022년 4월 12일에 마지막으로 업데이트되었습니다.
+{% endhint %}
