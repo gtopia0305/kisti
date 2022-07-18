@@ -24,7 +24,7 @@
 
 <mark style="color:red;">**- Abaqus, ANSYS CFX, ANSYS Fluent는 2022년 4월 1일로 서비스 종료되었음**</mark>
 
-| **분야** | **소프트웨어** | **버전** | **라이센스** | **디렉터리 위치** |
+| **분야** |{: width:"300"} **소프트웨어** | **버전** | **라이센스** | **디렉터리 위치** |
 | --- | --- | --- | --- | ------------------------------ |
 | <p>구조</p><p>역학</p> | <p>MSC ONE<br>(Nastran)</p> | <p>20182</p><p>20191</p><p>20213</p> | 135 토큰 | <p>20182 : /apps/commercial/MSC/Nastran</p><p>20191 : /apps/commercial/MSC/MSC_Nastran/2019fp1</p><p>20213 :</p><p>/apps/commercial/MSC/MSC_Nastran/2021.3</p> |
 | <p>화학/</p><p>생명</p> | Gaussian | <p>g16-a03<br>g16-a03.linda</p><p>g16-b01.linda</p><p>g16-c01.linda</p> | <p>작업 수 제한없음<br>단일노드 내 CPU<br>수 제한없음</p> | /apps/commercial/G16/g16                                                                                                                                       |
