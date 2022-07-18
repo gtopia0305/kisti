@@ -119,47 +119,23 @@ PBS에서 배치 작업을 수행하기 위해서는 위에서 설명된 PBS 키
 
 ※ /apps/shell/home/job\_examples 에서 작업제출 스크립트 예제 파일을 복사하여 사용 가능
 
-#### ■ Serial 프로그램 작업 스크립트 작성 예제(serial.sh)
-
-| ■ Serial 프로그램 작업 스크립트 작성 예제(serial.sh)                                                                                                                                                                                                                                                                                                                                                                |   |   |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | - | - |
-| <p>#!/bin/sh</p><p>#PBS -N serial_job</p><p>#PBS -V</p><p>#PBS -q normal#PBS -A {PBS 옵션 이름} # Application별 PBS 옵션 이름표 참고</p><p>#PBS -l select=1:ncpus=1:mpiprocs=1:ompthreads=1</p><p>#PBS -l walltime=04:00:00#PBS -m abe # 작업 이메일 알림 옵션</p><p>#PBS -M abc@def.com # 수신할 메일 주소</p><p></p><p>cd $PBS_O_WORKDIR</p><p></p><p>module purge</p><p>module load craype-mic-knl</p><p></p><p>./test.exe</p> |   |   |
-
-
-
-```
-#!/bin/sh
-#PBS -N serial_job
-#PBS -V
-#PBS -q normal#PBS -A {PBS 옵션 이름}  # Application별 PBS 옵션 이름표 참고
-#PBS -l select=1:ncpus=1:mpiprocs=1:ompthreads=1
-#PBS -l walltime=04:00:00#PBS -m abe  # 작업 이메일 알림 옵션#PBS -M abc@def.com  # 수신할 메일 주소
-
-cd $PBS_O_WORKDIR
-module purgemodule load craype-mic-knl
-./test.exe
-```
+| ■ Serial 프로그램 작업 스크립트 작성 예제(serial.sh)                                                                                                                                                                                                                                                                                                                                                                                                                                         |   |   |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | - | - |
+| <p>#!/bin/sh</p><p>#PBS -N serial_job</p><p>#PBS -V</p><p>#PBS -q normal</p><p><mark style="color:red;">#PBS -A {PBS 옵션 이름} # Application별 PBS 옵션 이름표 참고</mark></p><p>#PBS -l select=1:ncpus=1:mpiprocs=1:ompthreads=1</p><p><strong>#PBS -l walltime=04:00:00#PBS -m abe # 작업 이메일 알림 옵션</strong></p><p><strong>#PBS -M abc@def.com # 수신할 메일 주소</strong></p><p></p><p>cd $PBS_O_WORKDIR</p><p></p><p>module purge</p><p>module load craype-mic-knl</p><p></p><p>./test.exe</p> |   |   |
 
 ※ 1노드 점유 순차, 사용 예제
 
 ※ 위 예제와 같이 #PBS –m, #PBS –M 옵션을 사용하여 작업을 제출하는 경우 작업이 실행될 때와 완료 시, 그리고 작업이 중단되는 경우에도 abc@def.com로 이메일 발송
 
-#### ■ OpenMP 프로그램 작업 스크립트 작성 예제(openmp.sh)
 
-```
-#!/bin/sh
-#PBS -N openmp_job
-#PBS -V
-#PBS -q normal#PBS -A {PBS 옵션 이름}  # Application별 PBS 옵션 이름표 참고
-#PBS -l select=1:ncpus=64:mpiprocs=1:ompthread=64
-#PBS -l walltime=04:00:00
 
-cd $PBS_O_WORKDIR
-module purgemodule load craype-mic-knl
-./test_omp.exe
-```
+| ■ OpenMP 프로그램 작업 스크립트 작성 예제(openmp.sh)                                                                                                                                                                                                                                                                                                      |   |   |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | - | - |
+| <p>#!/bin/sh</p><p>#PBS -N openmp_job</p><p>#PBS -V</p><p>#PBS -q normal</p><p>#PBS -A {PBS 옵션 이름} # Application별 PBS 옵션 이름표 참고</p><p>#PBS -l select=1:ncpus=64:mpiprocs=1:ompthread=64</p><p>#PBS -l walltime=04:00:00</p><p></p><p>cd $PBS_O_WORKDIR</p><p></p><p>module purge module load craype-mic-knl</p><p></p><p>./test_omp.exe</p> |   |   |
 
 ※ 1노드 점유, 노드 당 64 스레드(총 64 OpenMP 스레드) 사용 예제
+
+####
 
 #### ■ MPI (IntelMPI)프로그램 작업 스크립트 작성 예제(mpi.sh)
 
