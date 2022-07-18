@@ -569,3 +569,9 @@ $ scancel 761
 \- 디버깅 노드는 CPU time Limit이 120분임.
 
 \- 필요시 모든 파티션에서 SLURM Interactive Job 기능을 이용해 컴파일, 디버깅이 가능함
+
+
+
+{% hint style="info" %}
+2022년 5월 13일에 마지막으로 업데이트되었습니다.
+{% endhint %}
