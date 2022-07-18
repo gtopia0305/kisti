@@ -1,23 +1,10 @@
----
-description: '[별첨4] Lustre stripe 사용법'
----
-
 # \[별첨4] Lustre stripe 사용법
 
 ## 가. 5호기 Lustre Striping 기본 설정
 
 5호기 Lustre File System은 File Striping을 지원하며, 이를 위해 복수 개의 OST(Object Storage Target, 즉 물리적으로 분산되어 있는 여러 디스크)에 하나의 파일을 분산시켜 저장 함으로써 병목을 줄이고 I/O 성능을 향상시킬 수 있다. 특히, Lustre 2.10부터 지원되는 PFL(Progressive File Layout)이 /scratch 파일시스템에 적용되어 있다. 이 기능은 사용자 별도의 striping 설정 없이 파일의 크기에 따라 stripe-count 개수가 자동으로 적용되어 I/O의 성능을 향상시킬 수 있다. Nurion 파일 시스템의 striping 설정은 아래와 같다.
 
-|                             | stripe-count    | stripe-size |     |
-| --------------------------- | --------------- | ----------- | --- |
-| /home01                     | 1               | 1MB         |     |
-| /apps                       | 1               | 1MB         |     |
-| <p>/scratch</p><p>(PFL)</p> | file size < 4MB | 1           | 1MB |
-| 4M < file size < 512MB      | 2               | 1MB         |     |
-| 512MB < file size < 1G      | 4               | 1MB         |     |
-| 1G < file size < 10G        | 8               | 1MB         |     |
-| 10G < file size < 100G      | 16              | 1MB         |     |
-| file size > 100G            | 32              | 1MB         |     |
+![](../../../.gitbook/assets/nurion-a04-table-01.png)
 
 ## 나. Lustre Striping 개념
 
@@ -63,4 +50,8 @@ $ lfs getstripe filename|dirname
 
 ㅇ --stripe-size는 파일 사이즈가 수 TB 이상인 파일인 경우에만 유효하므로 대부분 default 값을 사용해도 문제 없음
 
-\\
+
+
+{% hint style="info" %}
+2022년 4월 12일에 마지막으로 업데이트되었습니다.
+{% endhint %}
