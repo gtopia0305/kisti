@@ -37,63 +37,53 @@
 
 ![](../../../.gitbook/assets/FouxpybuajnMgzY.png)
 
-※ 최초 한번만 실행하며 환경설정이 완료되면 즉시 웹 페이지 접속하여 (나. JupyterHub 웹 페이지 접속 참고) JupyterLab/Notebook을 사용 가능하다.
+<mark style="color:red;">※ 최초 한번만 실행하며 환경설정이 완료되면 즉시 웹 페이지 접속하여 (나. JupyterHub 웹 페이지 접속 참고) JupyterLab/Notebook을 사용 가능하다.</mark>
 
 **1) 스크립트 실행**
 
 \
-\- 터미널로 로그인 노드 (**neuron.ksc.re.kr**) 에 접속하여 다음 스크립트 /apps/jupyter/kisti\_conda\_jupyter.sh 를 실행한다.\
-\- 스크립트를 실행하면 **/scratch/\[사용자ID]/.conda/envs** 디렉터리에 notebook Conda 환경이 만들어지고 jupyterhub, JupyterLab, Notebook, Tensorflow, ipyparallel 패키지들이 자동으로 설치되고 멀티 GPU 환경에 필요한 cudatoolkit=10.0 과 cudnn이 설치된다. (약 8분 소요)
+\- 터미널로 로그인 노드 (<mark style="color:red;">**neuron.ksc.re.kr**</mark>) 에 접속하여 다음 스크립트 /apps/jupyter/kisti\_conda\_jupyter.sh 를 실행한다.\
+\- 스크립트를 실행하면 <mark style="color:red;">**/scratch/\[사용자ID]/.conda/envs**</mark> 디렉터리에 notebook Conda 환경이 만들어지고 jupyterhub, JupyterLab, Notebook, Tensorflow, ipyparallel 패키지들이 자동으로 설치되고 멀티 GPU 환경에 필요한 cudatoolkit=10.0 과 cudnn이 설치된다. (약 8분 소요)
 
 \
 **※ 이 파일은 한번만 실행하면 되고 그 다음부터는 바로 웹 페이지 접속하여 사용 가능하다.**\
 ※ 실행파일은 공유 디렉터리에서 /apps/jupyter/kisti\_conda\_jupyter.sh 로 바로 실행 가능하다.\
-※ 아래 테스트는 사용자ID _**a1113a01**_ 로 진행하였다.
+※ 아래 테스트는 사용자ID _<mark style="color:red;">**a1113a01**</mark>_ <mark style="color:red;"></mark><mark style="color:red;"></mark> 로 진행하였다.
 
-|
+| <p>[a1113a01@glogin02 ~]$ <mark style="color:red;"> <strong>sh /apps/jupyter/kisti_conda_jupyter.sh</strong></mark><br>... ...<br>modified /home01/a1113a01/.bashrc<br>...prepare conda environment for jupyter user.<br>Exporting CONDA ENVS and PKGS PATH to bash File.<br>Downloading and Extracting Packages<br>#################################################################### | 100%<br>#################################################################### | 100%<br>#################################################################### | 100%<br>#################################################################### | 100%<br>Preparing transaction: done<br>Verifying transaction: done<br>Executing transaction: / WARNING conda.core.prefix_data:_load_single_record(167):<br>Ignoring malformed prefix record at:<br>/scratch/a1113a01/.conda/envs/notebook/conda-meta/001.pycurl-7.43.0.5-py37h16ce93b_0.json<br>done</p> |   |   |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | - | - |
 
-\[a1113a01@glogin02 \~]$ **sh /apps/jupyter/kisti\_conda\_jupyter.sh**\
-... ...\
-modified /home01/a1113a01/.bashrc\
-...prepare conda environment for jupyter user.\
-Exporting CONDA ENVS and PKGS PATH to bash File.\
-Downloading and Extracting Packages\
-\#################################################################### | 100%\
-\#################################################################### | 100%\
-\#################################################################### | 100%\
-\#################################################################### | 100%\
-Preparing transaction: done\
-Verifying transaction: done\
-Executing transaction: / WARNING conda.core.prefix\_data:\_load\_single\_record(167):\
-Ignoring malformed prefix record at:\
-/scratch/a1113a01/.conda/envs/notebook/conda-meta/001.pycurl-7.43.0.5-py37h16ce93b\_0.json\
-done
 
-\| | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 
 \- shell을 다시 시작하고 base 환경 자동 활성화 기능을 꺼야 한다. (한번만 실행)
 
-| <p>[a1113a01@glogin01 ~]$ <strong>source ~/.bashrc</strong><br>(base) [a1113a01@glogin01 ~]$ <strong>conda config --set auto_activate_base false</strong><br>(base) [a1113a01@glogin01 ~]$ <strong>conda deactivate</strong></p> |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <p>[a1113a01@glogin01 ~]$ <mark style="color:red;"><strong>source ~/.bashrc</strong></mark><br>(base) [a1113a01@glogin01 ~]$ <mark style="color:red;"><strong>conda config --set auto_activate_base false</strong></mark><br>(base) [a1113a01@glogin01 ~]$ <mark style="color:red;"><strong>conda deactivate</strong></mark></p> |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 
 ※ base 환경 자동 활성화 기능을 false 로 설정함으로 다음에 base 환경으로 자동 활성화 되는 것을 방지한다. （만약 base 환경으로 활성화 되지 않았으면 source \~/.bashrc 이후 바로 conda activate notebook 명령어를 실행)
 
+
+
 \- conda notebook 환경을 다음 명령어로 활성화 한다.
 
-| <p>[a1113a01@glogin01 ~]$ <strong>conda activate notebook</strong><br>(notebook) [a1113a01@glogin01 ~]$</p> |
-| ----------------------------------------------------------------------------------------------------------- |
+| <p>[a1113a01@glogin01 ~]$ <mark style="color:red;"><strong>conda activate notebook</strong></mark><br>(notebook) [a1113a01@glogin01 ~]$</p> |
+| ------------------------------------------------------------------------------------------------------------------------------------------- |
+
+
 
 \- Tensorboard와 IPyParallel 사용을 원하는 사용자는 웹 페이지에 접속하기 전에 Jupyter notebook/JupyterLab 용 tensorboard와 ipyparallel 확장 패키지를 설치해야 한다. KISTI에서 제공하는 자동 설치 스크립트 /apps/jupyter/kisti\_conda\_plugins.sh 를 실행하여 설치할 수 있다. (약 5분 소요)
 
 ※ 주의: 반드시 notebook 사용자 환경에서 실행해야 한다.
 
-| <p>(notebook) 757% [a1113a01@glogin01 ~]$ <strong>sh /apps/jupyter/kisti_conda_plugins.sh</strong><br>Installing /scratch/a1113a01/.conda/envs/notebook/lib/python3.7/site-packages/ipyparallel/nbextension/static -> ipyparallel<br>Up to date: /scratch/a1113a01/.conda/envs/notebook/share/jupyter/nbextensions/ipyparallel/clusterlist.css<br>Up to date: /scratch/a1113a01/.conda/envs/notebook/share/jupyter/nbextensions/ipyparallel/clusterlist.js<br>Up to date: /scratch/a1113a01/.conda/envs/notebook/share/jupyter/nbextensions/ipyparallel/main.js<br>- Validating: OK</p><p>To initialize this nbextension in the browser every time the notebook (or other app) loads:<br><br>jupyter nbextension enable ipyparallel --py --sys-prefix<br><br>Enabling tree extension ipyparallel/main...<br>- Validating: OK<br>Enabling: ipyparallel.nbextension<br>- Writing config: /scratch/a1113a01/.conda/envs/notebook/etc/jupyter<br>- Validating...<br>ipyparallel.nbextension OK<br>[ProfileCreate] Generating default config file: '/home01/a1113a01/.ipython/profile_slurm/ipython_config.py'<br>[ProfileCreate] Generating default config file: '/home01/a1113a01/.ipython/profile_slurm/ipython_kernel_config.py'<br>[ProfileCreate] Generating default config file: '/home01/a1113a01/.ipython/profile_slurm/ipcontroller_config.py'<br>[ProfileCreate] Generating default config file: '/home01/a1113a01/.ipython/profile_slurm/ipengine_config.py'<br>[ProfileCreate] Generating default config file: '/home01/a1113a01/.ipython/profile_slurm/ipcluster_config.py'</p> |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <p>(notebook) 757% [a1113a01@glogin01 ~]$ <mark style="color:red;"><strong>sh /apps/jupyter/kisti_conda_plugins.sh</strong></mark><br>Installing /scratch/a1113a01/.conda/envs/notebook/lib/python3.7/site-packages/ipyparallel/nbextension/static -> ipyparallel<br>Up to date: /scratch/a1113a01/.conda/envs/notebook/share/jupyter/nbextensions/ipyparallel/clusterlist.css<br>Up to date: /scratch/a1113a01/.conda/envs/notebook/share/jupyter/nbextensions/ipyparallel/clusterlist.js<br>Up to date: /scratch/a1113a01/.conda/envs/notebook/share/jupyter/nbextensions/ipyparallel/main.js<br>- Validating: OK</p><p>To initialize this nbextension in the browser every time the notebook (or other app) loads:<br><br>jupyter nbextension enable ipyparallel --py --sys-prefix<br><br>Enabling tree extension ipyparallel/main...<br>- Validating: OK<br>Enabling: ipyparallel.nbextension<br>- Writing config: /scratch/a1113a01/.conda/envs/notebook/etc/jupyter<br>- Validating...<br>ipyparallel.nbextension OK<br>[ProfileCreate] Generating default config file: '/home01/a1113a01/.ipython/profile_slurm/ipython_config.py'<br>[ProfileCreate] Generating default config file: '/home01/a1113a01/.ipython/profile_slurm/ipython_kernel_config.py'<br>[ProfileCreate] Generating default config file: '/home01/a1113a01/.ipython/profile_slurm/ipcontroller_config.py'<br>[ProfileCreate] Generating default config file: '/home01/a1113a01/.ipython/profile_slurm/ipengine_config.py'<br>[ProfileCreate] Generating default config file: '/home01/a1113a01/.ipython/profile_slurm/ipcluster_config.py'</p> |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 
 ※ 이제부터 사용자는 직접 웹에 접속하여 Jupyter 노트북을 사용할 수 있다. (여기까지 작업들은 한번만 실행하면 됨)
 
+
+
 **2) JupyterHub 웹 페이지 접속**\
-\- [https://jupyter.ksc.re.kr](https://jupyter.ksc.re.kr/) 에 접속하여 신청 받은 뉴런 계정, OTP, 비밀번호를 입력한다.
+\- [<mark style="color:red;">https://jupyter.ksc.re.kr</mark>](https://jupyter.ksc.re.kr/) 에 접속하여 신청 받은 뉴런 계정, OTP, 비밀번호를 입력한다.
 
 ![](../../../.gitbook/assets/cXDKdaUkHSJ0yAM.png)
 
@@ -135,13 +125,13 @@ done
 
 **1) Jupyter 작업 환경**
 
-**◦ Jupyter 환경 디렉터리: /scratch/\[사용자ID]/.conda/envs/notebook**\
-**◦ 로그 저장 디렉터리: /scratch/\[사용자ID]/log/작업ID.log**\
-**◦ 작업 파일 저장 디렉터리: /scratch/\[사용자ID]/workspace/**
+<mark style="color:red;">**◦ Jupyter 환경 디렉터리: /scratch/\[사용자ID]/.conda/envs/notebook**</mark>\ <mark style="color:red;"></mark><mark style="color:red;">**◦ 로그 저장 디렉터리: /scratch/\[사용자ID]/log/작업ID.log**</mark>\ <mark style="color:red;"></mark><mark style="color:red;">**◦ 작업 파일 저장 디렉터리: /scratch/\[사용자ID]/workspace/**</mark>
 
 ※ 사용자는 본인이 필요로 하는 머신러닝/딥러닝 라이브러리들을 .../notebook conda 환경에 설치하기 때문에 기본 쿼터가 큰 /scratch/사용자ID/ 에 설치된다. (Jupyter 실행 후 발생하는 로그파일도 /scratch/사용자ID 에 저장)\
 ※ 사용자가 작성한 코드는 /scratch/사용자ID/에 저장된다.\
 ※ conda 환경 백업을 위한 conda 환경 내보내기 및 가져오기 관련 정보는 KISTI 홈페이지 소프트웨어 지침서에서 확인할 수 있다.
+
+
 
 **2) Jupyter Notebook 사용 방법**
 
