@@ -1,7 +1,3 @@
----
-description: 스케줄러(PBS)를 통한 작업 실행
----
-
 # 스케줄러(PBS)를 통한 작업 실행
 
 5호기 누리온 시스템의 작업 스케줄러는 Portable Batch System (이하 PBS)을 사용한다. 이 장에서는 스케줄러를 통해 작업 제출하는 방법 및 관련 명령어들을 소개한다. 사용자가 작업 제출 시 사용할 수 있는 큐는 정해져 있으며, 큐 별로 사용자별 최대 제출할수 있는 작업의 수는 제한이 있고, 이 값은 시스템의 부하 정도에 따라 변동될 수 있다.
@@ -135,106 +131,55 @@ PBS에서 배치 작업을 수행하기 위해서는 위에서 설명된 PBS 키
 
 ※ 1노드 점유, 노드 당 64 스레드(총 64 OpenMP 스레드) 사용 예제
 
-####
 
-#### ■ MPI (IntelMPI)프로그램 작업 스크립트 작성 예제(mpi.sh)
 
-```
-#!/bin/sh
-#PBS -N IntelMPI_job
-#PBS -V
-#PBS -q normal#PBS -A {PBS 옵션 이름}  # Application별 PBS 옵션 이름표 참고
-#PBS -l select=4:ncpus=64:mpiprocs=64
-#PBS -l walltime=04:00:00
-
-cd $PBS_O_WORKDIR
-module purgemodule load craype-mic-knl intel/18.0.3 impi/18.0.3
-mpirun ./test_mpi.exe
-```
+| ■ MPI (IntelMPI)프로그램 작업 스크립트 작성 예제(mpi.sh)                                                                                                                                                                                                                                                                                                                                                       |   |   |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | - | - |
+| <p>#!/bin/sh</p><p>#PBS -N IntelMPI_job</p><p>#PBS -V</p><p><mark style="color:red;">#PBS -q normal#PBS -A {PBS 옵션 이름} # Application별 PBS 옵션 이름표 참고</mark></p><p>#PBS -l select=4:ncpus=64:mpiprocs=64</p><p>#PBS -l walltime=04:00:00</p><p></p><p>cd $PBS_O_WORKDIR</p><p></p><p>module purge</p><p>module load craype-mic-knl intel/18.0.3 impi/18.0.3</p><p></p><p>mpirun ./test_mpi.exe</p> |   |   |
 
 ※ 4노드 점유, 노드 당 64 프로세스(총 256 MPI 프로세스) 사용 예제
 
-#### ■ MPI (OpenMPI)프로그램 작업 스크립트 작성 예제(mpi.sh)
 
-```
-#!/bin/sh
-#PBS -N OpenMPI_job
-#PBS -V
-#PBS -q normal#PBS -A {PBS 옵션 이름}  # Application별 PBS 옵션 이름표 참고
-#PBS -l select=4:ncpus=64:mpiprocs=64
-#PBS -l walltime=04:00:00
 
-cd $PBS_O_WORKDIR
-module purgemodule load craype-mic-knl gcc/7.2.0 openmpi/3.1.0
-mpirun ./test_mpi.exe
-```
+| ■ MPI (OpenMPI)프로그램 작업 스크립트 작성 예제(mpi.sh)                                                                                                                                                                                                                                                                                                                                                             |   |   |   |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | - | - | - |
+| <p>#!/bin/sh</p><p>#PBS -N OpenMPI_job</p><p>#PBS -V</p><p>#PBS -q normal</p><p><mark style="color:red;">#PBS -A {PBS 옵션 이름} # Application별 PBS 옵션 이름표 참고</mark></p><p>#PBS -l select=4:ncpus=64:mpiprocs=64</p><p>#PBS -l walltime=04:00:00</p><p></p><p>cd $PBS_O_WORKDIR</p><p></p><p>module purge</p><p>module load craype-mic-knl gcc/7.2.0 openmpi/3.1.0</p><p></p><p>mpirun ./test_mpi.exe</p> |   |   |   |
 
 ※ 4노드 점유, 노드 당 64 프로세스(총 256 MPI 프로세스) 사용 예제
 
-#### ■ MPI (Mvapich2) 프로그램 작업 스크립트 작성 예제(mpi\_mvapich2.sh)
 
-```
-#!/bin/sh
-#PBS -N mvapich2_job
-#PBS -V
-#PBS -q normal#PBS -A {PBS 옵션 이름}  # Application별 PBS 옵션 이름표 참고
-#PBS -l select=4:ncpus=64:mpiprocs=64:ompthread=1
-#PBS -l walltime=04:00:00
 
-cd $PBS_O_WORKDIRmodule purgemodule load craype-mic-knl intel/18.0.3 mvapich2/2.3.1TOTAL_CPUS=$(wc -l $PBS_NODEFILE | awk '{print $1}')mpirun_rsh -np ${TOTAL_CPUS} -hostfile $PBS_NODEFILE ./test_mpi.exe
-```
+| ■ MPI (Mvapich2) 프로그램 작업 스크립트 작성 예제(mpi\_mvapich2.sh)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |   |   |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | - | - |
+| <p>#!/bin/sh</p><p>#PBS -N mvapich2_job</p><p>#PBS -V</p><p>#PBS -q normal</p><p><mark style="color:red;">#PBS -A {PBS 옵션 이름} # Application별 PBS 옵션 이름표 참고</mark></p><p>#PBS -l select=4:ncpus=64:mpiprocs=64:ompthread=1</p><p>#PBS -l walltime=04:00:00</p><p></p><p>cd $PBS_O_WORKDIR</p><p></p><p>module purge</p><p>module load craype-mic-knl intel/18.0.3 mvapich2/2.3.1</p><p></p><p><strong>TOTAL_CPUS=$(wc -l $PBS_NODEFILE | awk '{print $1}')</strong></p><p></p><p><strong>mpirun_rsh -np ${TOTAL_CPUS} -hostfile $PBS_NODEFILE ./test_mpi.exe</strong></p> |   |   |
 
 ※ 4노드 점유, 노드 당 64 프로세스(총 256 MPI 프로세스) 사용 예제
 
-#### ■ Hybrid(IntelMPI + OpenMP) 프로그램 작업 스크립트 작성 예제(hybrid\_intel.sh)
 
-```
-#!/bin/sh
-#PBS -N hybrid_job
-#PBS -V
-#PBS -q normal#PBS -A {PBS 옵션 이름}  # Application별 PBS 옵션 이름표 참고
-#PBS -l select=4:ncpus=64:mpiprocs=2:ompthread=32
-#PBS -l walltime=04:00:00
 
-cd $PBS_O_WORKDIRmodule purgemodule load craype-mic-knl intel/18.0.3 impi/18.0.3
-
-mpirun ./test_mpi.exe
-```
+| ■ Hybrid(IntelMPI + OpenMP) 프로그램 작업 스크립트 작성 예제(hybrid\_intel.sh)                                                                                                                                                                                                                                                                                                                                                  |   |   |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | - | - |
+| <p>#!/bin/sh</p><p>#PBS -N hybrid_job</p><p>#PBS -V</p><p>#PBS -q normal</p><p><mark style="color:red;">#PBS -A {PBS 옵션 이름} # Application별 PBS 옵션 이름표 참고</mark></p><p>#PBS -l select=4:ncpus=64:mpiprocs=2:ompthread=32</p><p>#PBS -l walltime=04:00:00</p><p></p><p>cd $PBS_O_WORKDIR</p><p></p><p>module purge</p><p>module load craype-mic-knl intel/18.0.3 impi/18.0.3</p><p></p><p>mpirun ./test_mpi.exe</p> |   |   |
 
 ※ 4노드 점유, 노드 당 2 프로세스, 프로세스 당 32 스레드(총 8 MPI 프로세스, 256 OpenMP 스레드) 사용 예제
 
-#### ■ Hybrid(openMPI + OpenMP) 프로그램 작업 스크립트 작성 예제(hybrid\_openmpi.sh)
 
-```
-#!/bin/sh
-#PBS -N hybrid_job
-#PBS -V
-#PBS -q normal#PBS -A {PBS 옵션 이름}  # Application별 PBS 옵션 이름표 참고
-#PBS -l select=4:ncpus=64:mpiprocs=2:ompthread=32
-#PBS -l walltime=04:00:00
 
-cd $PBS_O_WORKDIRmodule purgemodule load craype-mic-knl gcc/7.2.0 openmpi/3.1.0
-
-mpirun --map-by NUMA:PE=34 ./test_mpi.exe
-```
+| ■ Hybrid(openMPI + OpenMP) 프로그램 작업 스크립트 작성 예제(hybrid\_openmpi.sh)                                                                                                                                                                                                                                                                                                                                                                    |   |   |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | - | - |
+| <p>#!/bin/sh</p><p>#PBS -N hybrid_job</p><p>#PBS -V</p><p>#PBS -q normal</p><p><mark style="color:red;">#PBS -A {PBS 옵션 이름} # Application별 PBS 옵션 이름표 참고</mark></p><p>#PBS -l select=4:ncpus=64:mpiprocs=2:ompthread=32</p><p>#PBS -l walltime=04:00:00</p><p></p><p>cd $PBS_O_WORKDIR</p><p></p><p>module purge</p><p>module load craype-mic-knl gcc/7.2.0 openmpi/3.1.0</p><p></p><p>mpirun --map-by NUMA:PE=34 ./test_mpi.exe</p> |   |   |
 
 ※ 4노드 점유, 노드 당 2 프로세스, 프로세스 당 32 스레드(총 8 MPI 프로세스, 256 OpenMP 스레드) 사용 예제
 
-#### ■ Hybrid(Mvapich2 + OpenMP) 프로그램 작업 스크립트 작성 예제(hybrid\_mvapich2.sh)
 
-```
-#!/bin/sh
-#PBS -N hybrid_job
-#PBS -V
-#PBS -q normal#PBS -A {PBS 옵션 이름}  # Application별 PBS 옵션 이름표 참고
-#PBS -l select=4:ncpus=64:mpiprocs=2:ompthread=32
-#PBS -l walltime=04:00:00
 
-cd $PBS_O_WORKDIRmodule purgemodule load craype-mic-knl intel/18.0.3 mvapich2/2.3.1
-TOTAL_CPUS=$(wc -l $PBS_NODEFILE | awk '{print $1}')mpirun_rsh -np ${TOTAL_CPUS} -hostfile $PBS_NODEFILE OMP_NUM_THREADS=$OMP_NUM_THREADS ./test_mpi.exe
-```
+| ■ Hybrid(Mvapich2 + OpenMP) 프로그램 작업 스크립트 작성 예제(hybrid\_mvapich2.sh)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |   |   |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | - | - |
+| <p>#!/bin/sh</p><p>#PBS -N hybrid_job</p><p>#PBS -V</p><p>#PBS -q normal</p><p><mark style="color:red;">#PBS -A {PBS 옵션 이름} # Application별 PBS 옵션 이름표 참고</mark></p><p>#PBS -l select=4:ncpus=64:mpiprocs=2:ompthread=32</p><p>#PBS -l walltime=04:00:00</p><p></p><p>cd $PBS_O_WORKDIR</p><p></p><p>module purge</p><p>module load craype-mic-knl intel/18.0.3 mvapich2/2.3.1</p><p></p><p><strong>TOTAL_CPUS=$(wc -l $PBS_NODEFILE | awk '{print $1}')</strong></p><p></p><p><strong>mpirun_rsh -np ${TOTAL_CPUS} -hostfile $PBS_NODEFILE OMP_NUM_THREADS=$OMP_NUM_THREADS ./test_mpi.exe</strong></p> |   |   |
 
 ※ 4노드 점유, 노드 당 2 프로세스, 프로세스 당 32 스레드(총 8 MPI 프로세스, 256 OpenMP 스레드) 사용 예제
+
+
 
 ㅇ작성한 작업 스크립트 제출 예시
 
@@ -244,7 +189,11 @@ $ qsub mpi.sh
 
 ※ mpi.sh 파일은 예시로, 작성한 작업 스크립트 파일을 이용하여 작업을 제출
 
+
+
 ㅇPBS 배치 작업을 수행하는 경우, 작업 중 STDOUT(표준 출력)과 STDERR(표준 에러)를 시스템 디렉터리의 output에 저장하였다가 작업 완료 후 사용자 작업 제출 디렉터리로 복사한다. 기본적으로, 작업 완료 시까지 작업 관련 내용을 확인할 수 없으나 다음 키워드를 추가하면 확인 가능하다.
+
+
 
 ㅇPBS에 의해 생성되는 STDOUT / STDERR를 작업 실행 중 확인할 수 있는 키워드(/home01에 파일 생성)
 
@@ -252,11 +201,15 @@ $ qsub mpi.sh
 #PBS -W sandbox=PRIVATE
 ```
 
+
+
 ㅇ 리눅스의 Redirection 기능을 사용하여 작업 실행 확인
 
 ```
 ./test.exe 1>stdout 2>stderr
 ```
+
+
 
 ㅇ 작업 이메일 알림 지정
 
@@ -272,17 +225,23 @@ $ qsub -m -M
 | e  | job 실행 완료 시   |
 | n  | 이메일 알림을 받지 않음 |
 
+####
+
 #### 2) 인터렉티브 작업 제출
 
 ※ 인터렉티브 작업 제출의 경우 잡 스크립트 작성과는 달리 #PBS를 생략하고 –I –A 등의 옵션만 사용
 
-※ 2시간 이상 미사용시 타임아웃으로 작업이 종료되고 자원이 회수됨, 인터렉티브 작업의 walltime은 최대 12시간으로 고정됨
+<mark style="color:red;">※ 2시간 이상 미사용시 타임아웃으로 작업이 종료되고 자원이 회수됨, 인터렉티브 작업의 walltime은 최대 12시간으로 고정됨</mark>
+
+<mark style="color:red;"></mark>
 
 ㅇ 배치 스크립트 대신 "-I" 옵션 사용
 
 ```
 $ qsub -I -l select=1:ncpus=68:ompthreads=1 -l walltime=12:00:00 -q normal -A {PBS 옵션 이름}
 ```
+
+
 
 ㅇ 인터렉티브 작업 제출 시 그래픽 환경 사용 (-X)
 
@@ -291,6 +250,8 @@ $ qsub -I -X -l select=1:ncpus=68:ompthreads=1 -l walltime=12:00:00 -q normal -A
 ```
 
 ※ 여기서 -l select 이하 구문의 내용은 사용자 수요에 따라 변경하여 사용하면 되나, 위 구문들(리소스 점유, 큐 이름, PBS 옵션 이름)은 반드시 작성하고 작업을 제출해야함
+
+
 
 ㅇ 인터렉티브 작업 제출 시 기존 환경변수 상속 (-V)
 
@@ -302,23 +263,23 @@ $ qsub -I -V -l select=1:ncpus=68:ompthreads=1 -l walltime=12:00:00 -q normal -A
 
 ※ 위 예제에서 소문자 l과 대문자 I를 유념하여 참조
 
-#### ■ 인터렉티브 모드로 계산 노드에서 텐서플로우 프로그램 실행 예제
 
-```
-$ qsub -I -V -l select=1:ncpus=68:ompthreads=68 \
--l walltime=12:00:00 -q normal -A tf
 
-$ export OMP_NUM_THREADS=68;
-singularity exec tensorflow-1.12.0-py3.simg python convolutional.py
-```
+| ■ 인터렉티브 모드로 계산 노드에서 텐서플로우 프로그램 실행 예제                                                                                                                                                                                                                                           |   |   |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | - | - |
+| <p>$ qsub -I -V -l select=1:ncpus=68:ompthreads=68 <mark style="color:red;">\</mark><br>-l walltime=12:00:00 -q normal <mark style="color:red;">-A tf</mark></p><p></p><p>$ export OMP_NUM_THREADS=68; singularity exec tensorflow-1.12.0-py3.simg python convolutional.py</p> |   |   |
 
 ※ 예제 싱귤레러티 이미지 파일 위치: /apps/applications/tensorflow/1.12.0/tensorflow-1.12.0-py3.simg
 
 예제 convolutional.py 위치: /apps/applications/tensorflow/1.12.0/examples/convolutional.py
 
+####
+
 #### 3) 작업 모니터링
 
 ※ 작업 모니터링 관련 명령어들은 로그인 노드에서만 사용 가능.
+
+
 
 ㅇ 큐 조회
 
@@ -326,17 +287,23 @@ singularity exec tensorflow-1.12.0-py3.simg python convolutional.py
 $ showq
 ```
 
+
+
 ㅇ 큐별 노드 유휴 자원 조회
 
 ```
 $ pbs_status
 ```
 
+
+
 ㅇ 현재 사용 계정으로 사용 가능한 큐리스트 조회
 
 ```
 $ pbs_queue_check
 ```
+
+
 
 ㅇ 작업 상태 조회
 
@@ -366,6 +333,8 @@ Name: 작업 스크립트의 #PBS –N 값
 
 S: 작업의 동작 상태를 표시(R-수행 중/ Q-대기/ H-일시정지/ E-오류)
 
+
+
 ㅇ 작업 속성 조회
 
 ```
@@ -384,6 +353,8 @@ Job Id : 0000.pbs
     job_state = R
 <생략>
 ```
+
+
 
 ㅇ 작업 대기 시간 조회 (Estimated Start Time, 작업 시작 시각 추정)
 
@@ -413,4 +384,8 @@ $ qdel
 $ qsig -s  
 ```
 
-\\
+
+
+{% hint style="info" %}
+2022년 4월 12일에 마지막으로 업데이트되었습니다.
+{% endhint %}
