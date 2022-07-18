@@ -196,7 +196,7 @@ Packing environment at '/home01/userID/.conda/envs/tensorflow_1.12' to 'conda_te
 
 \-예제-
 
-```
+```markup
 $ module load python/3.7
 $ mkdir -p $HOME/.conda/envs/tensorflow_1.12
 $ tar xvzf conda_tensorflow_1.12.tar.gz -C $HOME/.conda/envs/tensorflow_1.12
@@ -205,3 +205,9 @@ $ source activate tensorflow_1.12
 (tensorflow_1.12) $ conda deactivate
 $
 ```
+
+
+
+{% hint style="info" %}
+2022년 4월 12일에 마지막으로 업데이트되었습니다.
+{% endhint %}
