@@ -1,7 +1,3 @@
----
-description: '[별첨3] Singularity 컨테이너 사용법'
----
-
 # \[별첨3] Singularity 컨테이너 사용법
 
 싱귤레러티(Singularity)는 도커(Docker)와 같이 OS 가상화를 구현하기 위한 HPC 환경에 적합한 컨테이너 플랫폼이다. 사용자 작업 환경에 적합한 리눅스 배포판, 컴파일러, 라이브러리 등을 포함하는 컨테이너 이미지를 생성하고 컨테이너를 구동하여 사용자 프로그램을 실행할 수 있다.
@@ -56,6 +52,8 @@ $ singularity build --fakeroot ubuntu1.sif ubuntu.def (recipe 파일로부터 ub
 _※ 3.6.4 버전에서 지원하며, KISTI 홈페이지 > 기술지원 > 상담신청을 통해 관리자가 fakeroot 사용 등록을 해주어야 함._\
 _※ 단, 생성된 싱귤레러티 이미지 파일(\*.sif)을 수정하기 위해서는 root 권한이 필요하며, 샌드박스(쓰기 가능 chroot 디렉터리)로 변환해야 함._
 
+****
+
 **(ubuntu.def recipe 파일 예제)**
 
 ```
@@ -66,6 +64,8 @@ apt update
 %runscript
 echo "hello world from ubuntu container!"
 ```
+
+****
 
 **2) 원격 빌드**
 
@@ -104,3 +104,9 @@ _※ Sylabs Cloud(https://cloud.sylabs.io)에 이미지를 내보내기(업로�
 ![](../../../.gitbook/assets/ViIZ0BPIfboW1Tz.png)
 
 _※ 누리온에서 singularity 명령어로 리모트 빌드한 이미지 목록도 포함됨_
+
+__
+
+{% hint style="info" %}
+2022년 4월 12일에 마지막으로 업데이트되었습니다.
+{% endhint %}
