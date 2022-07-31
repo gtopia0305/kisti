@@ -15,7 +15,7 @@ coverY: 0
 [commercial-software](userguide/commercial-software/)
 {% endcontent-ref %}
 
-### 기술블로
+### 기술블로그&#x20;
 
 {% content-ref url="blog/userguide/" %}
 [userguide](blog/userguide/)
