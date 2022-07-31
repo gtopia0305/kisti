@@ -4,6 +4,8 @@ Horovod adopts a standard message passing interface (MPI) model to send messages
 
 \- For information on how to use Horovod, refer to \[Appendix 8].
 
+
+
 1\) Create a conda environment
 
 ```
@@ -14,6 +16,8 @@ $ module load gcc/8.3.0 cuda/10.0 cudampi/openmpi-3.1.0 python/3.7.1
 ```
 
 \- For detailed information on how to use conda, refer to \[Appendix 5].
+
+
 
 2\) Install and link the required libraries
 
@@ -28,6 +32,8 @@ $ module load gcc/8.3.0 cuda/10.0 cudampi/openmpi-3.1.0 python/3.7.1
 
 ※ ln -s: command for creating a symbolic link
 
+
+
 3\) Install Horovod
 
 ```
@@ -37,3 +43,7 @@ $ module load gcc/8.3.0 cuda/10.0 cudampi/openmpi-3.1.0 python/3.7.1
  (my_tensorflow) $ HOROVOD_WITH_TENSORFLOW=1 
  (my_tensorflow) $ pip install horovod==0.18.2
 ```
+
+{% hint style="info" %}
+2021년 12월 2일에 마지막으로 업데이트되었습니다.
+{% endhint %}

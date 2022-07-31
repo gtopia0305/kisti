@@ -31,24 +31,24 @@
 ○ IPyParallel project is a Python module for interactive cluster computing that provides an interactive Python parallel environment.\
 ○ IPyParallel can be extended as a plug-in to Jupyter Notebook and used as an IPython Clusters Tab with a Jupyter Notebook.
 
-![](<../../../.gitbook/assets/fEuuyE877IXSvC9 (1).png>)
+![](../../../.gitbook/assets/UsvHLLtTHQsX0yN.png)
 
 ## 2. Run Jupyter through a Script
 
 ![](../../../.gitbook/assets/FouxpybuajnMgzY.png)
 
-**※ Run the script only once the first time. Once the environment is set, you can immediately connect to the webpage (refer to B. Connect to the JupyterHub webpage) and use JupyterLab and Jupyter Notebook.**
+<mark style="color:red;">**※ Run the script only once the first time. Once the environment is set, you can immediately connect to the webpage (refer to B. Connect to the JupyterHub webpage) and use JupyterLab and Jupyter Notebook.**</mark>
 
 **1. Run the script**
 
 \
-\- Connect to the login node (**neuron.ksc.re.kr**) via a terminal and run the /apps/jupyter/kisti\_conda\_jupyter.sh script.\
-\- While running the script, the Notebook conda environment is created in the **/scratch/\[user ID]/.conda/envs** directory. In addition, JupyterHub, JupyterLab, Jupyter Notebook, TensorFlow, and IPyParallel packages are automatically installed, while cudatoolkit 10.0 and cudnn, which are required for a multiple GPU environment, are installed (this takes approximately 8 min).
+\- Connect to the login node (<mark style="color:red;">**neuron.ksc.re.kr**</mark>) via a terminal and run the /apps/jupyter/kisti\_conda\_jupyter.sh script.\
+\- While running the script, the Notebook conda environment is created in the <mark style="color:red;">**/scratch/\[user ID]/.conda/envs**</mark> directory. In addition, JupyterHub, JupyterLab, Jupyter Notebook, TensorFlow, and IPyParallel packages are automatically installed, while cudatoolkit 10.0 and cudnn, which are required for a multiple GPU environment, are installed (this takes approximately 8 min).
 
 \
 **※ This file needs to be run just once. You can then immediately connect to the webpage and use JupyterLab and Jupyter Notebook.**\
 ※ Executable files can be run from the shared directory using the /apps/jupyter/kisti\_conda\_jupyter.sh script.\
-※ User ID **a1113a01** was adopted in the following test.
+※ User ID <mark style="color:red;">**a1113a01**</mark> was adopted in the following test.
 
 ```
 [a1113a01@glogin02 ~]$ sh /apps/jupyter/kisti_conda_jupyter.sh
@@ -69,6 +69,8 @@
  done
 ```
 
+
+
 \- Restart the shell and turn off the function that automatically activates the base environment. (Run only once)
 
 ```
@@ -79,12 +81,16 @@
 
 ※ Set the function that automatically activates the base environment to false prevent the automatic activation of the base environment next time. (If the base environment is not activated, run the conda activate notebook command right after source \~/.bashrc.)
 
+
+
 \- Activate the conda notebook using the following command.
 
 ```
 [a1113a01@glogin01 ~]$ conda activate notebook
  (notebook) [a1113a01@glogin01 ~]$
 ```
+
+
 
 \- Users who want to employ Tensorboard and IPyParallel must install the tensorboard and ipyparallel extension packages for Jupyter Notebook/JupyterLab before connecting to the webpage. These packages can be installed by running the automated installation script /apps/jupyter/kisti\_conda\_plugins.sh provided by KISTI (this takes approximately 5 min).
 
@@ -116,8 +122,10 @@ To initialize this nbextension in the browser every time the notebook (or other 
 
 ※ Henceforth, users can directly access the webpage and use Jupyter Notebook. (The tasks up to this point only need to be run once.)
 
+****
+
 **B. Connect to the JupyterHub webpage**\
-\- Connect to [**https://jupyter.ksc.re.kr**](https://jupyter.ksc.re.kr/) and enter your Neuron account username, OTP, and password.
+\- Connect to [<mark style="color:red;">**https://jupyter.ksc.re.kr**</mark>](https://jupyter.ksc.re.kr/) and enter your Neuron account username, OTP, and password.
 
 ![](../../../.gitbook/assets/cXDKdaUkHSJ0yAM.png)
 
@@ -126,26 +134,30 @@ To initialize this nbextension in the browser every time the notebook (or other 
 **C. Select a queue and run Jupyter**
 
 \
-\- Click the **Refresh** button before running Jupyter to check the resource status\
+\- Click the <mark style="color:red;">**Refresh**</mark> button before running Jupyter to check the resource status\
 ◦ Alloc: Number of nodes being used\
 ◦ Idle: Number of available nodes\
 ◦ Down: Number of unavailable nodes\
 ◦ Total: Total number of nodes
 
-![](../../../.gitbook/assets/0uegGvxpcDETAut.png)
+![](../../../.gitbook/assets/27PJ1fZR4qLEo5X.png)
 
 \
 \- Check the queue information\
-◦ jupyter queue (free): for installing the environment, preprocessing, and debugging\
-◦ other queues (for a fee): for executing deep learning/machine learning models and visualization
+&#x20; ****  ◦ jupyter queue (free): for installing the environment, preprocessing, and debugging\
+&#x20; ◦ other queues (for a fee): for executing deep learning/machine learning models and visualization
+
+
 
 ※ The jupyter queue currently has 3 nodes and can run up to 30 Jupyter Notebooks (one Jupyter per user). Although it can perform visualization and model execution, its resources are provided for free; consequently, delays occur as more users are connected to the system.\
 ※ In addition to the jupyter queue, other queues exclusively use 1 node to run Jupyter Notebook; hence, the GPU resources of the node can be maximally used. (Refer to the table regarding the fees for using the Neuron system)\
 ※ The charging policy follows the existing charging policy for the Neuron system; the charge information can be found on the fee guide page of the National Supercomputing website ([**https://www.ksc.re.kr/jwjg/gjbg/ygan**](https://www.ksc.re.kr/jwjg/gjbg/ygan)).
 
+
+
 \- Select the jupyter queue from the “Select a job” queue dropdown menu and click the Submit button to run Jupyter Notebook. (Although Jupyter Notebook can be run with other queues, additional fees are charged. Refer to the fee information about the Neuron system on the KSC Homepage.)
 
-![](../../../.gitbook/assets/bURdAe1yRXKrQDg.png)
+![](../../../.gitbook/assets/UdHdWFdotD2kQhK.png)
 
 \- The following screen is displayed for a few seconds, and resources are allocated.
 
@@ -161,13 +173,15 @@ To initialize this nbextension in the browser every time the notebook (or other 
 
 **A. Jupyter work environment**
 
-**◦ Jupyter environment directory: /scratch/\[user ID]/.conda/envs/notebook**\
-**◦ Directory where logs are saved: /scratch/\[user ID]/log/job ID.log**\
-**◦ Directory where job files are saved: /scratch/\[user ID]/workspace/**
+<mark style="color:red;">**◦ Jupyter environment directory: /scratch/\[user ID]/.conda/envs/notebook**</mark>\ <mark style="color:red;"></mark><mark style="color:red;">**◦ Directory where logs are saved: /scratch/\[user ID]/log/job ID.log**</mark>\ <mark style="color:red;"></mark><mark style="color:red;">**◦ Directory where job files are saved: /scratch/\[user ID]/workspace/**</mark>
+
+<mark style="color:red;">****</mark>
 
 ※ Users install machine learning/deep learning libraries they need in the .../notebook conda environment. Therefore, these libraries are installed in the /scratch/user ID/ directory, which has a large default quota. (Log files that are generated after running Jupyter are also saved in the /scratch/user ID directory.)\
 ※ Codes written by the user are saved in the /scratch/user ID/ directory.\
 ※ Information on exporting and importing a conda environment for backing up a conda environment can be found in the software guidelines on the KISTI homepage.
+
+
 
 **B. How to use Jupyter Notebook**
 
@@ -181,13 +195,15 @@ To initialize this nbextension in the browser every time the notebook (or other 
 
 \- The Menu Bar -> IPython Clusters tab can start and end a profile-based Python parallel engine. (Refer to D. Running IPyParallel on how to create IPython parallel profiles.)
 
-![](<../../../.gitbook/assets/fEuuyE877IXSvC9 (1).png>)
+![](../../../.gitbook/assets/KUAAfWdceL0IGi8.png)
 
 좌측 탭 스크롤 -> 뉴론(Neuron) -> 스케줄러(SLURM)를 통한 작업 실행: Scroll the left tab -> Neuron -> Run the job via the scheduler (SLURM)
 
 ![](../../../.gitbook/assets/lgAmF7Hvd0Vh50B.png)
 
 \- You can create a new Python3/Text File/Folder/Terminal/Tensorboard by clicking the “New” button.
+
+
 
 **C. How to switch to JupyterLab**
 
@@ -201,11 +217,13 @@ To initialize this nbextension in the browser every time the notebook (or other 
 
 ※ Refer to Supplement 1 for detailed information on how to use JupyterLab.
 
-\\
+
 
 ## 4. Execute the Machine Learning/Deep Learning Example Code
 
 **A. Install libraries that are necessary to execute the example code**
+
+****
 
 \- Click New->Terminal and install libraries that are required for machine learning/deep learning.
 
@@ -246,7 +264,11 @@ To initialize this nbextension in the browser every time the notebook (or other 
 
 ※ You can ignore the warnings that are displayed during the execution process. If the same code is run again, these warning messages disappear. (The warnings provide syntax guidance for coding according to the version.)
 
+
+
 **관련 패키지 설치 후 예제 코드 실행 가능: You can run the example code after installing the relevant packages**
+
+****
 
 \- Plot graphs using the matplotlib library
 
@@ -329,7 +351,7 @@ queue: name of the queue to which the parallel job will be submitted (Select aft
 
 ![](../../../.gitbook/assets/xnnQM4NqlW3ZouC.png)
 
-\\
+
 
 ## 5. How to Stop Jupyter
 
@@ -350,9 +372,7 @@ queue: name of the queue to which the parallel job will be submitted (Select aft
 
 ![](../../../.gitbook/assets/Aifkvuq9qpyyJxG.png)
 
-**※ When you log out of the homepage, all running Jupyter and sessions are automatically closed.**
-
-\\
+<mark style="color:red;">**※ When you log out of the homepage, all running Jupyter and sessions are automatically closed.**</mark>
 
 ## 6. Jupyter Environment Initialization Method
 
@@ -365,7 +385,19 @@ queue: name of the queue to which the parallel job will be submitted (Select aft
 \- The data in the /scratch/\[user ID]/workspace/ directory are preserved.
 
 ```
-[a1113a01@glogin02 ~]$ sh /apps/jupyter/reset_env.shRemove all packages in environment /scratch/a1113a01/.conda/envs/notebook:Preparing transaction: doneVerifying transaction: doneExecuting transaction: / WARNING conda.core.prefix_data:_load_single_record(167): Ignoring malformed prefix record at: /scratch/acnta03/.conda/envs/notebook/conda-meta/001.pysocks-1.7.1-py37hc8dfbb8_1.jsondoneOne more step left, please execute these commands !!!!!!!1. conda activate notebook2. sh /apps/jupyter/kisti_conda_plugins.sh[a1113a01@glogin02 ~]$ conda activate notebook(notebook) [a1113a01@glogin02 ~]$ sh /apps/jupyter/kisti_conda_plugins.sh
+[a1113a01@glogin02 ~]$ sh /apps/jupyter/reset_env.sh
+Remove all packages in environment /scratch/a1113a01/.conda/envs/notebook:
+Preparing transaction: done
+Verifying transaction: done
+Executing transaction: / WARNING conda.core.prefix_data:_load_single_record(167): Ignoring malformed prefix record at: /scratch/acnta03/.conda/envs/notebook/conda-meta/001.pysocks-1.7.1-py37hc8dfbb8_1.json
+done
+
+One more step left, please execute these commands !!!!!!!
+1. conda activate notebook
+2. sh /apps/jupyter/kisti_conda_plugins.sh
+
+[a1113a01@glogin02 ~]$ conda activate notebook
+(notebook) [a1113a01@glogin02 ~]$ sh /apps/jupyter/kisti_conda_plugins.sh
 ```
 
 \- Connect to the https://jupyter.ksc.re.kr homepage and check whether Jupyter is executing and working properly.
@@ -411,3 +443,7 @@ to https://jupyter.ksc.re.kr/user/a1113a01/lab, and go to the new webpage.
 ![](../../../.gitbook/assets/lGi3UXL44cC0Fr9.png)
 
 {% embed url="https://www.youtube.com/embed/bMvwXXJvwq4" %}
+
+{% hint style="info" %}
+2021년 12월 2일에 마지막으로 업데이트되었습니다.
+{% endhint %}
