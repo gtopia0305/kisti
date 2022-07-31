@@ -386,7 +386,7 @@ $ qstat -i -w -T -u
 $ qstat -i -w -T -u user01
 ```
 
-![](<../../../.gitbook/assets/e7KSHFnzy6a6X9h (1).png>)
+![](../../../.gitbook/assets/e7KSHFnzy6a6X9h.png)
 
 ※ Calculated estimation based on the collected walltime information of a user’s job script
 

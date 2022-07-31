@@ -12,20 +12,14 @@
 
 \- After the account is created, account-related information will be sent to the e-mail address provided in the application form.
 
-&#x20;
-
 ② OTP (One-Time Password) authentication code issuance
 
 \- **Compose an email, as shown below, by referring to the email you received about the account information, and send it to account@ksc.re.kr to receive an authentication code.**
-
-&#x20;
 
 | Email subject           | <p>Request for an OTP authentication code - user ID</p><p>(example) Request for an OTP authentication code - x123abc</p>              |
 | ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
 | Recipient               | [account@ksc.re.kr](mailto:account@ksc.re.kr)                                                                                         |
 | Email content (example) | <p>Login ID: x123abc</p><p>Mobile phone number: 010-1234-5678</p><p>Name: Hong Gil-dong</p><p>Network provider: LG U+ (or SKT/KT)</p> |
-
-&#x20;
 
 ③ Install the OTP app
 
@@ -35,15 +29,11 @@
 
 \- When logging in to the supercomputer, you must enter the OTP security numbers from the “Any OTP” app.
 
-&#x20;
-
 ※ For users who do not use smartphones, please contact the account administrator (account@ksc.re.kr).
 
 ※ Refer to the “OTP User Manual” at the KISTI homepage > Technical support > Guidelines for detailed method on how to install and use the OTP.
 
 ※ In the case of LG U+, text messages are processed as spam messages. Hence, information will be sent via email.
-
-&#x20;
 
 ## B. Login
 
@@ -52,8 +42,6 @@
 \- The default character set (encoding) is Unicode (UTF-8).
 
 \- The login node can only be accessed using ssh, scp, sftp, or X11.
-
-&#x20;
 
 ① Unix or Linux environment
 
@@ -69,8 +57,6 @@ $ ssh -l neuron01.ksc.re.kr -p 22
 
 ![](../../../.gitbook/assets/VhT2afiz3QVaR6W.png)
 
-&#x20;
-
 ② Windows environment
 
 \- Open Xming to run in the X environment.
@@ -83,7 +69,7 @@ $ ssh -l neuron01.ksc.re.kr -p 22
 
 ※ The programs can be downloaded from the Internet for free.
 
-※ Host Name: neuron.ksc.re.kr, Port: 22, Connection type: SSH &#x20;
+※ Host Name: neuron.ksc.re.kr, Port: 22, Connection type: SSH
 
 ![](../../../.gitbook/assets/aUi3Rys5RaiCIhE.png)
 
@@ -93,25 +79,21 @@ $ ssh -l neuron01.ksc.re.kr -p 22
 
 ![](../../../.gitbook/assets/yykOZoJFaQM2QaG.png)
 
-&#x20;
-
 ※ If you cannot connect owing to a DNS caching problem, clear the cache (run the ipconfig /flushdns command from the command prompt). Then, try to connect again.
 
 ```
 C:￦> ipconfig /flushdns
 ```
 
-&#x20;
-
 ③ Sending and receiving files
 
 \- Connect via ftp (can connect without OTP) or sftp using an FTP client, and send and receive files.
 
 ```
-$ ftp neuron-dm.ksc.re.kror$ sftp [user ID@]neuron-dm.ksc.re.kr [-P 22]
+$ ftp neuron-dm.ksc.re.kr
+or
+$ sftp [user ID@]neuron-dm.ksc.re.kr [-P 22]
 ```
-
-&#x20;
 
 \- Use a freely distributed FTP/SFTP client program, such as WinSCP, to connect in the Windows environment.
 
@@ -119,9 +101,7 @@ $ ftp neuron-dm.ksc.re.kror$ sftp [user ID@]neuron-dm.ksc.re.kr [-P 22]
 
 \* Files can be sent without entering the OTP when using FTP (File Transfer Protocol).
 
-&#x20;\* When using SFTP (Secure-FTP), the OTP must be entered to send files (a safer transmission method than FTP).
-
-&#x20;
+\* When using SFTP (Secure-FTP), the OTP must be entered to send files (a safer transmission method than FTP).
 
 ④ Node configuration
 
@@ -130,11 +110,7 @@ $ ftp neuron-dm.ksc.re.kror$ sftp [user ID@]neuron-dm.ksc.re.kr [-P 22]
 | **Login node** | <p><strong>neuron.ksc.re.kr</strong></p><p><em><strong>: Node with one V100 GPU card</strong></em></p> | 120 minutes   | <p><strong>• Can connect via ssh/scp</strong></p><p><strong>• To compile and submit batch jobs</strong></p><p><strong>• FTP/sftp not allowed</strong></p> |
 | **DM node**    | **neuron-dm.ksc.re.kr**                                                                                | -             | **• Can connect via ftp**                                                                                                                                 |
 
-&#x20;**** \
-\
 
-
-&#x20;
 
 ## C. Changing User Shell
 
@@ -144,19 +120,16 @@ $ ftp neuron-dm.ksc.re.kror$ sftp [user ID@]neuron-dm.ksc.re.kr [-P 22]
 $ chsh
 ```
 
-&#x20;
-
-&#x20;\- Use the echo $SHELL command to check the current shell being used.
+\- Use the echo $SHELL command to check the current shell being used.
 
 ```
 $ echo $SHELL
 ```
 
-&#x20;\- The shell environment can be configured by modifying the environment configuration file (e.g., .bashrc and .cshrc) in the user's home directory.
+\- The shell environment can be configured by modifying the environment configuration file (e.g., .bashrc and .cshrc) in the user's home directory.
 
-&#x20;\
 \
-
+\\
 
 ## D. Changing User Password
 
@@ -165,8 +138,6 @@ $ echo $SHELL
 ```
 $ passwd
 ```
-
-&#x20;
 
 ※ Password-related security policy
 
@@ -178,15 +149,13 @@ $ passwd
 
 ㅇ Maximum number of login failures allowed: 5 times
 
-&#x20; \- If an incorrect password is entered more than five times, the ID associated with this account becomes locked. To unlock the account, the user needs to contact the account administrator (account@ksc.re.kr).
+\- If an incorrect password is entered more than five times, the ID associated with this account becomes locked. To unlock the account, the user needs to contact the account administrator (account@ksc.re.kr).
 
-&#x20; \- If the user tries to connect from the same PC and enters an incorrect password more than five times, the IP address of the PC becomes temporarily blocked. In this case, the user needs to contact the account administrator (account@ksc.re.kr).
+\- If the user tries to connect from the same PC and enters an incorrect password more than five times, the IP address of the PC becomes temporarily blocked. In this case, the user needs to contact the account administrator (account@ksc.re.kr).
 
 ㅇ Number of OTP authentication failures allowed: 5 times
 
-&#x20; \- If the OTP authentication fails more than five times, the user needs to inquire with the account administrator (account@ksc.re.kr).
-
-&#x20;
+\- If the OTP authentication fails more than five times, the user needs to inquire with the account administrator (account@ksc.re.kr).
 
 ## E. Time Allotted
 
@@ -204,22 +173,15 @@ $ passwd
 
 **※ Owing to the exclusive node policy, fees are charged for the total number of cores in at least one node.**
 
-&#x20;
-
 ## F. Work Directory and Quota Policy
 
 \- The following is information about the home directory and scratch directory.
 
-| **Category**          | **Directory path** | **Capacity limit** | **Limit on the number of files** | **File deletion policy**                                        | **Backup support** |
-| --------------------- | ------------------ | ------------------ | -------------------------------- | --------------------------------------------------------------- | ------------------ |
-| **Home directory**    | **/home01**        | **64GB**           | **100K**                         | **-**                                                           | **X**              |
-| **Scratch directory** | **/scratch**       |  **100TB**         | **4M**                           | **Files not accessed in 15 days will be automatically deleted** | **X**              |
+![](../../../.gitbook/assets/work\_directory\_and\_quota\_policy.png)
 
 \* The Neuron system does not support backup.
 
 \- Because the home directory has limited capacity and I/O performance, all computing jobs must be performed in the user workspace of the scratch directory (/scratch).
-
-&#x20;
 
 \- Check the capacity of the user directory (run from the login node).
 
@@ -227,4 +189,6 @@ $ passwd
 $ neuroninfo
 ```
 
-&#x20;
+{% hint style="info" %}
+2022년 3월 22일에 마지막으로 업데이트되었습니다.
+{% endhint %}
