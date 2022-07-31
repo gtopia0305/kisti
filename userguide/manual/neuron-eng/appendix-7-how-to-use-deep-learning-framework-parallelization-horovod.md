@@ -5,12 +5,8 @@
 It is possible to parallelize by linking Horovod with TensorFlow when adopting multiple GPUs across multiple nodes. As presented in the following example, Horovod can be linked with TensorFlow by introducing a code for using Horovod. Both TensorFlow and all the Keras APIs that can be adopted in TensorFlow can be linked with Horovod. First, we introduce how to link Horovod with TensorFlow.\
 (Example: MNIST Dataset and LeNet-5 CNN structure)
 
-
-
 ※ Refer to the official Horovod guide for detailed information on how to link Horovod with TensorFlow.\
 ([https://github.com/horovod/horovod#usage](https://github.com/horovod/horovod#usage))
-
-
 
 ◦ The import statement for linking Horovod with TensorFlow and the Horovod initialization in the main function
 
@@ -24,8 +20,6 @@ import horovod.tensorflow as hvd
 
 ※ Horovod is initialized; hence, it can be used.
 
-
-
 ◦ Set the dataset to use Horovod in the main function
 
 ```
@@ -34,8 +28,6 @@ import horovod.tensorflow as hvd
 ```
 
 ※ The dataset to be accessed for each job is set and created according to the Horovod rank.
-
-
 
 ◦ Set the Horovod-related settings, broadcast, and number of training epochs for the optimizer in the main function
 
@@ -62,8 +54,6 @@ config = tf.ConfigProto()
 
 ※ Allocate a single job for each GPU according to the Horovod local rank.
 
-
-
 ◦ Set checkpoint for the rank 0 job
 
 ```
@@ -81,12 +71,8 @@ checkpoint_dir = './checkpoints' if hvd.rank() == 0 else None
 By linking Keras with Horovod, parallelization is possible even when Keras APIs are adopted in TensorFlow. As shown in the following example, Horovod can be linked with Keras by introducing a code for using Horovod.\
 (Example: MNIST Dataset and LeNet-5 CNN structure)
 
-
-
 ※ Refer to the official Horovod guide for detailed information on how to link Horovod with Keras.\
 ([https://github.com/horovod/horovod/blob/master/docs/keras.rst](https://github.com/horovod/horovod/blob/master/docs/keras.rst))
-
-
 
 ◦ The import statement for linking Horovod with Keras and the Horovod initialization in the main function
 
@@ -100,8 +86,6 @@ import horovod.tensorflow.keras as hvd
 
 ※ Horovod is initialized; hence, it can be used.
 
-
-
 ◦ Allocate GPU devices according to the Horovod process rank
 
 ```
@@ -111,8 +95,6 @@ config = tf.ConfigProto()
 ```
 
 ※ Allocate a single job for each GPU according to the Horovod local rank.
-
-
 
 ◦ Set the Horovod-related settings, broadcast, and number of training epochs for the optimizer in the main function
 
@@ -128,8 +110,6 @@ epochs = int(math.ceil(12.0 / hvd.size()))
 
 ※ Apply Horovod-related settings to the optimizer and use broadcast to convey them to each job.
 
-
-
 ◦ Set checkpoint for the rank 0 job
 
 ```
@@ -138,8 +118,6 @@ if hvd.rank() == 0:
 ```
 
 ※ The job that involves saving or retrieving a checkpoint must be performed by a single process; hence, it is set to rank 0.
-
-
 
 ◦ Allocate GPU devices according to the Horovod process rank
 
@@ -154,12 +132,8 @@ model.fit(x_train, y_train, batch_size=batch_size, callbacks=callbacks, epochs=e
 It is possible to parallelize by linking Horovod with PyTorch when employing multiple GPUs across multiple nodes. As presented in the following example, Horovod can be linked with PyTorch by introducing a code for using Horovod.\
 (Example: MNIST Dataset and LeNet-5 CNN structure)
 
-
-
 ※ Refer to the official Horovod guide for detailed information on how to use Horovod in PyTorch.\
 ([https://github.com/horovod/horovod/blob/master/docs/pytorch.rst](https://github.com/horovod/horovod/blob/master/docs/pytorch.rst))
-
-
 
 ◦ The import statement for linking Horovod with PyTorch and the Horovod initialization in the main function
 
@@ -181,8 +155,6 @@ import torch.utils.data.distributed
 
 ※ To use one CPU thread for each job, torch.set\_num\_threads(1) is employed.
 
-
-
 ◦ Add Horovod-related information in the training process
 
 ```
@@ -200,8 +172,6 @@ def train(args, model, device, train_loader, optimizer, epoch):
 
 ※ Because the training dataset is split across and processed by several jobs, len(train\_sampler) is adopted to verify the total dataset size.
 
-
-
 ◦ Calculate the average value using Horovod
 
 ```
@@ -212,8 +182,6 @@ def metric_average(val, name):
 ```
 
 ※ The average value is calculated using the Allreduce communication method of Horovod to calculate the average value across several nodes.
-
-
 
 ◦ Add Horovod-related information in the test process
 
@@ -230,8 +198,6 @@ test_loss /= len(test_sampler)
 **※ The metric\_average function presented above is adopted because the calculation of the average value is required across several nodes.**
 
 ※ Because each node has the same calculated values for loss and accuracy via the Allreduce communication, rank 0 executes the print function.
-
-
 
 ◦ Set dataset to use Horovod in the main function
 
@@ -255,8 +221,6 @@ train_dataset = datasets.MNIST('data-%d' % hvd.rank(), train=True, download=True
 
 ※ Set the distributed sampler of PyTorch and assign it to the data loader.
 
-
-
 ◦ Add Horovod-related settings to the optimizer and the sampler to the training and test process in the main function
 
 ```
@@ -272,7 +236,3 @@ optimizer = optim.SGD(model.parameters(), lr=args.lr * hvd.size(), momentum=args
 ※ Apply Horovod-related settings to the optimizer and use broadcast to convey them to each job.
 
 ※ Add the sampler to the training and test processes, and pass it to each function.
-
-{% hint style="info" %}
-2021년 12월 2일에 마지막으로 업데이트되었습니다.
-{% endhint %}
