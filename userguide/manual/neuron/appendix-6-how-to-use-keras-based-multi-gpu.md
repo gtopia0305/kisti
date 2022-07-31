@@ -21,23 +21,8 @@ Keras(케라스)는 파이썬으로 작성된 오픈 소스 신경망 라이브�
 
 3\) 작업제출 스크립트
 
-```
-#!/bin/sh
-#SBATCH -J keras
-#SBATCH --time=24:00:00
-#SBATCH -o %x_%j.out
-#SBATCH -e %x_%j.err
-#SBATCH -p cas_v100_4
-#SBATCH --comment tensorflow
-#SBATCH --gres=gpu:2
-#SBATCH --nodes=2
-#SBATCH --ntasks-per-node=8
-
-module purge
-module load  gcc/8.3.0 cuda/10.0 cudampi/openmpi-3.1.0 conda/tensorflow_1.13
-
-srun python example.py
-```
+| <p>#!/bin/sh</p><p>#SBATCH -J keras</p><p>#SBATCH --time=24:00:00</p><p>#SBATCH -o %x_%j.out</p><p>#SBATCH -e %x_%j.err</p><p>#SBATCH -p cas_v100_4</p><p>#SBATCH --comment tensorflow</p><p>#SBATCH --gres=gpu:2</p><p>#SBATCH --nodes=2</p><p>#SBATCH --ntasks-per-node=8</p><p></p><p>module purge</p><p>module load gcc/8.3.0 cuda/10.0 cudampi/openmpi-3.1.0 conda/tensorflow_1.13</p><p></p><p>srun python example.py</p> |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 
 {% hint style="info" %}
 2022년 7월 28일에 마지막으로 업데이트되었습니다.
