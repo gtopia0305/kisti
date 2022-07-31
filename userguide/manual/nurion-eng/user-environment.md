@@ -49,7 +49,9 @@ $ ssh -l nurion.ksc.re.kr [-p 22]
 e.g.) When user ID is x123abc
 
 ```
-$ ssh -l x123abc nurion.ksc.re.kr or $ ssh -l x123abc nurion.ksc.re.kr -p 22
+$ ssh -l x123abc nurion.ksc.re.kr 
+or 
+$ ssh -l x123abc nurion.ksc.re.kr -p 22
 ```
 
 ② Windows environment
@@ -85,7 +87,9 @@ C: ipconfig /flushdns
 \- Access the Datamover node (nurion-dm.ksc.re.kr) through an FTP client to send/receive files (refer to the node configuration below).
 
 ```
-$ ftp nurion-dm.ksc.re.kr or $ sftp [user ID@]nurion-dm.ksc.re.kr [-p 22]
+$ ftp nurion-dm.ksc.re.kr 
+or 
+$ sftp [user ID@]nurion-dm.ksc.re.kr [-p 22]
 ```
 
 \- In the Windows environment, use FTP/SFTP client programs such as WinSCP that are distributed for free to access the system.
@@ -161,9 +165,12 @@ $ isam
 \- A user’s current usage can be checked with the following commands.
 
 ```
-$ lfs quota -h /home01$ lfs quota -h /scratch
+$ lfs quota -h /home01
+$ lfs quota -h /scratch
 ```
 
 \- A user’s job directory is applied to different policies according to use.
 
+{% hint style="info" %}
 2022년 3월 22일에 마지막으로 업데이트되었습니다.
+{% endhint %}
