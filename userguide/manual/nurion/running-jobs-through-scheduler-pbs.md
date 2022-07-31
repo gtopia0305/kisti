@@ -366,7 +366,7 @@ $ qstat -i -w -T -u
 
 $ qstat -i -w -T -u user01
 
-![](<../../../.gitbook/assets/e7KSHFnzy6a6X9h (1).png>)
+![](../../../.gitbook/assets/e7KSHFnzy6a6X9h.png)
 
 ※ 사용자 작업스크립트의 walltime 정보 취합으로 계산된 예상치임
 
