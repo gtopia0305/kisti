@@ -87,4 +87,6 @@ The IME240 solution of DDN was applied for the BB configuration; the \[Burst buf
 
 \*EC : Erasure Coding (settings may change)
 
+{% hint style="info" %}
 2021년 11월 29일에 마지막으로 업데이트되었습니다.
+{% endhint %}
