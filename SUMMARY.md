@@ -36,6 +36,7 @@
     * [\[별첨6\] Keras 기반 Multi GPU 사용법](userguide/manual/neuron/appendix-6-how-to-use-keras-based-multi-gpu.md)
     * [\[별첨7\] Conda 환경 기반 Horovod 설치방법](userguide/manual/neuron/appendix-7-conda-environment-based-horovod-tensorflow-installation-method.md)
     * [\[별첨8\] 딥러닝 프레임워크 병렬화 (Horovod) 사용법](userguide/manual/neuron/appendix-8-how-to-use-deep-learning-framework-parallelization-horovod.md)
+    * [\[별첨9\] AI 멀티노드 활용](userguide/manual/neuron/9-ai.md)
   * [NURION(ENG)](userguide/manual/nurion-eng/README.md)
     * [Nurion System Specifications and Configuration](userguide/manual/nurion-eng/specifications-and-configuration.md)
     * [User Environment](userguide/manual/nurion-eng/user-environment.md)
