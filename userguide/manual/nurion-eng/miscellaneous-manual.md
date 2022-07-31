@@ -79,13 +79,17 @@ $ module load singularity/3.6.4
 **ㅇ Executing shell in singularity container**
 
 ```
-$ singularity shell [image name] $ singularity shell tensorflow-1.12.0-py3.simgSingularity: Invoking an interactive shell within container... Singularity tensorflow-1.12.0-py3.simg:tensorflow>
+$ singularity shell [image name] 
+$ singularity shell tensorflow-1.12.0-py3.simgSingularity: Invoking an interactive shell within container... 
+
+Singularity tensorflow-1.12.0-py3.simg:tensorflow>
 ```
 
 **ㅇ Executing user program in singularity container**
 
 ```
-$ singularity exec [image name] execution command $ singularity exec tensorflow-1.12.0-py3.simg python convolutional.py
+$ singularity exec [image name] execution command 
+$ singularity exec tensorflow-1.12.0-py3.simg python convolutional.py
 ```
 
 _※ For executing containers through the scheduler (PBS) in a computing node, refer to the example in the guideline 'Job Submission through Scheduler (PBS)' B.-2) 'Submission of Interactive Jobs'_
@@ -103,7 +107,9 @@ _※ A convolutional model sample program (convolutional.py) and data directory 
 **(Local build)**
 
 ```
- $ singularity build --fakeroot ubuntu1.sif ubuntu.def (building ubuntu1.sif image from the recipe file) $ singularity build --fakeroot ubuntu2.sif library://ubuntu:18.04 (building ubuntu2.sif image from the singularity library) $ singularity build --fakeroot --sandbox ubuntu3 docker://ubuntu:18.04 (building sandbox directory (ubuntu3) from Docker Hub)
+$ singularity build --fakeroot ubuntu1.sif ubuntu.def (building ubuntu1.sif image from the recipe file)
+$ singularity build --fakeroot ubuntu2.sif library://ubuntu:18.04 (building ubuntu2.sif image from the singularity library)
+$ singularity build --fakeroot --sandbox ubuntu3 docker://ubuntu:18.04 (building sandbox directory (ubuntu3) from Docker Hub)
 ```
 
 _※ It is supported in the 3.6.4 version; go to KISTI website > Technical Support > Inquiry to request the administrator to register for the use of fakeroot._\
@@ -112,13 +118,19 @@ _※ Root permission is required to adjust the generated singularity image file 
 **(Example of ubuntu.def recipe file)**
 
 ```
-bootstrap: library from: ubuntu:18.04 %post apt update %runscript echo "hello world from ubuntu container!"
+bootstrap: library
+ from: ubuntu:18.04
+ %post
+ apt update
+ %runscript
+ echo "hello world from ubuntu container!"
 ```
 
 **(Remote build)**
 
 ```
- $ singularity build --remote ubuntu4.sif ubuntu.def  (Building ubuntu4.sif image from the recipe file using a remote build service provided by Sylabs Cloud)
+ $ singularity build --remote ubuntu4.sif ubuntu.def 
+ (Building ubuntu4.sif image from the recipe file using a remote build service provided by Sylabs Cloud)
 ```
 
 _※ An access token needs to be generated and registered on Nurion to use a remote build service provided by Sylabs Cloud (https://cloud.sylabs.io) \[reference 1]_\
@@ -127,12 +139,14 @@ _※ Generating/managing a singularity container image is possible by accessing 
 **(Import/export singularity container image)**
 
 ```
-$ singularity pull tensorflow.sif library://dxtr/default/hpc-tensorflow:0.1 (importing a container image from the Sylabs Cloud library)$ singularity pull tensorflow.sif docker://tensorflow/tensorflow:latest (importing an image from Docker Hub and converting it into a singularity image)$ singularity push -U tensorflow.sif library://ID/default/tensorflow.sif (exporting a singularity image to the Sylabs Cloud library (upload))
+$ singularity pull tensorflow.sif library://dxtr/default/hpc-tensorflow:0.1 (importing a container image from the Sylabs Cloud library)
+$ singularity pull tensorflow.sif docker://tensorflow/tensorflow:latest (importing an image from Docker Hub and converting it into a singularity image)
+$ singularity push -U tensorflow.sif library://ID/default/tensorflow.sif (exporting a singularity image to the Sylabs Cloud library (upload))
 ```
 
 _※ An access token needs to be generated and registered on Nurion to export an image to Sylabs Cloud (https://cloud.sylabs.io) \[reference 1]_
 
-\\
+
 
 **\[Reference 1] Generating a Sylabs Cloud access token and registering on Nurion**
 
@@ -167,7 +181,20 @@ IME is mounted on a client node (entire computing nodes and login node) using FU
 1. ex) INPUT="/scratch\_ime/$USER/input.dat", OUTPUT="/scratch\_ime/$USER/output.dat"
 
 ```
-#!/bin/sh #PBS -N burstbuffer #PBS -V #PBS -q normal        # all queues can be used #PBS -A {PBS option name} # refer to the table of PBS option name per application #PBS -P burst_buffer  # must be clarified for using burst buffer #PBS -l select=2:ncpus=16:mpiprocs=16 #PBS -l walltime=05:00:00  cd $PBS_O_WORKDIR  OUTFILE=/scratch_ime/$USER/output.dat    # write execution commands related to the job (refer to the example in Chapter 4 "Job Execution through Scheduler" Section B.)
+#!/bin/sh
+ #PBS -N burstbuffer
+ #PBS -V
+ #PBS -q normal        # all queues can be used
+ #PBS -A {PBS option name} # refer to the table of PBS option name per application
+ #PBS -P burst_buffer  # must be clarified for using burst buffer
+ #PBS -l select=2:ncpus=16:mpiprocs=16
+ #PBS -l walltime=05:00:00
+ 
+ cd $PBS_O_WORKDIR
+ 
+ OUTFILE=/scratch_ime/$USER/output.dat 
+ 
+  # write execution commands related to the job (refer to the example in Chapter 4 "Job Execution through Scheduler" Section B.)
 ```
 
 ② To use MPI-IO based I/O, the mvapich2/2.3.1 module that supports IME must be used. Application programs need to be compiled again using the MPI library. The file or directory path needs to be designated using the IME protocol as shown in the example below.
@@ -181,7 +208,21 @@ $ module load mvapich2/2.3.1
 Load the mvapich2/2.3.1 module as above and write a job script as shown below.
 
 ```
-#!/bin/sh #PBS -N mvapich2_ime #PBS -V #PBS -q normal            # all queues corresponding to KNL can be used (exclusive, normal, long, flat, debug) #PBS -A {PBS option name} # refer to the table of PBS option name per application #PBS -P burst_buffer     # Must be clarified for using burst buffer #PBS -l select=2:ncpus=16:mpiprocs=16 #PBS -l walltime=5:00:00  cd $PBS_O_WORKDIR TOTAL_CPUS=$(wc -l $PBS_NODEFILE | awk '{print $1}') OUTFILE=ime:///scratch/$USER/output.dat   mpirun_rsh -np ${TOTAL_CPUS} -hostfile $PBS_NODEFILE ./a.out  or mpirun -np ${TOTAL_CPUS} -hostfile $PBS_NODEFILE ./a.out   
+#!/bin/sh
+ #PBS -N mvapich2_ime
+ #PBS -V
+ #PBS -q normal            # all queues corresponding to KNL can be used (exclusive, normal, long, flat, debug)
+ #PBS -A {PBS option name} # refer to the table of PBS option name per application
+ #PBS -P burst_buffer     # Must be clarified for using burst buffer
+ #PBS -l select=2:ncpus=16:mpiprocs=16
+ #PBS -l walltime=5:00:00
+ 
+ cd $PBS_O_WORKDIR
+ TOTAL_CPUS=$(wc -l $PBS_NODEFILE | awk '{print $1}')
+ OUTFILE=ime:///scratch/$USER/output.dat  
+ mpirun_rsh -np ${TOTAL_CPUS} -hostfile $PBS_NODEFILE ./a.out 
+ or
+ mpirun -np ${TOTAL_CPUS} -hostfile $PBS_NODEFILE ./a.out 
 ```
 
 \* Supported compiler: gcc/6.1.0, gcc/7.2.0, intel/17.0.5, intel/18.0.1, intel/18.0.3, intel/19.0.4, pgi/18.10
@@ -231,13 +272,22 @@ Moreover, IME (approximately 0.9 PB) has a relatively small capacity because it 
 #### ■ **Example of a flat mode job script**
 
 ```
- 
-```
+#!/bin/sh
+#PBS -N flat_job
+#PBS -V#PBS -q flat
+#PBS -A {PBS option name} # refer to the table of PBS option name per application
+#PBS -l select=1:ncpus=68:mpiprocs=32:ompthreads=1
+#PBS -l walltime=12:00:00 
 
-```
-#!/bin/sh#PBS -N flat_job#PBS -V#PBS -q flat#PBS -A {PBS option name} # refer to the table of PBS option name per application#PBS -l select=1:ncpus=68:mpiprocs=32:ompthreads=1#PBS -l walltime=12:00:00 cd $PBS_O_WORKDIR mpirun numactl -m 1 my_app.xormpirun numactl -p 1 my_app.x
+cd $PBS_O_WORKDIR 
+
+mpirun numactl -m 1 my_app.x
+or
+mpirun numactl -p 1 my_app.x
 ```
 
 ※ Flat must be selected for the queue being submitted with the PBS option (i.e., -q flat)
 
+{% hint style="info" %}
 2022년 2월 15일에 마지막으로 업데이트되었습니다.
+{% endhint %}
