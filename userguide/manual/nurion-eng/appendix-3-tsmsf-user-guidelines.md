@@ -1,10 +1,6 @@
 # \[Appendix 3] TSMSF User Guidelines
 
-## Method for Archiving Data Using TSMSF
-
-\*\*\*\*
-
-\\
+**Method for Archiving Data Using TSMSF**
 
 ## A. System Environment and How to Use the System
 
@@ -18,9 +14,7 @@ Tiered storage management script facility (TSMSF) is a software tool that suppor
 
 **o Nurion system Datamover Node: nurion-dm.ksc.re.kr**
 
-\[TSMSF System Configuration Diagram ]
-
-![](../../../.gitbook/assets/K2uTYs6pSXjH8F6.bmp)
+![\[TSMSF System Configuration Diagram \]](../../../.gitbook/assets/K2uTYs6pSXjH8F6.bmp)
 
 Data are automatically archived 7 days (this may be changed later) after the user uploads files from Datamover to the specified directory (/scratch/arcv/$USER). When uploading files to Datamover, the user can use FTP, SCP, SSH, SFTP, etc. to upload files directly from the outside. The user can also upload files through the Nurion login node (but FTP cannot be used for the login node). Here, services other than FTP require the user to enter a one-time password (OTP). Furthermore, services other than FTP automatically stop uploading files if the limited resource (10 min of CPU time) is used up. Hence, we recommend that you use FTP to upload files.
 
@@ -44,33 +38,25 @@ To archive the user data, please use the Nurion system's login node or Datamover
 
 (Method1) Connect (ssh) to the login node (nurion.ksc.re.kr) or the Datamover node (nurion-dm.ksc.re.kr), and use the cp command.
 
-|
+```
+[user01@dm2:/home01/user01 ]$ ssh $USER@nurion-dm.ksc.re.kr (또는 ssh $USER@nurion.ksc.re.kr)
+  Password(OTP):
+  Password:
 
-\[user01@dm2:/home01/user01 ]$ **ssh $USER@nurion-dm.ksc.re.kr (또는 ssh $USER@nurion.ksc.re.kr)**
-
-Password(OTP):
-
-Password:
-
-\[user01@dm02:/home01/user01 ]$ **cp –r \[mydir | myfile] /scratch/arcv/$USER/**
-
-\| | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+[user01@dm02:/home01/user01 ]$ cp –r [mydir | myfile] /scratch/arcv/$USER/
+```
 
 (Method 2) Use the scp command remotely.
 
-|
-
-\[user01@login01:/home01/user01 ]$ **scp –r \[mydir | myfile] $USER@nurion-dm.ksc.re.kr:/scratch/arcv/$USER/**
-
-Password(OTP):
-
-Password:
-
-\| | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+```
+[user01@login01:/home01/user01 ]$ scp –r [mydir | myfile] $USER@nurion-dm.ksc.re.kr:/scratch/arcv/$USER/
+  Password(OTP):
+  Password:
+```
 
 (Method 3) Upload files by connecting to the Datamover node (nurion-dm.ksc.re.kr) using an FTP / SFTP client program.
 
-\*\*\*\*
+
 
 ① Example of using the FileZilla client (FTP)
 
@@ -122,7 +108,9 @@ Password:
 
 \- Upload files by selecting files or directories in the local site on the left.
 
-\*\*\*\* ![](../../../.gitbook/assets/wlvqaTAw4xYiieb.bmp)
+&#x20;
+
+![](../../../.gitbook/assets/wlvqaTAw4xYiieb.bmp)
 
 **3.2 Data archiving**
 
@@ -145,7 +133,7 @@ For the archived data, the arc\_ls command can be used to check the detailed inf
 
 The arc\_ls command can take the relative or absolute path of a directory or file as an argument. It can also search the subdirectories of the specified directory through the -r option when needed. In the output result, DIR denotes a directory, NRM a regular file, and ARC an archived file.
 
-\*\*\*\*
+
 
 ## D. Restore Method
 
@@ -166,3 +154,7 @@ Similar to the arc\_ls command, the arc\_restore command can take the relative o
 To delete some or all of the files in the specified directory (/scratch/arcv/$USER), you can use the rm command, which is a basic Linux command.
 
 Temporary files (chunk files with the .archived extension) can also be deleted using the rm command. When temporary files are deleted, it may take about 3 days for the archived data in the tape library to be deleted and synchronized. That is, if the temporary file does not exist in the original path, the system determines that "the user has deleted the file." Therefore, do not change the name of the temporary file directly or move the temporary file. You must first restore the file before changing the temporary file name or moving the temporary file. **(Please note that it is impossible to restore the file once the temporary file has been deleted.)**
+
+{% hint style="info" %}
+2022년 2월 15일에 마지막으로 업데이트되었습니다.
+{% endhint %}
