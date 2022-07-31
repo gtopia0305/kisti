@@ -4,7 +4,7 @@ Similar to Docker, Singularity is a container platform suitable for implementing
 
 Container images that support deep learning frameworks, such as TensorFlow, Caffe, and PyTorch, can be accessed from /apps/applications/singularity\_images and /apps/applications/singularity\_images/ngc directories.
 
-\\
+
 
 ![< Singularity container architecture >](<../../../.gitbook/assets/iA7rMElSDzNPxoc (1).png>)
 
@@ -69,7 +69,7 @@ Python 3.6.9
 ```
 
 _※ Refer to the writing a job script file> for information on how to run the container on the compute node using a scheduler (SLURM)._\
-\\
+
 
 ## D. How to Execute User Program From an Nvidia GPU Cloud (NGC) Container Based on the Module (Lmod)
 
@@ -206,8 +206,10 @@ _※ Singularity container images can be created and managed by accessing the Sy
 
 ①웹 브라우저에서 컨테이너 이미지 빌드하기 : Build a container image from a web brower
 
-<img src="https://www.ksc.re.kr/file/image/?path=sos/jcs/2020/12/&#x26;name=QRfz3mqIyCZsnlB.png" alt="" data-size="original">
+![](../../../.gitbook/assets/QRfz3mqIyCZsnlB.png)
 
 ②빌드한 컨테이너 이미지 목록 보기 :View the list ofcontainer images thathave been built
 
-\\
+{% hint style="info" %}
+2021년 12월 14일에 마지막으로 업데이트되었습니다.
+{% endhint %}
