@@ -5,16 +5,14 @@
 It is possible to parallelize by linking Horovod with TensorFlow when adopting multiple GPUs across multiple nodes. As presented in the following example, Horovod can be linked with TensorFlow by introducing a code for using Horovod. Both TensorFlow and all the Keras APIs that can be adopted in TensorFlow can be linked with Horovod. First, we introduce how to link Horovod with TensorFlow.\
 (Example: MNIST Dataset and LeNet-5 CNN structure)
 
-&#x20;
+
 
 ※ Refer to the official Horovod guide for detailed information on how to link Horovod with TensorFlow.\
 ([https://github.com/horovod/horovod#usage](https://github.com/horovod/horovod#usage))
 
-&#x20;
+
 
 ◦ The import statement for linking Horovod with TensorFlow and the Horovod initialization in the main function
-
-&#x20;
 
 ```
 import horovod.tensorflow as hvd
@@ -22,32 +20,24 @@ import horovod.tensorflow as hvd
  hvd.init()
 ```
 
-&#x20;
-
 ※ horovod.tensorflow: a module for linking Horovod with TensorFlow
 
 ※ Horovod is initialized; hence, it can be used.
 
-&#x20;
+
 
 ◦ Set the dataset to use Horovod in the main function
-
-&#x20;
 
 ```
 (x_train, y_train), (x_test, y_test) = \
  keras.datasets.mnist.load_data('MNIST-data-%d' % hvd.rank())
 ```
 
-&#x20;
-
 ※ The dataset to be accessed for each job is set and created according to the Horovod rank.
 
-&#x20;
+
 
 ◦ Set the Horovod-related settings, broadcast, and number of training epochs for the optimizer in the main function
-
-&#x20;
 
 ```
 opt = tf.train.AdamOptimizer(0.001 * hvd.size())
@@ -62,11 +52,7 @@ opt = tf.train.AdamOptimizer(0.001 * hvd.size())
 
 ※ Set the training process step of each job according to the number of Horovod jobs.
 
-&#x20;
-
 ◦ Allocate GPU devices according to the Horovod process rank
-
-&#x20;
 
 ```
 config = tf.ConfigProto()
@@ -74,15 +60,11 @@ config = tf.ConfigProto()
  config.gpu_options.visible_device_list = str(hvd.local_rank())
 ```
 
-&#x20;
-
 ※ Allocate a single job for each GPU according to the Horovod local rank.
 
-&#x20;
+
 
 ◦ Set checkpoint for the rank 0 job
-
-&#x20;
 
 ```
 checkpoint_dir = './checkpoints' if hvd.rank() == 0 else None
@@ -94,23 +76,19 @@ checkpoint_dir = './checkpoints' if hvd.rank() == 0 else None
 
 ※ The job that involves saving or retrieving a checkpoint must be carried out by a single process; hence, it is set to rank 0.
 
-&#x20;
-
 ## B. How to Use Horovod in Keras
 
 By linking Keras with Horovod, parallelization is possible even when Keras APIs are adopted in TensorFlow. As shown in the following example, Horovod can be linked with Keras by introducing a code for using Horovod.\
 (Example: MNIST Dataset and LeNet-5 CNN structure)
 
-&#x20;
+
 
 ※ Refer to the official Horovod guide for detailed information on how to link Horovod with Keras.\
 ([https://github.com/horovod/horovod/blob/master/docs/keras.rst](https://github.com/horovod/horovod/blob/master/docs/keras.rst))
 
-&#x20;
+
 
 ◦ The import statement for linking Horovod with Keras and the Horovod initialization in the main function
-
-&#x20;
 
 ```
 import horovod.tensorflow.keras as hvd
@@ -122,11 +100,9 @@ import horovod.tensorflow.keras as hvd
 
 ※ Horovod is initialized; hence, it can be used.
 
-&#x20;
+
 
 ◦ Allocate GPU devices according to the Horovod process rank
-
-&#x20;
 
 ```
 config = tf.ConfigProto()
@@ -136,11 +112,9 @@ config = tf.ConfigProto()
 
 ※ Allocate a single job for each GPU according to the Horovod local rank.
 
-&#x20;
+
 
 ◦ Set the Horovod-related settings, broadcast, and number of training epochs for the optimizer in the main function
-
-&#x20;
 
 ```
 epochs = int(math.ceil(12.0 / hvd.size()))
@@ -154,11 +128,9 @@ epochs = int(math.ceil(12.0 / hvd.size()))
 
 ※ Apply Horovod-related settings to the optimizer and use broadcast to convey them to each job.
 
-&#x20;
+
 
 ◦ Set checkpoint for the rank 0 job
-
-&#x20;
 
 ```
 if hvd.rank() == 0:
@@ -167,11 +139,9 @@ if hvd.rank() == 0:
 
 ※ The job that involves saving or retrieving a checkpoint must be performed by a single process; hence, it is set to rank 0.
 
-&#x20;
+
 
 ◦ Allocate GPU devices according to the Horovod process rank
-
-&#x20;
 
 ```
 model.fit(x_train, y_train, batch_size=batch_size, callbacks=callbacks, epochs=epochs, verbose=1 if hvd.rank() == 0 else 0, validation_data=(x_test, y_test))
@@ -179,23 +149,19 @@ model.fit(x_train, y_train, batch_size=batch_size, callbacks=callbacks, epochs=e
 
 ※ To print phrases that are solely output during training from the rank 0 job, the verbose value is set to 1 for the rank 0 job alone.
 
-&#x20;
-
 ## C. How to Use Horovod in PyTorch
 
 It is possible to parallelize by linking Horovod with PyTorch when employing multiple GPUs across multiple nodes. As presented in the following example, Horovod can be linked with PyTorch by introducing a code for using Horovod.\
 (Example: MNIST Dataset and LeNet-5 CNN structure)
 
-&#x20;
+
 
 ※ Refer to the official Horovod guide for detailed information on how to use Horovod in PyTorch.\
 ([https://github.com/horovod/horovod/blob/master/docs/pytorch.rst](https://github.com/horovod/horovod/blob/master/docs/pytorch.rst))
 
-&#x20;
+
 
 ◦ The import statement for linking Horovod with PyTorch and the Horovod initialization in the main function
-
-&#x20;
 
 ```
 import torch.utils.data.distributed
@@ -211,15 +177,13 @@ import torch.utils.data.distributed
 
 ※ horovod.torch: module for adopting Horovod with PyTorch
 
-※ Horovod is initialized, and the device that will execute the job is set according to the rank that was set in the initialization process. &#x20;
+※ Horovod is initialized, and the device that will execute the job is set according to the rank that was set in the initialization process.
 
 ※ To use one CPU thread for each job, torch.set\_num\_threads(1) is employed.
 
-&#x20;
+
 
 ◦ Add Horovod-related information in the training process
-
-&#x20;
 
 ```
 def train(args, model, device, train_loader, optimizer, epoch):
@@ -236,11 +200,9 @@ def train(args, model, device, train_loader, optimizer, epoch):
 
 ※ Because the training dataset is split across and processed by several jobs, len(train\_sampler) is adopted to verify the total dataset size.
 
-&#x20;
+
 
 ◦ Calculate the average value using Horovod
-
-&#x20;
 
 ```
 def metric_average(val, name):
@@ -251,11 +213,9 @@ def metric_average(val, name):
 
 ※ The average value is calculated using the Allreduce communication method of Horovod to calculate the average value across several nodes.
 
-&#x20;
+
 
 ◦ Add Horovod-related information in the test process
-
-&#x20;
 
 ```
 test_loss /= len(test_sampler)
@@ -271,11 +231,9 @@ test_loss /= len(test_sampler)
 
 ※ Because each node has the same calculated values for loss and accuracy via the Allreduce communication, rank 0 executes the print function.
 
-&#x20;
+
 
 ◦ Set dataset to use Horovod in the main function
-
-&#x20;
 
 ```
 train_dataset = datasets.MNIST('data-%d' % hvd.rank(), train=True, download=True,
@@ -297,11 +255,9 @@ train_dataset = datasets.MNIST('data-%d' % hvd.rank(), train=True, download=True
 
 ※ Set the distributed sampler of PyTorch and assign it to the data loader.
 
-&#x20;
+
 
 ◦ Add Horovod-related settings to the optimizer and the sampler to the training and test process in the main function
-
-&#x20;
 
 ```
 optimizer = optim.SGD(model.parameters(), lr=args.lr * hvd.size(), momentum=args.momentum)
@@ -317,6 +273,6 @@ optimizer = optim.SGD(model.parameters(), lr=args.lr * hvd.size(), momentum=args
 
 ※ Add the sampler to the training and test processes, and pass it to each function.
 
-&#x20;
-
-&#x20;
+{% hint style="info" %}
+2021년 12월 2일에 마지막으로 업데이트되었습니다.
+{% endhint %}
