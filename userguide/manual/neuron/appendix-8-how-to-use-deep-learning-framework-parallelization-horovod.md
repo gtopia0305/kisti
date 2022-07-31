@@ -5,16 +5,12 @@
 다중노드에서 멀티 GPU를 활용할 경우 Horovod를 Tensorflow와 연동하여 병렬화가 가능하다. 아래 예시와 같이 Horovod 사용을 위한 코드를 추가해주면 Tensorflow와 연동이 가능하다. Tensorflow 및 Tensorflow에서 활용 가능한 Keras API 모두 Horovod와 연동이 가능하며 우선 Tensorflow에서 Horovod와 연동하는 방법을 소개한다.\
 (예시: MNIST Dataset 및 LeNet-5 CNN 구조)
 
-&#x20;
-
 ※ Tensorflow에서 Horovod 활용을 위한 자세한 사용법은 Horovod 공식 가이드 참조\
 ([https://github.com/horovod/horovod#usage](https://github.com/horovod/horovod#usage))
 
-&#x20;
+
 
 ◦ Tensorflow에서 Horovod 사용을 위한 import 및 메인 함수에서 Horovod 초기화
-
-&#x20;
 
 ```
 import horovod.tensorflow as hvd
@@ -22,30 +18,24 @@ import horovod.tensorflow as hvd
 hvd.init()
 ```
 
-&#x20;
-
 ※ horovod.tensorflow: Horovod를 Tensorflow와 연동하기 위한 모듈
 
 ※ Horovod를 사용하기 위하여 초기화한다.
 
-&#x20;
+
 
 ◦ 메인 함수에서 Horovod 활용을 위한 Dataset 설정
-
-&#x20;
 
 ```
 (x_train, y_train), (x_test, y_test) = \
 keras.datasets.mnist.load_data('MNIST-data-%d' % hvd.rank())
 ```
 
-&#x20;
-
 ※ 각 작업별로 접근할 dataset을 설정하기 위하여 Horovod rank에 따라 설정 및 생성한다.
 
-&#x20;
 
-◦ 메인 함수에서 optimizer에 Horovod 관련 설정 및 broadcast, 학습 진행 수 설정&#x20;
+
+◦ 메인 함수에서 optimizer에 Horovod 관련 설정 및 broadcast, 학습 진행 수 설정
 
 ```
 opt = tf.train.AdamOptimizer(0.001 * hvd.size())
@@ -60,7 +50,7 @@ tf.train.StopAtStepHook(last_step=20000 // hvd.size()), ... ]
 
 ※ 각 작업들의 학습과정 step을 Horovod 작업 수에 따라 설정함
 
-&#x20;
+
 
 ◦ Horovod의 프로세스 rank 에 따라 GPU Device 할당
 
@@ -70,11 +60,9 @@ config.gpu_options.allow_growth = True
 config.gpu_options.visible_device_list = str(hvd.local_rank())
 ```
 
-&#x20;
-
 ※ 각 GPU 별로 하나의 작업을 Horovod의 local rank에 따라 할당함
 
-&#x20;
+
 
 ◦ Rank 0 작업에 Checkpoint 설정
 
@@ -88,19 +76,17 @@ config=config) as mon_sess:
 
 ※ Checkpoint 저장 및 불러오는 작업은 하나의 프로세스에서 수행되어야 하므로 rank 0번에 설정함
 
-&#x20;
+
 
 나. Keras에서 Horovod 사용법
 
 Tensorflow에서는 Keras API를 활용할 경우에도 Horovod와 연동하여 병렬화가 가능하다. 아래 예시와 같이 Horovod 사용을 위한 코드를 추가해주면 Keras와 연동이 가능하다.\
 (예시: MNIST Dataset 및 LeNet-5 CNN 구조)
 
-&#x20;
-
 ※ Keras에서 Horovod 활용을 위한 자세한 사용법은 Horovod 공식 가이드 참조\
 ([https://github.com/horovod/horovod/blob/master/docs/keras.rst](https://github.com/horovod/horovod/blob/master/docs/keras.rst))
 
-&#x20;
+
 
 ◦ Keras에서 Horovod 사용을 위한 import 및 메인 함수에서 Horovod 초기화
 
@@ -114,7 +100,7 @@ hvd.init()
 
 ※ Horovod를 사용하기 위하여 초기화한다.
 
-&#x20;
+
 
 ◦ Horovod의 프로세스 rank 에 따라 GPU Device 할당
 
@@ -126,7 +112,7 @@ config.gpu_options.visible_device_list = str(hvd.local_rank())
 
 ※ 각 GPU 별로 하나의 작업을 Horovod의 local rank에 따라 할당함
 
-&#x20;
+
 
 ◦ 메인 함수에서 optimizer에 Horovod 관련 설정 및 broadcast, 학습 진행 수 설정
 
@@ -142,7 +128,7 @@ callbacks = [ hvd.callbacks.BroadcastGlobalVariablesCallback(0), ]
 
 ※ Optimizer에 Horovod 관련 설정을 적용하고 각 작업에 broadcast를 활용하여 전달함
 
-&#x20;
+
 
 ◦ Rank 0 작업에 Checkpoint 설정
 
@@ -154,8 +140,6 @@ callbacks = [ hvd.callbacks.BroadcastGlobalVariablesCallback(0), ]
 
 ※ Checkpoint 저장 및 불러오는 작업은 하나의 프로세스에서 수행되어야 하여 rank 0번에 설정함
 
-&#x20;
-
 ◦ Horovod의 프로세스 rank 에 따라 GPU Device 할당
 
 ```
@@ -165,19 +149,17 @@ verbose=1 if hvd.rank() == 0 else 0, validation_data=(x_test, y_test))
 
 ※ 학습 중 출력되는 문구를 Rank 0번 작업에서만 출력하기 위하여 Rank 0번 작업만 verbose 값을 1로 설정함
 
-&#x20;
+
 
 다. PyTorch에서 Horovod 사용법
 
 다중노드에서 멀티 GPU를 활용할 경우 Horovod를 PyTorch와 연동하여 병렬화가 가능하다. 아래 예시와 같이 Horovod 사용을 위한 코드를 추가해주면 PyTorch와 연동이 가능하다.\
 (예시: MNIST Dataset 및 LeNet-5 CNN 구조)
 
-&#x20;
-
 ※ PyTorch에서 Horovod 활용을 위한 자세한 사용법은 Horovod 공식 가이드 참조\
 ([https://github.com/horovod/horovod/blob/master/docs/pytorch.rst](https://github.com/horovod/horovod/blob/master/docs/pytorch.rst))
 
-&#x20;
+
 
 ◦ PyTorch에서 Horovod 사용을 위한 import 및 메인 함수에서 Horovod 초기화 및 설정
 
@@ -199,7 +181,7 @@ if args.cuda:
 
 ※ 각 작업별로 CPU thread 1개를 사용하기 위해 torch.set\_num\_threads(1)를 사용한다.
 
-&#x20;
+
 
 ◦ Training 과정에 Horovod 관련 내용 추가
 
@@ -218,7 +200,7 @@ train_sampler.set_epoch(epoch)
 
 ※ Training dataset이 여러 작업들에 나뉘어서 처리되므로 전체 dataset 크기 확인을 위하여 len(train\_sampler)을 사용한다.
 
-&#x20;
+
 
 ◦ Horovod를 활용하여 평균값 계산
 
@@ -231,7 +213,7 @@ return avg_tensor.item()
 
 ※ 여러 노드에 걸쳐 평균값을 계산하기 위하여 Horovod의 Allreduce 통신을 활용하여 계산한다.
 
-&#x20;
+
 
 ◦ Test 과정에 Horovod 관련 내용 추가
 
@@ -249,7 +231,7 @@ if hvd.rank() == 0:
 
 ※ 각 노드별로 Allreduce 통신을 거쳐 loss 및 accuracy에 대해 계산된 값을 동일하게 가지고 있으므로 rank 0번에서 print 함수를 수행한다.
 
-&#x20;
+
 
 ◦ 메인 함수에서 Horovod 활용을 위한 Dataset 설정
 
@@ -273,7 +255,7 @@ sampler=test_sampler, **kwargs)
 
 ※ PyTorch의 distributed sampler를 설정하여 이를 data loader에 할당한다.
 
-&#x20;
+
 
 ◦ 메인 함수에서 optimizer에 Horovod 관련 설정 및 training, test 과정에 sampler 추가
 
@@ -290,3 +272,7 @@ for epoch in range(1, args.epochs + 1):
 ※ Optimizer에 Horovod 관련 설정을 적용하고 각 작업에 broadcast를 활용하여 전달함
 
 ※ Training 및 test 과정에 sampler를 추가하여 각 함수에 전달함
+
+{% hint style="info" %}
+2022년 7월 28일에 마지막으로 업데이트되었습니다.
+{% endhint %}
