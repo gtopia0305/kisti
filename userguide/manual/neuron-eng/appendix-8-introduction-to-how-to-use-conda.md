@@ -8,51 +8,45 @@ To install Anaconda, you can download and install the distribution suitable for 
 
 (Example) Windows, MacOS, Linux
 
-&#x20;
+
 
 Currently, Anaconda provides versions based on Python 3.7 and Python 2.7, respectively.
 
-&#x20;
+
 
 Conda is an application provided to manage package versions in Anaconda.
 
 By using conda, the dependency problem that Python users have the most difficulty with when installing packages can be easily addressed.
 
-&#x20;
+
 
 This document introduces how to use the conda package in the KISTI system for Python users.
 
 The "/home01/userID" directory on the introduction page is the home directory of the test account. Therefore, users are required to change it to the path that is appropriate for them.
 
-&#x20;
-
 ## 1. Use of Conda
 
-&#x20;          For Miniconda, you can download a version suitable for each OS from the https://docs.conda.io/en/latest/miniconda.html site.
+For Miniconda, you can download a version suitable for each OS from the https://docs.conda.io/en/latest/miniconda.html site.
 
 For Anaconda, you can download a version suitable for each OS from the [https://www.anaconda.com/distribution/#download-section](https://www.anaconda.com/distribution/#download-section) site.
 
-&#x20;
-
-| **Command** | **Description**                                                                                                                                                              |
-| ----------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-|  clean      |  Discard unused packages and caches.                                                                                                                                         |
-| config      | <p> Modify configuration values in .condarc. This is modeled after the git config command. </p><p> Write to the user .condarc file (/home01/userID/.condarc) by default.</p> |
-|  create     |  Create a new conda environment from a list of specified packages.                                                                                                           |
-|  help       |  Display a list of available conda commands and their help strings.                                                                                                          |
-|  info       |  Display information on current conda installation.                                                                                                                          |
-|  init       |  Initialize conda for shell interaction. \[Experimental]                                                                                                                     |
-|  install    |  Install a list of packages into a specified conda environment.                                                                                                              |
-|  list       |  List linked packages in a conda environment.                                                                                                                                |
-|  package    |  Low-level conda package utility. (EXPERIMENTAL)                                                                                                                             |
-|  remove     |  Discard a list of packages from a specified conda environment.                                                                                                              |
-|  uninstall  |  Alias for conda removal.                                                                                                                                                    |
-|  run        |  Run an executable in a conda environment. \[Experimental]                                                                                                                   |
-|  search     | <p> Search for packages and display associated information. <br> The input is a MatchSpec, a query language for conda packages.</p><p> Refer to examples below.</p>          |
-|  update     |  Updates conda packages to the latest compatible version.                                                                                                                    |
-|  upgrade    |  Alias for conda update.                                                                                                                                                     |
-
-&#x20;
+| **Command** | **Description**                                                                                                                                                           |
+| ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| clean       | Discard unused packages and caches.                                                                                                                                       |
+| config      | <p>Modify configuration values in .condarc. This is modeled after the git config command.</p><p>Write to the user .condarc file (/home01/userID/.condarc) by default.</p> |
+| create      | Create a new conda environment from a list of specified packages.                                                                                                         |
+| help        | Display a list of available conda commands and their help strings.                                                                                                        |
+| info        | Display information on current conda installation.                                                                                                                        |
+| init        | Initialize conda for shell interaction. \[Experimental]                                                                                                                   |
+| install     | Install a list of packages into a specified conda environment.                                                                                                            |
+| list        | List linked packages in a conda environment.                                                                                                                              |
+| package     | Low-level conda package utility. (EXPERIMENTAL)                                                                                                                           |
+| remove      | Discard a list of packages from a specified conda environment.                                                                                                            |
+| uninstall   | Alias for conda removal.                                                                                                                                                  |
+| run         | Run an executable in a conda environment. \[Experimental]                                                                                                                 |
+| search      | <p>Search for packages and display associated information.<br>The input is a MatchSpec, a query language for conda packages.</p><p>Refer to examples below.</p>           |
+| update      | Updates conda packages to the latest compatible version.                                                                                                                  |
+| upgrade     | Alias for conda update.                                                                                                                                                   |
 
 ## 2. Create Conda Environment
 
@@ -64,9 +58,9 @@ For Anaconda, you can download a version suitable for each OS from the [https://
 
 \- If the "--use-local" option is adopted, the conda environment is created in the user’s home directory (**${HOME}/.conda/envs/\[environment\_name]**).
 
-&#x20;
 
-&#x20;\- Example -
+
+\- Example -
 
 ```
 $ module load python/3.7.1
@@ -95,8 +89,6 @@ $ source activate scikit-learn_0.21
 (scikit-learn_0.21) $
 ```
 
-&#x20;
-
 ## 3. Install and Check Packages in Conda Environment
 
 \- Packages can be installed using conda install \[package name].
@@ -105,9 +97,9 @@ $ source activate scikit-learn_0.21
 
 \- Packages are installed under the conda environment path created in Section 2.
 
-&#x20;
 
-&#x20;\- Example -
+
+\- Example -
 
 ```
 $ module load python/3.7.1
@@ -150,15 +142,11 @@ Executing transaction: done
 (scikit-learn_0.21) $
 ```
 
-&#x20;
-
-&#x20;
-
 ## 4. Check Conda Environment List
 
 \- You can check the conda environment list using "conda-env list" or "conda env list.”
 
-&#x20;
+
 
 \-Example-
 
@@ -172,13 +160,11 @@ scikit-learn_0.21     *  /home01/userID/.conda/envs/scikit-learn_0.21
 $
 ```
 
-&#x20;
-
 ## 5. Remove Conda Environment
 
 \- You can remove a conda environment using "conda-env remove -n \[ENVIRONMENT]" or "conda env remove -n \[ENVIRONMENT].”
 
-&#x20;
+
 
 \-Example-
 
@@ -189,19 +175,17 @@ Remove all packages in environment /home01/userID/.conda/envs/scikit-learn_0.21:
 $
 ```
 
-&#x20;****&#x20;
+
 
 ## 6. Export Conda Environment
 
 \- The conda-pack package is required before exporting a conda environment.
 
-&#x20;(Reference) [https://conda.github.io/conda-pack](https://conda.github.io/conda-pack)
+(Reference) [https://conda.github.io/conda-pack](https://conda.github.io/conda-pack)
 
 \- You can adopt the conda environment in another system by using "conda pack -n \[ENVIRONMENT] -o \[file name].”
 
-&#x20;(Example) When the external Internet is not connected, the same conda environment is used in another system
-
-&#x20;
+(Example) When the external Internet is not connected, the same conda environment is used in another system
 
 \-Example-
 
@@ -218,13 +202,11 @@ Packing environment at '/home01/userID/.conda/envs/tensorflow_1.12' to 'conda_te
 (tensorflow_1.12) $
 ```
 
-&#x20;
-
 ## 7. Import Conda Environment
 
 \- You can import the conda environment that was created using conda pack, as presented in the following example, and use it after setting up the environment.
 
-&#x20;
+
 
 \-Example-
 
@@ -237,6 +219,6 @@ $ source activate tensorflow_1.12
 $
 ```
 
-&#x20;
-
-\
+{% hint style="info" %}
+2021년 12월 2일에 마지막으로 업데이트되었습니다.
+{% endhint %}
