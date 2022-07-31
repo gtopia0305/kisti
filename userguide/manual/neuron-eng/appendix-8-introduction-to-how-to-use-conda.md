@@ -8,17 +8,11 @@ To install Anaconda, you can download and install the distribution suitable for 
 
 (Example) Windows, MacOS, Linux
 
-
-
 Currently, Anaconda provides versions based on Python 3.7 and Python 2.7, respectively.
-
-
 
 Conda is an application provided to manage package versions in Anaconda.
 
 By using conda, the dependency problem that Python users have the most difficulty with when installing packages can be easily addressed.
-
-
 
 This document introduces how to use the conda package in the KISTI system for Python users.
 
@@ -58,8 +52,6 @@ For Anaconda, you can download a version suitable for each OS from the [https://
 
 \- If the "--use-local" option is adopted, the conda environment is created in the user’s home directory (**${HOME}/.conda/envs/\[environment\_name]**).
 
-
-
 \- Example -
 
 ```
@@ -96,8 +88,6 @@ $ source activate scikit-learn_0.21
 \- Packages in the conda channel can be installed using "conda install -c \[channel name] \[package name].”
 
 \- Packages are installed under the conda environment path created in Section 2.
-
-
 
 \- Example -
 
@@ -146,8 +136,6 @@ Executing transaction: done
 
 \- You can check the conda environment list using "conda-env list" or "conda env list.”
 
-
-
 \-Example-
 
 ```
@@ -164,8 +152,6 @@ $
 
 \- You can remove a conda environment using "conda-env remove -n \[ENVIRONMENT]" or "conda env remove -n \[ENVIRONMENT].”
 
-
-
 \-Example-
 
 ```
@@ -175,7 +161,7 @@ Remove all packages in environment /home01/userID/.conda/envs/scikit-learn_0.21:
 $
 ```
 
-
+\*\*\*\*
 
 ## 6. Export Conda Environment
 
@@ -206,8 +192,6 @@ Packing environment at '/home01/userID/.conda/envs/tensorflow_1.12' to 'conda_te
 
 \- You can import the conda environment that was created using conda pack, as presented in the following example, and use it after setting up the environment.
 
-
-
 \-Example-
 
 ```
@@ -219,6 +203,4 @@ $ source activate tensorflow_1.12
 $
 ```
 
-{% hint style="info" %}
-2021년 12월 2일에 마지막으로 업데이트되었습니다.
-{% endhint %}
+\\
