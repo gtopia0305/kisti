@@ -1,8 +1,8 @@
 # \[Appendix 6] List of Common Libraries
 
 \
-A.  Common Libraries
---------------------
+A. Common Libraries
+-------------------
 
 |    Name    |           Version          |           Path           |
 | :--------: | :------------------------: | :----------------------: |
@@ -52,4 +52,6 @@ A.  Common Libraries
 |    w3lib   |            2.0.6           |     /app/common/w3lib    |
 |    zlib    |           1.2.11           |     /apps/common/zlib    |
 
-\
+{% hint style="info" %}
+2022년 2월 15일에 마지막으로 업데이트되었습니다.
+{% endhint %}
