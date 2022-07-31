@@ -94,7 +94,7 @@
 **3) 큐 (Queue) 선택 및 Jupyter 실행**
 
 \
-\- Jupyter를 실행하기 전에 **Refresh** 버튼을 클릭하여 자원 현황을 확인\
+\- Jupyter를 실행하기 전에 <mark style="color:red;">**Refresh**</mark> 버튼을 클릭하여 자원 현황을 확인\
 ◦ Alloc: 사용중인 노드 개수\
 ◦ Idle: 사용가능한 노드 개수\
 ◦ Down: 사용불가한 노드 개수\
@@ -120,6 +120,8 @@
 \- Default로 https://jupyter.ksc.re.kr/user/a1113a01/tree Jupyter Notebook 화면이 실행된다.
 
 ![](../../../.gitbook/assets/bMiS3ZoVOuWaGle.png)
+
+{% embed url="https://youtu.be/HN-Uw3NYmmA" %}
 
 ## 다. Jupyter Notebook 사용 방법
 
@@ -300,7 +302,7 @@ queue: 병렬 작업을 제출할 큐 이름 (아래 자원 현황을 보고 선
 
 ![](../../../.gitbook/assets/Aifkvuq9qpyyJxG.png)
 
-※ 홈페이지 Logout 시 실행중인 Jupyter 및 세션들은 모두 자동으로 종료된다.
+<mark style="color:red;">※ 홈페이지 Logout 시 실행중인 Jupyter 및 세션들은 모두 자동으로 종료된다.</mark>
 
 ## 바. Jupyter 환경 초기화 방법
 
@@ -312,8 +314,8 @@ queue: 병렬 작업을 제출할 큐 이름 (아래 자원 현황을 보고 선
 
 \- /sratch/\[사용자ID]/workspace/에 데이터는 보존된다.
 
-| <p>[a1113a01@glogin02 ~]$ sh /apps/jupyter/reset_env.sh</p><p>Remove all packages in environment /scratch/a1113a01/.conda/envs/notebook:</p><p>Preparing transaction: done</p><p>Verifying transaction: done</p><p>Executing transaction: / WARNING conda.core.prefix_data:_load_single_record(167): Ignoring malformed prefix record at: /scratch/acnta03/.conda/envs/notebook/conda-meta/001.pysocks-1.7.1-py37hc8dfbb8_1.json</p><p>done</p><p>One more step left, please execute these commands !!!!!!!</p><p>1. conda activate notebook</p><p>2. sh /apps/jupyter/kisti_conda_plugins.sh</p><p>[a1113a01@glogin02 ~]$ conda activate notebook</p><p>(notebook) [a1113a01@glogin02 ~]$ sh /apps/jupyter/kisti_conda_plugins.sh</p> |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <p>[a1113a01@glogin02 ~]$ sh /apps/jupyter/reset_env.sh</p><p>Remove all packages in environment /scratch/a1113a01/.conda/envs/notebook:</p><p>Preparing transaction: done</p><p>Verifying transaction: done</p><p>Executing transaction: / WARNING conda.core.prefix_data:_load_single_record(167): Ignoring malformed prefix record at: /scratch/acnta03/.conda/envs/notebook/conda-meta/001.pysocks-1.7.1-py37hc8dfbb8_1.json</p><p>done</p><p></p><p>One more step left, please execute these commands !!!!!!!</p><p>1. conda activate notebook</p><p>2. sh /apps/jupyter/kisti_conda_plugins.sh</p><p></p><p>[a1113a01@glogin02 ~]$ conda activate notebook</p><p>(notebook) [a1113a01@glogin02 ~]$ sh /apps/jupyter/kisti_conda_plugins.sh</p> |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 
 \- https://jupyter.ksc.re.kr 홈페이지로 접속하여 jupyter 실행하여 잘 동작하는지 확인한다.
 
@@ -357,4 +359,6 @@ queue: 병렬 작업을 제출할 큐 이름 (아래 자원 현황을 보고 선
 
 {% embed url="https://youtu.be/bMvwXXJvwq4" %}
 
+{% hint style="info" %}
 2022년 4월 15일에 마지막으로 업데이트되었습니다.
+{% endhint %}
