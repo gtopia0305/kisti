@@ -2,27 +2,12 @@
 
 ## A. Basic Settings for the Neuron Lustre Striping
 
-&#x20;
-
+\
 The Neuron Lustre File system supports file striping. Therefore, a single file was distributed and stored in multiple object storage targets (OST), i.e., several physically distributed disks. Consequently, it was possible to reduce bottlenecks and improve input/output (I/O) performance. In particular, the progressive file layout (PFL), which is supported by Lustre 2.10, is applied to the /scratch file system. This function automatically applies the number of stripe-counts according to the file size, without the separate striping setting of the user, thereby improving the I/O performance. The striping settings of the Neuron file system are presented as follows.
 
-&#x20;
-
-|  ****                                                         | **stripe-count** | **stripe-size** |      |
-| ------------------------------------------------------------- | ---------------- | --------------- | ---- |
-| **/home01**                                                   | 1                | 1 MB            |      |
-| **/apps**                                                     | 1                | 1 MB            |      |
-| <p><strong>/scratch</strong></p><p><strong>(PFL)</strong></p> | file < 4 M       | 1               | 1 MB |
-| 4MB < file < 512 MB                                           | 2                | 1 MB            |      |
-| 512 MB < file < 1 G                                           | 4                | 1 MB            |      |
-| 1 G < file < 10 G                                             | 8                | 1 MB            |      |
-| 10 G< file < 100 G                                            | 16               | 1 MB            |      |
-| file > 100 G                                                  | 32               | 1 MB            |      |
+![](../../../.gitbook/assets/basic\_settings\_for\_the\_neuron\_lustre\_striping.png)
 
 &#x20;****&#x20;
-
-\
-
 
 ## B. Lustre Striping Concept
 
@@ -31,15 +16,9 @@ The Neuron Lustre File system supports file striping. Therefore, a single file w
 Stripe에 의해 분할: Partitioned by the stripe
 분할된 파일은 RAID에 의해 한번 더 분할되어 저장: Partitioned files further split by the RAID and stored)](../../../.gitbook/assets/ByuiN89DGA7hjDU.png)
 
-&#x20;
-
 Lustre partitions data for each OST to maximize the I/O performance of large files. The maximum number of partitions for which parallelization is valid is equal to the OST number. Figure 1 shows how a single file can be parallelly stored in the OST using the Lustre striping function.
 
-&#x20;
-
 ## C. Stripe Settings and Verification
-
-&#x20;
 
 ```
 $ lfs setstripe [--stripe-size|-s size] [--stripe-count|-c count] filename|dirname
@@ -63,24 +42,20 @@ $ lfs setstripe [--stripe-size|-s size] [--stripe-count|-c count] filename|dirna
 
 ∙All possible OSTs are used if the stripe\_count is -1.
 
-&#x20;
-
 ```
 $ lfs getstripe filename|dirname
 ```
 
 \- The command checks the values of the striping settings that have been applied to a file or directory.
 
-&#x20;
-
 ## D. Recommended Guidelines and Tips
-
-&#x20;
 
 ◦ If setstripe is specified in the job script for the directory where the result file of the model will be saved, all the subdirectories and files that are subsequently created inherit this setting value.
 
 ◦ When --stripe-count is set to 4 for files larger than or equal to 1 GB, performance is enhanced in most cases. If a larger value is adopted, it needs to be tested.
 
-◦  --stripe-size is only valid when the file size is several TB or larger; hence, it is acceptable to use the default value in most cases.
+◦ --stripe-size is only valid when the file size is several TB or larger; hence, it is acceptable to use the default value in most cases.
 
-&#x20;
+{% hint style="info" %}
+2021년 12월 14일에 마지막으로 업데이트되었습니다.
+{% endhint %}
