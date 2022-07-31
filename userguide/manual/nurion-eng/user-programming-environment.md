@@ -20,14 +20,9 @@
 
 ㅇ Commercial software information
 
-| **Field**                         | **Software**             | **Version**                                                             | **License**                                                                                | **Directory location**   |   |
-| --------------------------------- | ------------------------ | ----------------------------------------------------------------------- | ------------------------------------------------------------------------------------------ | ------------------------ | - |
-| <p>Structural</p><p>mechanics</p> | Abaqus                   | <p>6.14-6<br>2016<br>2017<br>2018</p><p>2019</p>                        | 151 tokens                                                                                 | /apps/commercial/abaqus  |   |
-| <p>MSC ONE<br>(Nastran)</p>       | <p>20182</p><p>20191</p> | 60 tokens                                                               | <p>20182 : /apps/commercial/MSC/Nastran</p><p>20191 : /apps/commercial/MSC/MSC_Nastran</p> |                          |   |
-| Thermo-hydromechanics             | <p>ANSYS<br>CFX</p>      | <p>V145<br>V170<br>V181<br>V191</p><p>V195</p><p>V201</p>               | <p>20 solvers<br>(HPC 512)</p>                                                             | /apps/commercial/ANSYS   |   |
-| <p>ANSYS<br>Fluent</p>            | /apps/commercial/ANSYS   |                                                                         |                                                                                            |                          |   |
-| <p>Chemistry/</p><p>Biology</p>   | Gaussian                 | <p>g16-a03<br>g16-a03.linda</p><p>g16-b01.linda</p><p>g16-c01.linda</p> | <p>No limit on no. of jobs<br>No limit on no. of CPUs<br>within a single node</p>          | /apps/commercial/G16/g16 |   |
-|                                   |                          |                                                                         |                                                                                            |                          |   |
+
+
+![](../../../.gitbook/assets/commercial\_software\_information.png)
 
 ※ For Gaussian, obtain permission for use from the helpdesk account manager ([account@ksc.re.kr](mailto:account@ksc.re.kr)) first
 
@@ -46,7 +41,9 @@
 | Module name                   | craype-mic-knl | craype-x86-skylake |
 
 ```
-$ module load craype-mic-knl or $ module load craype-x86-skylake
+$ module load craype-mic-knl
+or
+$ module load craype-x86-skylake
 ```
 
 (2) Basic commands related to the module
@@ -56,7 +53,9 @@ $ module load craype-mic-knl or $ module load craype-x86-skylake
 A list of modules that are available such as compiler and library can be checked.
 
 ```
-$ module avail or  $ module av
+$ module avail
+or
+$ module av
 ```
 
 ▶ Add a module to be used
@@ -66,7 +65,9 @@ Modules to be used such as compiler and library can be added.
 All modules to be used can be added at once.
 
 ```
-$ module load [module name] [module name] [module name] … or $ module add [module name] [module name] [module name] …
+$ module load [module name] [module name] [module name] … 
+or
+$ module add [module name] [module name] [module name] …
 ```
 
 ▶ Delete modules being used
@@ -82,7 +83,9 @@ $ module unload [module name] [module name] [module name] ... or $ module rm [mo
 A list of currently set modules can be checked.
 
 ```
-$ module list or $ module li
+$ module list 
+or 
+$ module li
 ```
 
 ▶ Purge all modules being used
@@ -143,7 +146,11 @@ $ module load intel/18.0.3
 The following is an example of creating an execution file test.exe by compiling a test sample file with the Intel compiler in the **KNL computing node**.
 
 ```
-$ module load craype-mic-knl intel/18.0.3 $ icc –o test.exe –O3 –fPIC –xMIC-AVX512 test.c or $ ifort -o test.exe -O3 -fPIC -xMIC-AVX512 test.f90 $ ./test.exe
+$ module load craype-mic-knl intel/18.0.3
+ $ icc –o test.exe –O3 –fPIC –xMIC-AVX512 test.c
+ or
+ $ ifort -o test.exe -O3 -fPIC -xMIC-AVX512 test.f90
+ $ ./test.exe
 ```
 
 ※ Copy the test sample file for job submission in /apps/shell/home/job\_examples
@@ -196,7 +203,11 @@ $ module load gcc/7.2.0
 The following is an example of creating an execution file test.exe by compiling a test sample file with the GNU compiler in the **KNL computing node**.
 
 ```
-$ module load craype-mic-knl gcc/7.2.0 $ gcc –o test.exe -O3 -fPIC -march=knl test.c or $ gfortran –o test.exe -O3 -fPIC -march=knl test.f90 $ ./test.exe
+$ module load craype-mic-knl gcc/7.2.0
+$ gcc –o test.exe -O3 -fPIC -march=knl test.c
+or
+$ gfortran –o test.exe -O3 -fPIC -march=knl test.f90
+$ ./test.exe
 ```
 
 ※ Copy the test sample file for job submission in /apps/shell/home/job\_examples
@@ -253,7 +264,11 @@ $ module load pgi/18.10
 The following is an example of creating an execution file test.exe by compiling a test sample file with the PGI compiler in the **KNL computing node**.
 
 ```
-$ module load craype-mic-knl pgi/18.10 $ pgcc –o test.exe -fast –tp=knl test.c or $ pgfortran –o test.exe -fast –tp=knl test.f90 $ ./test.exe
+$ module load craype-mic-knl pgi/18.10
+$ pgcc –o test.exe -fast –tp=knl test.c
+or
+$ pgfortran –o test.exe -fast –tp=knl test.f90
+$ ./test.exe
 ```
 
 ※ Copy the test sample file for job submission in /apps/shell/home/job\_examples
@@ -302,7 +317,11 @@ $ module load cce/8.6.3
 The following is an example of creating an execution file test.exe by compiling a test sample file with the PGI compiler in the **KNL computing node**.
 
 ```
-$ module load craype-mic-knl cce/8.6.3 PrgEnv-cray/1.0.2 $ cc –o test.exe –hcpu=mic-knl test.c or $ ftn –o test.exe –hcpu=mic-knl test.f90 $ ./test.exe
+$ module load craype-mic-knl cce/8.6.3 PrgEnv-cray/1.0.2
+ $ cc –o test.exe –hcpu=mic-knl test.c
+ or
+ $ ftn –o test.exe –hcpu=mic-knl test.f90
+ $ ./test.exe
 ```
 
 ※ Copy the test sample file for job submission in /apps/shell/home/job\_examples
@@ -337,7 +356,11 @@ OpenMP is a technique simply developed to enable multi-thread utilization only b
 The following is an example of creating an execution file test\_omp.exe by compiling a test\_omp sample file that uses OpenMP with the Intel compiler in the **KNL computing node**.
 
 ```
-$ module load craype-mic-knlintel/18.0.3 $ icc -o test_omp.exe -qopenmp -O3 -fPIC –xMIC-AVX512 test_omp.c or $ ifort -o test_omp.exe -qopenmp -O3 -fPIC –xMIC-AVX512 test_omp.f90 $ ./test_omp.exe
+$ module load craype-mic-knlintel/18.0.3
+$ icc -o test_omp.exe -qopenmp -O3 -fPIC –xMIC-AVX512 test_omp.c
+or
+$ ifort -o test_omp.exe -qopenmp -O3 -fPIC –xMIC-AVX512 test_omp.f90
+$ ./test_omp.exe
 ```
 
 ② Example of OpenMP program compilation (GNU compiler)
@@ -345,7 +368,11 @@ $ module load craype-mic-knlintel/18.0.3 $ icc -o test_omp.exe -qopenmp -O3 -fPI
 The following is an example of creating an execution file test\_omp.exe by compiling a test\_omp sample file that uses OpenMP with the GNU compiler in the **KNL computing node**.
 
 ```
-$ module load craype-mic-knl gcc/7.2.0 $ gcc -o test_omp.exe -fopenmp -O3 -fPIC -march=knl test_omp.c or $ gfortran -o test_omp.exe -fopenmp -O3 -fPIC -march=knl test_omp.f90 $ ./test_omp.exe
+$ module load craype-mic-knl gcc/7.2.0
+$ gcc -o test_omp.exe -fopenmp -O3 -fPIC -march=knl test_omp.c
+or
+$ gfortran -o test_omp.exe -fopenmp -O3 -fPIC -march=knl test_omp.f90
+$ ./test_omp.exe
 ```
 
 ③ Example of OpenMP program compilation (PGI compiler)
@@ -353,7 +380,11 @@ $ module load craype-mic-knl gcc/7.2.0 $ gcc -o test_omp.exe -fopenmp -O3 -fPIC 
 The following is an example of creating an execution file test\_omp.exe by compiling a test\_omp sample file that uses OpenMP with the PGI compiler in the **KNL computing node**.
 
 ```
-$ module load craype-mic-knl pgi/18.10 $ pgcc –o test_omp.exe -mp -fast test_omp.c or $ pgfortran –o test_omp.exe -mp -fast test_omp.f90 $ ./test_omp.exe
+$ module load craype-mic-knl pgi/18.10
+$ pgcc –o test_omp.exe -mp -fast test_omp.c
+or
+$ pgfortran –o test_omp.exe -mp -fast test_omp.f90
+$ ./test_omp.exe
 ```
 
 ④ Example of OpenMP program compilation (Cray compiler)
@@ -361,7 +392,11 @@ $ module load craype-mic-knl pgi/18.10 $ pgcc –o test_omp.exe -mp -fast test_o
 The following is an example of creating an execution file test\_omp.exe by compiling a test\_omp sample file that uses OpenMP with the Cray compiler in the **KNL computing node**.
 
 ```
-$ module load craype-mic-knl cce/8.6.3 PrgEnv-cray/1.0.2 $ cc -o test_omp.exe -homp -hcpu=mic-knl test_omp.c or $ ftn -o test_omp.exe -homp -hcpu=mic-knl test_omp.f90 $ ./test_omp.exe
+$ module load craype-mic-knl cce/8.6.3 PrgEnv-cray/1.0.2
+$ cc -o test_omp.exe -homp -hcpu=mic-knl test_omp.c
+or
+$ ftn -o test_omp.exe -homp -hcpu=mic-knl test_omp.f90
+$ ./test_omp.exe
 ```
 
 (2) MPI compiler
@@ -386,7 +421,11 @@ Even when compiled through mpicc, the options corresponding to the original comp
 The following is an example of creating an execution file test\_mpi.exe by compiling a test\_mpi sample file that uses MPI with the Intel compiler in the **KNL computing node**.
 
 ```
-$ module load craype-mic-knl intel/18.0.3 impi/18.0.3 $ mpiicc -o test_mpi.exe -O3 -fPIC -xMIC-AVX512 test_mpi.c or $ mpiifort -o test_mpi.exe -O3 -fPIC -xMIC-AVX512 test_mpi.f90 $ mpirun -np 2 ./test_mpi.exe
+$ module load craype-mic-knl intel/18.0.3 impi/18.0.3
+$ mpiicc -o test_mpi.exe -O3 -fPIC -xMIC-AVX512 test_mpi.c
+or
+$ mpiifort -o test_mpi.exe -O3 -fPIC -xMIC-AVX512 test_mpi.f90
+$ mpirun -np 2 ./test_mpi.exe
 ```
 
 **②** Example of MPI program compilation (GNU compiler)
@@ -394,7 +433,11 @@ $ module load craype-mic-knl intel/18.0.3 impi/18.0.3 $ mpiicc -o test_mpi.exe -
 The following is an example of creating an execution file test\_mpi.exe by compiling a test\_mpi sample file that uses MPI with the GNU compiler in the **KNL computing node**.
 
 ```
-$ module load craype-mic-knl gcc/7.2.0 openmpi/3.1.0 $ mpicc -o test_mpi.exe -O3 -fPIC -march=knl test_mpi.c or $ mpif90 -o test_mpi.exe -O3 -fPIC -march=knl test_mpi.f90 $ mpirun -np 2 ./test_mpi.exe
+$ module load craype-mic-knl gcc/7.2.0 openmpi/3.1.0
+$ mpicc -o test_mpi.exe -O3 -fPIC -march=knl test_mpi.c
+or
+$ mpif90 -o test_mpi.exe -O3 -fPIC -march=knl test_mpi.f90
+$ mpirun -np 2 ./test_mpi.exe
 ```
 
 **③** Example of MPI program compilation (PGI compiler)
@@ -402,7 +445,11 @@ $ module load craype-mic-knl gcc/7.2.0 openmpi/3.1.0 $ mpicc -o test_mpi.exe -O3
 The following is an example of creating an execution file test\_mpi.exe by compiling a test\_mpi sample file that uses MPI with the PGI compiler in the **KNL computing node**.
 
 ```
-$ module load craype-mic-knl pgi/18.10 openmpi/3.1.0 $ mpicc -o test_mpi.exe -O3 -fPIC -tp=knl test_mpi.c or $ mpifort -o test_mpi.exe -O3 -fPIC -tp=knl test_mpi.f90 $ mpirun -np 2 ./test_mpi.exe
+$ module load craype-mic-knl pgi/18.10 openmpi/3.1.0
+$ mpicc -o test_mpi.exe -O3 -fPIC -tp=knl test_mpi.c
+or
+$ mpifort -o test_mpi.exe -O3 -fPIC -tp=knl test_mpi.f90
+$ mpirun -np 2 ./test_mpi.exe
 ```
 
 **④** Example of MPI program compilation (Cray compiler)
@@ -410,7 +457,11 @@ $ module load craype-mic-knl pgi/18.10 openmpi/3.1.0 $ mpicc -o test_mpi.exe -O3
 The following is an example of creating an execution file test\_mpi.exe by compiling a test\_mpi sample file that uses MPI with the Cray compiler in the **KNL computing node**.
 
 ```
-$ module load craype-mic-knl cce/8.6.3 PrgEnv-cray/1.0.2 $ cc -o test_mpi.exe -hcpu=mic-knl test_mpi.c or $ ftn -o test_mpi.exe -hcpu=mic-knl test_mpi.f90 $ mpirun -np 2 ./test_mpi.exe
+$ module load craype-mic-knl cce/8.6.3 PrgEnv-cray/1.0.2
+$ cc -o test_mpi.exe -hcpu=mic-knl test_mpi.c
+or
+$ ftn -o test_mpi.exe -hcpu=mic-knl test_mpi.f90
+$ mpirun -np 2 ./test_mpi.exe
 ```
 
 ## C. Debugger and Profiler
@@ -422,7 +473,9 @@ The 5th supercomputer Nurion beta service provides DDT for program debugging by 
 \- Select the architecture, compiler, and MPI to be used for using DDT in the 5th supercomputer, and then select a module for using DDT.
 
 ```
-$ module load craype-mic-knl or craype-x86-skylake$ module load intel/17.0.5 impi/17.0.5$ module load forge/18.1.2
+$ module load craype-mic-knl or craype-x86-skylake
+$ module load intel/17.0.5 impi/17.0.5
+$ module load forge/18.1.2
 ```
 
 \- This example was tested in the identical environment as above.
@@ -455,7 +508,9 @@ $ ddt &
 Select the architecture, compiler, and MPI for using a profiler vtune in this system, and then select vtune to use the profiler.
 
 ```
-$ module load craype-mic-knl or craype-x86-skylake $ module load intel/17.0.5 impi/17.0.5 $ module load vtune/17.0.5
+$ module load craype-mic-knl or craype-x86-skylake
+$ module load intel/17.0.5 impi/17.0.5
+$ module load vtune/17.0.5
 ```
 
 This example was tested in an identical environment as above.
@@ -468,13 +523,30 @@ $ Executing a program for analyzing the amplxe-cl option
 ```
 
 ```
-$ amplxe-cl -collect hotspots /home01/$USER/test/test.x  amplxe: Using result path '/home01/$USER/test/r000hs' amplxe: Executing actions 75% Generating a report Function CPUTime CPUTime:EffectiveTime CPUTime:EffectiveTime:Idle CPUTime:EffectiveTime:Poor CPUTime:EffectiveTime:Ok CPUTime:EffectiveTime:Ideal CPUTime:EffectiveTime:Over CPUTime:SpinTime CPUTime:OverheadTime Module Function(full) SourceFile StartAddress   multiply1 21.568s 0.176s 21.392s 0s 0s 0s 0s martix.mic multiply1 multiply.c 0x401590 init_arr 0.020s 0s 0.020s 0s 0s 0s 0s matrix.mic init_arr matrix.c 0x402384 amplx: Executing actions 100% done
+$ amplxe-cl -collect hotspots /home01/$USER/test/test.x
+ 
+ amplxe: Using result path '/home01/$USER/test/r000hs'
+ amplxe: Executing actions 75% Generating a report
+ Function CPUTime CPUTime:EffectiveTime CPUTime:EffectiveTime:Idle
+ CPUTime:EffectiveTime:Poor CPUTime:EffectiveTime:Ok CPUTime:EffectiveTime:Ideal
+ CPUTime:EffectiveTime:Over CPUTime:SpinTime CPUTime:OverheadTime Module Function(full)
+ SourceFile StartAddress
+  
+ multiply1 21.568s 0.176s 21.392s 0s 0s 0s 0s martix.mic multiply1 multiply.c
+ 0x401590
+ init_arr 0.020s 0s 0.020s 0s 0s 0s 0s matrix.mic init_arr matrix.c
+ 0x402384
+ amplx: Executing actions 100% done
 ```
 
 \- If a compiled execution file is prepared and executed according to the command, the r000hs directory is generated. After confirming that the directory has been generated, the command for generating a report is executed to output the result shown below.
 
 ```
-$ amplxe-cl -report hotspots /home01/$USER/debugger/test/r000hs amplxe: Using result path `/home01/$USER/debugger/test/r000hs' amplxe: Executing actions 75 % Generating a report Function CPU Time CPU Time:Effective Time CPU Time:Spin Time CPU Time:Overhead Time Module Function (Full) Source File Start Address -------- -------- ----------------------- ------------------ ---------------------- ------ --------------- ----------- ------------- amplxe: Executing actions 100 % done
+$ amplxe-cl -report hotspots /home01/$USER/debugger/test/r000hs
+ amplxe: Using result path `/home01/$USER/debugger/test/r000hs'
+ amplxe: Executing actions 75 % Generating a report Function CPU Time CPU Time:Effective Time CPU Time:Spin Time CPU Time:Overhead Time Module Function (Full) Source File Start Address
+ -------- -------- ----------------------- ------------------ ---------------------- ------ --------------- ----------- -------------
+ amplxe: Executing actions 100 % done
 ```
 
 ㅇ How to check the result of using GUI\
@@ -504,7 +576,9 @@ $ amplxe-gui
 The environment including the architecture is set as below for using CaryPat, which is a profiler, and the example was initiated.
 
 ```
-$ module load craype-mic-knl or craype-x86-skylake $ module load perftools-base/6.5.2 perftools/6.5.2 $ module load PrgEnv-cray/1.0.2 cce/8.6.3
+$ module load craype-mic-knl or craype-x86-skylake
+$ module load perftools-base/6.5.2 perftools/6.5.2
+$ module load PrgEnv-cray/1.0.2 cce/8.6.3
 ```
 
 \- First, test.c file to be used in the example is compiled.
@@ -575,4 +649,6 @@ $ app2 a.out+apa+378250-3t
 
 ![](<../../../.gitbook/assets/09wS30q3jMt4TaN (1).png>)
 
+{% hint style="info" %}
 2022년 2월 15일에 마지막으로 업데이트되었습니다.
+{% endhint %}
