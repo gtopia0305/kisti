@@ -8,3 +8,6 @@ If you encounter any problems or have questions while using the system, please s
 |                                    Educational inquiries                                   | [https://kacademy.kisti.re.kr/](https://kacademy.kisti.re.kr/) |
 |                               Information on using the system                              |       [https://blog.ksc.re.kr/](https://blog.ksc.re.kr/)       |
 
+{% hint style="info" %}
+2021년 12월 2일에 마지막으로 업데이트되었습니다.
+{% endhint %}

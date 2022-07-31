@@ -1,6 +1,6 @@
 # \[Appendix 1] Main Keywords for Job Scripts
 
-The method of resource allocation needs to be specified for a desired job by using the appropriate keywords in the job script. The main keywords are presented as follows; users can create a job script file using these keywords. ****&#x20;
+&#x20;**** The method of resource allocation needs to be specified for a desired job by using the appropriate keywords in the job script. The main keywords are presented as follows; users can create a job script file using these keywords. ****&#x20;
 
 &#x20;
 
@@ -90,4 +90,6 @@ The method of resource allocation needs to be specified for a desired job by usi
 
 ※ Detailed manual: Refer to [http://slurm.schedmd.com/](http://slurm.schedmd.com/)&#x20;
 
-&#x20;
+{% hint style="info" %}
+2021년 11월 25일에 마지막으로 업데이트되었습니다.
+{% endhint %}
