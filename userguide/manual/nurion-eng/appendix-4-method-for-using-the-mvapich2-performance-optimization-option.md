@@ -4,8 +4,6 @@ You can use the environment variables within the job script to set the inter-pro
 
 The <mark style="color:red;">**MV2\_INTRA**</mark> environment variable is used for the intra-node MPI process communication, and the <mark style="color:blue;">**MV2\_INT**</mark>**ER** environment variable is used for the inter-node MPI process communication. For MPI\_Alltoall, the same algorithm is applied to both the INTRA and INTER cases. The same can be applied to routines for transmitting data of different sizes (example: MPI\_Alltoallv) or non-blocking-based routines (example: MPI\_Ibcast), and the setting method is shown below.
 
-&#x20;
-
 ■ Main environment variables for the MVAPICH2 library collective communication
 
 | MPI communication |                                                                          Environment variable                                                                         | Setting range |
@@ -22,4 +20,6 @@ The <mark style="color:red;">**MV2\_INTRA**</mark> environment variable is used 
 
 ※ Refer to [http://mvapich.cse.ohio-state.edu/userguide/](http://mvapich.cse.ohio-state.edu/userguide/) for a detailed description of each environment variable.
 
-&#x20;
+{% hint style="info" %}
+2022년 2월 15일에 마지막으로 업데이트되었습니다.
+{% endhint %}
