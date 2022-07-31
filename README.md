@@ -5,10 +5,30 @@ coverY: 0
 
 # 국가 슈퍼 컴퓨팅 센터
 
-{% content-ref url="broken-reference" %}
-[Broken link](broken-reference)
+### 지침
+
+{% content-ref url="userguide/manual/" %}
+[manual](userguide/manual/)
 {% endcontent-ref %}
 
-{% content-ref url="broken-reference" %}
-[Broken link](broken-reference)
+{% content-ref url="userguide/commercial-software/" %}
+[commercial-software](userguide/commercial-software/)
+{% endcontent-ref %}
+
+### 기술블로
+
+{% content-ref url="blog/userguide/" %}
+[userguide](blog/userguide/)
+{% endcontent-ref %}
+
+{% content-ref url="blog/sw-install-doc/" %}
+[sw-install-doc](blog/sw-install-doc/)
+{% endcontent-ref %}
+
+{% content-ref url="blog/usage-tip/" %}
+[usage-tip](blog/usage-tip/)
+{% endcontent-ref %}
+
+{% content-ref url="blog/technic-doc/" %}
+[technic-doc](blog/technic-doc/)
 {% endcontent-ref %}
