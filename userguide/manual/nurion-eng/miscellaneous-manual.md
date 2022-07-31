@@ -1,7 +1,3 @@
----
-description: Miscellaneous Manual
----
-
 # Miscellaneous Manual
 
 ## A. Desktop Virtualization (VDI)

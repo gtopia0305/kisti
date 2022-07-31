@@ -1,7 +1,3 @@
----
-description: '[Appendix 1] Main Keywords for Job Scripts'
----
-
 # \[Appendix 1] Main Keywords for Job Scripts
 
 You need to specify how to allocate resources for the desired job by using appropriate keywords in the job script. The main keywords are shown below, and users can create a job script file using only a few of these keywords.
@@ -45,3 +41,7 @@ You need to specify how to allocate resources for the desired job by using appro
 | -z              |                                             | Suppress job identifier                               |
 
 ※ Manual with details: Refer to [https://pbsworks.com/pdfs/PBSUserGuide14.2.pdf](https://pbsworks.com/pdfs/PBSUserGuide14.2.pdf)
+
+{% hint style="info" %}
+2022년 2월 15일에 마지막으로 업데이트되었습니다.
+{% endhint %}
