@@ -1,3 +1,7 @@
+---
+description: 슈퍼컴퓨팅인프라센터 2020. 5. 28. 09:15
+---
+
 # 뉴론 Jupyter 사용자 지침서
 
 1\. Jupyter 개요
@@ -12,6 +16,8 @@
 
 ※ Neuron 기반 JupyterHub는 5호기 Bright LDAP, OTP 인증기능을 추가하였고 Slurm 배치 스케줄러와 연동하여 자원을 할당하여 Jupyter 실행하고 현재 default로 Jupyter Notebook을 제공하고 추가로 JupyterLab 제공한다.
 
+
+
 나. Jupyter Notebook
 
 ○ Jupyter Notebook은 웹 기반의 오픈소스 어플리케이션으로 프로그래머들에게 문서 생성, 코드 생성 및 실행, 수학적 라이브러리를 사용한 데이터 시각화, 통계 모델링, 머신러닝/딥러닝 프로그래밍에 사용한다.
@@ -24,6 +30,8 @@
 
 ![](../../../.gitbook/assets/DuGAciy4ZdnjgPQ.png)
 
+
+
 다. JupyterLab
 
 ○ JupyterLab은 Jupyter Notebook 인터페이스에 사용자 편의를 위한 기능들을 추가하여 확장 가능한 모듈로 구성된다.
@@ -31,6 +39,8 @@
 ○ Jupyter Notebook과 달리 하나의 작업 화면에 Tabs 와 Splitters를 사용하여 여러 개의 도큐먼트 또는 다른 기능을 제공한다.
 
 ![](../../../.gitbook/assets/P1gtEKP1fQV1Nsq.png)
+
+
 
 라. IPyParallel
 
@@ -44,65 +54,59 @@
 
 ![](../../../.gitbook/assets/FouxpybuajnMgzY.png)
 
-※ 최초 한번만 실행하며 환경설정이 완료되면 즉시 웹 페이지에 접속하여 (나. JupyterHub 웹 페이지 접속 참고) JupyterLab/Notebook을 사용 가능하다.
+<mark style="color:red;">※ 최초 한번만 실행하며 환경설정이 완료되면 즉시 웹 페이지에 접속하여 (나. JupyterHub 웹 페이지 접속 참고) JupyterLab/Notebook을 사용 가능하다.</mark>
+
+
 
 가. 스크립트 실행
 
-\- 터미널로 로그인 노드 (neuron.ksc.re.kr) 에 접속하여 다음 스크립트 /apps/jupyter/kisti\_conda\_jupyter.sh 를 실행한다.
+\- 터미널로 로그인 노드 (<mark style="color:red;">neuron.ksc.re.kr</mark>) 에 접속하여 다음 스크립트 /apps/jupyter/kisti\_conda\_jupyter.sh 를 실행한다.
 
-\- 스크립트를 실행하면 /scratch/\[사용자ID]/.conda/envs 디렉터리에 notebook Conda 환경이 만들어지고 jupyterhub, JupyterLab, Notebook, Tensorflow, ipyparallel 패키지들이 자동으로 설치되고 멀티 GPU 환경에 필요한 cudatoolkit=10.0 과 cudnn이 설치된다. (약 8분 소요)
+\- 스크립트를 실행하면 <mark style="color:red;">/scratch/\[사용자ID]/.conda/envs</mark> 디렉터리에 notebook Conda 환경이 만들어지고 jupyterhub, JupyterLab, Notebook, Tensorflow, ipyparallel 패키지들이 자동으로 설치되고 멀티 GPU 환경에 필요한 cudatoolkit=10.0 과 cudnn이 설치된다. (약 8분 소요)
+
+****
 
 **※ 이 파일은 한번만 실행하면 되고 그 다음부터는 바로 웹 페이지 접속하여 사용 가능하다.**
 
 ※ 실행파일은 공유 디렉터리에서 /apps/jupyter/kisti\_conda\_jupyter.sh 바로 실행 가능하다.
 
-※ 아래 테스트는 사용자ID a1113a01 로 진행하였다.
+※ 아래 테스트는 사용자ID <mark style="color:red;">a1113a01</mark> 로 진행하였다.
 
-|
+| <p>[a1113a01@glogin02 ~]$ <mark style="color:red;">sh /apps/jupyter/kisti_conda_jupyter.sh</mark></p><p>... ...</p><p>modified /home01/a1113a01/.bashrc</p><p>...prepare conda environment for jupyter user.</p><p>Exporting CONDA ENVS and PKGS PATH to bash File.</p><p>Downloading and Extracting Packages ############################################################## | 100% ############################################################## | 100% ############################################################## | 100% ############################################################## | 100% Preparing transaction: done</p><p>Verifying transaction: done</p><p>Executing transaction: / WARNING conda.core.prefix_data:_load_single_record(167): Ignoring malformed prefix record at:</p><p>/scratch/a1113a01/.conda/envs/notebook/conda-meta/001.pycurl-7.43.0.5-py37h16ce93b_0.json</p><p>done</p> |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 
-\[a1113a01@glogin02 \~]$ sh /apps/jupyter/kisti\_conda\_jupyter.sh\
-... ...\
-modified /home01/a1113a01/.bashrc\
-...prepare conda environment for jupyter user.\
-Exporting CONDA ENVS and PKGS PATH to bash File.\
-Downloading and Extracting Packages\
-\#################################################################### | 100%\
-\#################################################################### | 100%\
-\#################################################################### | 100%\
-\#################################################################### | 100%\
-Preparing transaction: done\
-Verifying transaction: done\
-Executing transaction: / WARNING conda.core.prefix\_data:\_load\_single\_record(167):\
-Ignoring malformed prefix record at:\
-/scratch/a1113a01/.conda/envs/notebook/conda-meta/001.pycurl-7.43.0.5-py37h16ce93b\_0.json\
-done
 
-\| | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 
 \- shell을 다시 시작하고 base 환경 자동 활성화 기능을 꺼야 한다. (한번만 실행)
 
-| <p>[a1113a01@glogin01 ~]$ source ~/.bashrc<br>(base) [a1113a01@glogin01 ~]$ conda config --set auto_activate_base false<br>(base) [a1113a01@glogin01 ~]$ conda deactivate</p> |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <p>[a1113a01@glogin01 ~]$ <mark style="color:red;">source ~/.bashrc</mark><br>(base) [a1113a01@glogin01 ~]$ <mark style="color:red;">conda config --set auto_activate_base false</mark><br>(base) [a1113a01@glogin01 ~]$ <mark style="color:red;">conda deactivate</mark></p> |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 
 ※ base 환경 자동 활성화 기능을 false 로 설정함으로 다음에 base 환경으로 자동 활성화 되는 것을 방지한다. （만약 base 환경으로 활성화 되지 않았으면 source \~/.bashrc 이후 바로 conda activate notebook 명령어를 실행)
 
+
+
 \- conda notebook 환경을 다음 명령어로 활성화 한다.
 
-| <p>[a1113a01@glogin01 ~]$ conda activate notebook<br>(notebook) [a1113a01@glogin01 ~]$</p> |
-| ------------------------------------------------------------------------------------------ |
+| <p>[a1113a01@glogin01 ~]$ <mark style="color:red;">conda activate notebook</mark><br>(notebook) [a1113a01@glogin01 ~]$</p> |
+| -------------------------------------------------------------------------------------------------------------------------- |
+
+
 
 \- Tensorboard와 IPyParallel 사용을 원하는 사용자는 웹 페이지에 접속하기 전에 Jupyter notebook/JupyterLab 용 tensorboard와 ipyparallel 확장 패키지를 설치해야 한다. KISTI에서 제공하는 자동 설치 스크립트 /apps/jupyter/kisti\_conda\_plugins.sh 를 실행하여 설치치할 수 있다. (약 5분 소요)
 
 ※ 주의: 반드시 notebook 사용자 환경에서 실행해야 한다.
 
-| <p>(notebook) 757% [a1113a01@glogin01 ~]$ sh /apps/jupyter/kisti_conda_plugins.sh<br>Installing /scratch/a1113a01/.conda/envs/notebook/lib/python3.7/site-packages/ipyparallel/nbextension/static -> ipyparallel<br>Up to date: /scratch/a1113a01/.conda/envs/notebook/share/jupyter/nbextensions/ipyparallel/clusterlist.css<br>Up to date: /scratch/a1113a01/.conda/envs/notebook/share/jupyter/nbextensions/ipyparallel/clusterlist.js<br>Up to date: /scratch/a1113a01/.conda/envs/notebook/share/jupyter/nbextensions/ipyparallel/main.js<br>- Validating: OK<br><br>To initialize this nbextension in the browser every time the notebook (or other app) loads:<br><br><br>jupyter nbextension enable ipyparallel --py --sys-prefix<br><br><br>Enabling tree extension ipyparallel/main...<br>- Validating: OK<br>Enabling: ipyparallel.nbextension<br>- Writing config: /scratch/a1113a01/.conda/envs/notebook/etc/jupyter<br>- Validating...<br>ipyparallel.nbextension OK<br>[ProfileCreate] Generating default config file: '/home01/a1113a01/.ipython/profile_slurm/ipython_config.py'<br>[ProfileCreate] Generating default config file: '/home01/a1113a01/.ipython/profile_slurm/ipython_kernel_config.py'<br>[ProfileCreate] Generating default config file: '/home01/a1113a01/.ipython/profile_slurm/ipcontroller_config.py'<br>[ProfileCreate] Generating default config file: '/home01/a1113a01/.ipython/profile_slurm/ipengine_config.py'<br>[ProfileCreate] Generating default config file: '/home01/a1113a01/.ipython/profile_slurm/ipcluster_config.py'</p> |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <p>(notebook) 757% [a1113a01@glogin01 ~]$ <mark style="color:red;">sh /apps/jupyter/kisti_conda_plugins.sh</mark><br>Installing /scratch/a1113a01/.conda/envs/notebook/lib/python3.7/site-packages/ipyparallel/nbextension/static -> ipyparallel<br>Up to date: /scratch/a1113a01/.conda/envs/notebook/share/jupyter/nbextensions/ipyparallel/clusterlist.css<br>Up to date: /scratch/a1113a01/.conda/envs/notebook/share/jupyter/nbextensions/ipyparallel/clusterlist.js<br>Up to date: /scratch/a1113a01/.conda/envs/notebook/share/jupyter/nbextensions/ipyparallel/main.js<br>- Validating: OK<br><br>To initialize this nbextension in the browser every time the notebook (or other app) loads:<br><br><br>jupyter nbextension enable ipyparallel --py --sys-prefix<br><br><br>Enabling tree extension ipyparallel/main...<br>- Validating: OK<br>Enabling: ipyparallel.nbextension<br>- Writing config: /scratch/a1113a01/.conda/envs/notebook/etc/jupyter<br>- Validating...<br>ipyparallel.nbextension OK<br>[ProfileCreate] Generating default config file: '/home01/a1113a01/.ipython/profile_slurm/ipython_config.py'<br>[ProfileCreate] Generating default config file: '/home01/a1113a01/.ipython/profile_slurm/ipython_kernel_config.py'<br>[ProfileCreate] Generating default config file: '/home01/a1113a01/.ipython/profile_slurm/ipcontroller_config.py'<br>[ProfileCreate] Generating default config file: '/home01/a1113a01/.ipython/profile_slurm/ipengine_config.py'<br>[ProfileCreate] Generating default config file: '/home01/a1113a01/.ipython/profile_slurm/ipcluster_config.py'</p> |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 
 ※ 이제부터 사용자는 직접 웹에 접속하여 Jupyter 노트북을 사용할 수 있다. (여기까지 작업들은 한번만 실행)
 
+
+
 나. JupyterHub 웹 페이지 접속
 
-\- https://jupyter.ksc.re.kr 에 접속하여 신청 받은 뉴런 계정, OTP, 비밀번호를 입력한다.
+\- <mark style="color:red;">https://jupyter.ksc.re.kr</mark> 에 접속하여 신청 받은 뉴런 계정, OTP, 비밀번호를 입력한다.
 
 ![](../../../.gitbook/assets/cXDKdaUkHSJ0yAM.png)
 
@@ -112,7 +116,9 @@ done
 
 다. 큐 (Queue) 선택 및 Jupyter 실행
 
-\- Jupyter 실행 전 Refresh 버튼을 클릭하여 자원 현황을 확인
+
+
+\- Jupyter 실행 전 <mark style="color:red;">Refresh</mark> 버튼을 클릭하여 자원 현황을 확인
 
 ◦ Alloc: 사용중인 노드 개수
 
@@ -122,17 +128,23 @@ done
 
 ◦ Total: 전체 노드 개수
 
+
+
 \- Queue 정보 확인
 
 ◦ jupyter queue (무료): 환경 설치, 전처리, 디버깅 용도
 
 ◦ other queues (유료): 딥러닝/머신러닝 등 모델 실행 및 시각화 용도
 
+
+
 ※ jupyter queue는 현재 5개 노드로 최대 50개(노드 당 10개) Jupyter Notebook 실행 가능함 (여러 사용자가 노드의 CPU+GPU\[v100] 공유)
 
 ※ jupyter 큐 외 other queues 들은 1개 노드를 독점하여 Jupyter Notebook을 실행함으로 노드의 GPU자원을 최대로 사용할 수 있다. (뉴론 과금 표를 참고)
 
 ※ 유료 과금 정책은 기존 Neuron 시스템 과금 정책을 따르고 관련 정보는 국가슈퍼컴퓨팅 홈페이지 요금안내 페이지 (https://www.ksc.re.kr/jwjg/gjbg/ygan)에서 확인 가능하다.
+
+
 
 \- Job queue 에서 해당 queue를 선택하고 Submit버튼을 클릭하여 Jupyter Notebook 실행 (other queues로도 실행 가능하나, 과금 발생. 과금 정보는 KSC 홈페이지 Neuron 과금 정보 참고)
 
@@ -146,21 +158,25 @@ done
 
 ![](../../../.gitbook/assets/bMiS3ZoVOuWaGle.png)
 
+
+
 3\. Jupyter Notebook 사용 방법
 
 가. Jupyter 작업 환경
 
-◦ Jupyter 환경 디렉터리: /scratch/\[사용자ID]/.conda/envs/notebook
+<mark style="color:red;">◦ Jupyter 환경 디렉터리: /scratch/\[사용자ID]/.conda/envs/notebook</mark>
 
-◦ 로그 저장 디렉터리: /scratch/\[사용자ID]/log/작업ID.log
+<mark style="color:red;">◦ 로그 저장 디렉터리: /scratch/\[사용자ID]/log/작업ID.log</mark>
 
-◦ 작업 파일 저장 디렉터리: /scratch/\[사용자ID]/workspace/
+<mark style="color:red;">◦ 작업 파일 저장 디렉터리: /scratch/\[사용자ID]/workspace/</mark>
 
 ※ 사용자는 본인이 필요로 하는 머신러닝/딥러닝 라이브러리들을 .../notebook conda 환경에 설치하기 때문에 기본 쿼터가 큰 /scratch/사용자ID/ 에 설치된다. (Jupyter 실행 후 발생하는 로그파일도 /scratch/사용자ID/ 에 저장)
 
 ※ 사용자가 작성한 코드는 /scratch/사용자ID/ 에 저장된다.
 
 ※ conda 환경 백업을 위한 conda 환경 내보내기 및 가져오기 관련 정보는 KISTI 홈페이지 소프트웨어 지침서에서 확인할 수 있다.
+
+
 
 나. Jupyter Notebook 사용 방법
 
@@ -191,6 +207,10 @@ done
 \- JupyterLab 화면 https://jupyter.ksc.re.kr/user/a1113a01/lab
 
 ※ JupyterLab 자세한 사용 방법은 \[부록 1] 참고
+
+{% embed url="https://youtu.be/HN-Uw3NYmmA" %}
+
+
 
 4\. 머신러닝/딥러닝 예제 코드 실행하기
 
@@ -311,6 +331,10 @@ queue: 병렬 작업을 제출할 큐 이름 (아래 자원 현황을 보고 선
 
 ![](../../../.gitbook/assets/xnnQM4NqlW3ZouC.png)
 
+{% embed url="https://youtu.be/HTQotKlT5xs" %}
+
+
+
 5\. Jupyter 종료 방법
 
 가. 실행중인 세션 종료
@@ -321,6 +345,8 @@ queue: 병렬 작업을 제출할 큐 이름 (아래 자원 현황을 보고 선
 
 ※ 세션을 종료시키지 않고 JupyterHub 웹 페이지를 종료하는 경우, 다음 Jupyter 실행 시에도 그대로 남아있게 된다. (과금은 진행되지 않음)
 
+
+
 나. Jupyter 종료
 
 \- (Jupyter Notebook) Control Panel -> Stop My Server를 클릭한다.
@@ -329,11 +355,15 @@ queue: 병렬 작업을 제출할 큐 이름 (아래 자원 현황을 보고 선
 
 ![](../../../.gitbook/assets/Aifkvuq9qpyyJxG.png)
 
-※ 홈페이지 Logout 시 실행중인 Jupyter 및 세션들은 모두 자동으로 종료된다.
+<mark style="color:red;">※ 홈페이지 Logout 시 실행중인 Jupyter 및 세션들은 모두 자동으로 종료된다.</mark>
+
+<mark style="color:red;"></mark>
 
 **6. Jupyter 환경 초기화 방법**
 
 ※ conda 가상 환경 notebook 에 pip 으로 설치 할 경우 기존 conda install 로 설치한 패키지들과 버전 충돌이 발생하여 Jupyter 노크북이 실행이 안될 경우 다음과 같은 명령어로 환경 초기화를 해줄 수 있다.
+
+
 
 \- 터미널로 로그인 노드에서 /apps/jupyter/reset\_env.sh 를 실행한다.
 
@@ -341,10 +371,12 @@ queue: 병렬 작업을 제출할 큐 이름 (아래 자원 현황을 보고 선
 
 \- /sratch/\[사용자ID]/workspace/에 데이터는 보존된다.
 
-| <p><strong>[a1113a01@glogin02 ~]$ sh /apps/jupyter/reset_env.sh</strong> Remove all packages in environment /scratch/a1113a01/.conda/envs/notebook:<br>Preparing transaction: done<br>Verifying transaction: done<br>Executing transaction: / WARNING conda.core.prefix_data:_load_single_record(167): Ignoring malformed prefix record at: /scratch/acnta03/.conda/envs/notebook/conda-meta/001.pysocks-1.7.1-py37hc8dfbb8_1.json<br>done<br><br>One more step left, please execute these commands !!!!!!! 1. conda activate notebook<br>2. sh /apps/jupyter/kisti_conda_plugins.sh<br><br><br><strong>[a1113a01@glogin02 ~]$ conda activate notebook (notebook) [a1113a01@glogin02 ~]$ sh /apps/jupyter/kisti_conda_plugins.sh</strong></p> |
-| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <p><mark style="color:red;"><strong>[a1113a01@glogin02 ~]$ sh /apps/jupyter/reset_env.sh</strong></mark> Remove all packages in environment /scratch/a1113a01/.conda/envs/notebook:<br>Preparing transaction: done<br>Verifying transaction: done<br>Executing transaction: / WARNING conda.core.prefix_data:_load_single_record(167): Ignoring malformed prefix record at: /scratch/acnta03/.conda/envs/notebook/conda-meta/001.pysocks-1.7.1-py37hc8dfbb8_1.json<br>done<br><br>One more step left, please execute these commands !!!!!!! 1. conda activate notebook<br>2. sh /apps/jupyter/kisti_conda_plugins.sh<br><br><br><mark style="color:red;"><strong>[a1113a01@glogin02 ~]$ conda activate notebook (notebook) [a1113a01@glogin02 ~]$ sh /apps/jupyter/kisti_conda_plugins.sh</strong></mark></p> |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 
 \- https://jupyter.ksc.re.kr 홈페이지로 접속하여 jupyter 실행하여 잘 동작하는지 확인한다.
+
+
 
 \[부록 1]
 
@@ -366,15 +398,17 @@ queue: 병렬 작업을 제출할 큐 이름 (아래 자원 현황을 보고 선
 
 ![](../../../.gitbook/assets/t8EJplkhAqtCUtR.png)
 
+
+
 나. 실행중인 세션 종료
 
 \- 다음과 같이, Left Side Bar에서 Session 탭을 클릭하여 실행중인 Terminal Sessions이나 Kernel Sessions들을 Shut Down 버튼을 클릭하여 종료한다.
 
-※
-
-세션을 종료시키지 않고 JupyterHub 웹 페이지를 종료하는 경우, 다음 Jupyter 실행 시에도 그대로 남아있게 된다. (과금은 진행되지 않음)
+※ **** 세션을 종료시키지 않고 JupyterHub 웹 페이지를 종료하는 경우, 다음 Jupyter 실행 시에도 그대로 남아있게 된다. (과금은 진행되지 않음)
 
 ![](../../../.gitbook/assets/6wSWdeDOV2wFXw9.png)
+
+
 
 다. Jupyter 종료
 
@@ -383,3 +417,5 @@ queue: 병렬 작업을 제출할 큐 이름 (아래 자원 현황을 보고 선
 ![](../../../.gitbook/assets/Aifkvuq9qpyyJxG.png)
 
 ![](../../../.gitbook/assets/lGi3UXL44cC0Fr9.png)
+
+{% embed url="https://youtu.be/bMvwXXJvwq4" %}
