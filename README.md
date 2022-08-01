@@ -5,7 +5,7 @@ coverY: 0
 
 # 국가 슈퍼 컴퓨팅 센터
 
-### 지침
+### 지침서&#x20;
 
 {% content-ref url="userguide/manual/" %}
 [manual](userguide/manual/)
@@ -15,7 +15,7 @@ coverY: 0
 [commercial-software](userguide/commercial-software/)
 {% endcontent-ref %}
 
-### 기술블로
+### 기술블로그&#x20;
 
 {% content-ref url="blog/userguide/" %}
 [userguide](blog/userguide/)
