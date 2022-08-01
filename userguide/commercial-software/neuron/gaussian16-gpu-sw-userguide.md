@@ -26,6 +26,8 @@ $ id 사용자ID
 
 ※ 가우시안 그룹에 포함되어 있으면 출력 결과에 "1000009(gauss)" 이 포함되어 있어야 합니다.
 
+
+
 \- 보안 문제로 사용자는 프로그램의 소스 코드에는 접근할 수 없고, 실행 파일과 기저함수(basis function)에만 접근할 수 있습니다. 실제로 프로그램을 사용하는 데는 아무런 지장이 없습니다.
 
 \- 가우시안에 연동하여 사용하는 프로그램을 사용하기 위해서는 사전에 일부 소스 코드 혹은 쉘 파일에 대한 접근권한이 필요하며 (예, Gaussrate) 이 경우 KISTI 홈페이지 또는 account@ksc.re.kr 메일을 통해 요청하셔야 합니다.
@@ -55,6 +57,8 @@ Neuron 시스템에서 SLURM을 사용하는 예제 파일들이 아래의 경�
 \- 독점 노드 방식으로 실행하는 예제 작업 스크립트 : /apps/applications/test\_samples/G16/g16.c01\_gpu.sh
 
 \- 공유 노드 방식으로 실행하는 예제 작업 스크립트 : /apps/applications/test\_samples/G16/g16.c01\_gpu\_share.sh
+
+
 
 ※ 아래 예제는 Neuron 시스템 에서의 가우시안16에 대한 예제입니다.
 
@@ -96,9 +100,13 @@ g16 test.com
 
 \- 참고 : http://gaussian.com/relnotes
 
+
+
 ※ 가우시안 입력 파일을 PC에서 작성 후 FTP로 전송한다면, 반드시 ascii mode로 전송해야만 합니다.
 
 \- 기타 SLURM에 관련된 명령어 및 사용법은 Neuron 사용자 지침서를 참조하시면 됩니다.
+
+
 
 \- SLURM 스케쥴러의 주요 명령어 (세부 사항은 Neuron 시스템 사용자 지침서 참조)
 
@@ -118,3 +126,7 @@ James B. Foresman and Aeleen Frisch, "Exploring Chemistry with Electronic Struct
 www.amazon.com, www.bn.com 등의 온라인 서점에서 구매할 수 있고, http://gaussian.com에서도 직접 구매가 가능합니다.
 
 \- 가우시안에 관한 모든 정보는 Gaussian사의 홈페이지(http://gaussian.com)를 통해 얻을 수 있습니다.
+
+{% hint style="info" %}
+2022년 5월 11일에 마지막으로 업데이트되었습니다.
+{% endhint %}
