@@ -1,3 +1,7 @@
+---
+description: 슈퍼컴퓨팅인프라센터 2021. 5. 28. 10:36
+---
+
 # 누리온 lammps-3Mar20 설치 소개(KNL)
 
 KISTI 슈퍼컴퓨터센터의 장비에 lammps-3Mar20 source 버전으로 설치 하는 방법에 대하여 소개 한다.
