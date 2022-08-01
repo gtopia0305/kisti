@@ -1,3 +1,7 @@
+---
+description: 슈퍼컴퓨팅인프라센터 2021. 4. 27. 09:17
+---
+
 # 누리온 Quantum Espresso-6.6 설치 소개
 
 KISTI 슈퍼컴퓨터센터의 장비에 Quantum Espresso-6.6 source 버전으로 설치하는 방법에 대하여 소개한다.
