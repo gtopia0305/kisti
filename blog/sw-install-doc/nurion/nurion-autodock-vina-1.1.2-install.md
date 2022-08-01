@@ -1,7 +1,3 @@
----
-description: 슈퍼컴퓨팅인프라센터 2020. 12. 24. 10:03
----
-
 # 누리온 AutoDock Vina-1.1.2 설치 소개
 
 KISTI 슈퍼컴퓨팅센터의 누리온 시스템에 AutoDock Vina-1.1.2 Source 버전으로 설치하는 방법에 대하여 소개한다.
@@ -85,14 +81,18 @@ KISTI 슈퍼컴퓨팅센터의 누리온 시스템에 AutoDock Vina-1.1.2 Source
 
 \- GNU 컴파일러 사용 시
 
-| <p>BASE=<mark style="color:blue;">/apps/common/boost/1.68.0</mark></p><p>BOOST_VERSION=<mark style="color:blue;">1_68</mark></p><p>BOOST_INCLUDE = $(BASE)/include</p><p>C_PLATFORM= -static -pthread <mark style="color:blue;">-L/apps/compiler/gcc/7.2.0/lib64</mark></p><p>GPP=<mark style="color:blue;">g++</mark></p><p>C_OPTIONS= -O3 -DNDEBUG</p><p>BOOST_LIB_VERSION=</p><p><br></p><p>include ../../makefile_common</p> |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <p>BASE=/apps/common/boost/1.68.0</p><p>BOOST_VERSION=1_68</p><p>BOOST_INCLUDE = $(BASE)/include</p><p>C_PLATFORM= -static -pthread -L/apps/compiler/gcc/7.2.0/lib64</p><p>GPP=g++</p><p>C_OPTIONS= -O3 -DNDEBUG</p><p>BOOST_LIB_VERSION=</p><p><br></p><p>include ../../makefile_common</p> |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 
 \
 
 
 \- intel 컴파일러 사용 시
 
-| <p>BASE=<mark style="color:blue;">/apps/common/boost/1.68.0</mark></p><p>BOOST_VERSION=<mark style="color:blue;">1_68</mark></p><p>BOOST_INCLUDE = $(BASE)/include</p><p>C_PLATFORM= -static -pthread <mark style="color:blue;">-L/apps/compiler/gcc/7.2.0/lib64</mark></p><p>GPP=<mark style="color:blue;">icpc</mark></p><p>C_OPTIONS= -O3 -DNDEBUG</p><p>BOOST_LIB_VERSION=</p><p><br></p><p>include ../../makefile_common</p> |
-| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <p>BASE=/apps/common/boost/1.68.0</p><p>BOOST_VERSION=1_68</p><p>BOOST_INCLUDE = $(BASE)/include</p><p>C_PLATFORM= -static -pthread -L/apps/compiler/gcc/7.2.0/lib64</p><p>GPP=icpc</p><p>C_OPTIONS= -O3 -DNDEBUG</p><p>BOOST_LIB_VERSION=</p><p><br></p><p>include ../../makefile_common</p> |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 
+\
+
+
+\
