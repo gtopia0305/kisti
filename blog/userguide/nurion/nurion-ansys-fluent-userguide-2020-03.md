@@ -194,4 +194,10 @@ $ qdel 0001.pbcm
 
 ANSYS Fluent 버전별 Start Guide 문서
 
-[ANSYS\_Fluent\_Getting\_Started\_Guide\_v145.pdf다운로드](https://t1.daumcdn.net/cfile/tistory/99D06D4C5C0F6D9913?original)[ANSYS\_Fluent\_Getting\_Started\_Guide\_v170.pdf다운로드](https://t1.daumcdn.net/cfile/tistory/99D2954E5C0F6D9916?original)[ANSYS\_Fluent\_Getting\_Started\_Guide\_v181.pdf다운로드](https://t1.daumcdn.net/cfile/tistory/992AC2375C0F6D9910?original)[ANSYS\_Fluent\_Getting\_Started\_Guide\_v191.pdf다운로드](https://t1.daumcdn.net/cfile/tistory/994B31465C0F6D991F?original)
+{% file src="../../../.gitbook/assets/ANSYS_Fluent_Getting_Started_Guide_v145.pdf" %}
+
+{% file src="../../../.gitbook/assets/ANSYS_Fluent_Getting_Started_Guide_v170.pdf" %}
+
+{% file src="../../../.gitbook/assets/ANSYS_Fluent_Getting_Started_Guide_v181.pdf" %}
+
+{% file src="../../../.gitbook/assets/ANSYS_Fluent_Getting_Started_Guide_v191.pdf" %}
