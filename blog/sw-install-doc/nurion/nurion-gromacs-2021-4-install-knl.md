@@ -1,3 +1,7 @@
+---
+description: 슈퍼컴퓨팅인프라센터 2021. 12. 9. 15:47
+---
+
 # 누리온 GROMACS-2021.4 버전 설치 소개 (KNL)
 
 KISTI 슈퍼컴퓨팅센터의 누리온 시스템의 KNL 사용 시  gromacs-2021.4 Source 버전으로 설치 하는 방법에 대하여 소개 한다.
@@ -19,9 +23,7 @@ KISTI 슈퍼컴퓨팅센터의 누리온 시스템의 KNL 사용 시  gromacs-20
 
 **2. 설치 전 환경 설정**
 
-&#x20;
-
-&#x20; 누리온 시스템은 PATH, LD\_LIBRARY\_PATH 등을 쉽게 하기 위하여&#x20;
+&#x20;  누리온 시스템은 PATH, LD\_LIBRARY\_PATH 등을 쉽게 하기 위하여&#x20;
 
 &#x20; 환경설정 툴인 Modules([http://modules.sourceforge.net)](http://modules.sourceforge.net\)/)이 구성되어 있고,
 
@@ -34,8 +36,6 @@ KISTI 슈퍼컴퓨팅센터의 누리온 시스템의 KNL 사용 시  gromacs-20
 ```
  $ module intel/oneapi_21.2 impi/oneapi_21.2 cmake/3.12.7
 ```
-
-&#x20;
 
 &#x20;****&#x20;
 
