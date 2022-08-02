@@ -1,39 +1,26 @@
+---
+description: 슈퍼컴퓨팅인프라센터 2019. 4. 30. 09:36
+---
+
 # Conda 의 활용 소개
 
-아나콘다(Anaconda)는 PYTHON 과 R 프로그래밍 언어로 된 과학 컴퓨팅(데이터 과학, 기계 학습 응용 프로그램, 대규모 데이터 처리, 예측 분석 등)분야의 패키지들의 모음을 제공하는 배포판이다.
-
-Anaconda 배포판은 1,200 만 명이 넘는 사용자가 사용하며 Windows, Linux 및 MacOS에 적합한 1400 가지 이상의 인기있는 데이터 과학 패키지를 포함한다.
-
-Anaconda를 설치하기 위해서는 [https://www.anaconda.com](https://www.anaconda.com/) 웹사이트에서 자신의 OS에 맞는 배포판을 다운받아 설치하면 된다.
-
-(예) Windows, MacOS, Linux
-
+아나콘다(Anaconda)는 PYTHON 과 R 프로그래밍 언어로 된 과학 컴퓨팅(데이터 과학, 기계 학습 응용 프로그램, 대규모 데이터 처리, 예측 분석 등)분야의 패키지들의 모음을 제공하는 배포판이다.\
+Anaconda 배포판은 1,200 만 명이 넘는 사용자가 사용하며 Windows, Linux 및 MacOS에 적합한 1400 가지 이상의 인기있는 데이터 과학 패키지를 포함한다.\
+Anaconda를 설치하기 위해서는 [https://www.anaconda.com](https://www.anaconda.com/) 웹사이트에서 자신의 OS에 맞는 배포판을 다운받아 설치하면 된다.\
+(예) Windows, MacOS, Linux\
 현재 Anaconda 는 Python 3.7 기반의 버전과 Python 2.7 기반의 버전을 제공한다.
 
-\
-
-
-conda 는 아나콘다에서 패키지 버전 관리를 위해 제공되는 어플리케이션이다.
-
+conda 는 아나콘다에서 패키지 버전 관리를 위해 제공되는 어플리케이션이다.\
 Python 사용자들이 패키지 설치 시 가장 어려움을 겪는 의존성 문제를 conda 를 활용함으로써 쉽게 해결할 수 있다.
 
-\
-
-
-본 문서는 KISTI 시스템에서 Python 사용자를 위하여 conda 패키지 활용하는 방법을 소개 한다.
-
+본 문서는 KISTI 시스템에서 Python 사용자를 위하여 conda 패키지 활용하는 방법을 소개 한다.\
 소개 페이지의 "/home01/optpar02" 는 테스트 계정 optpar02 의 홈디렉토리로 자신에 맞는 경로로 적절히 변경해서 사용해야 한다.
 
-&#x20;
+****
 
 **1. Conda 의 사용**
 
-&#x20;\- Miniconda는 https://docs.conda.io/en/latest/miniconda.html 사이트 에서 각 OS 에 맞는 버전을 다운 받을 수 있고,
-
-&#x20;  Anaconda 는 [https://www.anaconda.com/distribution/#download-section](https://www.anaconda.com/distribution/#download-section) 사이트 에서 각 OS 에 맞는 버전을 다운 받을 수 있다.
-
-\
-
+&#x20;\- Miniconda는 https://docs.conda.io/en/latest/miniconda.html 사이트 에서 각 OS 에 맞는 버전을 다운 받을 수 있고, Anaconda 는 [https://www.anaconda.com/distribution/#download-section](https://www.anaconda.com/distribution/#download-section) 사이트 에서 각 OS 에 맞는 버전을 다운 받을 수 있다.
 
 | **명령어 모음** | **내용**                                                                                                                                                                           |
 | ---------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -53,7 +40,6 @@ Python 사용자들이 패키지 설치 시 가장 어려움을 겪는 의존성
 |  update    |  Updates conda packages to the latest compatible version.                                                                                                                        |
 |  upgrade   |  Alias for conda update                                                                                                                                                          |
 
-\
 
 
 **2. Conda Environment 생성**
@@ -66,15 +52,15 @@ Python 사용자들이 패키지 설치 시 가장 어려움을 겪는 의존성
 
 \- "--use-local" 옵션을 사용하면 사용자 홈 디렉토리(**${HOME}/.conda/envs/\[environment\_name]**)에 생성 된다.
 
-\
 
 
 &#x20;\- 예제 -
 
-| <p>[optpar02@login02 ~]$ <strong>module load python/3.7.1</strong></p><p>[optpar02@login02 ~]$ <strong>conda create -n scikit-learn_0.21 --use-local</strong></p><p>Collecting package metadata: done</p><p>Solving environment: done</p><p><br></p><p>## Package Plan ##</p><p><br></p><p>  environment location: /home01/optpar02/.conda/envs/scikit-learn_0.21</p><p><br></p><p><br></p><p><br></p><p>Proceed ([y]/n)? y</p><p><br></p><p>Preparing transaction: done</p><p>Verifying transaction: done</p><p>Executing transaction: done</p><p>#</p><p># To activate this environment, use:</p><p># > conda activate scikit-learn_0.21</p><p>#</p><p># To deactivate an active environment, use:</p><p># > conda deactivate</p><p>#</p><p><br></p><p>[optpar02@login02 ~]$ <strong>source activate scikit-learn_0.21</strong></p><p>(scikit-learn_0.21) [optpar02@login02 ~]$ <strong></strong> </p> |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+>
 
-\
+| <p>[optpar02@login02 ~]$ <strong>module load python/3.7.1</strong></p><p>[optpar02@login02 ~]$ <strong>conda create -n scikit-learn_0.21 --use-local</strong></p><p>Collecting package metadata: done</p><p>Solving environment: done</p><p></p><p>## Package Plan ##</p><p></p><p>  environment location: /home01/optpar02/.conda/envs/scikit-learn_0.21</p><p></p><p>Proceed ([y]/n)? y</p><p></p><p>Preparing transaction: done</p><p>Verifying transaction: done</p><p>Executing transaction: done</p><p>#</p><p># To activate this environment, use:</p><p># > conda activate scikit-learn_0.21</p><p>#</p><p># To deactivate an active environment, use:</p><p># > conda deactivate</p><p>#</p><p></p><p>[optpar02@login02 ~]$ <strong>source activate scikit-learn_0.21</strong></p><p>(scikit-learn_0.21) [optpar02@login02 ~]$ <strong></strong> </p> |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+
 
 
 **3. Conda Environment에 패키지 설치 및 확인**
@@ -85,45 +71,247 @@ Python 사용자들이 패키지 설치 시 가장 어려움을 겪는 의존성
 
 \- 위 "2" 항목에서 생성한 conda environment 경로 아래에 패키지 들이 설치 된다.
 
-\
 
 
 &#x20;\- 예제 -
 
-| <p>[optpar02@login02 ~]$ <strong>module load python/3.7.1</strong></p><p>[optpar02@login02 ~]$ <strong>source activate scikit-learn_0.21</strong></p><p>(scikit-learn_0.21) [optpar02@login02 ~]$ <strong>conda install scikit-learn</strong></p><p>Collecting package metadata: done</p><p>Solving environment: done</p><p><br></p><p>## Package Plan ##</p><p><br></p><p>  environment location: /home01/optpar02/.conda/envs/scikit-learn_0.21</p><p><br></p><p>  added / updated specs:</p><p>    - scikit-learn</p><p><br></p><p><br></p><p>The following packages will be downloaded:</p><p><br></p><p>    package                    |            build</p><p>    ---------------------------|-----------------</p><p>    ca-certificates-2019.1.23  |                0         126 KB</p><p>    certifi-2019.3.9           |           py37_0         155 KB</p><p>    intel-openmp-2019.3        |              199         886 KB</p><p>    libedit-3.1.20181209       |       hc058e9b_0         188 KB</p><p>    mkl-2019.3                 |              199       203.3 MB</p><p>    mkl_fft-1.0.10             |   py37ha843d7b_0         169 KB</p><p>    numpy-1.16.2               |   py37h7e9f1db_0          49 KB</p><p>    numpy-base-1.16.2          |   py37hde5b4d6_0         4.3 MB</p><p>    openssl-1.1.1b             |       h7b6447c_1         4.0 MB</p><p>    pip-19.0.3                 |           py37_0         1.8 MB</p><p>    python-3.7.3               |       h0371630_0        36.7 MB</p><p>    scikit-learn-0.20.3        |   py37hd81dba3_0         5.8 MB</p><p>    scipy-1.2.1                |   py37h7c811a0_0        17.7 MB</p><p>    setuptools-40.8.0          |           py37_0         643 KB</p><p>    sqlite-3.27.2              |       h7b6447c_0         1.9 MB</p><p>    wheel-0.33.1               |           py37_0          39 KB</p><p>    ------------------------------------------------------------</p><p>                                           Total:       277.6 MB</p><p><br></p><p>The following NEW packages will be INSTALLED:</p><p><br></p><p>  blas               pkgs/main/linux-64::blas-1.0-mkl</p><p>  ca-certificates    pkgs/main/linux-64::ca-certificates-2019.1.23-0</p><p>  certifi            pkgs/main/linux-64::certifi-2019.3.9-py37_0</p><p>  intel-openmp       pkgs/main/linux-64::intel-openmp-2019.3-199</p><p>  libedit            pkgs/main/linux-64::libedit-3.1.20181209-hc058e9b_0</p><p>  libffi             pkgs/main/linux-64::libffi-3.2.1-hd88cf55_4</p><p>  libgcc-ng          pkgs/main/linux-64::libgcc-ng-8.2.0-hdf63c60_1</p><p>  libgfortran-ng     pkgs/main/linux-64::libgfortran-ng-7.3.0-hdf63c60_0</p><p>  libstdcxx-ng       pkgs/main/linux-64::libstdcxx-ng-8.2.0-hdf63c60_1</p><p>  mkl                pkgs/main/linux-64::mkl-2019.3-199</p><p>  mkl_fft            pkgs/main/linux-64::mkl_fft-1.0.10-py37ha843d7b_0</p><p>  mkl_random         pkgs/main/linux-64::mkl_random-1.0.2-py37hd81dba3_0</p><p>  ncurses            pkgs/main/linux-64::ncurses-6.1-he6710b0_1</p><p>  numpy              pkgs/main/linux-64::numpy-1.16.2-py37h7e9f1db_0</p><p>  numpy-base         pkgs/main/linux-64::numpy-base-1.16.2-py37hde5b4d6_0</p><p>  openssl            pkgs/main/linux-64::openssl-1.1.1b-h7b6447c_1</p><p>  pip                pkgs/main/linux-64::pip-19.0.3-py37_0</p><p>  python             pkgs/main/linux-64::python-3.7.3-h0371630_0</p><p>  readline           pkgs/main/linux-64::readline-7.0-h7b6447c_5</p><p>  scikit-learn       pkgs/main/linux-64::scikit-learn-0.20.3-py37hd81dba3_0</p><p>  scipy              pkgs/main/linux-64::scipy-1.2.1-py37h7c811a0_0</p><p>  setuptools         pkgs/main/linux-64::setuptools-40.8.0-py37_0</p><p>  sqlite             pkgs/main/linux-64::sqlite-3.27.2-h7b6447c_0</p><p>  tk                 pkgs/main/linux-64::tk-8.6.8-hbc83047_0</p><p>  wheel              pkgs/main/linux-64::wheel-0.33.1-py37_0</p><p>  xz                 pkgs/main/linux-64::xz-5.2.4-h14c3975_4</p><p>  zlib               pkgs/main/linux-64::zlib-1.2.11-h7b6447c_3</p><p><br></p><p><br></p><p>Proceed ([y]/n)? y</p><p><br></p><p><br></p><p>Downloading and Extracting Packages</p><p>setuptools-40.8.0    | 643 KB    | ##################################### | 100% </p><p>mkl_fft-1.0.10       | 169 KB    | ##################################### | 100% </p><p>pip-19.0.3           | 1.8 MB    | ##################################### | 100% </p><p>mkl-2019.3           | 203.3 MB  | ##################################### | 100% </p><p>ca-certificates-2019 | 126 KB    | ##################################### | 100% </p><p>sqlite-3.27.2        | 1.9 MB    | ##################################### | 100% </p><p>wheel-0.33.1         | 39 KB     | ##################################### | 100% </p><p>python-3.7.3         | 36.7 MB   | ##################################### | 100% </p><p>intel-openmp-2019.3  | 886 KB    | ##################################### | 100% </p><p>libedit-3.1.20181209 | 188 KB    | ##################################### | 100% </p><p>numpy-base-1.16.2    | 4.3 MB    | ##################################### | 100% </p><p>scipy-1.2.1          | 17.7 MB   | ##################################### | 100% </p><p>scikit-learn-0.20.3  | 5.8 MB    | ##################################### | 100% </p><p>numpy-1.16.2         | 49 KB     | ##################################### | 100% </p><p>certifi-2019.3.9     | 155 KB    | ##################################### | 100% </p><p>openssl-1.1.1b       | 4.0 MB    | ##################################### | 100% </p><p>Preparing transaction: done</p><p>Verifying transaction: done</p><p>Executing transaction: done</p><p>(scikit-learn_0.21) [optpar02@login02 ~]$ <strong>python -c "import sklearn"</strong></p><p>(scikit-learn_0.21) [optpar02@login02 ~]$</p> |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+> \[optpar02@login02 \~]$ **module load python/3.7.1**
+>
+> \[optpar02@login02 \~]$ **source activate scikit-learn\_0.21**
+>
+> (scikit-learn\_0.21) \[optpar02@login02 \~]$ **conda install scikit-learn**
+>
+> Collecting package metadata: done
+>
+> Solving environment: done
+>
+>
+>
+> \## Package Plan ##
+>
+>
+>
+> &#x20; environment location: /home01/optpar02/.conda/envs/scikit-learn\_0.21
+>
+>
+>
+> &#x20; added / updated specs:
+>
+> &#x20;   \- scikit-learn
+>
+>
+>
+> The following packages will be downloaded:
+>
+>
+>
+> &#x20;   package                    |            build
+>
+> &#x20;   \---------------------------|-----------------
+>
+> &#x20;   ca-certificates-2019.1.23  |                0         126 KB
+>
+> &#x20;   certifi-2019.3.9           |           py37\_0         155 KB
+>
+> &#x20;   intel-openmp-2019.3        |              199         886 KB
+>
+> &#x20;   libedit-3.1.20181209       |       hc058e9b\_0         188 KB
+>
+> &#x20;   mkl-2019.3                 |              199       203.3 MB
+>
+> &#x20;   mkl\_fft-1.0.10             |   py37ha843d7b\_0         169 KB
+>
+> &#x20;   numpy-1.16.2               |   py37h7e9f1db\_0          49 KB
+>
+> &#x20;   numpy-base-1.16.2          |   py37hde5b4d6\_0         4.3 MB
+>
+> &#x20;   openssl-1.1.1b             |       h7b6447c\_1         4.0 MB
+>
+> &#x20;   pip-19.0.3                 |           py37\_0         1.8 MB
+>
+> &#x20;   python-3.7.3               |       h0371630\_0        36.7 MB
+>
+> &#x20;   scikit-learn-0.20.3        |   py37hd81dba3\_0         5.8 MB
+>
+> &#x20;   scipy-1.2.1                |   py37h7c811a0\_0        17.7 MB
+>
+> &#x20;   setuptools-40.8.0          |           py37\_0         643 KB
+>
+> &#x20;   sqlite-3.27.2              |       h7b6447c\_0         1.9 MB
+>
+> &#x20;   wheel-0.33.1               |           py37\_0          39 KB
+>
+> &#x20;   \------------------------------------------------------------
+>
+> &#x20;                                          Total:       277.6 MB
+>
+>
+>
+> The following NEW packages will be INSTALLED:
+>
+>
+>
+> &#x20; blas               pkgs/main/linux-64::blas-1.0-mkl
+>
+> &#x20; ca-certificates    pkgs/main/linux-64::ca-certificates-2019.1.23-0
+>
+> &#x20; certifi            pkgs/main/linux-64::certifi-2019.3.9-py37\_0
+>
+> &#x20; intel-openmp       pkgs/main/linux-64::intel-openmp-2019.3-199
+>
+> &#x20; libedit            pkgs/main/linux-64::libedit-3.1.20181209-hc058e9b\_0
+>
+> &#x20; libffi             pkgs/main/linux-64::libffi-3.2.1-hd88cf55\_4
+>
+> &#x20; libgcc-ng          pkgs/main/linux-64::libgcc-ng-8.2.0-hdf63c60\_1
+>
+> &#x20; libgfortran-ng     pkgs/main/linux-64::libgfortran-ng-7.3.0-hdf63c60\_0
+>
+> &#x20; libstdcxx-ng       pkgs/main/linux-64::libstdcxx-ng-8.2.0-hdf63c60\_1
+>
+> &#x20; mkl                pkgs/main/linux-64::mkl-2019.3-199
+>
+> &#x20; mkl\_fft            pkgs/main/linux-64::mkl\_fft-1.0.10-py37ha843d7b\_0
+>
+> &#x20; mkl\_random         pkgs/main/linux-64::mkl\_random-1.0.2-py37hd81dba3\_0
+>
+> &#x20; ncurses            pkgs/main/linux-64::ncurses-6.1-he6710b0\_1
+>
+> &#x20; numpy              pkgs/main/linux-64::numpy-1.16.2-py37h7e9f1db\_0
+>
+> &#x20; numpy-base         pkgs/main/linux-64::numpy-base-1.16.2-py37hde5b4d6\_0
+>
+> &#x20; openssl            pkgs/main/linux-64::openssl-1.1.1b-h7b6447c\_1
+>
+> &#x20; pip                pkgs/main/linux-64::pip-19.0.3-py37\_0
+>
+> &#x20; python             pkgs/main/linux-64::python-3.7.3-h0371630\_0
+>
+> &#x20; readline           pkgs/main/linux-64::readline-7.0-h7b6447c\_5
+>
+> &#x20; scikit-learn       pkgs/main/linux-64::scikit-learn-0.20.3-py37hd81dba3\_0
+>
+> &#x20; scipy              pkgs/main/linux-64::scipy-1.2.1-py37h7c811a0\_0
+>
+> &#x20; setuptools         pkgs/main/linux-64::setuptools-40.8.0-py37\_0
+>
+> &#x20; sqlite             pkgs/main/linux-64::sqlite-3.27.2-h7b6447c\_0
+>
+> &#x20; tk                 pkgs/main/linux-64::tk-8.6.8-hbc83047\_0
+>
+> &#x20; wheel              pkgs/main/linux-64::wheel-0.33.1-py37\_0
+>
+> &#x20; xz                 pkgs/main/linux-64::xz-5.2.4-h14c3975\_4
+>
+> &#x20; zlib               pkgs/main/linux-64::zlib-1.2.11-h7b6447c\_3
+>
+>
+>
+> Proceed (\[y]/n)? y
+>
+>
+>
+> Downloading and Extracting Packages
+>
+> setuptools-40.8.0    | 643 KB    | ##################################### | 100%&#x20;
+>
+> mkl\_fft-1.0.10       | 169 KB    | ##################################### | 100%&#x20;
+>
+> pip-19.0.3           | 1.8 MB    | ##################################### | 100%&#x20;
+>
+> mkl-2019.3           | 203.3 MB  | ##################################### | 100%&#x20;
+>
+> ca-certificates-2019 | 126 KB    | ##################################### | 100%&#x20;
+>
+> sqlite-3.27.2        | 1.9 MB    | ##################################### | 100%&#x20;
+>
+> wheel-0.33.1         | 39 KB     | ##################################### | 100%&#x20;
+>
+> python-3.7.3         | 36.7 MB   | ##################################### | 100%&#x20;
+>
+> intel-openmp-2019.3  | 886 KB    | ##################################### | 100%&#x20;
+>
+> libedit-3.1.20181209 | 188 KB    | ##################################### | 100%&#x20;
+>
+> numpy-base-1.16.2    | 4.3 MB    | ##################################### | 100%&#x20;
+>
+> scipy-1.2.1          | 17.7 MB   | ##################################### | 100%&#x20;
+>
+> scikit-learn-0.20.3  | 5.8 MB    | ##################################### | 100%&#x20;
+>
+> numpy-1.16.2         | 49 KB     | ##################################### | 100%&#x20;
+>
+> certifi-2019.3.9     | 155 KB    | ##################################### | 100%&#x20;
+>
+> openssl-1.1.1b       | 4.0 MB    | ##################################### | 100%&#x20;
+>
+> Preparing transaction: done
+>
+> Verifying transaction: done
+>
+> Executing transaction: done
+>
+> (scikit-learn\_0.21) \[optpar02@login02 \~]$ **python -c "import sklearn"**
+>
+> (scikit-learn\_0.21) \[optpar02@login02 \~]$
 
-\
 
 
 **4. Conda Environment 목록 확인**
 
 \- "conda-env list" 또는 "conda env list" 를 이용하여 목록을 확인 할 수 있다.
 
-\
 
 
 \[예제]
 
-| <p>(scikit-learn_0.21) [optpar02@login02 ~]$ <strong>conda env list</strong></p><p># conda environments:</p><p>#</p><p>base                     /apps/applications/PYTHON/3.7</p><p><strong>scikit-learn_0.21     *  /home01/optpar02/.conda/envs/scikit-learn_0.21</strong></p><p><br></p><p>[optpar02@login02 ~]$</p> |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+> (scikit-learn\_0.21) \[optpar02@login02 \~]$ **conda env list**
+>
+> \# conda environments:
+>
+> \#
+>
+> base                     /apps/applications/PYTHON/3.7
+>
+> **scikit-learn\_0.21     \*  /home01/optpar02/.conda/envs/scikit-learn\_0.21**
+>
+>
+>
+> \[optpar02@login02 \~]$
 
-\
 
 
 **5. Conda Environment 삭제**
 
 \- "conda-env remove -n \[ENVIRONMENT]" 또는 "conda env remove -n \[ENVIRONMENT]" 를 이용하여 삭제 할 수 있다.
 
-\
 
 
 \[예제]
 
-| <p>[optpar02@login02 ~]$ <strong>module load python/3.7.1</strong></p><p>[optpar02@login02 ~]$ <strong>conda env remove -n scikit-learn_0.21</strong></p><p><br></p><p>Remove all packages in environment /home01/optpar02/.conda/envs/scikit-learn_0.21:</p><p><br></p><p>[optpar02@login02 ~]$ <strong>conda env list</strong></p><p># conda environments:</p><p>#</p><p>base                  *  /apps/applications/PYTHON/3.7</p><p><br></p><p>[optpar02@login02 ~]$<br></p> |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 
-\
+
+> \[optpar02@login02 \~]$ **module load python/3.7.1**
+>
+> \[optpar02@login02 \~]$ **conda env remove -n scikit-learn\_0.21**
+>
+> \
+> Remove all packages in environment /home01/optpar02/.conda/envs/scikit-learn\_0.21:
+>
+>
+>
+> \[optpar02@login02 \~]$ **conda env list**
+>
+> \# conda environments:
+>
+> \#
+>
+> base                  \*  /apps/applications/PYTHON/3.7
+>
+>
+>
+> \[optpar02@login02 \~]$
+
 
 
 **6. Conda Environment 내보내기**
@@ -136,27 +324,72 @@ Python 사용자들이 패키지 설치 시 가장 어려움을 겪는 의존성
 
 &#x20; (예) 외부 인터넷이 연결되지 않는 경우, 다른 시스템에서 동일한 conda 환경을 이용하는 경우
 
-\
 
 
 \[예제]
 
-| <p>[optpar02@login02 ~]$ <strong>module load python/3.7.1</strong></p><p>[optpar02@login02 ~]$ <strong>source activate tensorflow_1.12</strong></p><p>(tensorflow_1.12) [optpar02@login02 ~]$ <strong>conda install -c conda-forge -n tensorflow_1.12</strong></p><p>(tensorflow_1.12) [optpar02@login02 ~]$ <strong>conda pack -n tensorflow_1.12 -o conda_tensorflow_1.12.tar.gz</strong></p><p>Collecting packages...</p><p>Packing environment at '/home01/optpar02/.conda/envs/tensorflow_1.12' to 'conda_tensorflow_1.12.tar.gz'</p><p>[########################################] | 100% Completed |  4min 18.8s</p><p>(tensorflow_1.12) [optpar02@login02 ~]$ ls -l conda_tensorflow_1.12.tar.gz</p><p>-rw-------. 1 optpar02 in0162 1459826406 Mar 28 15:03 <strong>conda_tensorflow_1.12.tar.gz</strong></p><p>(tensorflow_1.12) [optpar02@login02 ~]$</p> |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+> \[optpar02@login02 \~]$ **module load python/3.7.1**
+>
+> \[optpar02@login02 \~]$ **source activate tensorflow\_1.12**
+>
+> (tensorflow\_1.12) \[optpar02@login02 \~]$ **conda install -c conda-forge -n tensorflow\_1.12**
+>
+> (tensorflow\_1.12) \[optpar02@login02 \~]$ **conda pack -n tensorflow\_1.12 -o conda\_tensorflow\_1.12.tar.gz**
+>
+> Collecting packages...
+>
+> Packing environment at '/home01/optpar02/.conda/envs/tensorflow\_1.12' to 'conda\_tensorflow\_1.12.tar.gz'
+>
+> \[########################################] | 100% Completed |  4min 18.8s
+>
+> (tensorflow\_1.12) \[optpar02@login02 \~]$ ls -l conda\_tensorflow\_1.12.tar.gz
+>
+> \-rw-------. 1 optpar02 in0162 1459826406 Mar 28 15:03 **conda\_tensorflow\_1.12.tar.gz**
+>
+> (tensorflow\_1.12) \[optpar02@login02 \~]$
 
-\
 
 
 **7. Conda Environment 가져오기**
 
 \- conda pack 을 이용하여 생성했던 conda environment 를 아래 \[예제]와 같이 가져와 환경설정 후 사용 가능.
 
-\
 
 
 \[예제]
 
-| <p>[optpar02@login02 ~]$ <strong>module load python/3.7.1</strong></p><p>[optpar02@login02 ~]$ <strong>conda env list</strong></p><p># conda environments:</p><p>#</p><p>base                  *  /apps/applications/PYTHON/3.7</p><p><br></p><p>[optpar02@login02 ~]$ <strong>mkdir -p $HOME/.conda/envs/tensorflow_1.12</strong></p><p>[optpar02@login02 ~]$ <strong>tar xvzf conda_tensorflow_1.12.tar.gz -C $HOME/.conda/envs/tensorflow_1.12</strong></p><p>[optpar02@login02 ~]$ <strong>cd $HOME/.conda/envs/tensorflow_1.12/bin</strong></p><p>[optpar02@login02 ~]$ <strong>./conda-unpack</strong></p><p>[optpar02@login02 ~]$ <strong>conda env list</strong></p><p># conda environments:</p><p>#</p><p>base                  *  /apps/applications/PYTHON/3.7</p><p>tensorflow_1.12          /home01/optpar02/.conda/envs/tensorflow_1.12</p><p><br></p><p>[optpar02@login02 ~]$ <strong>source activate tensorflow_1.12</strong></p> |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+> \[optpar02@login02 \~]$ **module load python/3.7.1**
+>
+> \[optpar02@login02 \~]$ **conda env list**
+>
+> \# conda environments:
+>
+> \#
+>
+> base                  \*  /apps/applications/PYTHON/3.7
+>
+>
+>
+> \[optpar02@login02 \~]$ **mkdir -p $HOME/.conda/envs/tensorflow\_1.12**
+>
+> \[optpar02@login02 \~]$ **tar xvzf conda\_tensorflow\_1.12.tar.gz -C $HOME/.conda/envs/tensorflow\_1.12**
+>
+> \[optpar02@login02 \~]$ **cd $HOME/.conda/envs/tensorflow\_1.12/bin**
+>
+> \[optpar02@login02 \~]$ **./conda-unpack**
+>
+> \[optpar02@login02 \~]$ **conda env list**
+>
+> \# conda environments:
+>
+> \#
+>
+> base                  \*  /apps/applications/PYTHON/3.7
+>
+> tensorflow\_1.12          /home01/optpar02/.conda/envs/tensorflow\_1.12
+>
+>
+>
+> \[optpar02@login02 \~]$ **source activate tensorflow\_1.12**
 
 \
