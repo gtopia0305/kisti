@@ -1,3 +1,7 @@
+---
+description: 슈퍼컴퓨팅인프라센터 2020. 7. 23. 15:48
+---
+
 # 누리온 MVAPICH2/MVAPICH2-X 성능 비교(VASP)
 
 **1. 개요**
@@ -6,8 +10,7 @@ MVAPICH2-X는 MVAPICH2를 기반으로 개발된 MPI 라이브러리로, 엑사�
 
 MVAPICH2-X는 ‘Advanced MPI and Unified MPI+PGAS Communication Runtime for Exascale Systems’ 을 의미하며, 매니코어 CPU 기반의 슈퍼컴퓨터에서 많이 활용되고 있으며 최근 클라우드 컴퓨팅 산업의 발전에 따라 Microsoft Azure 및 Amazon Web Service (AWS) 등 여러 시스템에서도 활용되고 있다.
 
-계산 과학에서 Message Passing Interface (MPI) 는 가장 많이 사용되는 프로그래밍 모델이며, Partitioned Global Address Space (PGAS) 는 주로 불규칙한 통신 패턴이 있는 프로그램을 위하여 사용된다.
-
+계산 과학에서 Message Passing Interface (MPI) 는 가장 많이 사용되는 프로그래밍 모델이며, Partitioned Global Address Space (PGAS) 는 주로 불규칙한 통신 패턴이 있는 프로그램을 위하여 사용된다.\
 PGAS는 성능에 필요한 공유 메모리 추상화(abstraction) 및 지역성(locality) 통제를 제공한다.
 
 MVAPICH2-X에서 활용되는 여러 feature 중 KISTI 5호기 Nurion에 활용 가능한 기술은 노드 내 collective 최적화를 제공하는 XPMEM 및 asynchronous progress 최적화 기술이 있다.
@@ -34,36 +37,70 @@ MVAPICH2-X는 MVAPICH2를 기반으로 개발하여 MPI-3 및 고급 MPI 기능�
 
 [http://mvapich.cse.ohio-state.edu/overview/](http://mvapich.cse.ohio-state.edu/overview/)
 
+****
+
 **2. 환경설정 및 구성**
 
 1\) 환경설정 방법
+
+```
+$ module load intel/19.0.5 mvapich2-x/2.3.3
+```
+
+
 
 2\) 상세 구성
 
 누리온 시스템에 설치된 mvapich2-x/2.3.3모듈은 아래와 같은 옵션으로 설치되었다.
 
-\- --disable-rdma-cm
-
-\- --without-hydra-ckpointlib
-
-\- --disable-mcast
-
-\- --with-device=ch3:psm
-
-\- --with-xpmem=/opt/xpmem/
-
+\- --disable-rdma-cm\
+****- --without-hydra-ckpointlib\
+\- --disable-mcast\
+\- --with-device=ch3:psm\
+\- --with-xpmem=/opt/xpmem/\
 \- --with-ch3-rank-bits=32
 
 64K 이상의 코어 수를 지원하기 위하여 –with-ch3-rank-bits 옵션이 사용되었으며, MVAPICH2 와는 달리 collective communication 을 위하여 xpmem 을 통하여 동작한다.
 
-**※ xpmem 을 활용한 intra-socket 및 inter-socket 성능 참고**
-
-[http://mvapich.cse.ohio-state.edu/performance/mv2x-pt\_to\_pt/](http://mvapich.cse.ohio-state.edu/performance/mv2x-pt\_to\_pt/)
+**※ xpmem 을 활용한 intra-socket 및 inter-socket 성능 참고**\
+****[http://mvapich.cse.ohio-state.edu/performance/mv2x-pt\_to\_pt/](http://mvapich.cse.ohio-state.edu/performance/mv2x-pt\_to\_pt/)
 
 MV2\_SHOW\_ENV\_INFO 환경변수를 2로 구성하여 Knights Landings(KNL) 최적화 설정으로 구성되었다.
 
-| <p>PROCESSOR ARCH NAME : MV2_ARCH_INTEL_XEON_PHI_7250</p><p>PROCESSOR FAMILY NAME : MV2_CPU_FAMILY_INTEL</p><p>PROCESSOR MODEL NUMBER : 87</p><p>HCA NAME : MV2_HCA_INTEL_HFI1</p><p>MV2_USE_CMA_COLL : 1</p><p>- MV2_USE_CMA_COLL_ALLREDUCE : 0</p><p>- MV2_USE_CMA_COLL_REDUCE : 0</p><p>- MV2_USE_CMA_COLL_BCAST : 0</p><p>- MV2_USE_CMA_COLL_SCATTER : 1</p><p>- MV2_USE_CMA_COLL_GATHER : 1</p><p>- MV2_USE_CMA_COLL_ALLGATHER : 1</p><p>- MV2_USE_CMA_COLL_ALLTOALL : 1</p><p>MV2_USE_XPMEM_COLL : 1</p><p>- MV2_USE_XPMEM_COLL_ALLREDUCE : 1</p><p>- MV2_USE_XPMEM_COLL_REDUCE : 1</p><p>- MV2_USE_XPMEM_COLL_BCAST : 1</p><p>- MV2_USE_XPMEM_COLL_SCATTER : 1</p><p>- MV2_USE_XPMEM_COLL_GATHER : 1</p><p>- MV2_USE_XPMEM_COLL_ALLGATHER : 1</p><p>- MV2_USE_XPMEM_COLL_ALLTOALL : 0</p><p>PSM2_MQ_RNDV_HFI_THRESH : 4194304</p><p>PSM2_MQ_EAGER_SDMA_SZ : 4194304</p><p>Heterogeneity : NO</p><p>SMP Eagersize : 32768</p><p>HFI Eagersize : 4194304</p><p>Tuning Table: : MV2_ARCH_INTEL_XEON_PHI_7250 MV2_HCA_INTEL_HFI1</p><p>MV2_ENABLE_SOCKET_AWARE_COLLECTIVES : 1</p><p>MV2_USE_SOCKET_AWARE_ALLREDUCE : 1</p><p>MV2_USE_SOCKET_AWARE_BARRIER : 1</p><p>MV2_USE_SOCKET_AWARE_SHARP_ALLREDUCE : 0</p><p>MV2_SOCKET_AWARE_ALLREDUCE_MIN_MSG : 1</p><p>MV2_SOCKET_AWARE_ALLREDUCE_MAX_MSG : 2048</p><p><br></p> |
-| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+```
+ PROCESSOR ARCH NAME                     : MV2_ARCH_INTEL_XEON_PHI_7250
+ PROCESSOR FAMILY NAME                   : MV2_CPU_FAMILY_INTEL
+ PROCESSOR MODEL NUMBER                  : 87
+ HCA NAME                                : MV2_HCA_INTEL_HFI1
+ MV2_USE_CMA_COLL                        : 1
+ - MV2_USE_CMA_COLL_ALLREDUCE            : 0
+ - MV2_USE_CMA_COLL_REDUCE               : 0
+ - MV2_USE_CMA_COLL_BCAST                : 0
+ - MV2_USE_CMA_COLL_SCATTER              : 1
+ - MV2_USE_CMA_COLL_GATHER               : 1
+ - MV2_USE_CMA_COLL_ALLGATHER            : 1
+ - MV2_USE_CMA_COLL_ALLTOALL             : 1
+ MV2_USE_XPMEM_COLL                      : 1
+ - MV2_USE_XPMEM_COLL_ALLREDUCE          : 1
+ - MV2_USE_XPMEM_COLL_REDUCE             : 1
+ - MV2_USE_XPMEM_COLL_BCAST              : 1
+ - MV2_USE_XPMEM_COLL_SCATTER            : 1
+ - MV2_USE_XPMEM_COLL_GATHER             : 1
+ - MV2_USE_XPMEM_COLL_ALLGATHER          : 1
+ - MV2_USE_XPMEM_COLL_ALLTOALL           : 0
+ PSM2_MQ_RNDV_HFI_THRESH                 : 4194304
+ PSM2_MQ_EAGER_SDMA_SZ                   : 4194304
+ Heterogeneity                           : NO
+ SMP Eagersize                           : 32768
+ HFI Eagersize                           : 4194304
+ Tuning Table:                           : MV2_ARCH_INTEL_XEON_PHI_7250 MV2_HCA_INTEL_HFI1
+ MV2_ENABLE_SOCKET_AWARE_COLLECTIVES     : 1
+ MV2_USE_SOCKET_AWARE_ALLREDUCE          : 1
+ MV2_USE_SOCKET_AWARE_BARRIER            : 1
+ MV2_USE_SOCKET_AWARE_SHARP_ALLREDUCE    : 0
+ MV2_SOCKET_AWARE_ALLREDUCE_MIN_MSG      : 1
+ MV2_SOCKET_AWARE_ALLREDUCE_MAX_MSG      : 2048
+```
 
 **3. 성능 비교**
 
@@ -71,70 +108,67 @@ MV2\_SHOW\_ENV\_INFO 환경변수를 2로 구성하여 Knights Landings(KNL) 최
 
 ![](../../.gitbook/assets/9988B8465F0D0DC224.jpg)
 
-| <p><br></p><p>ISTART = 0</p><p>ICHARG = 2</p><p><br></p><p>PREC = normal</p><p>ENCUT = 300</p><p>LREAL = auto</p><p><br></p><p>ALGO = normal</p><p>NELMIN = 4</p><p>NELM = 10</p><p>EDIFF = 1e-6</p><p><br></p><p>ISMEAR = 0</p><p>SIGMA = 0.1</p><p><br></p><p>KPAR = 1</p><p>NCORE = {4,8,16,32,64}</p><p>NSIM = 4</p><p>LPLANE = .TRUE.</p><p><br></p><p>LWAVE =.FALSE.</p><p>LCHARG =.FALSE.</p><p><br></p> |
-| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+
+
+{% code title="INCAR 파일" %}
+```
+ISTART = 0
+ICHARG = 2
+
+PREC   = normal
+ENCUT  = 300
+LREAL  = auto
+
+ALGO   = normal
+NELMIN = 4
+NELM   = 10
+EDIFF  = 1e-6
+
+ISMEAR = 0
+SIGMA  = 0.1
+
+KPAR   = 1
+NCORE  = {4,8,16,32,64}
+NSIM   = 4
+LPLANE = .TRUE.
+
+LWAVE  =.FALSE.
+LCHARG =.FALSE.
+```
+{% endcode %}
 
 _INCAR 파일_
 
-|
+__
 
-\
+{% code title="작업 스크립트" %}
+```
+#!/usr/bin/env bash
 
-
-\#!/usr/bin/env bash
-
-\
-
-
-\#PBS -V
-
-\#PBS -N bmt
-
-\#PBS -A vasp
-
-\#PBS -q normal
-
-\#PBS -l select=1:ncpus=64:mpiprocs=64:ompthreads=1
-
-\#PBS -l walltime=48:00:00
-
-\#PBS -W release\_nodes\_on\_stageout=True
-
-\
-
+#PBS -V
+#PBS -N bmt
+#PBS -A vasp
+#PBS -q normal
+#PBS -l select=1:ncpus=64:mpiprocs=64:ompthreads=1
+#PBS -l walltime=48:00:00
+#PBS -W release_nodes_on_stageout=True 
 
 module purge
-
 module load intel/19.0.5 mvapich2/2.3.1
 
-\
+cd $PBS_O_WORKDIR
+
+mpirun_rsh                                                 \
+    -np $(wc -l $PBS_NODEFILE | awk '{print $1}') \
+    -hostfile $PBS_NODEFILE                            \
+    MV2_ENABLE_AFFINITY=1                          \
+    MV2_CPU_BINDING_POLICY=bunch              \
+    OMP_NUM_THREADS=1                             \
+    {설치경로}/vasp_std
+```
+{% endcode %}
 
 
-cd $PBS\_O\_WORKDIR
-
-\
-
-
-mpirun\_rsh \</p>
-
-\-np $(wc -l $PBS\_NODEFILE | awk '{print $1}') \</p>
-
-\-hostfile $PBS\_NODEFILE \</p>
-
-MV2\_ENABLE\_AFFINITY=1 \</p>
-
-MV2\_CPU\_BINDING\_POLICY=bunch \</p>
-
-OMP\_NUM\_THREADS=1 \</p>
-
-{설치경로}/vasp\_std
-
-\
-
-
-\| | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-
-_작업 스크립트_
 
 **4. NCORE값에 따른 성능최적화**
 
