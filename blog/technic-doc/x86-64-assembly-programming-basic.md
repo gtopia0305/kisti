@@ -1,3 +1,7 @@
+---
+description: 슈퍼컴퓨팅인프라센터 2022. 6. 2. 16:08
+---
+
 # X86\_64 어셈블리 프로그래밍 기초
 
 ### 어셈블리(Assembly) 언어란?
@@ -7,8 +11,8 @@
 
 ### 어셈블리 언어를 배워야 하는 이유
 
-○ 어셈블리 언어를 배워야 하는 이유는 다음과 같다: \
-&#x20; 참고: x86-64 Assembly Language Programming with Ubuntu (Jorgensen)
+○ 어셈블리 언어를 배워야 하는 이유는 다음과 같다:\
+참고: x86-64 Assembly Language Programming with Ubuntu (Jorgensen)
 
 * 하드웨어 구조에 대한 이해를 돕는다. 기본적인 명령어, 레지스터, 메모리 접근방식, 하드웨어 인터페이싱에 대해 더 잘 이해할 수 있다.
 * 툴 체인에 대한 이해: 컴파일러, 어셈블러, 링커, 로더, 디버거와 같은 도구의 세부사항을 이해할 수 있다
@@ -17,7 +21,7 @@
 * 컴파일러의 범위 이해: 컴파일러가 컴퓨터 아키텍처와 관련하여 하는 일과 하지 않는 일에 대해 이해할 수 있음
 * 공유메모리, 인터럽트, 스레드 처리, 경쟁 조건과 같은 개념에 대해 이해 할 수 있음
 
-### &#x20;CISC vs RISC
+### CISC vs RISC
 
 **○ CISC (Complex Instruction Set Computer)**
 
@@ -26,8 +30,6 @@
 * 연산의 대상은 레지스터, 메모리, 또는 상수(immediate value)의 조합으로 다양함
 * 피연산자(operand)의 개수는 제한이 없으나, 2개\~3개 지정하는 경우가 많음
 * 복잡한 명령어 처리를 위해 마이크로프로그램 방식을 채택하는 경우가 많음. 복잡한 명령을 다시 단순한 명령어(micro-instruction)로 나누어 명령어 파이프라인에서 처리함
-
-&#x20;
 
 **○ RISC (Reduced Instruction Set Computer)**
 
@@ -51,8 +53,6 @@ CISC 와 RISC의 비교
 | 파이프라이닝   | 파이프라인을 적용하기 힘듦     | 파이프라이닝이 쉬움        |
 | 마이크로프로세서 | X86                | ARM, SPARC, MIPS  |
 
-&#x20;
-
 CISD 와 RISC 명령어 비교
 
 | 예시 기능                   | CISC 방식 어셈블리어                                | RISC 방식 어셈블리어                                                                     |
@@ -60,11 +60,9 @@ CISD 와 RISC 명령어 비교
 | <p>덧셈<br>(메모리 어드레싱)</p> | ADD Ma, Mb                                   | <p>LOAD Ra, Ma<br>LOAD Rb, Mb<br>ADD Ra, Rb<br>STORE Ma, Ra</p>                   |
 | 곱셈                      | <p>mov ax, 10<br>mov bx, 5<br>mul bx, ax</p> | <p>mov ax, 0<br>mov bx, 10<br>mov cx, 5<br>begin:<br>add ax, bx<br>loop begin</p> |
 
-&#x20;
-
 ### 어셈블리 코딩 예제
 
-다음과 같은 hello.asm 파일을 작성한다.&#x20;
+다음과 같은 hello.asm 파일을 작성한다.
 
 ```
 section .data
@@ -81,11 +79,9 @@ _start: mov rax, 1
         syscall
 ```
 
-&#x20;
-
 빌드를 위한 nasm 어셈블러 설치한다.
 
-&#x20;  (NASM: [https://github.com/netwide-assembler/nasm](https://github.com/netwide-assembler/nasm) , [https://www.nasm.us/](https://www.nasm.us/) )
+(NASM: [https://github.com/netwide-assembler/nasm](https://github.com/netwide-assembler/nasm) , [https://www.nasm.us/](https://www.nasm.us/) )
 
 ```
 $ sudo apt-get install nasm
@@ -104,13 +100,11 @@ Hello, World!
 
 \- 옵션 -l 은 소스 코드와 매크로 처리 결과와 생성된 코드를 비교할 수 있도록 출력한다.
 
-&#x20;
-
 <코드 설명>
 
-* data 섹션(.data)은 프로그램에서 초기화된 정적 변수를 위한 공간으로, 글로벌 변수와 정적 로컬 변수를 위한 공간이다. 이 섹션의 크기는 런타임에서 변경되지 않는다. data 섹션은 읽기와 쓰기가 가능하나, 읽기 전용을 위한 .rodata 섹션이 존재한다. &#x20;
-* text 섹션(section .text)는 코드를 위한 영역으로 읽기만 가능하다.&#x20;
-* &#x20;\_start 레이블은 프로그램의 엔트리 포인트이다. 이것은 디폴트 값으로 엔트리 포인트를 바꾸고 싶을 경우 ld -e foo 라고 할 수 있다.
+* data 섹션(.data)은 프로그램에서 초기화된 정적 변수를 위한 공간으로, 글로벌 변수와 정적 로컬 변수를 위한 공간이다. 이 섹션의 크기는 런타임에서 변경되지 않는다. data 섹션은 읽기와 쓰기가 가능하나, 읽기 전용을 위한 .rodata 섹션이 존재한다.
+* text 섹션(section .text)는 코드를 위한 영역으로 읽기만 가능하다.
+* \_start 레이블은 프로그램의 엔트리 포인트이다. 이것은 디폴트 값으로 엔트리 포인트를 바꾸고 싶을 경우 ld -e foo 라고 할 수 있다.
 * x86\_64 아키텍처의 레지스터는 다음과 같다. 자세한 것은[ Intel 64 and IA-2 Architectures Software Developer's Manual](https://www.intel.com/content/www/us/en/developer/articles/technical/intel-sdm.html) 을 참고한다.
 
 ![X86\_64 프로세서 내부 레지스터 구조](../../.gitbook/assets/0Xmdn0h1lkHC4wMQmXbF61.png)
@@ -132,26 +126,18 @@ Hello, World!
 | %rax | 60 | sys\_exit       |
 | %rdi | 0  | int error\_code |
 
-&#x20;
-
-&#x20;
-
-&#x20;
-
 ### 더 자세한 내용이 궁금하시다면..
 
-아래의 첨부파일을 참고하시기 바랍니다. \
-&#x20; 본 문서는 X86 64비트 아키텍쳐를 중심으로 일반적인 리눅스 환경에서 어셈블리 프로그래밍을 시작할 수 있는 기초 지식에 대해서 기술하였다.  어셈블리어 코딩, 역어셈블링 방법, C코드와 연동, SSE/AVX 확장 명령, ELF 포맷 등에 대한 기초 지식에 대해서 공부할 수 있다.
-
-&#x20;
+아래의 첨부파일을 참고하시기 바랍니다.\
+본 문서는 X86 64비트 아키텍쳐를 중심으로 일반적인 리눅스 환경에서 어셈블리 프로그래밍을 시작할 수 있는 기초 지식에 대해서 기술하였다. 어셈블리어 코딩, 역어셈블링 방법, C코드와 연동, SSE/AVX 확장 명령, ELF 포맷 등에 대한 기초 지식에 대해서 공부할 수 있다.
 
 X86\_64 어셈블리 프로그래밍 기초\
 2022.6.1.\
-ISBN  978-89-294-1309-5-93560\
-한국과학기술정보연구원  슈퍼컴퓨팅기술개발센터 김상완, 오광진
+ISBN 978-89-294-1309-5-93560\
+한국과학기술정보연구원 슈퍼컴퓨팅기술개발센터 김상완, 오광진
 
-[\[기술문서\] X86\_64 어셈블리 프로그래밍 기초.pdf1.90MB](https://blog.kakaocdn.net/dn/QZ53S/btrDKLeaB2F/DSD1ijThg95KOvPITkRSNK/\[%EA%B8%B0%EC%88%A0%EB%AC%B8%EC%84%9C]%20X86\_64%20%EC%96%B4%EC%85%88%EB%B8%94%EB%A6%AC%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D%20%EA%B8%B0%EC%B4%88.pdf?attach=1\&knm=tfile.pdf)
+{% file src="../../.gitbook/assets/[기술문서] X86_64 어셈블리 프로그래밍 기초.pdf" %}
 
-
-
+{% hint style="danger" %}
 본 보고서는 국가과학기술연구회에서 지원한 창의형 융합연구사업(CAP)인 "차세대 초고성능컴퓨터를 위한 이기종 매니코어 하드웨어 시스템 개발" 사업의 결과입니다. 무단전재 및 복사를 금지합니다.
+{% endhint %}
