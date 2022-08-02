@@ -137,10 +137,6 @@ LCHARG =.FALSE.
 ```
 {% endcode %}
 
-_INCAR 파일_
-
-__
-
 {% code title="작업 스크립트" %}
 ```
 #!/usr/bin/env bash
