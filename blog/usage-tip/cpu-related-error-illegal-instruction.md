@@ -1,3 +1,7 @@
+---
+description: 슈퍼컴퓨팅인프라센터 2018. 12. 11. 11:21
+---
+
 # CPU 관련 오류 사항 ( illegal instruction )
 
 \[오류 내용]
