@@ -1,3 +1,7 @@
+---
+description: 슈퍼컴퓨팅인프라센터 2019. 5. 7. 14:52
+---
+
 # PYTHON 2.7 EOL(End of Life) 안내
 
 \- 참고 : [https://legacy.python.org/dev/peps/pep-0373](https://legacy.python.org/dev/peps/pep-0373)\
