@@ -4,7 +4,7 @@ description: '[별첨5] TSMSF를 이용한 데이터 아카이빙(Archiving) 사
 
 # \[별첨5] TSMSF를 이용한 데이터 아카이빙(Archiving) 사용법
 
-![](../../../.gitbook/assets/oqm6dfnZbZXsgQ2.jpg) ![](../../../.gitbook/assets/ptXncsWKIDgF837.jpg)
+![](<../../../.gitbook/assets/\[별첨5] TSMSF를 이용한 데이터 아카이빙\_1.png>) ![](<../../../.gitbook/assets/\[별첨5] TSMSF를 이용한 데이터 아카이빙.png>)
 
 ## 가. 시스템 환경 및 사용 신청
 
@@ -84,7 +84,7 @@ TSMSF는 기본적으로 테이프 미디어를 이용하므로 <mark style="col
 
 \- Datamover 노드에 접속하기 위해서‘Quick Connect’ 버튼 클릭
 
-![](<../../../.gitbook/assets/tMoayQXkQ5bJOKX (1).jpg>)
+![](../../../.gitbook/assets/tMoayQXkQ5bJOKX.png)
 
 \- Datamover 노드에 접속하기 위한 정보를 입력하고 ‘연결(Connect)’ 버튼 클릭
 

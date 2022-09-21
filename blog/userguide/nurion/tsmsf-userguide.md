@@ -6,7 +6,7 @@ description: 슈퍼컴퓨팅인프라센터 2021. 2. 22. 09:24
 
 ## **TSMSF를 이용한 데이터 아카이빙(Archiving) 방법**
 
-![](../../../.gitbook/assets/oqm6dfnZbZXsgQ2.jpg) ![](../../../.gitbook/assets/ptXncsWKIDgF837.jpg)
+![](<../../../.gitbook/assets/\[별첨5] TSMSF를 이용한 데이터 아카이빙\_1.png>) ![](<../../../.gitbook/assets/\[별첨5] TSMSF를 이용한 데이터 아카이빙.png>)
 
 ### **1. 시스템 환경 및 사용 신청**
 
@@ -84,7 +84,7 @@ TSMSF를 사용하기 위해서는 별도의 사용 환경 구성이 필요하�
 
 \- Datamover 노드에 접속하기 위해서‘Quick Connect’ 버튼 클릭
 
-![](<../../../.gitbook/assets/tMoayQXkQ5bJOKX (1).jpg>)
+![](../../../.gitbook/assets/tMoayQXkQ5bJOKX.png)
 
 \- Datamover 노드에 접속하기 위한 정보를 입력하고 ‘연결(Connect)’ 버튼 클릭
 

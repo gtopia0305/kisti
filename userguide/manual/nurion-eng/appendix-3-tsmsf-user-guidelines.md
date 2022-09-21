@@ -4,7 +4,7 @@
 
 ## A. System Environment and How to Use the System
 
-![](../../../.gitbook/assets/oqm6dfnZbZXsgQ2.jpg) ![](../../../.gitbook/assets/ptXncsWKIDgF837.jpg)
+![](<../../../.gitbook/assets/\[별첨5] TSMSF를 이용한 데이터 아카이빙\_1.png>) ![](<../../../.gitbook/assets/\[별첨5] TSMSF를 이용한 데이터 아카이빙.png>)
 
 The Nurion system operates a Tape Library (IBM TS4500) with a capacity of 10 PBytes to support the long-term (1 year after the contract expires) storage of users' important files and large files.
 
@@ -84,7 +84,7 @@ To archive the user data, please use the Nurion system's login node or Datamover
 
 \- Click the “Quick Connect” button to connect to the Datamover node.
 
-![](<../../../.gitbook/assets/tMoayQXkQ5bJOKX (1).jpg>)
+![](../../../.gitbook/assets/tMoayQXkQ5bJOKX.png)
 
 \- Enter the information to connect to the Datamover node, and click the “Connect” button.
 

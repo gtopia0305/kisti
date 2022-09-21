@@ -97,7 +97,7 @@ $ sftp [user ID@]neuron-dm.ksc.re.kr [-P 22]
 
 \- Use a freely distributed FTP/SFTP client program, such as WinSCP, to connect in the Windows environment.
 
-![](../../../.gitbook/assets/7HNXz4ZOCMv2wPD.jpeg)
+![](<../../../.gitbook/assets/윈도우 환경에서는 WinSCP와 같이.png>)
 
 \* Files can be sent without entering the OTP when using FTP (File Transfer Protocol).
 

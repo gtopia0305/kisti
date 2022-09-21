@@ -111,7 +111,7 @@ $ sftp [사용자ID@]neuron-dm.ksc.re.kr [-P 22]
 
 \- 윈도우 환경에서는 WinSCP와 같이 무료로 배포되고 있는 FTP/SFTP 클라이언트 프로그램을 이용하여 접속한다.
 
-![](../../../.gitbook/assets/7HNXz4ZOCMv2wPD.jpeg)
+![](<../../../.gitbook/assets/윈도우 환경에서는 WinSCP와 같이.png>)
 
 \* FTP (File Tranfer Protocal)을 이용하며, OTP를 입력하지 않고 파일 전송 가능
 
