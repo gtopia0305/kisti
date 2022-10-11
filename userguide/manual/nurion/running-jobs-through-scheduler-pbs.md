@@ -115,9 +115,25 @@ PBS에서 배치 작업을 수행하기 위해서는 위에서 설명된 PBS 키
 
 ※ /apps/shell/home/job\_examples 에서 작업제출 스크립트 예제 파일을 복사하여 사용 가능
 
-| ■ Serial 프로그램 작업 스크립트 작성 예제(serial.sh)                                                                                                                                                                                                                                                                                                                                                                                                                                         |   |   |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | - | - |
-| <p>#!/bin/sh</p><p>#PBS -N serial_job</p><p>#PBS -V</p><p>#PBS -q normal</p><p><mark style="color:red;">#PBS -A {PBS 옵션 이름} # Application별 PBS 옵션 이름표 참고</mark></p><p>#PBS -l select=1:ncpus=1:mpiprocs=1:ompthreads=1</p><p><strong>#PBS -l walltime=04:00:00#PBS -m abe # 작업 이메일 알림 옵션</strong></p><p><strong>#PBS -M abc@def.com # 수신할 메일 주소</strong></p><p></p><p>cd $PBS_O_WORKDIR</p><p></p><p>module purge</p><p>module load craype-mic-knl</p><p></p><p>./test.exe</p> |   |   |
+{% code title="■ Serial 프로그램 작업 스크립트 작성 예제(serial.sh)" %}
+```
+#!/bin/sh
+#PBS -N serial_job
+#PBS -V
+#PBS -q normal
+#PBS -A {PBS 옵션 이름} # Application별 PBS 옵션 이름표 참고
+#PBS -l select=1:ncpus=1:mpiprocs=1:ompthreads=1
+#PBS -l walltime=04:00:00#PBS -m abe # 작업 이메일 알림 옵션
+#PBS -M abc@def.com # 수신할 메일 주소
+
+cd $PBS_O_WORKDIR
+
+module purge
+module load craype-mic-knl
+
+./test.exe
+```
+{% endcode %}
 
 ※ 1노드 점유 순차, 사용 예제
 
