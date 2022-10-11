@@ -14,22 +14,9 @@ IME는 사용자 레벨 파일시스템인 FUSE(**F**ile System In **USE**rspace
 
 ex) INPUT="/scratch\_ime/$USER/input.dat", OUTPUT="/scratch\_ime/$USER/output.dat"
 
-```
-#!/bin/sh
-#PBS -N burstbuffer
-#PBS -V
-#PBS -q normal # 모든 큐 사용가능
-#PBS -A {PBS 옵션 이름} # Application별 PBS 옵션 이름표 참고
-#PBS -P burst_buffer # 버스트 버퍼 사용을 위해서 반드시 명시
-#PBS -l select=2:ncpus=16:mpiprocs=16
-#PBS -l walltime=05:00:00
-
-cd $PBS_O_WORKDIR
-
-OUTFILE=/scratch_ime/$USER/output.dat
-
-# 이하 해당 작업 관련 실행명령어 작성 (4장 "스케줄러를 통한 작업실행" 나절 예제 참조)
-```
+|                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| <p>#!/bin/sh<br>#PBS -N burstbuffer<br>#PBS -V<br>#PBS -q normal <mark style="color:blue;"># 모든 큐 사용가능</mark></p><p>#PBS -A {PBS 옵션 이름} # Application별 PBS 옵션 이름표 참고</p><p><mark style="color:red;">#PBS -P burst_buffer # 버스트 버퍼 사용을 위해서 반드시 명</mark>시</p><p>#PBS -l select=2:ncpus=16:mpiprocs=16</p><p>#PBS -l walltime=05:00:00<br><br>cd $PBS_O_WORKDIR</p><p><br><mark style="color:red;">OUTFILE=/scratch_ime/$USER/output.dat</mark><br></p><p><mark style="color:blue;"># 이하 해당 작업 관련 실행명령어 작성 (4장 "스케줄러를 통한 작업실행" 나절 예제 참조)</mark></p> |
 
 
 
@@ -43,18 +30,9 @@ $ module load mvapich2/2.3.1
 
 위와 같이 mvapich2/2.3.1 모듈을 로드하고 아래와 같이 작업 스크립트를 작성한다.
 
-```
-#!/bin/sh
-#PBS -N mvapich2_ime
-#PBS -V
-#PBS -q normal # KNL에 해당하는 모든 큐 사용 가능 (전용큐, normal, long, flat, debug)
-#PBS -A {PBS 옵션 이름} # Application별 PBS 옵션 이름표 참고
-#PBS -P burst_buffer # 버스트 버퍼 사용을 위해 반드시 명시
-#PBS -l select=2:ncpus=16:mpiprocs=16
-#PBS -l walltime=5:00:00
-cd $PBS_O_WORKDIR
-TOTAL_CPUS=$(wc -l $PBS_NODEFILE
-```
+|                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <p>#!/bin/sh<br>#PBS -N mvapich2_ime<br>#PBS -V</p><p>#PBS -q normal <mark style="color:blue;"># KNL에 해당하는 모든 큐 사용 가능</mark> (전용큐, normal, long, flat, debug)</p><p>#PBS -A {PBS 옵션 이름} # Application별 PBS 옵션 이름표 참고</p><p><mark style="color:red;">#PBS -P burst_buffer # 버스트 버퍼 사용을 위해 반드시 명시</mark></p><p>#PBS -l select=2:ncpus=16:mpiprocs=16</p><p>#PBS -l walltime=5:00:00</p><p>cd $PBS_O_WORKDIR</p><p>TOTAL_CPUS=$(wc -l $PBS_NODEFILE</p> |
 
 \* 지원컴파일러: gcc/6.1.0, gcc/7.2.0, intel/17.0.5, intel/18.0.1, intel/18.0.3, intel/19.0.4, pgi/18.10
 
